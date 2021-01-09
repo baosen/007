@@ -194,20 +194,20 @@ glabel cheatButton_7F091740
   andi  $t6, $a0, 0xffff
   move  $a0, $t6
   beqz  $t6, .L7F091774
-   move  $v1, $zero
+  move  $v1, $zero
 .L7F091754:
   andi  $t7, $a0, 1
   beqz  $t7, .L7F091764
-   move  $v0, $a0
+  move  $v0, $a0
   addiu $v1, $v1, 1
 .L7F091764:
   srl   $a0, $v0, 1
   andi  $t8, $a0, 0xffff
   bnez  $t8, .L7F091754
-   move  $a0, $t8
+  move  $a0, $t8
 .L7F091774:
   jr    $ra
-   move  $v0, $v1
+  move  $v0, $v1
 ");
 
 asm(R"
@@ -435,13 +435,12 @@ glabel cheatCheckIfMPCheat
   move  $v0, $zero
   andi  $t8, $t7, 4
   bne   $t8, $at, .L7F091AA4
-   nop   
+  nop
   jr    $ra
-   li    $v0, 1
-
+  li    $v0, 1
 .L7F091AA4:
   jr    $ra
-   nop   
+  nop
 ");
 
 asm(R"
@@ -503,7 +502,6 @@ glabel turn_on_cheat_for_players
 #ifdef VERSION_US
 asm(R"
 .late_rodata
-/*D:800572B0*/
 glabel jpt_cheats_cheat
 .word cheats_cheat_extra_mp_chars
 .word cheats_cheat_invincibility
@@ -580,9 +578,9 @@ glabel jpt_cheats_cheat
 .word cheats_debug_unlocklevel
 .word cheats_debug_unlocklevel
 
-/*800573D8*/
 glabel finalamount
 .word 0x3d4ccccd /*0.050000001*/
+
 .text
 glabel handle_cheats_turned_on
   sll   $t6, $a0, 4
