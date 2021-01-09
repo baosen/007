@@ -3,70 +3,68 @@ unsigned int D_8002A784 = 0;
 unsigned int D_8002A788 = 0;
 
 asm(R"
-.late_rodata
-.text
 glabel set_weapon_model_generated_thrown_object
   addiu $t6, $a0, -3
   addiu $sp, $sp, -0x18
   sltiu $at, $t6, 0x2e
   sw    $ra, 0x14($sp)
   beqz  $at, .L7F00579C
-   li    $a1, -1
+  li    $a1, -1
   sll   $t6, $t6, 2
   lui   $at, %hi(projectile_ptr_table)
   addu  $at, $at, $t6
   lw    $t6, %lo(projectile_ptr_table)($at)
   jr    $t6
-   nop   
+  nop
 throwingknife:
   b     .L7F00579C
-   li    $a1, 186
+  li    $a1, 186
 grenade_launch_round:
   b     .L7F00579C
-   li    $a1, 203
+  li    $a1, 203
 rocket:
   b     .L7F00579C
-   li    $a1, 202
+  li    $a1, 202
 grenade:
   b     .L7F00579C
-   li    $a1, 196
+  li    $a1, 196
 timed_mine:
   b     .L7F00579C
-   li    $a1, 201
+  li    $a1, 201
 prox_mine:
   b     .L7F00579C
-   li    $a1, 200
+  li    $a1, 200
 remote_mine:
   b     .L7F00579C
-   li    $a1, 199
+  li    $a1, 199
 rocket_0:
   b     .L7F00579C
-   li    $a1, 202
+  li    $a1, 202
 bombcase:
   b     .L7F00579C
-   li    $a1, 226
+  li    $a1, 226
 plastique:
   b     .L7F00579C
-   li    $a1, 273
+  li    $a1, 273
 bug:
   b     .L7F00579C
-   li    $a1, 245
+  li    $a1, 245
 microcamera:
   li    $a1, 246
 default:
 .L7F00579C:
   bltz  $a1, .L7F0057B4
-   move  $v0, $zero
+  move  $v0, $zero
   jal   load_model
-   move  $a0, $a1
+  move  $a0, $a1
   b     .L7F0057B8
-   lw    $ra, 0x14($sp)
+  lw    $ra, 0x14($sp)
 .L7F0057B4:
   lw    $ra, 0x14($sp)
 .L7F0057B8:
   addiu $sp, $sp, 0x18
   jr    $ra
-   nop   
+  nop
 ");
 
 #ifdef VERSION_US
