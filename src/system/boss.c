@@ -169,9 +169,7 @@ const char aHard_1[] = "-hard";
 const char aHard_2[] = "-hard";
 const char aMa[] = "-ma";
 const char aMa_0[] = "-ma";
-const unsigned int taskgrab[] = {0x7536342e, 0x7461736b, 0x67726162,
-                                 0x2e25642e, 0x636f7265, 0x00000000};
-// const char taskgrab[] = "unsigned long long.taskgrab.%d.core";
+const char taskgrab[] = "u64.taskgrab.%d.core";
 asm(R"
 glabel mainloop
   addiu $sp, $sp, -0x1e0
