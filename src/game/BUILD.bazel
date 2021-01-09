@@ -430,7 +430,6 @@ gecc_library(
     srcs = [
         "indy_commands.h",
         "indy_comms.c",
-        "indy_comms.h",
         "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],

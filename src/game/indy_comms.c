@@ -1,6 +1,7 @@
-#include "indy_comms.h"
 #include "indy_commands.h"
 #include <types.h>
+
+void init_indy_if_ready(void);
 
 int init_indy_if_not_ready(void) {
   if (indy_ready != true) {
