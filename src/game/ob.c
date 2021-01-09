@@ -1318,13 +1318,13 @@ void removed_handle_filetable_entry(unsigned int index) {}
 
 void removed_loop_handle_filetable_entries(void) {
   int i;
-  for (i = 1; (i < file_entry_max); i++)
+  for (i = 1; i < file_entry_max; i++)
     removed_handle_filetable_entry(i);
 }
 
 void removed_loop_filetableentries(void) {
   int i;
-  for (i = 1; (i < file_entry_max); i++)
+  for (i = 1; i < file_entry_max; i++)
     ;
 }
 
