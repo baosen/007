@@ -348,7 +348,7 @@ glabel mainloop
 .L700062EC:
   jal   mempResetBank
    li    $a0, 4
-  jal   something_mem_bank_a0
+  jal   obBlankResourcesLoadedInBank
    li    $a0, 4
   lui   $a1, %hi(aMa)
   addiu $a1, %lo(aMa) # addiu $a1, $a1, -0x6ed4
@@ -746,7 +746,7 @@ glabel mainloop
    nop   
   jal   mempNullNextEntryInBank
    li    $a0, 4
-  jal   something_mem_bank_a0
+  jal   obBlankResourcesLoadedInBank
    li    $a0, 4
   lui   $v0, %hi(loadedstage)
   addiu $v0, %lo(loadedstage) # addiu $v0, $v0, 0x42fc

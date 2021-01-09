@@ -12,7 +12,6 @@ struct fileentry {
   unsigned char *hw_address;
 };
 
-void something_mem_bank_a0(int);
 void sub_GAME_7F0BD234(void);
 unsigned char *load_resource_index_to_buffer(int index, int param_2,
                                              unsigned char *ptrdata, int bytes);
@@ -21,8 +20,6 @@ unsigned char *load_rom_resource_index_to_membank(int index, int type, int size,
 void resource_load_from_indy(unsigned char *ptrdata, int bytes,
                              struct fileentry *srcfile,
                              struct resource_lookup_data_entry *lookupdata);
-void load_resource(unsigned char *ptrdata, int bytes, struct fileentry *srcfile,
-                   struct resource_lookup_data_entry *lookupdata);
 
 struct resource_lookup_data_entry resource_lookup_data_array[736];
 
@@ -775,52 +772,28 @@ struct fileentry file_resource_table[] = {
     {0},
     {0}};
 
-int file_entry_max = 727;
+#define OBJ_INDEX_END 727
+int file_entry_max = OBJ_INDEX_END;
 
-asm(R"
-glabel load_resource
-  addiu $sp, $sp, -0x2128
-  sw    $ra, 0x14($sp)
-  sw    $a0, 0x2128($sp)
-  bnez  $a1, .L7F0BCAC8
-   sw    $a2, 0x2130($sp)
-  lw    $a1, 8($a2)
-  jal   romCopy
-   lw    $a2, ($a3)
-  b     .L7F0BCB28
-   lw    $ra, 0x14($sp)
-.L7F0BCAC8:
-  lw    $a2, ($a3)
-  lw    $t7, 0x2128($sp)
-  li    $at, -8
-  addiu $t9, $a2, 7
-  and   $t0, $t9, $at
-  addu  $t8, $t7, $a1
-  subu  $a0, $t8, $t0
-  subu  $t1, $a0, $t7
-  sltiu $at, $t1, 8
-  beqz  $at, .L7F0BCAFC
-   lw    $t2, 0x2130($sp)
-  b     .L7F0BCB24
-   sw    $zero, 4($a3)
-.L7F0BCAFC:
-  lw    $a1, 8($t2)
-  sw    $a3, 0x2134($sp)
-  jal   romCopy
-   sw    $a0, 0x2124($sp)
-  lw    $a0, 0x2124($sp)
-  lw    $a1, 0x2128($sp)
-  jal   decompressdata
-   addiu $a2, $sp, 0x24
-  lw    $a3, 0x2134($sp)
-  sw    $v0, 4($a3)
-.L7F0BCB24:
-  lw    $ra, 0x14($sp)
-.L7F0BCB28:
-  addiu $sp, $sp, 0x2128
-  jr    $ra
-   nop   
-");
+void load_resource(unsigned char *ptrdata, unsigned int bytes,
+                   struct fileentry *srcfile,
+                   struct resource_lookup_data_entry *lookupdata) {
+  unsigned char *source;
+  unsigned char buffer[0x2100];
+  int unused;
+
+  if (bytes == 0) {
+    romCopy(ptrdata, srcfile->hw_address, lookupdata->rom_size);
+    return;
+  }
+  source = (ptrdata + bytes) - ((lookupdata->rom_size + 7) & -8);
+  if ((unsigned int)(source - ptrdata) < 8) {
+    lookupdata->pc_remaining = 0;
+  } else {
+    romCopy(source, srcfile->hw_address, lookupdata->rom_size);
+    lookupdata->pc_remaining = decompressdata(source, ptrdata, buffer);
+  }
+}
 
 const unsigned int rz_header_1[] = {0x11720000};
 const unsigned int rz_header_2[] = {0x11720000};
@@ -1241,45 +1214,19 @@ int get_pc_buffer_remaining_value(unsigned char *name) {
       .pc_remaining;
 }
 
-asm(R"
-glabel something_mem_bank_a0
-  lui   $v1, %hi(file_entry_max)
-  lw    $v1, %lo(file_entry_max)($v1)
-  andi  $t6, $a0, 0xff
-  sw    $a0, ($sp)
-  slti  $at, $v1, 2
-  bnez  $at, .L7F0BD22C
-   move  $v0, $t6
-  sll   $t7, $v1, 2
-  addu  $t7, $t7, $v1
-  lui   $t8, %hi(resource_lookup_data_array) 
-  addiu $t8, %lo(resource_lookup_data_array) # addiu $t8, $t8, -0x7750
-  sll   $t7, $t7, 2
-  lui   $a1, %hi(resource_lookup_data_array+0x14)
-  addiu $a1, %lo(resource_lookup_data_array+0x14) # addiu $a1, $a1, -0x773c
-  addu  $a2, $t7, $t8
-  li    $v1, 4
-  lbu   $t9, 0x10($a1)
-.L7F0BD200:
-  slt   $at, $v0, $t9
-  bnez  $at, .L7F0BD210
-   nop   
-  sb    $zero, 0x10($a1)
-.L7F0BD210:
-  bnel  $v1, $v0, .L7F0BD220
-   addiu $a1, $a1, 0x14
-  sw    $zero, 4($a1)
-  addiu $a1, $a1, 0x14
-.L7F0BD220:
-  sltu  $at, $a1, $a2
-  bnezl $at, .L7F0BD200
-   lbu   $t9, 0x10($a1)
-.L7F0BD22C:
-  jr    $ra
-   nop   
-");
+void obBlankResourcesLoadedInBank(unsigned char bank) {
+  int i;
+  for (i = 1; i < file_entry_max; i++) {
+    if (resource_lookup_data_array[i].loaded_bank <= bank) {
+      resource_lookup_data_array[i].loaded_bank = '\0';
+    }
+    if (bank == 4) {
+      resource_lookup_data_array[i].pc_remaining = 0;
+    }
+  }
+}
 
-void sub_GAME_7F0BD234(void) { something_mem_bank_a0(5); }
+void sub_GAME_7F0BD234(void) { obBlankResourcesLoadedInBank(5); }
 
 asm(R"
 glabel get_index_num_of_named_resource
