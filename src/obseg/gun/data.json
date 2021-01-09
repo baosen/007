@@ -1,0 +1,465 @@
+{
+    "compressed": true,
+    "files": [
+        {
+            "offset": 7782256,
+            "length": 2576,
+            "name": "Gak47Z.bin"
+        },
+        {
+            "offset": 7784832,
+            "length": 912,
+            "name": "GaudiotapeZ.bin"
+        },
+        {
+            "offset": 7785744,
+            "length": 6160,
+            "name": "GautoshotZ.bin"
+        },
+        {
+            "offset": 7791904,
+            "length": 1536,
+            "name": "GblackboxZ.bin"
+        },
+        {
+            "offset": 7793440,
+            "length": 256,
+            "name": "GblueprintsZ.bin"
+        },
+        {
+            "offset": 7793696,
+            "length": 1936,
+            "name": "GbombcaseZ.bin"
+        },
+        {
+            "offset": 7795632,
+            "length": 1520,
+            "name": "GbombdefuserZ.bin"
+        },
+        {
+            "offset": 7797152,
+            "length": 1936,
+            "name": "GbriefcaseZ.bin"
+        },
+        {
+            "offset": 7799088,
+            "length": 2416,
+            "name": "GbugZ.bin"
+        },
+        {
+            "offset": 7801504,
+            "length": 848,
+            "name": "GbugdetectorZ.bin"
+        },
+        {
+            "offset": 7802352,
+            "length": 848,
+            "name": "GbungeeZ.bin"
+        },
+        {
+            "offset": 7803200,
+            "length": 1152,
+            "name": "GcameraZ.bin"
+        },
+        {
+            "offset": 7804352,
+            "length": 608,
+            "name": "GcartblueZ.bin"
+        },
+        {
+            "offset": 7804960,
+            "length": 304,
+            "name": "GcartridgeZ.bin"
+        },
+        {
+            "offset": 7805264,
+            "length": 528,
+            "name": "GcartrifleZ.bin"
+        },
+        {
+            "offset": 7805792,
+            "length": 512,
+            "name": "GcartshellZ.bin"
+        },
+        {
+            "offset": 7806304,
+            "length": 320,
+            "name": "GcircuitboardZ.bin"
+        },
+        {
+            "offset": 7806624,
+            "length": 496,
+            "name": "GclipboardZ.bin"
+        },
+        {
+            "offset": 7807120,
+            "length": 848,
+            "name": "GcreditcardZ.bin"
+        },
+        {
+            "offset": 7807968,
+            "length": 848,
+            "name": "GdarkglassesZ.bin"
+        },
+        {
+            "offset": 7808816,
+            "length": 320,
+            "name": "GdatathiefZ.bin"
+        },
+        {
+            "offset": 7809136,
+            "length": 368,
+            "name": "GdattapeZ.bin"
+        },
+        {
+            "offset": 7809504,
+            "length": 1408,
+            "name": "GdoordecoderZ.bin"
+        },
+        {
+            "offset": 7810912,
+            "length": 848,
+            "name": "GdoorexploderZ.bin"
+        },
+        {
+            "offset": 7811760,
+            "length": 864,
+            "name": "GdossierredZ.bin"
+        },
+        {
+            "offset": 7812624,
+            "length": 848,
+            "name": "GdynamiteZ.bin"
+        },
+        {
+            "offset": 7813472,
+            "length": 592,
+            "name": "GexplosivefloppyZ.bin"
+        },
+        {
+            "offset": 7814064,
+            "length": 848,
+            "name": "GexplosivepenZ.bin"
+        },
+        {
+            "offset": 7814912,
+            "length": 2032,
+            "name": "GextinguisherZ.bin"
+        },
+        {
+            "offset": 7816944,
+            "length": 848,
+            "name": "GfingergunZ.bin"
+        },
+        {
+            "offset": 7817792,
+            "length": 5888,
+            "name": "GfistZ.bin"
+        },
+        {
+            "offset": 7823680,
+            "length": 848,
+            "name": "GflarepistolZ.bin"
+        },
+        {
+            "offset": 7824528,
+            "length": 3232,
+            "name": "Gfnp90Z.bin"
+        },
+        {
+            "offset": 7827760,
+            "length": 2608,
+            "name": "GgaskeyringZ.bin"
+        },
+        {
+            "offset": 7830368,
+            "length": 848,
+            "name": "GgoldbarZ.bin"
+        },
+        {
+            "offset": 7831216,
+            "length": 2480,
+            "name": "GgoldeneyekeyZ.bin"
+        },
+        {
+            "offset": 7833696,
+            "length": 6112,
+            "name": "GgoldengunZ.bin"
+        },
+        {
+            "offset": 7839808,
+            "length": 6496,
+            "name": "GgoldwppkZ.bin"
+        },
+        {
+            "offset": 7846304,
+            "length": 2608,
+            "name": "GgrenadeZ.bin"
+        },
+        {
+            "offset": 7848912,
+            "length": 4224,
+            "name": "GgrenadelaunchZ.bin"
+        },
+        {
+            "offset": 7853136,
+            "length": 848,
+            "name": "GheroinZ.bin"
+        },
+        {
+            "offset": 7853984,
+            "length": 7856,
+            "name": "GjoypadZ.bin"
+        },
+        {
+            "offset": 7861840,
+            "length": 1936,
+            "name": "GkeyanalysercaseZ.bin"
+        },
+        {
+            "offset": 7863776,
+            "length": 2544,
+            "name": "GkeyboltZ.bin"
+        },
+        {
+            "offset": 7866320,
+            "length": 304,
+            "name": "GkeycardZ.bin"
+        },
+        {
+            "offset": 7866624,
+            "length": 3408,
+            "name": "GkeyyaleZ.bin"
+        },
+        {
+            "offset": 7870032,
+            "length": 6864,
+            "name": "GknifeZ.bin"
+        },
+        {
+            "offset": 7876896,
+            "length": 3568,
+            "name": "GlaserZ.bin"
+        },
+        {
+            "offset": 7880464,
+            "length": 848,
+            "name": "GlectreZ.bin"
+        },
+        {
+            "offset": 7881312,
+            "length": 848,
+            "name": "GlockexploderZ.bin"
+        },
+        {
+            "offset": 7882160,
+            "length": 2592,
+            "name": "Gm16Z.bin"
+        },
+        {
+            "offset": 7884752,
+            "length": 240,
+            "name": "GmapZ.bin"
+        },
+        {
+            "offset": 7884992,
+            "length": 1600,
+            "name": "GmicrocameraZ.bin"
+        },
+        {
+            "offset": 7886592,
+            "length": 848,
+            "name": "GmicrocodeZ.bin"
+        },
+        {
+            "offset": 7887440,
+            "length": 848,
+            "name": "GmicrofilmZ.bin"
+        },
+        {
+            "offset": 7888288,
+            "length": 848,
+            "name": "GmoneyZ.bin"
+        },
+        {
+            "offset": 7889136,
+            "length": 3040,
+            "name": "Gmp5kZ.bin"
+        },
+        {
+            "offset": 7892176,
+            "length": 3328,
+            "name": "Gmp5ksilZ.bin"
+        },
+        {
+            "offset": 7895504,
+            "length": 848,
+            "name": "GpitongunZ.bin"
+        },
+        {
+            "offset": 7896352,
+            "length": 464,
+            "name": "GplansZ.bin"
+        },
+        {
+            "offset": 7896816,
+            "length": 848,
+            "name": "GplastiqueZ.bin"
+        },
+        {
+            "offset": 7897664,
+            "length": 1376,
+            "name": "GpolarizedglassesZ.bin"
+        },
+        {
+            "offset": 7899040,
+            "length": 2032,
+            "name": "GproximitymineZ.bin"
+        },
+        {
+            "offset": 7901072,
+            "length": 2496,
+            "name": "GremotemineZ.bin"
+        },
+        {
+            "offset": 7903568,
+            "length": 4640,
+            "name": "GrocketlaunchZ.bin"
+        },
+        {
+            "offset": 7908208,
+            "length": 7568,
+            "name": "GrugerZ.bin"
+        },
+        {
+            "offset": 7915776,
+            "length": 1936,
+            "name": "GsafecrackercaseZ.bin"
+        },
+        {
+            "offset": 7917712,
+            "length": 3808,
+            "name": "GshotgunZ.bin"
+        },
+        {
+            "offset": 7921520,
+            "length": 6496,
+            "name": "GsilverwppkZ.bin"
+        },
+        {
+            "offset": 7928016,
+            "length": 4608,
+            "name": "GskorpionZ.bin"
+        },
+        {
+            "offset": 7932624,
+            "length": 4208,
+            "name": "GsniperrifleZ.bin"
+        },
+        {
+            "offset": 7936832,
+            "length": 3200,
+            "name": "GspectreZ.bin"
+        },
+        {
+            "offset": 7940032,
+            "length": 848,
+            "name": "GspooltapeZ.bin"
+        },
+        {
+            "offset": 7940880,
+            "length": 848,
+            "name": "GspyfileZ.bin"
+        },
+        {
+            "offset": 7941728,
+            "length": 416,
+            "name": "GstafflistZ.bin"
+        },
+        {
+            "offset": 7942144,
+            "length": 7776,
+            "name": "GtaserZ.bin"
+        },
+        {
+            "offset": 7949920,
+            "length": 6896,
+            "name": "GthrowknifeZ.bin"
+        },
+        {
+            "offset": 7956816,
+            "length": 2752,
+            "name": "GtimedmineZ.bin"
+        },
+        {
+            "offset": 7959568,
+            "length": 13312,
+            "name": "GtriggerZ.bin"
+        },
+        {
+            "offset": 7972880,
+            "length": 6944,
+            "name": "Gtt33Z.bin"
+        },
+        {
+            "offset": 7979824,
+            "length": 2320,
+            "name": "GuziZ.bin"
+        },
+        {
+            "offset": 7982144,
+            "length": 528,
+            "name": "GvideotapeZ.bin"
+        },
+        {
+            "offset": 7982672,
+            "length": 5216,
+            "name": "GwatchcommunicatorZ.bin"
+        },
+        {
+            "offset": 7987888,
+            "length": 5216,
+            "name": "GwatchgeigercounterZ.bin"
+        },
+        {
+            "offset": 7993104,
+            "length": 5216,
+            "name": "GwatchidentifierZ.bin"
+        },
+        {
+            "offset": 7998320,
+            "length": 13312,
+            "name": "GwatchlaserZ.bin"
+        },
+        {
+            "offset": 8011632,
+            "length": 5200,
+            "name": "GwatchmagnetattractZ.bin"
+        },
+        {
+            "offset": 8016832,
+            "length": 5216,
+            "name": "GwatchmagnetrepelZ.bin"
+        },
+        {
+            "offset": 8022048,
+            "length": 1936,
+            "name": "GweaponcaseZ.bin"
+        },
+        {
+            "offset": 8023984,
+            "length": 7312,
+            "name": "GwppkZ.bin"
+        },
+        {
+            "offset": 8031296,
+            "length": 7488,
+            "name": "GwppksilZ.bin"
+        },
+        {
+            "offset": 8038784,
+            "length": 848,
+            "name": "GwristdartZ.bin"
+        }
+    ]
+}

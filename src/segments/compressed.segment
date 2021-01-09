@@ -1,0 +1,9 @@
+import microcodes/text
+import system/data
+import libultra/src/data
+import microcodes/rodata
+import system/rodata
+import libultra/src/rodata
+import game/data
+import game/rodata
+import microcodes/data

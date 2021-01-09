@@ -1,0 +1,7 @@
+#!/bin/bash
+
+thisdir=$(dirname $0)
+$thisdir/qemu-irix -silent -L $thisdir/root $thisdir/root/usr/bin/cc $@
+
+# The default behavior of IRIX C compiler produces a slightly different output than GCC.
+# It seems that -O2 on this compiler produces the same code as -O2 on GCC.

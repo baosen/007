@@ -1,0 +1,16 @@
+04000000 header/htext
++40      bootloader/boot
+80000400 start/start
+70000450 kernel subalign
++cdata   cdata/cdata
+70200000 inflate/inflate
+7F000000 text
+00117880 romfiles
++        obseg/obseg
++        images/images
+80020d90 compressed compressed
++        bss
++        roombuf/roombuf
+80300000 decompbuf/decompbuf
++ab400   stacks/sbss
++b5000   cfb/cfb

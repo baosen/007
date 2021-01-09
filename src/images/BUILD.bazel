@@ -1,0 +1,18 @@
+load("//src/images/extract:extract.bzl", "extract")
+load("//src/images:link_binaries.bzl", "link_binaries")
+
+extract(
+    name = "images",
+    json = "data.json",
+    rom = "//roms:usa.z64",
+    total = 2700,
+    visibility = ["//visibility:public"],
+)
+
+link_binaries(
+    name = "objects",
+    binaries = [
+        ":images",
+    ],
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,16 @@
+load("//tools/rz/inflate:inflate.bzl", "inflate")
+
+inflate(
+    name = "ctls",
+    srcs = [
+        "data.json",
+        "//roms:usa.z64",
+    ],
+    outs = [
+        "instruments.ctl",
+        "instruments.tbl",
+        "sfx.ctl",
+        "sfx.tbl",
+    ],
+    visibility = ["//visibility:public"],
+)

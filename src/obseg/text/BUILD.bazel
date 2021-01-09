@@ -1,0 +1,116 @@
+load("//tools/gecc:gecc.bzl", "gecc_libraries")
+load("//tools/gnu:mips.bzl", "link", "objcopy")
+load("//tools/rz/deflate:deflate.bzl", "deflate")
+load("//tools/rz/inflate:inflate.bzl", "inflate")
+
+inflate(
+    name = "text",
+    srcs = [
+        "data.json",
+        "//roms:usa.z64",
+    ],
+    outs = [
+        "LarchJ.bin",
+        "LcaveJ.bin",
+        "LdestJ.bin",
+        "LrunJ.bin",
+        "LsevxbJ.bin",
+    ],
+)
+
+deflate(
+    name = "rzbin",
+    srcs = [
+        ":text",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_libraries(
+    name = "objects",
+    srcs = [
+        "LameE.c",
+        "LameJ.c",
+        "LarchE.c",
+        "LarecE.c",
+        "LarkE.c",
+        "LashE.c",
+        "LashJ.c",
+        "LaztE.c",
+        "LcatE.c",
+        "LcatJ.c",
+        "LcaveE.c",
+        "LcradE.c",
+        "LcrypE.c",
+        "LdamE.c",
+        "LdepoE.c",
+        "LdestE.c",
+        "LdishE.c",
+        "LdishJ.c",
+        "LearE.c",
+        "LearJ.c",
+        "LeldE.c",
+        "LeldJ.c",
+        "LgunE.c",
+        "LimpE.c",
+        "LimpJ.c",
+        "LjunE.c",
+        "LleeE.c",
+        "LleeJ.c",
+        "LlenE.c",
+        "LlipE.c",
+        "LlipJ.c",
+        "LlueE.c",
+        "LlueJ.c",
+        "LmiscE.c",
+        "LmpmenuE.c",
+        "LmpweaponsE.c",
+        "LoatE.c",
+        "LoatJ.c",
+        "LoptionsE.c",
+        "LpamE.c",
+        "LpamJ.c",
+        "LpeteE.c",
+        "LpropobjE.c",
+        "LrefE.c",
+        "LrefJ.c",
+        "LritE.c",
+        "LritJ.c",
+        "LrunE.c",
+        "LsevE.c",
+        "LsevbE.c",
+        "LsevxE.c",
+        "LsevxbE.c",
+        "LshoE.c",
+        "LshoJ.c",
+        "LsiloE.c",
+        "LstatE.c",
+        "LtitleE.c",
+        "LtraE.c",
+        "LwaxE.c",
+        "LwaxJ.c",
+    ],
+)
+
+link(
+    name = "elf",
+    srcs = [
+        ":objects",
+    ],
+    ld = "LnameX.ld",
+)
+
+objcopy(
+    name = "bin",
+    srcs = [
+        ":elf",
+    ],
+)
+
+deflate(
+    name = "rz",
+    srcs = [
+        ":bin",
+    ],
+    visibility = ["//visibility:public"],
+)

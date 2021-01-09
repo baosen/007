@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_binary(
+    name = "opcodes",
+    embed = [
+        ":cmd_lib",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "cmd_lib",
+    srcs = ["main.go"],
+    importpath = "mips2ir/cmd",
+    visibility = ["//visibility:private"],
+    deps = ["//tools/mips2ir/opcodes:opcodes_lib"],
+)

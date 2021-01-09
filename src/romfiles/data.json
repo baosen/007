@@ -1,0 +1,40 @@
+{
+    "compressed": false,
+    "files": [
+        {
+            "offset": 1144960,
+            "length": 192,
+            "name": "jfont_dl.bin"
+        },
+        {
+            "offset": 1145152,
+            "length": 46848,
+            "name": "usa.jfont_chardata.bin"
+        },
+        {
+            "offset": 1192000,
+            "length": 6784,
+            "name": "efont_chardata.bin"
+        },
+        {
+            "offset": 1198784,
+            "length": 1482432,
+            "name": "animationtable_entries.bin"
+        },
+        {
+            "offset": 2681216,
+            "length": 59360,
+            "name": "animationtable_data.bin"
+        },
+        {
+            "offset": 2745696,
+            "length": 26608,
+            "name": "Globalimagetable_commandblock.bin"
+        },
+        {
+            "offset": 2772304,
+            "length": 107904,
+            "name": "2A4D50.usedby7F008DE4.bin"
+        }
+    ]
+}

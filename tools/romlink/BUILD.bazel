@@ -1,0 +1,27 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library", "go_test")
+
+go_binary(
+    name = "romlink",
+    embed = [":romlink_lib"],
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "romlink_lib",
+    srcs = [
+        "cmd.go",
+        "main.go",
+        "output.go",
+        "romlink.go",
+    ],
+    importpath = "romlink",
+    visibility = ["//visibility:private"],
+    deps = ["//tools/romlink/rom"],
+)
+
+go_test(
+    name = "romlink_test",
+    srcs = ["main_test.go"],
+    data = glob(["testdata/**"]),
+    embed = [":romlink_lib"],
+)

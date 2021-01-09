@@ -1,0 +1,36 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+genrule(
+    name = "lexer",
+    srcs = ["segment_lexer.l"],
+    outs = ["lex.yy.go"],
+    cmd = "golex -o $@ $<",
+)
+
+genrule(
+    name = "parser",
+    srcs = ["segment_parser.y"],
+    outs = ["segment_parser.go"],
+    cmd = "goyacc -o $@ $<",
+)
+
+go_library(
+    name = "segment",
+    srcs = [
+        "blocks.go",
+        "io.go",
+        "parse.go",
+        "segment.go",
+        "utils.go",
+        ":lexer",
+        ":parser",
+    ],
+    importpath = "romlink/segment",
+    visibility = ["//visibility:public"],
+)
+
+#go_test(
+#    name = "segment_test",
+#    srcs = ["segment_test.go"],
+#    embed = [":segment"],
+#)

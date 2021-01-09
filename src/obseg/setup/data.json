@@ -1,0 +1,135 @@
+{
+    "compressed": true,
+    "files": [
+        {
+            "offset": 9038304,
+            "length": 1824,
+            "name": "Ump_setupameZ.bin"
+        },
+        {
+            "offset": 9051808,
+            "length": 7488,
+            "name": "Ump_setuparkZ.bin"
+        },
+        {
+            "offset": 9059296,
+            "length": 1776,
+            "name": "Ump_setupashZ.bin"
+        },
+        {
+            "offset": 9061072,
+            "length": 9568,
+            "name": "Ump_setupcaveZ.bin"
+        },
+        {
+            "offset": 9070640,
+            "length": 2400,
+            "name": "Ump_setupcradZ.bin"
+        },
+        {
+            "offset": 9073040,
+            "length": 3424,
+            "name": "Ump_setupcrypZ.bin"
+        },
+        {
+            "offset": 9076464,
+            "length": 1008,
+            "name": "Ump_setupdishZ.bin"
+        },
+        {
+            "offset": 9077472,
+            "length": 1600,
+            "name": "Ump_setupimpZ.bin"
+        },
+        {
+            "offset": 9079072,
+            "length": 848,
+            "name": "Ump_setupoatZ.bin"
+        },
+        {
+            "offset": 9079920,
+            "length": 1040,
+            "name": "Ump_setuprefZ.bin"
+        },
+        {
+            "offset": 9080960,
+            "length": 4880,
+            "name": "Ump_setupsevbZ.bin"
+        },
+        {
+            "offset": 9085840,
+            "length": 3712,
+            "name": "Ump_setupstatueZ.bin"
+        },
+        {
+            "offset": 9089552,
+            "length": 17936,
+            "name": "UsetuparchZ.bin"
+        },
+        {
+            "offset": 9107488,
+            "length": 15248,
+            "name": "UsetuparkZ.bin"
+        },
+        {
+            "offset": 9122736,
+            "length": 10496,
+            "name": "UsetupaztZ.bin"
+        },
+        {
+            "offset": 9133232,
+            "length": 15968,
+            "name": "UsetupcaveZ.bin"
+        },
+        {
+            "offset": 9149200,
+            "length": 15104,
+            "name": "UsetupcontrolZ.bin"
+        },
+        {
+            "offset": 9171520,
+            "length": 7824,
+            "name": "UsetupcrypZ.bin"
+        },
+        {
+            "offset": 9179344,
+            "length": 17104,
+            "name": "UsetupdamZ.bin"
+        },
+        {
+            "offset": 9196448,
+            "length": 12176,
+            "name": "UsetupdepoZ.bin"
+        },
+        {
+            "offset": 9233232,
+            "length": 12160,
+            "name": "UsetuppeteZ.bin"
+        },
+        {
+            "offset": 9245392,
+            "length": 6240,
+            "name": "UsetuprunZ.bin"
+        },
+        {
+            "offset": 9251632,
+            "length": 9824,
+            "name": "UsetupsevbZ.bin"
+        },
+        {
+            "offset": 9261456,
+            "length": 6704,
+            "name": "UsetupsevbunkerZ.bin"
+        },
+        {
+            "offset": 9268160,
+            "length": 17168,
+            "name": "UsetupsevxZ.bin"
+        },
+        {
+            "offset": 9285328,
+            "length": 16624,
+            "name": "UsetupsevxbZ.bin"
+        }
+    ]
+}

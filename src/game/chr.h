@@ -1,76 +1,67 @@
 #ifndef _CHR_H_
 #define _CHR_H_
-#include "ultra64.h"
-#include "bondgame.h"
 
-struct animation_something
-{
-  s32 anonymous_0;
-  s32 field_4;
-  s32 field_8;
-  f32 field_C;
-  s32 field_10;
-  s32 field_14;
-  f32 field_18;
+struct animation_something {
+  int anonymous_0;
+  int field_4;
+  int field_8;
+  float field_C;
+  int field_10;
+  int field_14;
+  float field_18;
   struct struck_animation_table *field_1C;
-  s32 field_20;
+  int field_20;
   struct struck_animation_table *field_24;
-  s32 field_28;
+  int field_28;
 };
 
-struct struck_animation_table
-{
+struct struck_animation_table {
   void *anonymous_0;
-  s32 anonymous_1;
-  f32 anonymous_2;
-  f32 anonymous_3;
-  s32 anonymous_4;
-  f32 sfx1_timer_60;
-  f32 sfx2_timer_60;
+  int anonymous_1;
+  float anonymous_2;
+  float anonymous_3;
+  int anonymous_4;
+  float sfx1_timer_60;
+  float sfx2_timer_60;
 };
 
-struct explosion_death_animation
-{
-  s32 anonymous_0;
-  s32 anonymous_1;
-  f32 anonymous_2;
-  f32 anonymous_3;
-  f32 anonymous_4;
-  f32 anonymous_5;
-  f32 anonymous_6;
+struct explosion_death_animation {
+  int anonymous_0;
+  int anonymous_1;
+  float anonymous_2;
+  float anonymous_3;
+  float anonymous_4;
+  float anonymous_5;
+  float anonymous_6;
 };
 
-struct explosion_animation
-{
+struct explosion_animation {
   void *explosion_death_animation;
-  s32 count;
+  int count;
 };
 
-struct weapon_firing_animation_table
-{
-  s32 anonymous_0;
-  f32 anonymous_1;
-  f32 anonymous_2;
-  f32 anonymous_3;
-  f32 anonymous_4;
-  f32 anonymous_5;
-  f32 anonymous_6;
-  f32 anonymous_7;
-  f32 anonymous_8;
-  f32 anonymous_9;
-  f32 anonymous_10;
-  f32 anonymous_11;
-  f32 anonymous_12;
-  f32 anonymous_13;
-  f32 anonymous_14;
-  f32 anonymous_15;
-  f32 anonymous_16;
-  f32 anonymous_17;
+struct weapon_firing_animation_table {
+  int anonymous_0;
+  float anonymous_1;
+  float anonymous_2;
+  float anonymous_3;
+  float anonymous_4;
+  float anonymous_5;
+  float anonymous_6;
+  float anonymous_7;
+  float anonymous_8;
+  float anonymous_9;
+  float anonymous_10;
+  float anonymous_11;
+  float anonymous_12;
+  float anonymous_13;
+  float anonymous_14;
+  float anonymous_15;
+  float anonymous_16;
+  float anonymous_17;
 };
-
 
 extern struct animation_something D_8002C914;
-
 
 extern struct struck_animation_table D_8002CE54[];
 extern struct struck_animation_table D_8002DF10[];
@@ -119,17 +110,26 @@ extern struct weapon_firing_animation_table pistol_firing_animation_group5[];
 extern struct weapon_firing_animation_table doubles_firing_animation_group1[];
 extern struct weapon_firing_animation_table doubles_firing_animation_group2[];
 extern struct weapon_firing_animation_table doubles_firing_animation_group3[];
-extern struct weapon_firing_animation_table crouched_rifle_firing_animation_group1[];
-extern struct weapon_firing_animation_table crouched_rifle_firing_animation_groupA[];
-extern struct weapon_firing_animation_table crouched_rifle_firing_animation_group2[];
-extern struct weapon_firing_animation_table crouched_rifle_firing_animation_group3[];
-extern struct weapon_firing_animation_table crouched_pistol_firing_animation_group1[];
-extern struct weapon_firing_animation_table crouched_pistol_firing_animation_group2[];
-extern struct weapon_firing_animation_table crouched_pistol_firing_animation_group3[];
-extern struct weapon_firing_animation_table crouched_doubles_firing_animation_group1[];
-extern struct weapon_firing_animation_table crouched_doubles_firing_animation_group2[];
-extern struct weapon_firing_animation_table crouched_doubles_firing_animation_group3[];
-
+extern struct weapon_firing_animation_table
+    crouched_rifle_firing_animation_group1[];
+extern struct weapon_firing_animation_table
+    crouched_rifle_firing_animation_groupA[];
+extern struct weapon_firing_animation_table
+    crouched_rifle_firing_animation_group2[];
+extern struct weapon_firing_animation_table
+    crouched_rifle_firing_animation_group3[];
+extern struct weapon_firing_animation_table
+    crouched_pistol_firing_animation_group1[];
+extern struct weapon_firing_animation_table
+    crouched_pistol_firing_animation_group2[];
+extern struct weapon_firing_animation_table
+    crouched_pistol_firing_animation_group3[];
+extern struct weapon_firing_animation_table
+    crouched_doubles_firing_animation_group1[];
+extern struct weapon_firing_animation_table
+    crouched_doubles_firing_animation_group2[];
+extern struct weapon_firing_animation_table
+    crouched_doubles_firing_animation_group3[];
 
 extern struct weapon_firing_animation_table D_80030078;
 extern struct weapon_firing_animation_table D_800300C0;
@@ -164,27 +164,27 @@ extern struct weapon_firing_animation_table D_800308A0;
 extern struct weapon_firing_animation_table D_800308E8;
 extern struct weapon_firing_animation_table D_80030930;
 
-extern f32 animation_rate;
-extern s32 D_8002C904;
-extern s32 D_8002C908;
-extern s32 D_8002C90C;
-extern s32 D_8002C910;
+extern float animation_rate;
+extern int D_8002C904;
+extern int D_8002C908;
+extern int D_8002C90C;
+extern int D_8002C910;
 
-extern s32 D_8002CC58;
-extern s32 show_patrols_flag;
-extern s32 player1_guardID;
-extern s32 ptr_guard_data;
-extern s32 num_guards;
-extern s32 D_8002CC6C[];
-extern s32 D_8002CCA8;
-extern s32 D_8002CCAC;
-extern s32 D_8002CCB0;
-extern s32 D_8002CCB4;
-extern u8 D_8002CCB8;
-extern s32 num_bodies;
-extern s32 num_male_heads;
-extern s32 num_female_heads;
-extern s32 list_of_bodies[];
-extern s32 random_male_heads[];
-extern s32 random_female_heads[];
+extern int D_8002CC58;
+extern int show_patrols_flag;
+extern int player1_guardID;
+extern int ptr_guard_data;
+extern int num_guards;
+extern int D_8002CC6C[];
+extern int D_8002CCA8;
+extern int D_8002CCAC;
+extern int D_8002CCB0;
+extern int D_8002CCB4;
+extern unsigned char D_8002CCB8;
+extern int num_bodies;
+extern int num_male_heads;
+extern int num_female_heads;
+extern int list_of_bodies[];
+extern int random_male_heads[];
+extern int random_female_heads[];
 #endif

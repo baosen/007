@@ -1,0 +1,233 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+load("//tools/gnu:mips.bzl", "link", "objcopy")
+load("//tools/rz/deflate:deflate.bzl", "deflate")
+
+filegroup(
+    name = "includes",
+    srcs = [
+        "//src/game:bondtypes.h",
+        "//src/system:includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefarchZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefarchZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefarkZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefarkZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefaztZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefaztZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefcaveZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefcaveZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefcontrolZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefcontrolZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefcradZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefcradZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefcrypZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefcrypZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefdamZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefdamZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefdepoZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefdepoZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefdestZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefdestZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefjunZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefjunZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefpeteZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefpeteZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefrunZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefrunZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefsevbunkerZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefsevbunkerZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefsevbZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefsevbZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefsevxbZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefsevxbZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefsevxZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefsevxZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefsiloZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefsiloZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbriefstatueZ",
+    srcs = [
+        "Ubrief.h",
+        "UbriefstatueZ.c",
+        ":includes",
+    ],
+)
+
+gecc_library(
+    name = "UbrieftraZ",
+    srcs = [
+        "Ubrief.h",
+        "UbrieftraZ.c",
+        ":includes",
+    ],
+)
+
+link(
+    name = "brief",
+    srcs = [
+        ":UbriefarchZ",
+        ":UbriefarkZ",
+        ":UbriefaztZ",
+        ":UbriefcaveZ",
+        ":UbriefcontrolZ",
+        ":UbriefcradZ",
+        ":UbriefcrypZ",
+        ":UbriefdamZ",
+        ":UbriefdepoZ",
+        ":UbriefdestZ",
+        ":UbriefjunZ",
+        ":UbriefpeteZ",
+        ":UbriefrunZ",
+        ":UbriefsevbZ",
+        ":UbriefsevbunkerZ",
+        ":UbriefsevxZ",
+        ":UbriefsevxbZ",
+        ":UbriefsiloZ",
+        ":UbriefstatueZ",
+        ":UbrieftraZ",
+    ],
+    ld = "Ubrief.ld",
+)
+
+objcopy(
+    name = "seg",
+    srcs = [
+        ":brief",
+    ],
+)
+
+deflate(
+    name = "rz",
+    srcs = [
+        ":seg",
+    ],
+    visibility = ["//visibility:public"],
+)

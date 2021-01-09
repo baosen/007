@@ -1,0 +1,316 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+exports_files([
+    "music.h",
+])
+
+gecc_library(
+    name = "audio",
+    srcs = [
+        "audio.c",
+        "sched.h",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+filegroup(
+    name = "includes",
+    srcs = [
+        "bondaicommands.h",
+        "bondconstants.h",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "boot",
+    srcs = [
+        "boot.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "boss",
+    srcs = [
+        "bondconstants.h",
+        "boss.c",
+        ":includes",
+        "//src/roombuf:room_model_buffer.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+#genrule(
+#    name = "boss_pc",
+#    srcs = ["boss.c"],
+#    outs = ["boss_pc.c"],
+#    cmd = "$(location //tools/mips2ir) $< > $@",
+#    tools = ["//tools/mips2ir"],
+#    visibility = ["//visibility:public"],
+#)
+
+gecc_library(
+    name = "deb_print",
+    srcs = [
+        "deb_print.c",
+        "//src/cfb:cfb.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "deb_video",
+    srcs = [
+        "deb_video.c",
+        ":includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "deb",
+    srcs = [
+        "deb.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "debug_getlastRA",
+    srcs = [
+        "debug_getlastRA.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "debugmenu_vars",
+    srcs = [
+        "debugmenu_vars.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "debugmenu",
+    srcs = [
+        "debugmenu.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "init",
+    srcs = [
+        "init.c",
+        "sched.h",
+        ":includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "joy_rumble",
+    srcs = [
+        "joy_rumble.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "joy",
+    srcs = [
+        "joy.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "mema",
+    srcs = [
+        "mema.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "memp",
+    srcs = [
+        "memp.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "music",
+    srcs = [
+        "music.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "osMapTLB",
+    srcs = [
+        "osMapTLB.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "pi",
+    srcs = [
+        "pi.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "ramrom",
+    srcs = [
+        "ramrom.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "random",
+    srcs = [
+        "random.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+genrule(
+    name = "random_pc",
+    srcs = [
+        "random.c",
+    ],
+    outs = ["random_pc.c"],
+    cmd = "$(location //tools/mips2ir) $< > $@",
+    tools = [
+        "//tools/mips2ir",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "rmon",
+    srcs = [
+        "rmon.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "sched",
+    srcs = [
+        "sched.c",
+        "sched.h",
+        ":includes",
+        "//src/cfb:cfb.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "snd",
+    srcs = [
+        "music.h",
+        "snd.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "speed_graph",
+    srcs = [
+        "speed_graph.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "sprintf",
+    srcs = [
+        "sprintf.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "str",
+    srcs = [
+        "str.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "tlb_hardwire",
+    srcs = [
+        "tlb_hardwire.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "tlb_manage",
+    srcs = [
+        "tlb_manage.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "tlb_random",
+    srcs = [
+        "tlb_random.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "tlb_resolve",
+    srcs = [
+        "tlb_resolve.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "token",
+    srcs = [
+        "token.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "vi",
+    srcs = [
+        "vi.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "video",
+    srcs = [
+        "video.c",
+        ":includes",
+    ],
+    visibility = ["//visibility:public"],
+)

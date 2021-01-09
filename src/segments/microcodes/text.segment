@@ -1,0 +1,3 @@
+rsp/rspboot.o (.text)
+gsp/gspboot.o (.text)
+asp/aspboot.o (.text)

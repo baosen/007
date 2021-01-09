@@ -1,0 +1,25 @@
+{
+    "compressed": false,
+    "files": [
+        {
+            "offset": 3063264,
+            "length": 23488,
+            "name": "sfx.ctl"
+        },
+        {
+            "offset": 3086752,
+            "length": 797360,
+            "name": "sfx.tbl"
+        },
+        {
+            "offset": 3884112,
+            "length": 17312,
+            "name": "instruments.ctl"
+        },
+        {
+            "offset": 3901424,
+            "length": 397216,
+            "name": "instruments.tbl"
+        }
+    ]
+}

@@ -1,134 +1,124 @@
 #ifndef _CHROBJDATA_H_
 #define _CHROBJDATA_H_
-#include "ultra64.h"
 
 struct prop_pos_data {
-    u16 x;
-    u16 y;
-    u16 z;
+  unsigned short x, y, z;
 };
 
 struct item_related {
-    short num_entries_in_block;
-    short field_2;
-    struct prop_pos_data * ptr_block;
-    short total_cmd_indexval;
-    short field_A;
+  short num_entries_in_block;
+  short field_2;
+  struct prop_pos_data *ptr_block;
+  short total_cmd_indexval;
+  short field_A;
 };
 
 struct Gitemheader {
-    int offset_objtable;
-    void * guntype_modeldata;
-    int offset_objblock;
-    u16 num05soffset_entries;
-    u16 num_objgroups;
-    float drawdistance;
-    u16 num_entries;
-    u16 num_images;
-    int offset_imgdecl;
-    u32 isloaded;
+  int offset_objtable;
+  void *guntype_modeldata;
+  int offset_objblock;
+  unsigned short num05soffset_entries;
+  unsigned short num_objgroups;
+  float drawdistance;
+  unsigned short num_entries;
+  unsigned short num_images;
+  int offset_imgdecl;
+  unsigned int isloaded;
 };
 
-
 struct PitemZ_header {
-    s32 microcode_entry_num;
-    struct item_related * anonymous_1;
-    short anonymous_2;
-    short field_E;
-    s32 drawdistance;
-    float anonymous_4;
-    s32 anonymous_5;
-    s32 anonymous_6;
-    s32 anonymous_7;
+  int microcode_entry_num;
+  struct item_related *anonymous_1;
+  short anonymous_2;
+  short field_E;
+  int drawdistance;
+  float anonymous_4;
+  int anonymous_5;
+  int anonymous_6;
+  int anonymous_7;
 };
 
 struct p_itementry {
-    struct PitemZ_header * header;
-    char * filename;
-    float scale;
+  struct PitemZ_header *header;
+  char *filename;
+  float scale;
 };
 
 struct object_header {
-    int offset_obj_table;
-    void * ptr_archetype;
-    int offset_obj_offset_block;
-    short num_offset_entries;
-    short num_object_grps;
-    float anonymous_4;
-    short num_table_entries;
-    short num_image_entries;
-    int offset_img_declaration;
-    int is_loaded_in_mem;
+  int offset_obj_table;
+  void *ptr_archetype;
+  int offset_obj_offset_block;
+  short num_offset_entries;
+  short num_object_grps;
+  float anonymous_4;
+  short num_table_entries;
+  short num_image_entries;
+  int offset_img_declaration;
+  int is_loaded_in_mem;
 };
 
 struct c_itementry {
-    struct object_header * header;
-    char * filename;
-    float anonymous_1;
-    float anonymous_2;
-    int anonymous_3;
+  struct object_header *header;
+  char *filename;
+  float anonymous_1;
+  float anonymous_2;
+  int anonymous_3;
 };
 
 struct model_data {
-    u32  anonymous_0;
-    u32 *propposdata;
-    u32  anonymous_2;
+  unsigned int anonymous_0;
+  unsigned int *propposdata;
+  unsigned int anonymous_2;
 };
 
 struct player_gait_header {
-    u8 field_0x0;
-    u8 type;
-    u16 field_0x2;
-    struct player_gait_object_entry * field_0x4;
-    struct player_gait_pos_header * previous;
-    void * field_0xc;
-    void * field_0x10;
-    struct player_gait_pos_header * next;
+  unsigned char field_0x0;
+  unsigned char type;
+  unsigned short field_0x2;
+  struct player_gait_object_entry *field_0x4;
+  struct player_gait_pos_header *previous;
+  void *field_0xc;
+  void *field_0x10;
+  struct player_gait_pos_header *next;
 };
 
 struct player_gait_pos_header {
-    u8 field_0x0;
-    u8 type;
-    u16 field_0x2;
-    struct player_gait_position_entry * field_0x4;
-    struct player_gait_pos_header * previous;
-    void * field_0xc;
-    void * field_0x10;
-    struct player_gait_pos_header * next;
+  unsigned char field_0x0;
+  unsigned char type;
+  unsigned short field_0x2;
+  struct player_gait_position_entry *field_0x4;
+  struct player_gait_pos_header *previous;
+  void *field_0xc;
+  void *field_0x10;
+  struct player_gait_pos_header *next;
 };
 
 struct player_gait_object_entry {
-    u32 field_0x0;
-    struct player_gait_pos_header * ptr_header;
-    u32 field_0x8;
-    u32 field_0xc;
+  unsigned int field_0x0;
+  struct player_gait_pos_header *ptr_header;
+  unsigned int field_0x8;
+  unsigned int field_0xc;
 };
 
 struct player_gait_position_entry {
-    float z_scale;
-    float y_offset;
-    float xy_scale;
-    u16 field_0xc;
-    u16 field_0xe;
-    u16 field_0x10;
-    u16 field_0x12;
-    struct player_gait_pos_header * ptr_header;
-    u32 field_0x18;
+  float z_scale;
+  float y_offset;
+  float xy_scale;
+  unsigned short field_0xc;
+  unsigned short field_0xe;
+  unsigned short field_0x10;
+  unsigned short field_0x12;
+  struct player_gait_pos_header *ptr_header;
+  unsigned int field_0x18;
 };
 
 struct struct_13 {
-    void * ailist;
-    int ailistid;
+  void *ailist;
+  int ailistid;
 };
 
-struct headHat
-{
-    float xoffset;
-    float yoffset;
-    float zoffset;
-    float xsize;
-    float ysize;
-    float zsize;
+struct headHat {
+  float xoffset, yoffset, zoffset, xsize, ysize, zsize;
 };
 
 extern struct p_itementry PitemZ_entries[];

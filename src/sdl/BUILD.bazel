@@ -1,0 +1,9 @@
+#cc_binary(
+#    name = "sdl",
+#    srcs = [
+#        "log.cpp",
+#        "log.h",
+#        "main.cpp",
+#    ],
+#    linkopts = ["-lSDL2"],
+#)

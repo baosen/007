@@ -1,0 +1,14 @@
+filegroup(
+    name = "gecc_compiler_files",
+    srcs =
+        glob([
+            "**/*",
+        ]),
+    visibility = ["//visibility:public"],
+)
+
+exports_files(
+    glob([
+        "**/*",
+    ]),
+)

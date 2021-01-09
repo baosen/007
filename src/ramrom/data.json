@@ -1,0 +1,75 @@
+{
+    "compressed": false,
+    "files": [
+        {
+            "offset": 2880208,
+            "length": 20992,
+            "name": "Dam_1.bin"
+        },
+        {
+            "offset": 2901200,
+            "length": 8144,
+            "name": "Dam_2.bin"
+        },
+        {
+            "offset": 2909344,
+            "length": 6832,
+            "name": "Facility_1.bin"
+        },
+        {
+            "offset": 2916176,
+            "length": 9184,
+            "name": "Facility_2.bin"
+        },
+        {
+            "offset": 2925360,
+            "length": 7280,
+            "name": "Facility_3.bin"
+        },
+        {
+            "offset": 2932640,
+            "length": 10064,
+            "name": "Runway_1.bin"
+        },
+        {
+            "offset": 2942704,
+            "length": 10512,
+            "name": "Runway_2.bin"
+        },
+        {
+            "offset": 2953216,
+            "length": 13200,
+            "name": "BunkerI_1.bin"
+        },
+        {
+            "offset": 2966416,
+            "length": 21120,
+            "name": "BunkerI_2.bin"
+        },
+        {
+            "offset": 2987536,
+            "length": 8592,
+            "name": "Silo_1.bin"
+        },
+        {
+            "offset": 2996128,
+            "length": 8144,
+            "name": "Silo_2.bin"
+        },
+        {
+            "offset": 3004272,
+            "length": 6576,
+            "name": "Frigate_1.bin"
+        },
+        {
+            "offset": 3010848,
+            "length": 13536,
+            "name": "Frigate_2.bin"
+        },
+        {
+            "offset": 3024384,
+            "length": 15856,
+            "name": "Train.bin"
+        }
+    ]
+}

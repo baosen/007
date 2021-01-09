@@ -1,0 +1,13 @@
+filegroup(
+    name = "deflate_tool_files",
+    srcs = [
+        "1172compress.sh",
+        "gzip",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+exports_files([
+    "1172compress.sh",
+    "gzip",
+])

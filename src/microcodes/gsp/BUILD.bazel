@@ -1,0 +1,11 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+
+mips_library(
+    name = "gspboot",
+    srcs = [
+        "gspboot.data.bin",
+        "gspboot.s",
+        "gspboot.text.bin",
+    ],
+    visibility = ["//visibility:public"],
+)

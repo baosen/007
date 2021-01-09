@@ -1,0 +1,1705 @@
+{
+    "compressed": true,
+    "files": [
+        {
+            "offset": 8039632,
+            "length": 9600,
+            "name": "PICBMZ.bin"
+        },
+        {
+            "offset": 8049232,
+            "length": 1968,
+            "name": "PICBM_noseZ.bin"
+        },
+        {
+            "offset": 8051200,
+            "length": 480,
+            "name": "Pak47magZ.bin"
+        },
+        {
+            "offset": 8051680,
+            "length": 352,
+            "name": "Palarm1Z.bin"
+        },
+        {
+            "offset": 8052032,
+            "length": 416,
+            "name": "Palarm2Z.bin"
+        },
+        {
+            "offset": 8052448,
+            "length": 576,
+            "name": "Pammo_crate1Z.bin"
+        },
+        {
+            "offset": 8053024,
+            "length": 576,
+            "name": "Pammo_crate2Z.bin"
+        },
+        {
+            "offset": 8053600,
+            "length": 592,
+            "name": "Pammo_crate3Z.bin"
+        },
+        {
+            "offset": 8054192,
+            "length": 624,
+            "name": "Pammo_crate4Z.bin"
+        },
+        {
+            "offset": 8054816,
+            "length": 704,
+            "name": "Pammo_crate5Z.bin"
+        },
+        {
+            "offset": 8055520,
+            "length": 7264,
+            "name": "PapcZ.bin"
+        },
+        {
+            "offset": 8062784,
+            "length": 480,
+            "name": "Parchsecdoor1Z.bin"
+        },
+        {
+            "offset": 8063264,
+            "length": 464,
+            "name": "Parchsecdoor2Z.bin"
+        },
+        {
+            "offset": 8063728,
+            "length": 3584,
+            "name": "ParticZ.bin"
+        },
+        {
+            "offset": 8067312,
+            "length": 2320,
+            "name": "PartictrailerZ.bin"
+        },
+        {
+            "offset": 8069632,
+            "length": 576,
+            "name": "PbarricadeZ.bin"
+        },
+        {
+            "offset": 8070208,
+            "length": 848,
+            "name": "Pbin1Z.bin"
+        },
+        {
+            "offset": 8071056,
+            "length": 224,
+            "name": "Pblotter1Z.bin"
+        },
+        {
+            "offset": 8071280,
+            "length": 1184,
+            "name": "PbodyarmourZ.bin"
+        },
+        {
+            "offset": 8072464,
+            "length": 1056,
+            "name": "PbodyarmourvestZ.bin"
+        },
+        {
+            "offset": 8073520,
+            "length": 512,
+            "name": "PbollardZ.bin"
+        },
+        {
+            "offset": 8074032,
+            "length": 368,
+            "name": "PbombZ.bin"
+        },
+        {
+            "offset": 8074400,
+            "length": 400,
+            "name": "Pbook1Z.bin"
+        },
+        {
+            "offset": 8074800,
+            "length": 1776,
+            "name": "Pbookshelf1Z.bin"
+        },
+        {
+            "offset": 8076576,
+            "length": 368,
+            "name": "Pborg_crateZ.bin"
+        },
+        {
+            "offset": 8076944,
+            "length": 512,
+            "name": "PboxcartridgesZ.bin"
+        },
+        {
+            "offset": 8077456,
+            "length": 1072,
+            "name": "Pboxes2x4Z.bin"
+        },
+        {
+            "offset": 8078528,
+            "length": 1088,
+            "name": "Pboxes3x4Z.bin"
+        },
+        {
+            "offset": 8079616,
+            "length": 1632,
+            "name": "Pboxes4x4Z.bin"
+        },
+        {
+            "offset": 8081248,
+            "length": 880,
+            "name": "PbrakeunitZ.bin"
+        },
+        {
+            "offset": 8082128,
+            "length": 1408,
+            "name": "Pbridge_console1aZ.bin"
+        },
+        {
+            "offset": 8083536,
+            "length": 1376,
+            "name": "Pbridge_console1bZ.bin"
+        },
+        {
+            "offset": 8084912,
+            "length": 1408,
+            "name": "Pbridge_console2aZ.bin"
+        },
+        {
+            "offset": 8086320,
+            "length": 1264,
+            "name": "Pbridge_console2bZ.bin"
+        },
+        {
+            "offset": 8087584,
+            "length": 1360,
+            "name": "Pbridge_console3aZ.bin"
+        },
+        {
+            "offset": 8088944,
+            "length": 1424,
+            "name": "Pbridge_console3bZ.bin"
+        },
+        {
+            "offset": 8090368,
+            "length": 3296,
+            "name": "PcarbmwZ.bin"
+        },
+        {
+            "offset": 8093664,
+            "length": 512,
+            "name": "Pcard_box1Z.bin"
+        },
+        {
+            "offset": 8094176,
+            "length": 576,
+            "name": "Pcard_box2Z.bin"
+        },
+        {
+            "offset": 8094752,
+            "length": 496,
+            "name": "Pcard_box3Z.bin"
+        },
+        {
+            "offset": 8095248,
+            "length": 432,
+            "name": "Pcard_box4Z.bin"
+        },
+        {
+            "offset": 8095680,
+            "length": 512,
+            "name": "Pcard_box5Z.bin"
+        },
+        {
+            "offset": 8096192,
+            "length": 496,
+            "name": "Pcard_box6Z.bin"
+        },
+        {
+            "offset": 8096688,
+            "length": 3072,
+            "name": "PcarescortZ.bin"
+        },
+        {
+            "offset": 8099760,
+            "length": 3120,
+            "name": "PcargolfZ.bin"
+        },
+        {
+            "offset": 8102880,
+            "length": 4416,
+            "name": "PcarweirdZ.bin"
+        },
+        {
+            "offset": 8107296,
+            "length": 5632,
+            "name": "PcarzilZ.bin"
+        },
+        {
+            "offset": 8112928,
+            "length": 896,
+            "name": "PcctvZ.bin"
+        },
+        {
+            "offset": 8113824,
+            "length": 1376,
+            "name": "PchraudiotapeZ.bin"
+        },
+        {
+            "offset": 8115200,
+            "length": 864,
+            "name": "PchrautoshotZ.bin"
+        },
+        {
+            "offset": 8116064,
+            "length": 2176,
+            "name": "PchrblackboxZ.bin"
+        },
+        {
+            "offset": 8118240,
+            "length": 336,
+            "name": "PchrblueprintsZ.bin"
+        },
+        {
+            "offset": 8118576,
+            "length": 496,
+            "name": "PchrbombcaseZ.bin"
+        },
+        {
+            "offset": 8119072,
+            "length": 2272,
+            "name": "PchrbombdefuserZ.bin"
+        },
+        {
+            "offset": 8121344,
+            "length": 400,
+            "name": "PchrbriefcaseZ.bin"
+        },
+        {
+            "offset": 8121744,
+            "length": 3504,
+            "name": "PchrbugZ.bin"
+        },
+        {
+            "offset": 8125248,
+            "length": 368,
+            "name": "PchrbugdetectorZ.bin"
+        },
+        {
+            "offset": 8125616,
+            "length": 368,
+            "name": "PchrbungeeZ.bin"
+        },
+        {
+            "offset": 8125984,
+            "length": 1680,
+            "name": "PchrcameraZ.bin"
+        },
+        {
+            "offset": 8127664,
+            "length": 416,
+            "name": "PchrcircuitboardZ.bin"
+        },
+        {
+            "offset": 8128080,
+            "length": 640,
+            "name": "PchrclipboardZ.bin"
+        },
+        {
+            "offset": 8128720,
+            "length": 368,
+            "name": "PchrcreditcardZ.bin"
+        },
+        {
+            "offset": 8129088,
+            "length": 368,
+            "name": "PchrdarkglassesZ.bin"
+        },
+        {
+            "offset": 8129456,
+            "length": 416,
+            "name": "PchrdatathiefZ.bin"
+        },
+        {
+            "offset": 8129872,
+            "length": 496,
+            "name": "PchrdattapeZ.bin"
+        },
+        {
+            "offset": 8130368,
+            "length": 2144,
+            "name": "PchrdoordecoderZ.bin"
+        },
+        {
+            "offset": 8132512,
+            "length": 368,
+            "name": "PchrdoorexploderZ.bin"
+        },
+        {
+            "offset": 8132880,
+            "length": 1232,
+            "name": "PchrdossierredZ.bin"
+        },
+        {
+            "offset": 8134112,
+            "length": 368,
+            "name": "PchrdynamiteZ.bin"
+        },
+        {
+            "offset": 8134480,
+            "length": 368,
+            "name": "PchrexplosivepenZ.bin"
+        },
+        {
+            "offset": 8134848,
+            "length": 1280,
+            "name": "PchrextinguisherZ.bin"
+        },
+        {
+            "offset": 8136128,
+            "length": 368,
+            "name": "PchrfingergunZ.bin"
+        },
+        {
+            "offset": 8136496,
+            "length": 368,
+            "name": "PchrflarepistolZ.bin"
+        },
+        {
+            "offset": 8136864,
+            "length": 1120,
+            "name": "Pchrfnp90Z.bin"
+        },
+        {
+            "offset": 8137984,
+            "length": 3856,
+            "name": "PchrgaskeyringZ.bin"
+        },
+        {
+            "offset": 8141840,
+            "length": 368,
+            "name": "PchrgoldbarZ.bin"
+        },
+        {
+            "offset": 8142208,
+            "length": 624,
+            "name": "PchrgoldenZ.bin"
+        },
+        {
+            "offset": 8142832,
+            "length": 3744,
+            "name": "PchrgoldeneyekeyZ.bin"
+        },
+        {
+            "offset": 8146576,
+            "length": 368,
+            "name": "PchrgoldwppkZ.bin"
+        },
+        {
+            "offset": 8146944,
+            "length": 880,
+            "name": "PchrgrenadeZ.bin"
+        },
+        {
+            "offset": 8147824,
+            "length": 912,
+            "name": "PchrgrenadelaunchZ.bin"
+        },
+        {
+            "offset": 8148736,
+            "length": 624,
+            "name": "PchrgrenaderoundZ.bin"
+        },
+        {
+            "offset": 8149360,
+            "length": 368,
+            "name": "PchrheroinZ.bin"
+        },
+        {
+            "offset": 8149728,
+            "length": 1008,
+            "name": "PchrkalashZ.bin"
+        },
+        {
+            "offset": 8150736,
+            "length": 496,
+            "name": "PchrkeyanalysercaseZ.bin"
+        },
+        {
+            "offset": 8151232,
+            "length": 3744,
+            "name": "PchrkeyboltZ.bin"
+        },
+        {
+            "offset": 8154976,
+            "length": 5216,
+            "name": "PchrkeyyaleZ.bin"
+        },
+        {
+            "offset": 8160192,
+            "length": 512,
+            "name": "PchrknifeZ.bin"
+        },
+        {
+            "offset": 8160704,
+            "length": 960,
+            "name": "PchrlaserZ.bin"
+        },
+        {
+            "offset": 8161664,
+            "length": 368,
+            "name": "PchrlectreZ.bin"
+        },
+        {
+            "offset": 8162032,
+            "length": 368,
+            "name": "PchrlockexploderZ.bin"
+        },
+        {
+            "offset": 8162400,
+            "length": 976,
+            "name": "Pchrm16Z.bin"
+        },
+        {
+            "offset": 8163376,
+            "length": 336,
+            "name": "PchrmapZ.bin"
+        },
+        {
+            "offset": 8163712,
+            "length": 2288,
+            "name": "PchrmicrocameraZ.bin"
+        },
+        {
+            "offset": 8166000,
+            "length": 368,
+            "name": "PchrmicrocodeZ.bin"
+        },
+        {
+            "offset": 8166368,
+            "length": 368,
+            "name": "PchrmicrofilmZ.bin"
+        },
+        {
+            "offset": 8166736,
+            "length": 368,
+            "name": "PchrmoneyZ.bin"
+        },
+        {
+            "offset": 8167104,
+            "length": 896,
+            "name": "Pchrmp5kZ.bin"
+        },
+        {
+            "offset": 8168000,
+            "length": 1040,
+            "name": "Pchrmp5ksilZ.bin"
+        },
+        {
+            "offset": 8169040,
+            "length": 368,
+            "name": "PchrpitongunZ.bin"
+        },
+        {
+            "offset": 8169408,
+            "length": 656,
+            "name": "PchrplansZ.bin"
+        },
+        {
+            "offset": 8170064,
+            "length": 1120,
+            "name": "PchrplastiqueZ.bin"
+        },
+        {
+            "offset": 8171184,
+            "length": 2240,
+            "name": "PchrpolarizedglassesZ.bin"
+        },
+        {
+            "offset": 8173424,
+            "length": 1120,
+            "name": "PchrproximitymineZ.bin"
+        },
+        {
+            "offset": 8174544,
+            "length": 1120,
+            "name": "PchrremotemineZ.bin"
+        },
+        {
+            "offset": 8175664,
+            "length": 1456,
+            "name": "PchrrocketZ.bin"
+        },
+        {
+            "offset": 8177120,
+            "length": 992,
+            "name": "PchrrocketlaunchZ.bin"
+        },
+        {
+            "offset": 8178112,
+            "length": 992,
+            "name": "PchrrugerZ.bin"
+        },
+        {
+            "offset": 8179104,
+            "length": 496,
+            "name": "PchrsafecrackercaseZ.bin"
+        },
+        {
+            "offset": 8179600,
+            "length": 848,
+            "name": "PchrshotgunZ.bin"
+        },
+        {
+            "offset": 8180448,
+            "length": 368,
+            "name": "PchrsilverwppkZ.bin"
+        },
+        {
+            "offset": 8180816,
+            "length": 896,
+            "name": "PchrskorpionZ.bin"
+        },
+        {
+            "offset": 8181712,
+            "length": 912,
+            "name": "PchrsniperrifleZ.bin"
+        },
+        {
+            "offset": 8182624,
+            "length": 880,
+            "name": "PchrspectreZ.bin"
+        },
+        {
+            "offset": 8183504,
+            "length": 368,
+            "name": "PchrspooltapeZ.bin"
+        },
+        {
+            "offset": 8183872,
+            "length": 368,
+            "name": "PchrspyfileZ.bin"
+        },
+        {
+            "offset": 8184240,
+            "length": 544,
+            "name": "PchrstafflistZ.bin"
+        },
+        {
+            "offset": 8184784,
+            "length": 448,
+            "name": "PchrtesttubeZ.bin"
+        },
+        {
+            "offset": 8185232,
+            "length": 544,
+            "name": "PchrthrowknifeZ.bin"
+        },
+        {
+            "offset": 8185776,
+            "length": 1328,
+            "name": "PchrtimedmineZ.bin"
+        },
+        {
+            "offset": 8187104,
+            "length": 656,
+            "name": "Pchrtt33Z.bin"
+        },
+        {
+            "offset": 8187760,
+            "length": 720,
+            "name": "PchruziZ.bin"
+        },
+        {
+            "offset": 8188480,
+            "length": 720,
+            "name": "PchrvideotapeZ.bin"
+        },
+        {
+            "offset": 8189200,
+            "length": 512,
+            "name": "PchrweaponcaseZ.bin"
+        },
+        {
+            "offset": 8189712,
+            "length": 576,
+            "name": "PchrwppkZ.bin"
+        },
+        {
+            "offset": 8190288,
+            "length": 736,
+            "name": "PchrwppksilZ.bin"
+        },
+        {
+            "offset": 8191024,
+            "length": 368,
+            "name": "PchrwristdartZ.bin"
+        },
+        {
+            "offset": 8191392,
+            "length": 1664,
+            "name": "Pconsole1Z.bin"
+        },
+        {
+            "offset": 8193056,
+            "length": 1664,
+            "name": "Pconsole2Z.bin"
+        },
+        {
+            "offset": 8194720,
+            "length": 1680,
+            "name": "Pconsole3Z.bin"
+        },
+        {
+            "offset": 8196400,
+            "length": 1056,
+            "name": "Pconsole_sev2aZ.bin"
+        },
+        {
+            "offset": 8197456,
+            "length": 1216,
+            "name": "Pconsole_sev2bZ.bin"
+        },
+        {
+            "offset": 8198672,
+            "length": 1088,
+            "name": "Pconsole_sev2cZ.bin"
+        },
+        {
+            "offset": 8199760,
+            "length": 1072,
+            "name": "Pconsole_sev2dZ.bin"
+        },
+        {
+            "offset": 8200832,
+            "length": 1072,
+            "name": "Pconsole_sev_GEaZ.bin"
+        },
+        {
+            "offset": 8201904,
+            "length": 1072,
+            "name": "Pconsole_sev_GEbZ.bin"
+        },
+        {
+            "offset": 8202976,
+            "length": 1152,
+            "name": "Pconsole_sevaZ.bin"
+        },
+        {
+            "offset": 8204128,
+            "length": 1136,
+            "name": "Pconsole_sevbZ.bin"
+        },
+        {
+            "offset": 8205264,
+            "length": 1072,
+            "name": "Pconsole_sevcZ.bin"
+        },
+        {
+            "offset": 8206336,
+            "length": 1072,
+            "name": "Pconsole_sevdZ.bin"
+        },
+        {
+            "offset": 8207408,
+            "length": 400,
+            "name": "Pcryptdoor1aZ.bin"
+        },
+        {
+            "offset": 8207808,
+            "length": 400,
+            "name": "Pcryptdoor1bZ.bin"
+        },
+        {
+            "offset": 8208208,
+            "length": 400,
+            "name": "Pcryptdoor2aZ.bin"
+        },
+        {
+            "offset": 8208608,
+            "length": 400,
+            "name": "Pcryptdoor2bZ.bin"
+        },
+        {
+            "offset": 8209008,
+            "length": 624,
+            "name": "Pcryptdoor3Z.bin"
+        },
+        {
+            "offset": 8209632,
+            "length": 384,
+            "name": "Pcryptdoor4Z.bin"
+        },
+        {
+            "offset": 8210016,
+            "length": 640,
+            "name": "PdamchaindoorZ.bin"
+        },
+        {
+            "offset": 8210656,
+            "length": 544,
+            "name": "PdamgatedoorZ.bin"
+        },
+        {
+            "offset": 8211200,
+            "length": 880,
+            "name": "PdamtundoorZ.bin"
+        },
+        {
+            "offset": 8212080,
+            "length": 416,
+            "name": "Pdepot_door_steelZ.bin"
+        },
+        {
+            "offset": 8212496,
+            "length": 576,
+            "name": "Pdepot_gate_entryZ.bin"
+        },
+        {
+            "offset": 8213072,
+            "length": 384,
+            "name": "Pdesk1Z.bin"
+        },
+        {
+            "offset": 8213456,
+            "length": 384,
+            "name": "Pdesk2Z.bin"
+        },
+        {
+            "offset": 8213840,
+            "length": 576,
+            "name": "Pdesk_arecibo1Z.bin"
+        },
+        {
+            "offset": 8214416,
+            "length": 768,
+            "name": "Pdesk_lamp2Z.bin"
+        },
+        {
+            "offset": 8215184,
+            "length": 6384,
+            "name": "Pdest_engineZ.bin"
+        },
+        {
+            "offset": 8221568,
+            "length": 1632,
+            "name": "Pdest_exocetZ.bin"
+        },
+        {
+            "offset": 8223200,
+            "length": 1648,
+            "name": "Pdest_gunZ.bin"
+        },
+        {
+            "offset": 8224848,
+            "length": 2208,
+            "name": "Pdest_harpoonZ.bin"
+        },
+        {
+            "offset": 8227056,
+            "length": 4016,
+            "name": "Pdest_seawolfZ.bin"
+        },
+        {
+            "offset": 8231072,
+            "length": 448,
+            "name": "Pdisc_readerZ.bin"
+        },
+        {
+            "offset": 8231520,
+            "length": 400,
+            "name": "Pdisk_drive1Z.bin"
+        },
+        {
+            "offset": 8231920,
+            "length": 384,
+            "name": "Pdoor_azt_chairZ.bin"
+        },
+        {
+            "offset": 8232304,
+            "length": 1088,
+            "name": "Pdoor_azt_deskZ.bin"
+        },
+        {
+            "offset": 8233392,
+            "length": 912,
+            "name": "Pdoor_azt_desk_topZ.bin"
+        },
+        {
+            "offset": 8234304,
+            "length": 560,
+            "name": "Pdoor_aztecZ.bin"
+        },
+        {
+            "offset": 8234864,
+            "length": 768,
+            "name": "Pdoor_dest1Z.bin"
+        },
+        {
+            "offset": 8235632,
+            "length": 960,
+            "name": "Pdoor_dest2Z.bin"
+        },
+        {
+            "offset": 8236592,
+            "length": 1376,
+            "name": "Pdoor_eyelidZ.bin"
+        },
+        {
+            "offset": 8237968,
+            "length": 2640,
+            "name": "Pdoor_irisZ.bin"
+        },
+        {
+            "offset": 8240608,
+            "length": 752,
+            "name": "Pdoor_mfZ.bin"
+        },
+        {
+            "offset": 8241360,
+            "length": 880,
+            "name": "Pdoor_roller1Z.bin"
+        },
+        {
+            "offset": 8242240,
+            "length": 576,
+            "name": "Pdoor_roller2Z.bin"
+        },
+        {
+            "offset": 8242816,
+            "length": 576,
+            "name": "Pdoor_roller3Z.bin"
+        },
+        {
+            "offset": 8243392,
+            "length": 608,
+            "name": "Pdoor_roller4Z.bin"
+        },
+        {
+            "offset": 8244000,
+            "length": 304,
+            "name": "Pdoor_rollertrainZ.bin"
+        },
+        {
+            "offset": 8244304,
+            "length": 608,
+            "name": "Pdoor_st_arec1Z.bin"
+        },
+        {
+            "offset": 8244912,
+            "length": 736,
+            "name": "Pdoor_st_arec2Z.bin"
+        },
+        {
+            "offset": 8245648,
+            "length": 416,
+            "name": "Pdoor_winZ.bin"
+        },
+        {
+            "offset": 8246064,
+            "length": 1136,
+            "name": "PdoorconsoleZ.bin"
+        },
+        {
+            "offset": 8247200,
+            "length": 880,
+            "name": "PdoorpanelZ.bin"
+        },
+        {
+            "offset": 8248080,
+            "length": 336,
+            "name": "Pdoorprison1Z.bin"
+        },
+        {
+            "offset": 8248416,
+            "length": 512,
+            "name": "PdoorstatgateZ.bin"
+        },
+        {
+            "offset": 8248928,
+            "length": 288,
+            "name": "PexplosionbitZ.bin"
+        },
+        {
+            "offset": 8249216,
+            "length": 384,
+            "name": "Pfiling_cabinet1Z.bin"
+        },
+        {
+            "offset": 8249600,
+            "length": 304,
+            "name": "PflagZ.bin"
+        },
+        {
+            "offset": 8249904,
+            "length": 800,
+            "name": "PfloppyZ.bin"
+        },
+        {
+            "offset": 8250704,
+            "length": 416,
+            "name": "Pfnp90magZ.bin"
+        },
+        {
+            "offset": 8251120,
+            "length": 896,
+            "name": "Pgas_plant_met1_do1Z.bin"
+        },
+        {
+            "offset": 8252016,
+            "length": 480,
+            "name": "Pgas_plant_sw2_do1Z.bin"
+        },
+        {
+            "offset": 8252496,
+            "length": 512,
+            "name": "Pgas_plant_sw3_do1Z.bin"
+        },
+        {
+            "offset": 8253008,
+            "length": 352,
+            "name": "Pgas_plant_sw4_do1Z.bin"
+        },
+        {
+            "offset": 8253360,
+            "length": 656,
+            "name": "Pgas_plant_sw_do1Z.bin"
+        },
+        {
+            "offset": 8254016,
+            "length": 528,
+            "name": "Pgas_plant_wc_cub1Z.bin"
+        },
+        {
+            "offset": 8254544,
+            "length": 528,
+            "name": "PgasbarrelZ.bin"
+        },
+        {
+            "offset": 8255072,
+            "length": 1344,
+            "name": "PgasbarrelsZ.bin"
+        },
+        {
+            "offset": 8256416,
+            "length": 1376,
+            "name": "Pgasplant_clear_doorZ.bin"
+        },
+        {
+            "offset": 8257792,
+            "length": 1456,
+            "name": "PgastankZ.bin"
+        },
+        {
+            "offset": 8259248,
+            "length": 352,
+            "name": "Pglassware1Z.bin"
+        },
+        {
+            "offset": 8259600,
+            "length": 656,
+            "name": "Pglassware2Z.bin"
+        },
+        {
+            "offset": 8260256,
+            "length": 528,
+            "name": "Pglassware3Z.bin"
+        },
+        {
+            "offset": 8260784,
+            "length": 1408,
+            "name": "Pglassware4Z.bin"
+        },
+        {
+            "offset": 8262192,
+            "length": 3760,
+            "name": "PgoldeneyelogoZ.bin"
+        },
+        {
+            "offset": 8265952,
+            "length": 512,
+            "name": "PgoldenshellsZ.bin"
+        },
+        {
+            "offset": 8266464,
+            "length": 2000,
+            "name": "PgroundgunZ.bin"
+        },
+        {
+            "offset": 8268464,
+            "length": 1856,
+            "name": "Pgun_runway1Z.bin"
+        },
+        {
+            "offset": 8270320,
+            "length": 672,
+            "name": "PhatberetZ.bin"
+        },
+        {
+            "offset": 8270992,
+            "length": 720,
+            "name": "PhatberetblueZ.bin"
+        },
+        {
+            "offset": 8271712,
+            "length": 736,
+            "name": "PhatberetredZ.bin"
+        },
+        {
+            "offset": 8272448,
+            "length": 208,
+            "name": "PhatchboltZ.bin"
+        },
+        {
+            "offset": 8272656,
+            "length": 544,
+            "name": "PhatchdoorZ.bin"
+        },
+        {
+            "offset": 8273200,
+            "length": 368,
+            "name": "PhatchsevxZ.bin"
+        },
+        {
+            "offset": 8273568,
+            "length": 560,
+            "name": "PhatfurryZ.bin"
+        },
+        {
+            "offset": 8274128,
+            "length": 544,
+            "name": "PhatfurryblackZ.bin"
+        },
+        {
+            "offset": 8274672,
+            "length": 528,
+            "name": "PhatfurrybrownZ.bin"
+        },
+        {
+            "offset": 8275200,
+            "length": 560,
+            "name": "PhathelmetZ.bin"
+        },
+        {
+            "offset": 8275760,
+            "length": 560,
+            "name": "PhathelmetgreyZ.bin"
+        },
+        {
+            "offset": 8276320,
+            "length": 992,
+            "name": "PhatmoonZ.bin"
+        },
+        {
+            "offset": 8277312,
+            "length": 784,
+            "name": "PhatpeakedZ.bin"
+        },
+        {
+            "offset": 8278096,
+            "length": 592,
+            "name": "PhattbirdZ.bin"
+        },
+        {
+            "offset": 8278688,
+            "length": 624,
+            "name": "PhattbirdbrownZ.bin"
+        },
+        {
+            "offset": 8279312,
+            "length": 16928,
+            "name": "PhelicopterZ.bin"
+        },
+        {
+            "offset": 8296240,
+            "length": 6000,
+            "name": "PhindZ.bin"
+        },
+        {
+            "offset": 8302240,
+            "length": 4448,
+            "name": "PjeepZ.bin"
+        },
+        {
+            "offset": 8306688,
+            "length": 608,
+            "name": "Pjerry_can1Z.bin"
+        },
+        {
+            "offset": 8307296,
+            "length": 1920,
+            "name": "Pjungle3_treeZ.bin"
+        },
+        {
+            "offset": 8309216,
+            "length": 1328,
+            "name": "Pjungle5_treeZ.bin"
+        },
+        {
+            "offset": 8310544,
+            "length": 848,
+            "name": "Pkey_holderZ.bin"
+        },
+        {
+            "offset": 8311392,
+            "length": 368,
+            "name": "Pkeyboard1Z.bin"
+        },
+        {
+            "offset": 8311760,
+            "length": 672,
+            "name": "Pkit_units1Z.bin"
+        },
+        {
+            "offset": 8312432,
+            "length": 976,
+            "name": "PlabbenchZ.bin"
+        },
+        {
+            "offset": 8313408,
+            "length": 624,
+            "name": "PlandmineZ.bin"
+        },
+        {
+            "offset": 8314032,
+            "length": 4032,
+            "name": "PlegalpageZ.bin"
+        },
+        {
+            "offset": 8318064,
+            "length": 352,
+            "name": "Pletter_tray1Z.bin"
+        },
+        {
+            "offset": 8318416,
+            "length": 400,
+            "name": "Plocker3Z.bin"
+        },
+        {
+            "offset": 8318816,
+            "length": 400,
+            "name": "Plocker4Z.bin"
+        },
+        {
+            "offset": 8319216,
+            "length": 320,
+            "name": "Pm16magZ.bin"
+        },
+        {
+            "offset": 8319536,
+            "length": 512,
+            "name": "PmagnumshellsZ.bin"
+        },
+        {
+            "offset": 8320048,
+            "length": 768,
+            "name": "Pmainframe1Z.bin"
+        },
+        {
+            "offset": 8320816,
+            "length": 720,
+            "name": "Pmainframe2Z.bin"
+        },
+        {
+            "offset": 8321536,
+            "length": 832,
+            "name": "Pmetal_chair1Z.bin"
+        },
+        {
+            "offset": 8322368,
+            "length": 448,
+            "name": "Pmetal_crate1Z.bin"
+        },
+        {
+            "offset": 8322816,
+            "length": 448,
+            "name": "Pmetal_crate2Z.bin"
+        },
+        {
+            "offset": 8323264,
+            "length": 448,
+            "name": "Pmetal_crate3Z.bin"
+        },
+        {
+            "offset": 8323712,
+            "length": 448,
+            "name": "Pmetal_crate4Z.bin"
+        },
+        {
+            "offset": 8324160,
+            "length": 6368,
+            "name": "PmilcopterZ.bin"
+        },
+        {
+            "offset": 8330528,
+            "length": 8960,
+            "name": "PmiltruckZ.bin"
+        },
+        {
+            "offset": 8339488,
+            "length": 2576,
+            "name": "Pmissile_rack2Z.bin"
+        },
+        {
+            "offset": 8342064,
+            "length": 992,
+            "name": "Pmissile_rackZ.bin"
+        },
+        {
+            "offset": 8343056,
+            "length": 832,
+            "name": "PmodemboxZ.bin"
+        },
+        {
+            "offset": 8343888,
+            "length": 3776,
+            "name": "PmotorbikeZ.bin"
+        },
+        {
+            "offset": 8347664,
+            "length": 336,
+            "name": "Pmp5kmagZ.bin"
+        },
+        {
+            "offset": 8348000,
+            "length": 10976,
+            "name": "PnintendologoZ.bin"
+        },
+        {
+            "offset": 8358976,
+            "length": 624,
+            "name": "Poil_drum1Z.bin"
+        },
+        {
+            "offset": 8359600,
+            "length": 752,
+            "name": "Poil_drum2Z.bin"
+        },
+        {
+            "offset": 8360352,
+            "length": 752,
+            "name": "Poil_drum3Z.bin"
+        },
+        {
+            "offset": 8361104,
+            "length": 752,
+            "name": "Poil_drum5Z.bin"
+        },
+        {
+            "offset": 8361856,
+            "length": 784,
+            "name": "Poil_drum6Z.bin"
+        },
+        {
+            "offset": 8362640,
+            "length": 768,
+            "name": "Poil_drum7Z.bin"
+        },
+        {
+            "offset": 8363408,
+            "length": 2640,
+            "name": "PpadlockZ.bin"
+        },
+        {
+            "offset": 8366048,
+            "length": 1104,
+            "name": "PpalmZ.bin"
+        },
+        {
+            "offset": 8367152,
+            "length": 1232,
+            "name": "PpalmtreeZ.bin"
+        },
+        {
+            "offset": 8368384,
+            "length": 320,
+            "name": "Pphone1Z.bin"
+        },
+        {
+            "offset": 8368704,
+            "length": 9696,
+            "name": "PplaneZ.bin"
+        },
+        {
+            "offset": 8378400,
+            "length": 960,
+            "name": "Pplant11Z.bin"
+        },
+        {
+            "offset": 8379360,
+            "length": 912,
+            "name": "Pplant1Z.bin"
+        },
+        {
+            "offset": 8380272,
+            "length": 864,
+            "name": "Pplant2Z.bin"
+        },
+        {
+            "offset": 8381136,
+            "length": 1040,
+            "name": "Pplant2bZ.bin"
+        },
+        {
+            "offset": 8382176,
+            "length": 1104,
+            "name": "Pplant3Z.bin"
+        },
+        {
+            "offset": 8383280,
+            "length": 432,
+            "name": "Pradio_unit1Z.bin"
+        },
+        {
+            "offset": 8383712,
+            "length": 448,
+            "name": "Pradio_unit2Z.bin"
+        },
+        {
+            "offset": 8384160,
+            "length": 448,
+            "name": "Pradio_unit3Z.bin"
+        },
+        {
+            "offset": 8384608,
+            "length": 448,
+            "name": "Pradio_unit4Z.bin"
+        },
+        {
+            "offset": 8385056,
+            "length": 1632,
+            "name": "ProofgunZ.bin"
+        },
+        {
+            "offset": 8386688,
+            "length": 848,
+            "name": "PsafeZ.bin"
+        },
+        {
+            "offset": 8387536,
+            "length": 1264,
+            "name": "PsafedoorZ.bin"
+        },
+        {
+            "offset": 8388800,
+            "length": 5488,
+            "name": "Psat1_reflectZ.bin"
+        },
+        {
+            "offset": 8394288,
+            "length": 288,
+            "name": "PsatboxZ.bin"
+        },
+        {
+            "offset": 8394576,
+            "length": 1120,
+            "name": "PsatdishZ.bin"
+        },
+        {
+            "offset": 8395696,
+            "length": 416,
+            "name": "Psec_panelZ.bin"
+        },
+        {
+            "offset": 8396112,
+            "length": 656,
+            "name": "Psev_door3Z.bin"
+        },
+        {
+            "offset": 8396768,
+            "length": 912,
+            "name": "Psev_door3_windZ.bin"
+        },
+        {
+            "offset": 8397680,
+            "length": 992,
+            "name": "Psev_door4_windZ.bin"
+        },
+        {
+            "offset": 8398672,
+            "length": 848,
+            "name": "Psev_doorZ.bin"
+        },
+        {
+            "offset": 8399520,
+            "length": 816,
+            "name": "Psev_door_v1Z.bin"
+        },
+        {
+            "offset": 8400336,
+            "length": 944,
+            "name": "Psev_trislideZ.bin"
+        },
+        {
+            "offset": 8401280,
+            "length": 3872,
+            "name": "PsevdishZ.bin"
+        },
+        {
+            "offset": 8405152,
+            "length": 736,
+            "name": "PsevdoormetslideZ.bin"
+        },
+        {
+            "offset": 8405888,
+            "length": 368,
+            "name": "PsevdoornowindZ.bin"
+        },
+        {
+            "offset": 8406256,
+            "length": 1072,
+            "name": "PsevdoorwindZ.bin"
+        },
+        {
+            "offset": 8407328,
+            "length": 944,
+            "name": "PsevdoorwoodZ.bin"
+        },
+        {
+            "offset": 8408272,
+            "length": 10752,
+            "name": "PshuttleZ.bin"
+        },
+        {
+            "offset": 8419024,
+            "length": 3120,
+            "name": "Pshuttle_door_lZ.bin"
+        },
+        {
+            "offset": 8422144,
+            "length": 3328,
+            "name": "Pshuttle_door_rZ.bin"
+        },
+        {
+            "offset": 8425472,
+            "length": 416,
+            "name": "PsilencerZ.bin"
+        },
+        {
+            "offset": 8425888,
+            "length": 576,
+            "name": "Psilo_lift_doorZ.bin"
+        },
+        {
+            "offset": 8426464,
+            "length": 752,
+            "name": "PsilotopdoorZ.bin"
+        },
+        {
+            "offset": 8427216,
+            "length": 352,
+            "name": "PskorpionmagZ.bin"
+        },
+        {
+            "offset": 8427568,
+            "length": 368,
+            "name": "PspectremagZ.bin"
+        },
+        {
+            "offset": 8427936,
+            "length": 3392,
+            "name": "PspeedboatZ.bin"
+        },
+        {
+            "offset": 8431328,
+            "length": 12608,
+            "name": "Pst_pete_room_1iZ.bin"
+        },
+        {
+            "offset": 8443936,
+            "length": 12768,
+            "name": "Pst_pete_room_2iZ.bin"
+        },
+        {
+            "offset": 8456704,
+            "length": 12096,
+            "name": "Pst_pete_room_3tZ.bin"
+        },
+        {
+            "offset": 8468800,
+            "length": 13712,
+            "name": "Pst_pete_room_5cZ.bin"
+        },
+        {
+            "offset": 8482512,
+            "length": 13328,
+            "name": "Pst_pete_room_6cZ.bin"
+        },
+        {
+            "offset": 8495840,
+            "length": 624,
+            "name": "Psteel_door1Z.bin"
+        },
+        {
+            "offset": 8496464,
+            "length": 688,
+            "name": "Psteel_door2Z.bin"
+        },
+        {
+            "offset": 8497152,
+            "length": 720,
+            "name": "Psteel_door2bZ.bin"
+        },
+        {
+            "offset": 8497872,
+            "length": 720,
+            "name": "Psteel_door3Z.bin"
+        },
+        {
+            "offset": 8498592,
+            "length": 704,
+            "name": "Pstool1Z.bin"
+        },
+        {
+            "offset": 8499296,
+            "length": 400,
+            "name": "Pswipe_card2Z.bin"
+        },
+        {
+            "offset": 8499696,
+            "length": 656,
+            "name": "Pswivel_chair1Z.bin"
+        },
+        {
+            "offset": 8500352,
+            "length": 6816,
+            "name": "PtankZ.bin"
+        },
+        {
+            "offset": 8507168,
+            "length": 7824,
+            "name": "PtigerZ.bin"
+        },
+        {
+            "offset": 8514992,
+            "length": 2176,
+            "name": "Ptorpedo_rackZ.bin"
+        },
+        {
+            "offset": 8517168,
+            "length": 976,
+            "name": "Ptrain_door2Z.bin"
+        },
+        {
+            "offset": 8518144,
+            "length": 1056,
+            "name": "Ptrain_door3Z.bin"
+        },
+        {
+            "offset": 8519200,
+            "length": 624,
+            "name": "Ptrain_doorZ.bin"
+        },
+        {
+            "offset": 8519824,
+            "length": 832,
+            "name": "PtrainextdoorZ.bin"
+        },
+        {
+            "offset": 8520656,
+            "length": 320,
+            "name": "Ptt33magZ.bin"
+        },
+        {
+            "offset": 8520976,
+            "length": 1312,
+            "name": "Ptuning_console1Z.bin"
+        },
+        {
+            "offset": 8522288,
+            "length": 464,
+            "name": "Ptv1Z.bin"
+        },
+        {
+            "offset": 8522752,
+            "length": 416,
+            "name": "Ptv4screenZ.bin"
+        },
+        {
+            "offset": 8523168,
+            "length": 1744,
+            "name": "Ptv_holderZ.bin"
+        },
+        {
+            "offset": 8524912,
+            "length": 208,
+            "name": "PtvscreenZ.bin"
+        },
+        {
+            "offset": 8525120,
+            "length": 320,
+            "name": "PuzimagZ.bin"
+        },
+        {
+            "offset": 8525440,
+            "length": 1552,
+            "name": "PvertdoorZ.bin"
+        },
+        {
+            "offset": 8526992,
+            "length": 5552,
+            "name": "PwalletbondZ.bin"
+        },
+        {
+            "offset": 8532544,
+            "length": 240,
+            "name": "PwindowZ.bin"
+        },
+        {
+            "offset": 8532784,
+            "length": 224,
+            "name": "Pwindow_cor11Z.bin"
+        },
+        {
+            "offset": 8533008,
+            "length": 224,
+            "name": "Pwindow_lib_lg1Z.bin"
+        },
+        {
+            "offset": 8533232,
+            "length": 240,
+            "name": "Pwindow_lib_sm1Z.bin"
+        },
+        {
+            "offset": 8533472,
+            "length": 640,
+            "name": "Pwood_lg_crate1Z.bin"
+        },
+        {
+            "offset": 8534112,
+            "length": 544,
+            "name": "Pwood_lg_crate2Z.bin"
+        },
+        {
+            "offset": 8534656,
+            "length": 544,
+            "name": "Pwood_md_crate3Z.bin"
+        },
+        {
+            "offset": 8535200,
+            "length": 608,
+            "name": "Pwood_sm_crate4Z.bin"
+        },
+        {
+            "offset": 8535808,
+            "length": 608,
+            "name": "Pwood_sm_crate5Z.bin"
+        },
+        {
+            "offset": 8536416,
+            "length": 544,
+            "name": "Pwood_sm_crate6Z.bin"
+        },
+        {
+            "offset": 8536960,
+            "length": 880,
+            "name": "Pwooden_table1Z.bin"
+        },
+        {
+            "offset": 8537840,
+            "length": 320,
+            "name": "PwppkmagZ.bin"
+        }
+    ]
+}

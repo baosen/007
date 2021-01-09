@@ -1,0 +1,29 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+genrule(
+    name = "lexer",
+    srcs = ["rom_lexer.l"],
+    outs = ["lex.yy.go"],
+    cmd = "golex -o $@ $<",
+)
+
+genrule(
+    name = "parser",
+    srcs = ["rom_parser.y"],
+    outs = ["rom_parser.go"],
+    cmd = "goyacc -o $@ $<",
+)
+
+go_library(
+    name = "rom",
+    srcs = [
+        "address.go",
+        "parse.go",
+        "segment.go",
+        ":lexer",
+        ":parser",
+    ],
+    importpath = "romlink/rom",
+    visibility = ["//visibility:public"],
+    deps = ["//tools/romlink/segment"],
+)

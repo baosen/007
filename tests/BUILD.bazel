@@ -1,0 +1,10 @@
+sh_test(
+    name = "usa",
+    size = "small",
+    srcs = ["test.sh"],
+    args = ["$(location //src:usa_z64_rom)"],
+    data = [
+        ":usa.sha1",
+        "//src:usa_z64_rom",
+    ],
+)

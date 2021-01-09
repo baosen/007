@@ -1,0 +1,1205 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+exports_files([
+    "mainmenu.h",
+    "objecthandler.h",
+    "chrobjdata.h",
+    "bondtypes.h",
+    "bss.segment",
+    "data.segment",
+    "game.segment",
+    "rodata.segment",
+    "romfiles.segment",
+    "roombuf.segment",
+    "text.segment",
+])
+
+gecc_library(
+    name = "initgamedata",
+    srcs = [
+        "initgamedata.c",
+        "//src/game:mainmenu.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initweaponanigroups",
+    srcs = [
+        "initweaponanigroups.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initactorpropstuff",
+    srcs = [
+        "initactorpropstuff.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initnull_0009D0",
+    srcs = [
+        "initnull_0009D0.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initunk_0009E0",
+    srcs = [
+        "initunk_0009E0.c",
+        "//src/game:objecthandler.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initanitable",
+    srcs = [
+        "initanitable.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initunk_000B60",
+    srcs = [
+        "bondtypes.h",
+        "initunk_000B60.c",
+        "//src/game:chrobjdata.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "bg",
+    srcs = [
+        "bg.c",
+        "bondtypes.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "blood_image",
+    srcs = [
+        "blood_image.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "blood_animation",
+    srcs = [
+        "blood_animation.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "blood_decrypt",
+    srcs = [
+        "blood_decrypt.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "bond_data",
+    srcs = [
+        "bond.h",
+        "bond_data.c",
+        "chr.h",
+        "player.h",
+        "unk_093880.h",
+        "xyzpoint.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "bond",
+    srcs = [
+        "bond.c",
+        "bond.h",
+        "chr.h",
+        "player.h",
+        "unk_093880.h",
+        "xyzpoint.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "bond2",
+    srcs = [
+        "bond.h",
+        "bond2.c",
+        "chr.h",
+        "player.h",
+        "unk_093880.h",
+        "xyzpoint.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "bondwalk",
+    srcs = [
+        "bondtypes.h",
+        "bondwalk.c",
+        "chrobjdata.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "bondwalk2",
+    srcs = [
+        "bondwalk2.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "cheat_buttons",
+    srcs = [
+        "cheat_buttons.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "chr",
+    srcs = [
+        "bondtypes.h",
+        "chr.c",
+        "chr.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "chr2",
+    srcs = [
+        "bondtypes.h",
+        "chr.h",
+        "chr2.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "chrai",
+    srcs = [
+        "chrai.c",
+        "chrai.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "chrobjdata",
+    srcs = [
+        "bondtypes.h",
+        "chrobjdata.c",
+        "chrobjdata.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "chrobjhandler",
+    srcs = [
+        "bondtypes.h",
+        "chrai.h",
+        "chrobjhandler.c",
+        "lvl.h",
+        "//src/system:includes",
+        "//src/system:music.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "cleanup_alarms",
+    srcs = [
+        "chrai.h",
+        "cleanup_alarms.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "cleanup_objectives",
+    srcs = [
+        "cleanup_objectives.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "cleanup_objects",
+    srcs = [
+        "cleanup_objects.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "cleanupSFXRelated",
+    srcs = [
+        "bond.h",
+        "chr.h",
+        "cleanupSFXRelated.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "compiletime",
+    srcs = [
+        "compiletime.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "convertangleusinginverse",
+    srcs = [
+        "convertangleusinginverse.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "deb_loadallmodels",
+    srcs = [
+        "deb_loadallmodels.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "debugmenu_08FE00",
+    srcs = [
+        "debugmenu_08FE00.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "debugmenu_090490",
+    srcs = [
+        "debugmenu_090490.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "decompress",
+    srcs = [
+        "decompress.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "dyn",
+    srcs = [
+        "dyn.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "ejectedcartridges",
+    srcs = [
+        "ejectedcartridges.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "fog",
+    srcs = [
+        "fog.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "game_debug",
+    srcs = [
+        "game_debug.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "gamefile",
+    srcs = [
+        "bondtypes.h",
+        "gamefile.c",
+        "mainmenu.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "eeprom",
+    srcs = [
+        "eeprom.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "GlobalImageTable",
+    srcs = [
+        "GlobalImageTable.c",
+        "bondtypes.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "image_bank",
+    srcs = [
+        "image_bank.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "image",
+    srcs = [
+        "image.c",
+        "//src/images",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "indy_commands",
+    srcs = [
+        "indy_commands.c",
+        "indy_commands.h",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "indy_comms",
+    srcs = [
+        "indy_commands.h",
+        "indy_comms.c",
+        "indy_comms.h",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initBondDATA",
+    srcs = [
+        "initBondDATA.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initBondDATAdefaults",
+    srcs = [
+        "initBondDATAdefaults.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initcameraandthrown",
+    srcs = [
+        "initcameraandthrown.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initexplosioncasing",
+    srcs = [
+        "initexplosioncasing.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initguards",
+    srcs = [
+        "chr.h",
+        "initguards.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initimages",
+    srcs = [
+        "initimages.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initintromatrices",
+    srcs = [
+        "initintromatrices.c",
+        "intro_logos.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "inititemslots",
+    srcs = [
+        "inititemslots.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initmenus",
+    srcs = [
+        "initmenus.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initmttex",
+    srcs = [
+        "initmttex.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initnull_000BC0",
+    srcs = [
+        "initnull_000BC0.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initobjects",
+    srcs = [
+        "chrai.h",
+        "initobjects.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initpathtablelinks",
+    srcs = [
+        "initpathtablelinks.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initpathtablesomething",
+    srcs = [
+        "initpathtablesomething.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initunk_005450",
+    srcs = [
+        "initunk_005450.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initunk_005520",
+    srcs = [
+        "initunk_005520.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initunk_007180",
+    srcs = [
+        "initunk_007180.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initunk_007290",
+    srcs = [
+        "initunk_007290.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initunk_0072B0",
+    srcs = [
+        "bond.h",
+        "chr.h",
+        "initunk_0072B0.c",
+        "lvl.h",
+        "player.h",
+        "unk_093880.h",
+        "xyzpoint.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initunk_0073B0",
+    srcs = [
+        "initunk_0073B0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "initunk_007460",
+    srcs = [
+        "initunk_007460.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "intro_logos",
+    srcs = [
+        "bondtypes.h",
+        "intro_logos.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "lightfixture",
+    srcs = [
+        "lightfixture.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "loadobjectmodel",
+    srcs = [
+        "loadobjectmodel.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "lvl_2",
+    srcs = [
+        "lvl.h",
+        "lvl_2.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "lvl",
+    srcs = [
+        "bondtypes.h",
+        "lvl.c",
+        "mainmenu.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "lvl_text",
+    srcs = [
+        "bondtypes.h",
+        "lvl_text.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "mainmenu",
+    srcs = [
+        "bondtypes.h",
+        "mainmenu.c",
+        "mainmenu.h",
+        "//src/system:includes",
+        "//src/system:music.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "mp_music",
+    srcs = [
+        "bond.h",
+        "chr.h",
+        "mp_music.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "mp_watch",
+    srcs = [
+        "bondtypes.h",
+        "mp_watch.c",
+        "//src/system:includes",
+        "//src/system:music.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "mp_weapon",
+    srcs = [
+        "mp_weapon.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "music_0D2720",
+    srcs = [
+        "music_0D2720.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "null_007970",
+    srcs = [
+        "null_007970.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "ob",
+    srcs = [
+        "ob.c",
+        "obseg.h",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "objecthandler_2",
+    srcs = [
+        "objecthandler_2.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "objecthandler",
+    srcs = [
+        "objecthandler.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "objective",
+    srcs = [
+        "objective.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "objective_status2",
+    srcs = [
+        "objective_status2.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "objective_status",
+    srcs = [
+        "bondtypes.h",
+        "objective_status.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "othermodemicrocode",
+    srcs = [
+        "othermodemicrocode.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "playerstats_007770",
+    srcs = [
+        "playerstats_007770.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "prop",
+    srcs = [
+        "prop.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "radar",
+    srcs = [
+        "radar.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "rsp",
+    srcs = [
+        "rsp.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "setguscale",
+    srcs = [
+        "setguscale.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "sin",
+    srcs = [
+        "sin.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "spectrum",
+    srcs = [
+        "spectrum.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "stan",
+    srcs = [
+        "stan.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "textrelated",
+    srcs = [
+        "textrelated.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "truncf",
+    srcs = [
+        "truncf.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_007800",
+    srcs = [
+        "unk_007800.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_007920",
+    srcs = [
+        "unk_007920.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_007980",
+    srcs = [
+        "unk_007980.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_01B0E0",
+    srcs = [
+        "unk_01B0E0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_01B240",
+    srcs = [
+        "unk_01B240.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_01BAE0",
+    srcs = [
+        "unk_01BAE0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_057FD0",
+    srcs = [
+        "unk_057FD0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_05A9E0",
+    srcs = [
+        "bondtypes.h",
+        "unk_05A9E0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_05AB70",
+    srcs = [
+        "unk_05AB70.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_05ACB0",
+    srcs = [
+        "unk_05ACB0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_05AE00",
+    srcs = [
+        "unk_05AE00.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_05B1E0",
+    srcs = [
+        "unk_05B1E0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_05C440",
+    srcs = [
+        "unk_05C440.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_08DBB0",
+    srcs = [
+        "unk_08DBB0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_091080",
+    srcs = [
+        "unk_091080.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_092890",
+    srcs = [
+        "unk_092890.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_092E50",
+    srcs = [
+        "unk_092E50.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_093880",
+    srcs = [
+        "bond.h",
+        "chr.h",
+        "lvl.h",
+        "player.h",
+        "unk_093880.c",
+        "unk_093880.h",
+        "xyzpoint.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_09B600",
+    srcs = [
+        "unk_09B600.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_09B740",
+    srcs = [
+        "unk_09B740.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_09B7A0",
+    srcs = [
+        "unk_09B7A0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_09C250",
+    srcs = [
+        "unk_09C250.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_0A1DA0",
+    srcs = [
+        "unk_0A1DA0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_0B3200",
+    srcs = [
+        "unk_0B3200.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_0BC530",
+    srcs = [
+        "bond.h",
+        "chr.h",
+        "player.h",
+        "unk_093880.h",
+        "unk_0BC530.c",
+        "xyzpoint.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_0C0A70",
+    srcs = [
+        "unk_0C0A70.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_0CC4C0",
+    srcs = [
+        "unk_0CC4C0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "unk_0D1AC0",
+    srcs = [
+        "unk_0D1AC0.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "viewport",
+    srcs = [
+        "viewport.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "watch",
+    srcs = [
+        "bond.h",
+        "chr.h",
+        "player.h",
+        "unk_093880.h",
+        "unk_0A1DA0.h",
+        "watch.c",
+        "xyzpoint.h",
+        "//src/system:includes",
+        "//src/system:music.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "zlib",
+    srcs = [
+        "zlib.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)

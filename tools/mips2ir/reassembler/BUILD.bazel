@@ -1,0 +1,23 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "reassembler",
+    srcs = ["reassembler.go"],
+    importpath = "mips2ir/reassembler",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_llir_llvm//ir:go_default_library",
+        "@com_github_llir_llvm//ir/constant:go_default_library",
+        "@com_github_llir_llvm//ir/types:go_default_library",
+        "@com_github_llir_llvm//ir/value:go_default_library",
+    ],
+)
+
+go_test(
+    name = "reassembler_test",
+    srcs = ["reassembler_test.go"],
+    embed = [":reassembler"],
+    deps = [
+        "//tools/mips2ir/frontend",
+    ],
+)

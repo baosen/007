@@ -1,0 +1,13 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+
+exports_files([
+    "start.segment",
+])
+
+mips_library(
+    name = "_start",
+    srcs = [
+        "_start.s",
+    ],
+    visibility = ["//visibility:public"],
+)

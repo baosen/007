@@ -1,0 +1,105 @@
+{
+    "compressed": false,
+    "files": [
+        {
+            "offset": 4826000,
+            "length": 139472,
+            "name": "bg_stat_all_p.seg"
+        },
+        {
+            "offset": 4965472,
+            "length": 189312,
+            "name": "bg_arec_all_p.seg"
+        },
+        {
+            "offset": 5154784,
+            "length": 154352,
+            "name": "bg_arch_all_p.seg"
+        },
+        {
+            "offset": 5309136,
+            "length": 132464,
+            "name": "bg_tra_all_p.seg"
+        },
+        {
+            "offset": 5441600,
+            "length": 186816,
+            "name": "bg_dest_all_p.seg"
+        },
+        {
+            "offset": 5876208,
+            "length": 105520,
+            "name": "bg_pete_all_p.seg"
+        },
+        {
+            "offset": 5981728,
+            "length": 182640,
+            "name": "bg_depo_all_p.seg"
+        },
+        {
+            "offset": 6290512,
+            "length": 197024,
+            "name": "bg_dam_all_p.seg"
+        },
+        {
+            "offset": 6487536,
+            "length": 200576,
+            "name": "bg_ark_all_p.seg"
+        },
+        {
+            "offset": 6846224,
+            "length": 86352,
+            "name": "bg_jun_all_p.seg"
+        },
+        {
+            "offset": 6951120,
+            "length": 148720,
+            "name": "bg_cave_all_p.seg"
+        },
+        {
+            "offset": 7188032,
+            "length": 0,
+            "name": "bg_imp_all_p.seg"
+        },
+        {
+            "offset": 7188032,
+            "length": 0,
+            "name": "bg_ash_all_p.seg"
+        },
+        {
+            "offset": 7188032,
+            "length": 0,
+            "name": "bg_sho_all_p.seg"
+        },
+        {
+            "offset": 7228832,
+            "length": 0,
+            "name": "bg_oat_all_p.seg"
+        },
+        {
+            "offset": 7257072,
+            "length": 0,
+            "name": "bg_len_all_p.seg"
+        },
+        {
+            "offset": 7257072,
+            "length": 0,
+            "name": "bg_lee_all_p.seg"
+        },
+        {
+            "offset": 7257072,
+            "length": 0,
+            "name": "bg_ear_all_p.seg"
+        },
+        {
+            "offset": 7261072,
+            "length": 0,
+            "name": "bg_pam_all_p.seg"
+        },
+        {
+            "offset": 7261072,
+            "length": 0,
+            "name": "bg_wax_all_p.seg"
+        }
+    ]
+}

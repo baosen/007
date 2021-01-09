@@ -1,0 +1,45 @@
+{
+    "compressed": true,
+    "files": [
+        {
+            "offset": 9040128,
+            "length": 11680,
+            "name": "Ump_setuparchZ.bin"
+        },
+        {
+            "offset": 9164304,
+            "length": 7216,
+            "name": "UsetupcradZ.bin"
+        },
+        {
+            "offset": 9208624,
+            "length": 9040,
+            "name": "UsetupdestZ.bin"
+        },
+        {
+            "offset": 9217664,
+            "length": 14080,
+            "name": "UsetupjunZ.bin"
+        },
+        {
+            "offset": 9231744,
+            "length": 1488,
+            "name": "UsetuplenZ.bin"
+        },
+        {
+            "offset": 9301952,
+            "length": 10832,
+            "name": "UsetupsiloZ.bin"
+        },
+        {
+            "offset": 9312784,
+            "length": 10192,
+            "name": "UsetupstatueZ.bin"
+        },
+        {
+            "offset": 9322976,
+            "length": 12848,
+            "name": "UsetuptraZ.bin"
+        }
+    ]
+}

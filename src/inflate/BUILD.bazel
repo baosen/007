@@ -1,0 +1,14 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+exports_files([
+    "inflate.segment",
+])
+
+gecc_library(
+    name = "inflate",
+    srcs = [
+        "inflate.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)

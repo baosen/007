@@ -1,0 +1,46 @@
+load("//tools/rz/deflate:deflate.bzl", "deflate")
+load("//tools/rz/inflate:inflate.bzl", "inflate")
+
+inflate(
+    name = "setup",
+    srcs = [
+        "data.json",
+        "//roms:usa.z64",
+    ],
+    outs = [
+        "Ump_setupameZ.bin",
+        "Ump_setuparkZ.bin",
+        "Ump_setupashZ.bin",
+        "Ump_setupcaveZ.bin",
+        "Ump_setupcradZ.bin",
+        "Ump_setupcrypZ.bin",
+        "Ump_setupdishZ.bin",
+        "Ump_setupimpZ.bin",
+        "Ump_setupoatZ.bin",
+        "Ump_setuprefZ.bin",
+        "Ump_setupsevbZ.bin",
+        "Ump_setupstatueZ.bin",
+        "UsetuparchZ.bin",
+        "UsetuparkZ.bin",
+        "UsetupaztZ.bin",
+        "UsetupcaveZ.bin",
+        "UsetupcontrolZ.bin",
+        "UsetupcrypZ.bin",
+        "UsetupdamZ.bin",
+        "UsetupdepoZ.bin",
+        "UsetuppeteZ.bin",
+        "UsetuprunZ.bin",
+        "UsetupsevbZ.bin",
+        "UsetupsevbunkerZ.bin",
+        "UsetupsevxZ.bin",
+        "UsetupsevxbZ.bin",
+    ],
+)
+
+deflate(
+    name = "rz",
+    srcs = [
+        ":setup",
+    ],
+    visibility = ["//visibility:public"],
+)

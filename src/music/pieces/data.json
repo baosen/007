@@ -1,0 +1,320 @@
+{
+    "compressed": true,
+    "files": [
+        {
+            "offset": 4299148,
+            "length": 42,
+            "name": "no_music.bin"
+        },
+        {
+            "offset": 4299190,
+            "length": 470,
+            "name": "solo_death_abrev.bin"
+        },
+        {
+            "offset": 4299660,
+            "length": 2222,
+            "name": "intro_eye.bin"
+        },
+        {
+            "offset": 4301882,
+            "length": 3050,
+            "name": "train.bin"
+        },
+        {
+            "offset": 4304932,
+            "length": 3488,
+            "name": "depot.bin"
+        },
+        {
+            "offset": 4308420,
+            "length": 3480,
+            "name": "jungle_unused.bin"
+        },
+        {
+            "offset": 4311900,
+            "length": 3520,
+            "name": "citadel.bin"
+        },
+        {
+            "offset": 4315420,
+            "length": 2766,
+            "name": "facility.bin"
+        },
+        {
+            "offset": 4318186,
+            "length": 2910,
+            "name": "control.bin"
+        },
+        {
+            "offset": 4321096,
+            "length": 3588,
+            "name": "dam.bin"
+        },
+        {
+            "offset": 4324684,
+            "length": 3552,
+            "name": "frigate.bin"
+        },
+        {
+            "offset": 4328236,
+            "length": 2388,
+            "name": "archives.bin"
+        },
+        {
+            "offset": 4330624,
+            "length": 3696,
+            "name": "silo.bin"
+        },
+        {
+            "offset": 4334320,
+            "length": 3948,
+            "name": "jungle_perimeter_unused.bin"
+        },
+        {
+            "offset": 4338268,
+            "length": 3330,
+            "name": "streets.bin"
+        },
+        {
+            "offset": 4341598,
+            "length": 1650,
+            "name": "bunker1.bin"
+        },
+        {
+            "offset": 4343248,
+            "length": 1664,
+            "name": "bunker2.bin"
+        },
+        {
+            "offset": 4344912,
+            "length": 2456,
+            "name": "statue.bin"
+        },
+        {
+            "offset": 4347368,
+            "length": 2522,
+            "name": "elevator_control.bin"
+        },
+        {
+            "offset": 4349890,
+            "length": 3424,
+            "name": "cradle.bin"
+        },
+        {
+            "offset": 4353314,
+            "length": 42,
+            "name": "null1.bin"
+        },
+        {
+            "offset": 4353356,
+            "length": 1606,
+            "name": "elevator_wc.bin"
+        },
+        {
+            "offset": 4354962,
+            "length": 3482,
+            "name": "egyptian.bin"
+        },
+        {
+            "offset": 4358444,
+            "length": 994,
+            "name": "folders.bin"
+        },
+        {
+            "offset": 4359438,
+            "length": 498,
+            "name": "watchmusic.bin"
+        },
+        {
+            "offset": 4359936,
+            "length": 3186,
+            "name": "aztec.bin"
+        },
+        {
+            "offset": 4363122,
+            "length": 3628,
+            "name": "watercaverns.bin"
+        },
+        {
+            "offset": 4366750,
+            "length": 870,
+            "name": "deathsolo.bin"
+        },
+        {
+            "offset": 4367620,
+            "length": 3510,
+            "name": "surface2.bin"
+        },
+        {
+            "offset": 4371130,
+            "length": 2208,
+            "name": "trainx.bin"
+        },
+        {
+            "offset": 4373338,
+            "length": 42,
+            "name": "null2.bin"
+        },
+        {
+            "offset": 4373380,
+            "length": 2392,
+            "name": "facilityx.bin"
+        },
+        {
+            "offset": 4375772,
+            "length": 1980,
+            "name": "depotx.bin"
+        },
+        {
+            "offset": 4377752,
+            "length": 1352,
+            "name": "controlx.bin"
+        },
+        {
+            "offset": 4379104,
+            "length": 1876,
+            "name": "watercavernsx.bin"
+        },
+        {
+            "offset": 4380980,
+            "length": 1312,
+            "name": "damx.bin"
+        },
+        {
+            "offset": 4382292,
+            "length": 1474,
+            "name": "frigatex.bin"
+        },
+        {
+            "offset": 4383766,
+            "length": 1828,
+            "name": "archivesx.bin"
+        },
+        {
+            "offset": 4385594,
+            "length": 2292,
+            "name": "silox.bin"
+        },
+        {
+            "offset": 4387886,
+            "length": 42,
+            "name": "null3.bin"
+        },
+        {
+            "offset": 4387928,
+            "length": 1644,
+            "name": "streetsx.bin"
+        },
+        {
+            "offset": 4389572,
+            "length": 1958,
+            "name": "bunker1x.bin"
+        },
+        {
+            "offset": 4391530,
+            "length": 1614,
+            "name": "bunker2x.bin"
+        },
+        {
+            "offset": 4393144,
+            "length": 2070,
+            "name": "junglex.bin"
+        },
+        {
+            "offset": 4395214,
+            "length": 1074,
+            "name": "nint_rare_logo.bin"
+        },
+        {
+            "offset": 4396288,
+            "length": 1720,
+            "name": "statuex.bin"
+        },
+        {
+            "offset": 4398008,
+            "length": 2262,
+            "name": "aztecx.bin"
+        },
+        {
+            "offset": 4400270,
+            "length": 2224,
+            "name": "egyptianx.bin"
+        },
+        {
+            "offset": 4402494,
+            "length": 1738,
+            "name": "cradlex.bin"
+        },
+        {
+            "offset": 4404232,
+            "length": 2122,
+            "name": "cuba.bin"
+        },
+        {
+            "offset": 4406354,
+            "length": 3358,
+            "name": "runway.bin"
+        },
+        {
+            "offset": 4409712,
+            "length": 730,
+            "name": "runway_plane.bin"
+        },
+        {
+            "offset": 4410442,
+            "length": 1832,
+            "name": "surface2x.bin"
+        },
+        {
+            "offset": 4412274,
+            "length": 1314,
+            "name": "windblowing.bin"
+        },
+        {
+            "offset": 4413588,
+            "length": 524,
+            "name": "multideath_alt.bin"
+        },
+        {
+            "offset": 4414112,
+            "length": 1928,
+            "name": "jungle.bin"
+        },
+        {
+            "offset": 4416040,
+            "length": 1570,
+            "name": "runwayx.bin"
+        },
+        {
+            "offset": 4417610,
+            "length": 3432,
+            "name": "surface1.bin"
+        },
+        {
+            "offset": 4421042,
+            "length": 712,
+            "name": "multiplayerdeath.bin"
+        },
+        {
+            "offset": 4421754,
+            "length": 1832,
+            "name": "surface1x.bin"
+        },
+        {
+            "offset": 4423586,
+            "length": 668,
+            "name": "surface2_ending.bin"
+        },
+        {
+            "offset": 4424254,
+            "length": 358,
+            "name": "statue_ending.bin"
+        },
+        {
+            "offset": 4424612,
+            "length": 700,
+            "name": "frigate_outro.bin"
+        }
+    ]
+}

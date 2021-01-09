@@ -1,0 +1,5 @@
+filegroup(
+    name = "gnu_compiler_files",
+    srcs = ["macros.inc"],
+    visibility = ["//visibility:public"],
+)

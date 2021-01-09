@@ -1,0 +1,30 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+load("//tools/rz/inflate:inflate.bzl", "inflate")
+
+exports_files([
+    "font.segment",
+])
+
+inflate(
+    name = "binaries",
+    srcs = [
+        "data.json",
+        "//roms:usa.z64",
+    ],
+    outs = [
+        "first_font_table_controller_large.bin",
+        "first_font_table_controller_small.bin",
+        "second_font_table_controller_large.bin",
+        "second_font_table_controller_small.bin",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+mips_library(
+    name = "font",
+    srcs = [
+        "font.s",
+        ":binaries",
+    ],
+    visibility = ["//visibility:public"],
+)

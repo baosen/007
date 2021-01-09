@@ -1,0 +1,14 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+
+exports_files(["music.segment"])
+
+mips_library(
+    name = "music",
+    srcs = [
+        "music.s",
+        "//src/music/ctls",
+        "//src/music/pieces",
+        "//src/music/pieces:rz",
+    ],
+    visibility = ["//visibility:public"],
+)

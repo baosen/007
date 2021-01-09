@@ -1,0 +1,14 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+
+exports_files([
+    "boot.segment",
+])
+
+mips_library(
+    name = "bootcode",
+    srcs = [
+        "bootcode.s",
+        "bootcode_font.bin",
+    ],
+    visibility = ["//visibility:public"],
+)

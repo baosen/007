@@ -1,0 +1,47 @@
+load("//tools/rz/deflate:deflate.bzl", "deflate")
+load("//tools/rz/inflate:inflate.bzl", "inflate")
+
+inflate(
+    name = "usa",
+    srcs = [
+        "data.json",
+        "//roms:usa.z64",
+    ],
+    outs = [
+        "Tbg_ame_all_p_stanZ.bin",
+        "Tbg_arch_all_p_stanZ.bin",
+        "Tbg_arec_all_p_stanZ.bin",
+        "Tbg_ark_all_p_stanZ.bin",
+        "Tbg_ash_all_p_stanZ.bin",
+        "Tbg_azt_all_p_stanZ.bin",
+        "Tbg_cat_all_p_stanZ.bin",
+        "Tbg_cave_all_p_stanZ.bin",
+        "Tbg_crad_all_p_stanZ.bin",
+        "Tbg_cryp_all_p_stanZ.bin",
+        "Tbg_dam_all_p_stanZ.bin",
+        "Tbg_depo_all_p_stanZ.bin",
+        "Tbg_dest_all_p_stanZ.bin",
+        "Tbg_dish_all_p_stanZ.bin",
+        "Tbg_imp_all_p_stanZ.bin",
+        "Tbg_jun_all_p_stanZ.bin",
+        "Tbg_len_all_p_stanZ.bin",
+        "Tbg_oat_all_p_stanZ.bin",
+        "Tbg_pete_all_p_stanZ.bin",
+        "Tbg_ref_all_p_stanZ.bin",
+        "Tbg_run_all_p_stanZ.bin",
+        "Tbg_sev_all_p_stanZ.bin",
+        "Tbg_sevb_all_p_stanZ.bin",
+        "Tbg_sevx_all_p_stanZ.bin",
+        "Tbg_silo_all_p_stanZ.bin",
+        "Tbg_stat_all_p_stanZ.bin",
+        "Tbg_tra_all_p_stanZ.bin",
+    ],
+)
+
+deflate(
+    name = "rz",
+    srcs = [
+        ":usa",
+    ],
+    visibility = ["//visibility:public"],
+)

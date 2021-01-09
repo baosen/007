@@ -1,0 +1,405 @@
+{
+    "compressed": true,
+    "files": [
+        {
+            "offset": 7261072,
+            "length": 9344,
+            "name": "CarmourguardZ.bin"
+        },
+        {
+            "offset": 7270416,
+            "length": 14064,
+            "name": "CbaronsamediZ.bin"
+        },
+        {
+            "offset": 7284480,
+            "length": 9968,
+            "name": "CbluecamguardZ.bin"
+        },
+        {
+            "offset": 7294448,
+            "length": 7696,
+            "name": "CbluemanZ.bin"
+        },
+        {
+            "offset": 7302144,
+            "length": 7872,
+            "name": "CbluewomanZ.bin"
+        },
+        {
+            "offset": 7310016,
+            "length": 11280,
+            "name": "CboilerbondZ.bin"
+        },
+        {
+            "offset": 7321296,
+            "length": 13952,
+            "name": "CboilertrevZ.bin"
+        },
+        {
+            "offset": 7335248,
+            "length": 12576,
+            "name": "CborisZ.bin"
+        },
+        {
+            "offset": 7347824,
+            "length": 9952,
+            "name": "CcamguardZ.bin"
+        },
+        {
+            "offset": 7357776,
+            "length": 7680,
+            "name": "CcardimanZ.bin"
+        },
+        {
+            "offset": 7365456,
+            "length": 7808,
+            "name": "CcheckmanZ.bin"
+        },
+        {
+            "offset": 7373264,
+            "length": 9728,
+            "name": "CcommguardZ.bin"
+        },
+        {
+            "offset": 7382992,
+            "length": 11920,
+            "name": "CdjbondZ.bin"
+        },
+        {
+            "offset": 7394912,
+            "length": 7968,
+            "name": "CfattechwomanZ.bin"
+        },
+        {
+            "offset": 7402880,
+            "length": 10016,
+            "name": "Cgreatguard2Z.bin"
+        },
+        {
+            "offset": 7412896,
+            "length": 9856,
+            "name": "CgreatguardZ.bin"
+        },
+        {
+            "offset": 7422752,
+            "length": 9936,
+            "name": "CgreyguardZ.bin"
+        },
+        {
+            "offset": 7432688,
+            "length": 7616,
+            "name": "CgreymanZ.bin"
+        },
+        {
+            "offset": 7440304,
+            "length": 1488,
+            "name": "CheadalanZ.bin"
+        },
+        {
+            "offset": 7441792,
+            "length": 1392,
+            "name": "CheadbZ.bin"
+        },
+        {
+            "offset": 7443184,
+            "length": 976,
+            "name": "CheadbalaclavaZ.bin"
+        },
+        {
+            "offset": 7444160,
+            "length": 1696,
+            "name": "CheadbikeZ.bin"
+        },
+        {
+            "offset": 7445856,
+            "length": 3408,
+            "name": "CheadbrosnanZ.bin"
+        },
+        {
+            "offset": 7449264,
+            "length": 2976,
+            "name": "CheadbrosnanboilerZ.bin"
+        },
+        {
+            "offset": 7452240,
+            "length": 3712,
+            "name": "CheadbrosnansnowZ.bin"
+        },
+        {
+            "offset": 7455952,
+            "length": 3456,
+            "name": "CheadbrosnansuitZ.bin"
+        },
+        {
+            "offset": 7459408,
+            "length": 3008,
+            "name": "CheadbrosnantimberZ.bin"
+        },
+        {
+            "offset": 7462416,
+            "length": 1344,
+            "name": "CheadchrisZ.bin"
+        },
+        {
+            "offset": 7463760,
+            "length": 1408,
+            "name": "CheaddaveZ.bin"
+        },
+        {
+            "offset": 7465168,
+            "length": 1328,
+            "name": "CheaddesZ.bin"
+        },
+        {
+            "offset": 7466496,
+            "length": 1312,
+            "name": "CheadduncanZ.bin"
+        },
+        {
+            "offset": 7467808,
+            "length": 1408,
+            "name": "CheaddwayneZ.bin"
+        },
+        {
+            "offset": 7469216,
+            "length": 1392,
+            "name": "CheadgrahamZ.bin"
+        },
+        {
+            "offset": 7470608,
+            "length": 1328,
+            "name": "CheadgrantZ.bin"
+        },
+        {
+            "offset": 7471936,
+            "length": 1328,
+            "name": "CheadjimZ.bin"
+        },
+        {
+            "offset": 7473264,
+            "length": 1056,
+            "name": "Cheadjoe2Z.bin"
+        },
+        {
+            "offset": 7474320,
+            "length": 1392,
+            "name": "CheadjoeZ.bin"
+        },
+        {
+            "offset": 7475712,
+            "length": 1296,
+            "name": "CheadjoelZ.bin"
+        },
+        {
+            "offset": 7477008,
+            "length": 1376,
+            "name": "CheadkarlZ.bin"
+        },
+        {
+            "offset": 7478384,
+            "length": 1360,
+            "name": "CheadkenZ.bin"
+        },
+        {
+            "offset": 7479744,
+            "length": 1408,
+            "name": "CheadleeZ.bin"
+        },
+        {
+            "offset": 7481152,
+            "length": 1008,
+            "name": "CheadmandyZ.bin"
+        },
+        {
+            "offset": 7482160,
+            "length": 1040,
+            "name": "CheadmarionZ.bin"
+        },
+        {
+            "offset": 7483200,
+            "length": 1328,
+            "name": "CheadmarkZ.bin"
+        },
+        {
+            "offset": 7484528,
+            "length": 1376,
+            "name": "CheadmartinZ.bin"
+        },
+        {
+            "offset": 7485904,
+            "length": 1376,
+            "name": "CheadmishkinZ.bin"
+        },
+        {
+            "offset": 7487280,
+            "length": 1312,
+            "name": "CheadneilZ.bin"
+        },
+        {
+            "offset": 7488592,
+            "length": 1424,
+            "name": "CheadpeteZ.bin"
+        },
+        {
+            "offset": 7490016,
+            "length": 1296,
+            "name": "CheadrobinZ.bin"
+        },
+        {
+            "offset": 7491312,
+            "length": 1024,
+            "name": "CheadsallyZ.bin"
+        },
+        {
+            "offset": 7492336,
+            "length": 1408,
+            "name": "CheadscottZ.bin"
+        },
+        {
+            "offset": 7493744,
+            "length": 1504,
+            "name": "CheadshaunZ.bin"
+        },
+        {
+            "offset": 7495248,
+            "length": 1360,
+            "name": "CheadsteveeZ.bin"
+        },
+        {
+            "offset": 7496608,
+            "length": 1360,
+            "name": "CheadstevehZ.bin"
+        },
+        {
+            "offset": 7497968,
+            "length": 1168,
+            "name": "CheadvivienZ.bin"
+        },
+        {
+            "offset": 7499136,
+            "length": 11328,
+            "name": "CjawsZ.bin"
+        },
+        {
+            "offset": 7510464,
+            "length": 8208,
+            "name": "CjeanwomanZ.bin"
+        },
+        {
+            "offset": 7518672,
+            "length": 11168,
+            "name": "CmaydayZ.bin"
+        },
+        {
+            "offset": 7529840,
+            "length": 8528,
+            "name": "CmoonfemaleZ.bin"
+        },
+        {
+            "offset": 7538368,
+            "length": 9712,
+            "name": "CmoonguardZ.bin"
+        },
+        {
+            "offset": 7548080,
+            "length": 14528,
+            "name": "CnatalyaZ.bin"
+        },
+        {
+            "offset": 7562608,
+            "length": 9952,
+            "name": "CnavyguardZ.bin"
+        },
+        {
+            "offset": 7572560,
+            "length": 12592,
+            "name": "CoddjobZ.bin"
+        },
+        {
+            "offset": 7585152,
+            "length": 9808,
+            "name": "ColiveguardZ.bin"
+        },
+        {
+            "offset": 7594960,
+            "length": 13360,
+            "name": "CorumovZ.bin"
+        },
+        {
+            "offset": 7608320,
+            "length": 12416,
+            "name": "CpilotZ.bin"
+        },
+        {
+            "offset": 7620736,
+            "length": 10032,
+            "name": "CredmanZ.bin"
+        },
+        {
+            "offset": 7630768,
+            "length": 7216,
+            "name": "CrusguardZ.bin"
+        },
+        {
+            "offset": 7637984,
+            "length": 13104,
+            "name": "CsnowbondZ.bin"
+        },
+        {
+            "offset": 7651088,
+            "length": 11392,
+            "name": "CsnowguardZ.bin"
+        },
+        {
+            "offset": 7662480,
+            "length": 14624,
+            "name": "CspicebondZ.bin"
+        },
+        {
+            "offset": 7677104,
+            "length": 12832,
+            "name": "Csuit_lf_handZ.bin"
+        },
+        {
+            "offset": 7689936,
+            "length": 11664,
+            "name": "CsuitbondZ.bin"
+        },
+        {
+            "offset": 7701600,
+            "length": 9904,
+            "name": "CtechmanZ.bin"
+        },
+        {
+            "offset": 7711504,
+            "length": 8176,
+            "name": "CtechwomanZ.bin"
+        },
+        {
+            "offset": 7719680,
+            "length": 11568,
+            "name": "CtimberbondZ.bin"
+        },
+        {
+            "offset": 7731248,
+            "length": 14288,
+            "name": "CtrevelyanZ.bin"
+        },
+        {
+            "offset": 7745536,
+            "length": 9744,
+            "name": "CtrevguardZ.bin"
+        },
+        {
+            "offset": 7755280,
+            "length": 12144,
+            "name": "CvalentinZ.bin"
+        },
+        {
+            "offset": 7767424,
+            "length": 14832,
+            "name": "CxeniaZ.bin"
+        }
+    ]
+}

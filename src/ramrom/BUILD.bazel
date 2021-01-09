@@ -1,0 +1,39 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+load("//tools/rz/inflate:inflate.bzl", "inflate")
+
+exports_files([
+    "ramrom.segment",
+])
+
+inflate(
+    name = "binaries",
+    srcs = [
+        "data.json",
+        "//roms:usa.z64",
+    ],
+    outs = [
+        "BunkerI_1.bin",
+        "BunkerI_2.bin",
+        "Dam_1.bin",
+        "Dam_2.bin",
+        "Facility_1.bin",
+        "Facility_2.bin",
+        "Facility_3.bin",
+        "Frigate_1.bin",
+        "Frigate_2.bin",
+        "Runway_1.bin",
+        "Runway_2.bin",
+        "Silo_1.bin",
+        "Silo_2.bin",
+        "Train.bin",
+    ],
+)
+
+mips_library(
+    name = "ramrom",
+    srcs = [
+        "ramrom.s",
+        ":binaries",
+    ],
+    visibility = ["//visibility:public"],
+)

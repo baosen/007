@@ -1,0 +1,42 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+load("//tools/rz/inflate:inflate.bzl", "inflate")
+
+exports_files([
+    "romfiles.segment",
+    "romfiles2.segment",
+])
+
+inflate(
+    name = "binaries",
+    srcs = [
+        "data.json",
+        "//roms:usa.z64",
+    ],
+    outs = [
+        "2A4D50.usedby7F008DE4.bin",
+        "Globalimagetable_commandblock.bin",
+        "animationtable_data.bin",
+        "animationtable_entries.bin",
+        "efont_chardata.bin",
+        "jfont_dl.bin",
+        "usa.jfont_chardata.bin",
+    ],
+)
+
+mips_library(
+    name = "romfiles",
+    srcs = [
+        "romfiles.s",
+        ":binaries",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+mips_library(
+    name = "romfiles2",
+    srcs = [
+        "romfiles2.s",
+        ":binaries",
+    ],
+    visibility = ["//visibility:public"],
+)

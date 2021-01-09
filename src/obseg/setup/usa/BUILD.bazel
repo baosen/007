@@ -1,0 +1,28 @@
+load("//tools/rz/deflate:deflate.bzl", "deflate")
+load("//tools/rz/inflate:inflate.bzl", "inflate")
+
+inflate(
+    name = "usa",
+    srcs = [
+        "data.json",
+        "//roms:usa.z64",
+    ],
+    outs = [
+        "Ump_setuparchZ.bin",
+        "UsetupcradZ.bin",
+        "UsetupdestZ.bin",
+        "UsetupjunZ.bin",
+        "UsetuplenZ.bin",
+        "UsetupsiloZ.bin",
+        "UsetupstatueZ.bin",
+        "UsetuptraZ.bin",
+    ],
+)
+
+deflate(
+    name = "rz",
+    srcs = [
+        ":usa",
+    ],
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,16 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_binary(
+    name = "inflate",
+    embed = [":inflate_lib"],
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "inflate_lib",
+    srcs = [
+        "main.go",
+    ],
+    importpath = "inflate",
+    visibility = ["//visibility:private"],
+)

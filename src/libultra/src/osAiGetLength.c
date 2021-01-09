@@ -1,0 +1,1 @@
+int osAiGetLength(void) { return *(unsigned int *)(0xa4500004); }

@@ -1,9 +1,5 @@
-#include "ultra64.h"
+#include <math.h>
 
-
-f32 sub_GAME_7F05A9E0(f32 arg0) {
-    return sqrtf(((sinf(arg0) / cosf(arg0)) + 1.0f));
+float sub_GAME_7F05A9E0(float arg0) {
+  return sqrtf(((sinf(arg0) / cosf(arg0)) + 1.0f));
 }
-
-  
-

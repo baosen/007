@@ -1,8 +1,1 @@
-#include "ultra64.h"
-
-
-
-void cleanup_REMOVED_(void){
-
-}
-
+void cleanup_REMOVED_(void) {}

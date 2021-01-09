@@ -1,0 +1,11 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+
+mips_library(
+    name = "aspboot",
+    srcs = [
+        "aspboot.data.bin",
+        "aspboot.s",
+        "aspboot.text.bin",
+    ],
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,25 @@
+{
+    "compressed": false,
+    "files": [
+        {
+            "offset": 3040240,
+            "length": 676,
+            "name": "first_font_table_controller_small.bin"
+        },
+        {
+            "offset": 3040916,
+            "length": 8716,
+            "name": "second_font_table_controller_small.bin"
+        },
+        {
+            "offset": 3049632,
+            "length": 676,
+            "name": "first_font_table_controller_large.bin"
+        },
+        {
+            "offset": 3050308,
+            "length": 12956,
+            "name": "second_font_table_controller_large.bin"
+        }
+    ]
+}

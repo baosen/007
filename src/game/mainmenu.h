@@ -1,13 +1,9 @@
 #ifndef _MAINMENU_H_
 #define _MAINMENU_H_
-#include "ultra64.h"
-#include "bondgame.h"
 
 struct legal_screen_text {
-    int h_pos;
-    int v_pos;
-    int flag;
-    int flag2;
+    int h_pos, v_pos;
+    int flag, flag2;
     short txtID;
     short anonymous_5;
 };
@@ -24,26 +20,24 @@ struct mission_folder_setup {
 };
 
 struct MP_game_length_settings {
-    u16 text_preset;
-    u16 padding;
+    unsigned short text_preset;
+    unsigned short padding;
     int time;
     int points;
 };
 
 struct mp_stage_playercount {
     short stage;
-    char min;
-    char max;
+    char min, max;
 };
 
 struct mp_stage_setup {
-    s16 folder_text_preset;
-    s16 select_screen_text_preset;
-    s32 photo;
-    s32 stage_id;
-    s32 unlock_after;
-    s32 min_player;
-    s32 max_player;
+    short folder_text_preset;
+    short select_screen_text_preset;
+    int photo;
+    int stage_id;
+    int unlock_after;
+    int min_player, max_player;
 };
 
 struct MP_selectable_chars {
@@ -93,71 +87,38 @@ struct intro_animation {
 };
 
 struct solo_target_times {
-    u16 agent_time;
-    u16 secret_agent_time;
-    u16 OO_agent_time;
+    unsigned short agent_time;
+    unsigned short secret_agent_time;
+    unsigned short OO_agent_time;
 };
 
-
-
-extern f32 flt_CODE_bss_800695A0;
-//CODE.bss:800695A4
-extern f32 flt_CODE_bss_800695A4;
-//CODE.bss:800695A8
-extern f32 flt_CODE_bss_800695A8;
-//CODE.bss:800695AC
-extern f32 flt_CODE_bss_800695AC;
-//CODE.bss:800695B0
-extern f32 flt_CODE_bss_800695B0;
-//CODE.bss:800695B4
-extern f32 flt_CODE_bss_800695B4;
-//CODE.bss:800695B8
-extern f32 flt_CODE_bss_800695B8;
-//CODE.bss:800695BC
-extern f32 flt_CODE_bss_800695BC;
-//CODE.bss:800695C0
-extern f32 flt_CODE_bss_800695C0;
-//CODE.bss:800695C4                     .align 3
-//CODE.bss:800695C8
-extern f32 flt_CODE_bss_800695C8;
-//CODE.bss:800695CC
-extern f32 flt_CODE_bss_800695CC;
-//CODE.bss:800695D0
-extern f32 flt_CODE_bss_800695D0;
-//CODE.bss:800695D4                     .align 3
-//CODE.bss:800695D8
-extern f32 flt_CODE_bss_800695D8;
-//CODE.bss:800695DC
-extern f32 flt_CODE_bss_800695DC;
-//CODE.bss:800695E0
-extern f32 flt_CODE_bss_800695E0;
-//CODE.bss:800695E4
-extern f32 flt_CODE_bss_800695E4;
-//CODE.bss:800695E8
-extern f32 flt_CODE_bss_800695E8;
-//CODE.bss:800695EC
-extern f32 flt_CODE_bss_800695EC;
-//CODE.bss:800695F0
-extern f32 flt_CODE_bss_800695F0;
-//CODE.bss:800695F4                     .align 3
-//CODE.bss:800695F8
-extern f32 flt_CODE_bss_800695F8;
-//CODE.bss:800695FC
-extern f32 flt_CODE_bss_800695FC;
-//CODE.bss:80069600
-extern f32 flt_CODE_bss_80069600;
-//CODE.bss:80069604                     .align 3
-//CODE.bss:80069608
-extern f32 flt_CODE_bss_80069608;
-//CODE.bss:8006960C
-extern f32 flt_CODE_bss_8006960C;
-//CODE.bss:80069610
-extern f32 flt_CODE_bss_80069610;
-//CODE.bss:80069614
-extern f32 flt_CODE_bss_80069614;
-//CODE.bss:80069618
-extern f32 flt_CODE_bss_80069618;
-//CODE.bss:8006961C                     .align 4
+extern float flt_CODE_bss_800695A0;
+extern float flt_CODE_bss_800695A4;
+extern float flt_CODE_bss_800695A8;
+extern float flt_CODE_bss_800695AC;
+extern float flt_CODE_bss_800695B0;
+extern float flt_CODE_bss_800695B4;
+extern float flt_CODE_bss_800695B8;
+extern float flt_CODE_bss_800695BC;
+extern float flt_CODE_bss_800695C0;
+extern float flt_CODE_bss_800695C8;
+extern float flt_CODE_bss_800695CC;
+extern float flt_CODE_bss_800695D0;
+extern float flt_CODE_bss_800695D8;
+extern float flt_CODE_bss_800695DC;
+extern float flt_CODE_bss_800695E0;
+extern float flt_CODE_bss_800695E4;
+extern float flt_CODE_bss_800695E8;
+extern float flt_CODE_bss_800695EC;
+extern float flt_CODE_bss_800695F0;
+extern float flt_CODE_bss_800695F8;
+extern float flt_CODE_bss_800695FC;
+extern float flt_CODE_bss_80069600;
+extern float flt_CODE_bss_80069608;
+extern float flt_CODE_bss_8006960C;
+extern float flt_CODE_bss_80069610;
+extern float flt_CODE_bss_80069614;
+extern float flt_CODE_bss_80069618;
 /*
 CODE.bss:80069620     dword_CODE_bss_80069620:.space 0x30
 CODE.bss:80069650                     .space 1
@@ -196,344 +157,191 @@ CODE.bss:80069671     CHEAT_AVAILABLE_2X_HUNTING_KNIVES:.space 1
 CODE.bss:80069672     CHEAT_AVAILABLE_2X_LASER:.space 2
 CODE.bss:80069674                     .space 0x2C
 */
-//CODE.bss:800696A0
-extern u8 cheat_activated;
-//CODE.bss:800696A1
-extern u8 CHEAT_AVAILABLE_EXTRA_CHARS;
-//CODE.bss:800696A2
-extern u8 cheat_activated_1;
-//CODE.bss:800696A3
-extern u8 cheat_activated_2;
-//CODE.bss:800696A4
-extern u8 CHEAT_AVAILABLE_MAX_AMMO;
-//CODE.bss:800696A5
-extern u8 cheat_activated_4;
-//CODE.bss:800696A6
-extern u8 cheat_activated_5;
-//CODE.bss:800696A7
-extern u8 cheat_activated_6;
-//CODE.bss:800696A8
-extern u8 cheat_activated_7;
-//CODE.bss:800696A9
-extern u8 cheat_activated_8;
-//CODE.bss:800696AA
-extern u8 cheat_activated_9;
-//CODE.bss:800696AB
-extern u8 cheat_activated_10;
-//CODE.bss:800696AC
-extern u8 cheat_activated_11;
-//CODE.bss:800696AD
-extern u8 cheat_activated_12;
-//CODE.bss:800696AE
-extern u8 cheat_activated_13;
-//CODE.bss:800696AF
-extern u8 cheat_activated_14;
-//CODE.bss:800696B0
-extern u8 cheat_activated_15;
-//CODE.bss:800696B1
-extern u8 cheat_activated_16;
-//CODE.bss:800696B2
-extern u8 cheat_activated_17;
-//CODE.bss:800696B3
-extern u8 cheat_activated_18;
-//CODE.bss:800696B4
-extern u8 cheat_activated_19;
-//CODE.bss:800696B5
-extern u8 cheat_activated_20;
-//CODE.bss:800696B6
-extern u8 cheat_activated_21;
-//CODE.bss:800696B7
-extern u8 cheat_activated_22;
-//CODE.bss:800696B8
-extern u8 cheat_activated_23;
-//CODE.bss:800696B9
-extern u8 cheat_activated_24;
-//CODE.bss:800696BA
-extern u8 cheat_activated_25;
-//CODE.bss:800696BB
-extern u8 cheat_activated_26;
-//CODE.bss:800696BC
-extern u8 cheat_activated_27;
-//CODE.bss:800696BD
-extern u8 cheat_activated_28;
-//CODE.bss:800696BE
-extern u8 cheat_activated_29;
-//CODE.bss:800696BF
-extern u8 cheat_activated_30;
-//CODE.bss:800696C0
-extern u8 cheat_activated_31;
-//CODE.bss:800696C1
-extern u8 cheat_activated_32;
-//CODE.bss:800696C2
-extern u8 cheat_activated_33;
-//CODE.bss:800696C3
-extern u8 cheat_activated_34;
-//CODE.bss:800696C4
-extern u8 cheat_activated_35;
-//CODE.bss:800696C5
-extern u8 cheat_activated_36;
-//CODE.bss:800696C6
-extern u8 cheat_activated_37;
-//CODE.bss:800696C7
-extern u8 cheat_activated_38;
-//CODE.bss:800696C8
-extern u8 cheat_activated_39;
-//CODE.bss:800696C9
-extern u8 cheat_activated_40;
-//CODE.bss:800696CA
-extern u8 cheat_activated_41;
-//CODE.bss:800696CB
-extern u8 cheat_activated_42;
-//CODE.bss:800696CC
-extern u8 cheat_activated_43;
-//CODE.bss:800696CD
-extern u8 cheat_activated_44;
-//CODE.bss:800696CE
-extern u8 cheat_activated_45;
-//CODE.bss:800696CF
-extern u8 cheat_activated_46;
-//CODE.bss:800696D0
-extern u8 cheat_activated_47;
-//CODE.bss:800696D1
-extern u8 cheat_activated_48;
-//CODE.bss:800696D2
-extern u8 cheat_activated_49;
-//CODE.bss:800696D3
-extern u8 cheat_activated_50;
-//CODE.bss:800696D4
-extern u8 cheat_activated_51;
-//CODE.bss:800696D5
-extern u8 cheat_activated_52;
-//CODE.bss:800696D6
-extern u8 cheat_activated_53;
-//CODE.bss:800696D7
-extern u8 cheat_activated_54;
-//CODE.bss:800696D8
-extern u8 cheat_activated_55;
-//CODE.bss:800696D9
-extern u8 cheat_activated_56;
-//CODE.bss:800696DA
-extern u8 cheat_activated_57;
-//CODE.bss:800696DB
-extern u8 cheat_activated_58;
-//CODE.bss:800696DC
-extern u8 cheat_activated_59;
-//CODE.bss:800696DD
-extern u8 cheat_activated_60;
-//CODE.bss:800696DE
-extern u8 cheat_activated_61;
-//CODE.bss:800696DF
-extern u8 cheat_activated_62;
-//CODE.bss:800696E0
-extern u8 cheat_activated_63;
-//CODE.bss:800696E1
-extern u8 cheat_activated_64;
-//CODE.bss:800696E2
-extern u8 cheat_activated_65;
-//CODE.bss:800696E3
-extern u8 cheat_activated_66;
-//CODE.bss:800696E4
-extern u8 cheat_activated_67;
-//CODE.bss:800696E5
-extern u8 cheat_activated_68;
-//CODE.bss:800696E6
-extern u8 cheat_activated_69;
-//CODE.bss:800696E7
-extern u8 cheat_activated_70;
-//CODE.bss:800696E8
-extern u8 cheat_activated_71;
-//CODE.bss:800696E9
-extern u8 cheat_activated_72;
-//CODE.bss:800696EA
-extern u8 cheat_activated_73;
-//CODE.bss:800696EB
-extern u8 cheat_activated_74;
-//CODE.bss:800696EC
-extern u8 cheat_activated_75;
-//CODE.bss:800696ED
-extern u8 cheat_activated_76;
-//CODE.bss:800696EE
-extern u8 cheat_activated_77;
-//CODE.bss:800696EF
-extern u8 cheat_activated_78;
+extern unsigned char cheat_activated;
+extern unsigned char CHEAT_AVAILABLE_EXTRA_CHARS;
+extern unsigned char cheat_activated_1;
+extern unsigned char cheat_activated_2;
+extern unsigned char CHEAT_AVAILABLE_MAX_AMMO;
+extern unsigned char cheat_activated_4;
+extern unsigned char cheat_activated_5;
+extern unsigned char cheat_activated_6;
+extern unsigned char cheat_activated_7;
+extern unsigned char cheat_activated_8;
+extern unsigned char cheat_activated_9;
+extern unsigned char cheat_activated_10;
+extern unsigned char cheat_activated_11;
+extern unsigned char cheat_activated_12;
+extern unsigned char cheat_activated_13;
+extern unsigned char cheat_activated_14;
+extern unsigned char cheat_activated_15;
+extern unsigned char cheat_activated_16;
+extern unsigned char cheat_activated_17;
+extern unsigned char cheat_activated_18;
+extern unsigned char cheat_activated_19;
+extern unsigned char cheat_activated_20;
+extern unsigned char cheat_activated_21;
+extern unsigned char cheat_activated_22;
+extern unsigned char cheat_activated_23;
+extern unsigned char cheat_activated_24;
+extern unsigned char cheat_activated_25;
+extern unsigned char cheat_activated_26;
+extern unsigned char cheat_activated_27;
+extern unsigned char cheat_activated_28;
+extern unsigned char cheat_activated_29;
+extern unsigned char cheat_activated_30;
+extern unsigned char cheat_activated_31;
+extern unsigned char cheat_activated_32;
+extern unsigned char cheat_activated_33;
+extern unsigned char cheat_activated_34;
+extern unsigned char cheat_activated_35;
+extern unsigned char cheat_activated_36;
+extern unsigned char cheat_activated_37;
+extern unsigned char cheat_activated_38;
+extern unsigned char cheat_activated_39;
+extern unsigned char cheat_activated_40;
+extern unsigned char cheat_activated_41;
+extern unsigned char cheat_activated_42;
+extern unsigned char cheat_activated_43;
+extern unsigned char cheat_activated_44;
+extern unsigned char cheat_activated_45;
+extern unsigned char cheat_activated_46;
+extern unsigned char cheat_activated_47;
+extern unsigned char cheat_activated_48;
+extern unsigned char cheat_activated_49;
+extern unsigned char cheat_activated_50;
+extern unsigned char cheat_activated_51;
+extern unsigned char cheat_activated_52;
+extern unsigned char cheat_activated_53;
+extern unsigned char cheat_activated_54;
+extern unsigned char cheat_activated_55;
+extern unsigned char cheat_activated_56;
+extern unsigned char cheat_activated_57;
+extern unsigned char cheat_activated_58;
+extern unsigned char cheat_activated_59;
+extern unsigned char cheat_activated_60;
+extern unsigned char cheat_activated_61;
+extern unsigned char cheat_activated_62;
+extern unsigned char cheat_activated_63;
+extern unsigned char cheat_activated_64;
+extern unsigned char cheat_activated_65;
+extern unsigned char cheat_activated_66;
+extern unsigned char cheat_activated_67;
+extern unsigned char cheat_activated_68;
+extern unsigned char cheat_activated_69;
+extern unsigned char cheat_activated_70;
+extern unsigned char cheat_activated_71;
+extern unsigned char cheat_activated_72;
+extern unsigned char cheat_activated_73;
+extern unsigned char cheat_activated_74;
+extern unsigned char cheat_activated_75;
+extern unsigned char cheat_activated_76;
+extern unsigned char cheat_activated_77;
+extern unsigned char cheat_activated_78;
 
-//CODE.bss:800696F0
-extern s32 fav_weapon_right_player1;
-//CODE.bss:800696F4
-extern s32 fav_weapon_left_player1;
-//CODE.bss:800696F8
-extern s32 fav_weapon_right_player2;
-//CODE.bss:800696FC
-extern s32 fav_weapon_left_player2;
-//CODE.bss:80069700
-extern s32 fav_weapon_right_player3;
-//CODE.bss:80069704
-extern s32 fav_weapon_left_player3;
-//CODE.bss:80069708
-extern s32 fav_weapon_right_player4;
-//CODE.bss:8006970C
-extern s32 fav_weapon_left_player4;
-//CODE.bss:80069710
-extern s32 mp_char_cur_select_player1;
-//CODE.bss:80069714
-extern s32 mp_char_cur_select_player2;
-//CODE.bss:80069718
-extern s32 mp_char_cur_select_player3;
-//CODE.bss:8006971C
-extern s32 mp_char_cur_select_player4;
-//CODE.bss:80069720
-extern s32 mp_char_prev_select_player1;
-//CODE.bss:80069724
-extern s32 mp_char_prev_select_player2;
-//CODE.bss:80069728
-extern s32 mp_char_prev_select_player3;
-//CODE.bss:8006972C
-extern s32 mp_char_prev_select_player4;
-//CODE.bss:80069730
-extern s32 dword_CODE_bss_80069730;
-//CODE.bss:80069734
-extern s32 dword_CODE_bss_80069734;
-//CODE.bss:80069738
-extern s32 dword_CODE_bss_80069738;
-//CODE.bss:8006973C
-extern s32 dword_CODE_bss_8006973C;
-//CODE.bss:80069740
-extern s32 has_selected_char_player1;
-//CODE.bss:80069744
-extern s32 has_selected_char_player2;
-//CODE.bss:80069748
-extern s32 has_selected_char_player3;
-//CODE.bss:8006974C
-extern s32 has_selected_char_player4;
-//CODE.bss:80069750
-extern s32 size_mp_select_image_player1;
-//CODE.bss:80069754
-extern s32 size_mp_select_image_player2;
-//CODE.bss:80069758
-extern s32 size_mp_select_image_player3;
-//CODE.bss:8006975C
-extern s32 size_mp_select_image_player4;
-//CODE.bss:80069760
-extern s32 handicap_player1;
-//CODE.bss:80069764
-extern s32 handicap_player2;
-//CODE.bss:80069768
-extern s32 handicap_player3;
-//CODE.bss:8006976C
-extern s32 handicap_player4;
-//CODE.bss:80069770
-extern s32 dword_CODE_bss_80069770;
-//CODE.bss:80069774
-extern s32 dword_CODE_bss_80069774;
-//CODE.bss:80069778
-extern s32 dword_CODE_bss_80069778;
-//CODE.bss:8006977C
-extern s32 current_mp_stage_highlighted;
-//CODE.bss:80069780
-extern s32 dword_CODE_bss_80069780;
-//CODE.bss:80069784
-extern s32 mission_difficulty_highlighted;
-//CODE.bss:80069788
-extern s32 teamsize;
-//CODE.bss:8006978C
-extern s32 ptrbriefingdata;
-//CODE.bss:80069790
-extern s32 newcheatunlocked;
-//CODE.bss:80069794
-extern s32 highlight_enemy_reaction;
-//CODE.bss:80069798
-extern s32 highlight_enemy_health;
-//CODE.bss:8006979C
-extern s32 highlight_enemy_accuracy;
-//CODE.bss:800697A0
-extern s32 highlight_enemy_damage;
+extern int array_favweapon[4][2];
+extern int mp_char_cur_select_player1;
+extern int mp_char_cur_select_player2;
+extern int mp_char_cur_select_player3;
+extern int mp_char_cur_select_player4;
+extern int mp_char_prev_select_player1;
+extern int mp_char_prev_select_player2;
+extern int mp_char_prev_select_player3;
+extern int mp_char_prev_select_player4;
+extern int dword_CODE_bss_80069730;
+extern int dword_CODE_bss_80069734;
+extern int dword_CODE_bss_80069738;
+extern int dword_CODE_bss_8006973C;
+extern int has_selected_char_player1;
+extern int has_selected_char_player2;
+extern int has_selected_char_player3;
+extern int has_selected_char_player4;
+extern int size_mp_select_image_player1;
+extern int size_mp_select_image_player2;
+extern int size_mp_select_image_player3;
+extern int size_mp_select_image_player4;
+extern int handicap_player1;
+extern int handicap_player2;
+extern int handicap_player3;
+extern int handicap_player4;
+extern int dword_CODE_bss_80069770;
+extern int dword_CODE_bss_80069774;
+extern int dword_CODE_bss_80069778;
+extern int current_mp_stage_highlighted;
+extern int dword_CODE_bss_80069780;
+extern int mission_difficulty_highlighted;
+extern int teamsize;
+extern int ptrbriefingdata;
+extern int newcheatunlocked;
+extern int highlight_enemy_reaction;
+extern int highlight_enemy_health;
+extern int highlight_enemy_accuracy;
+extern int highlight_enemy_damage;
 
-//CODE.bss:800697A4                     .align 3
+extern int handicap_player1;
+extern int handicap_player2;
+extern int handicap_player3;
+extern int handicap_player4;
+extern unsigned int controlstyle_player[];
 
-//CODE.bss:800697A8
-extern s32 handicap_player1;
-//CODE.bss:800697AC
-extern s32 handicap_player2;
-//CODE.bss:800697B0
-extern s32 handicap_player3;
-//CODE.bss:800697B4
-extern s32 handicap_player4;
-//CODE.bss:800697B8
-extern u32 controlstyle_player[];
+extern int highlight_players;
+extern int highlight_scenario;
+extern int highlight_gameselect;
+extern int highlight_gamelength;
+extern int highlight_character;
+extern int highlight_weaponselect;
+extern int highlight_health;
+extern int highlight_controlstyle;
+extern int highlight_aimadjustment;
 
+extern int current_menu;
+extern int menu_update;
+extern int maybe_prev_menu;
+extern int menu_timer;
+extern int tab_1_selected;
+extern int tab_2_selected;
+extern int tab_3_selected;
+extern int tab_1_highlight;
+extern int tab_2_highlight;
+extern int tab_3_highlight;
 
-//CODE.bss:800697C8
-extern s32 highlight_players;
-//CODE.bss:800697CC
-extern s32 highlight_scenario;
-//CODE.bss:800697D0
-extern s32 highlight_gameselect;
-//CODE.bss:800697D4
-extern s32 highlight_gamelength;
-//CODE.bss:800697D8
-extern s32 highlight_character;
-//CODE.bss:800697DC
-extern s32 highlight_weaponselect;
-//CODE.bss:800697E0
-extern s32 highlight_health;
-//CODE.bss:800697E4
-extern s32 highlight_controlstyle;
-//CODE.bss:800697E8
-extern s32 highlight_aimadjustment;
-//CODE.bss:800697EC                     .align 4
-/*
-CODE.bss:800697F0     dword_CODE_bss_800697F0:.space 0x130
-*/
+extern float tab2_first_x_coord;
+extern float tab1_max_x_coord;
+extern float tab2_bottom_y_coord;
 
-extern s32 current_menu;
-extern s32 menu_update;
-extern s32 maybe_prev_menu;
-extern s32 menu_timer;
-extern s32 tab_1_selected;
-extern s32 tab_2_selected;
-extern s32 tab_3_selected;
-extern s32 tab_1_highlight;
-extern s32 tab_2_highlight;
-extern s32 tab_3_highlight;
-
-extern f32 tab2_first_x_coord;
-extern f32 tab1_max_x_coord;
-extern f32 tab2_bottom_y_coord;
-
-extern s32 selected_folder_num;
-extern s32 selected_folder_num_copy;
-extern s32 gamemode;
-extern s32 selected_stage;
-extern s32 briefingpage;
-extern s32 selected_difficulty;
-extern s32 append_cheat_sp;
-extern s32 append_cheat_mp;
-extern f32 cursor_h_pos;
-extern f32 cursor_v_pos;
-extern s32 final_menu_briefing_page;
-extern s32 current_menu_briefing_page;
-extern s32 folder_selection_screen_option_icon;
-extern s32 folder_selected_for_deletion;
-extern s32 folder_selected_for_deletion_choice;
-extern s32 mission_failed_or_aborted;
-extern s32 mission_kia_flag;
-extern s32 is_first_time_on_legal_screen;
-extern s32 is_first_time_on_main_menu;
-extern s32 prev_keypresses;
-extern s32 dword_D_8002A938;
-extern s32 maybe_is_in_menu;
-extern s32 screen_size;
-extern s32 spectrum_related_flag;
-extern s32 is_emulating_spectrum;
-extern s32 is_cheat_menu_available;
-extern s32 ptr_logo_and_walletbond_DL;
-extern s32 ptr_menu_videobuffer;
-extern s32 something_legalscreen_constructor;
-extern s32 ptr_folder_object_instance;
-extern s32 set0_never_used;
-extern s32 set0_never_used_0;
-extern s32 D_8002A968;
-extern s32 dword_D_8002A96C;
+extern int selected_folder_num;
+extern int selected_folder_num_copy;
+extern int gamemode;
+extern int selected_stage;
+extern int briefingpage;
+extern int selected_difficulty;
+extern int append_cheat_sp;
+extern int append_cheat_mp;
+extern float cursor_h_pos;
+extern float cursor_v_pos;
+extern int final_menu_briefing_page;
+extern int current_menu_briefing_page;
+extern int folder_selection_screen_option_icon;
+extern int folder_selected_for_deletion;
+extern int folder_selected_for_deletion_choice;
+extern int mission_failed_or_aborted;
+extern int mission_kia_flag;
+extern int is_first_time_on_legal_screen;
+extern int is_first_time_on_main_menu;
+extern int prev_keypresses;
+extern int dword_D_8002A938;
+extern int maybe_is_in_menu;
+extern int screen_size;
+extern int spectrum_related_flag;
+extern int is_emulating_spectrum;
+extern int is_cheat_menu_available;
+extern int ptr_logo_and_walletbond_DL;
+extern int ptr_menu_videobuffer;
+extern int something_legalscreen_constructor;
+extern int ptr_folder_object_instance;
+extern int set0_never_used;
+extern int set0_never_used_0;
+extern int D_8002A968;
+extern int dword_D_8002A96C;
 extern struct rgba_val stru_D_8002A970;
 extern struct rgba_val stru_D_8002A974;
 extern struct rgba_val stru_D_8002A978;
@@ -542,14 +350,14 @@ extern struct rgba_val stru_D_8002A980;
 extern struct rgba_val stru_D_8002A984;
 extern struct rgba_val stru_D_8002A988;
 extern struct rgba_val stru_D_8002A98C;
-extern u32 dword_D_8002A990;
-extern u32 dword_D_8002A994;
-extern u32 dword_D_8002A998;
-extern u32 dword_D_8002A99C;
-extern f32 slider_007_mode_reaction;
-extern f32 slider_007_mode_health;
-extern f32 slider_007_mode_damage;
-extern f32 slider_007_mode_accuracy;
+extern unsigned int dword_D_8002A990;
+extern unsigned int dword_D_8002A994;
+extern unsigned int dword_D_8002A998;
+extern unsigned int dword_D_8002A99C;
+extern float slider_007_mode_reaction;
+extern float slider_007_mode_health;
+extern float slider_007_mode_damage;
+extern float slider_007_mode_accuracy;
 
 /*
 dword_D_8002A9B0:.word 0xA0000000
@@ -581,14 +389,14 @@ dword_D_8002AB94:.word 0xC4610000, 0x44480000, 0
                 .float 900.0
                 .float -200.0
                 .word 0
-f32 folder_option_COPY_left_bound = 0.0;
-f32 folder_option_COPY_upper_bound = 0.0;
-f32 folder_option_COPY_right_bound = 0.0;
-f32 folder_option_COPY_lower_bound = 0.0;
-f32 folder_option_ERASE_left_bound = 0.0;
-f32 folder_option_ERASE_upper_bound = 0.0;
-f32 folder_option_ERASE_right_bound = 0.0;
-f32 folder_option_ERASE_lower_bound = 0.0;
+float folder_option_COPY_left_bound = 0.0;
+float folder_option_COPY_upper_bound = 0.0;
+float folder_option_COPY_right_bound = 0.0;
+float folder_option_COPY_lower_bound = 0.0;
+float folder_option_ERASE_left_bound = 0.0;
+float folder_option_ERASE_upper_bound = 0.0;
+float folder_option_ERASE_right_bound = 0.0;
+float folder_option_ERASE_lower_bound = 0.0;
 mission_folder_setup_entries:
     mission_folder_setup <"1", 0x9C78, 0, LEVELID_NONE, 0, MISSION_HEADER, 0xFFFFFFFF, 0>
     mission_folder_setup <"i", 0x9C79, 0, LEVELID_DAM, 0, MISSION_PART, 0, "UbriefdamZ">
@@ -757,22 +565,22 @@ stru_mp_sight_adjust_table:MP_sight_aim_settings <0x9C, 0x48, 0, 0>
                 MP_sight_aim_settings <0x9C, 0x4A, 0, 1>
                 MP_sight_aim_settings <0x9C, 0x4B, 1, 1>
 */
-extern s32 selected_num_players;
-extern s32 player_1_char;
-extern s32 player_2_char;
-extern s32 player_3_char;
-extern s32 player_4_char;
-extern s32 MP_stage_selected;
-extern s32 game_length;
-extern s32 aim_sight_adjustment;
-extern s32 scenario;
-extern s32 unlock_stage_select;
-extern s32 unlock_game_length;
-extern s32 unlock_chars;
-extern s32 unlock_weapon_select;
-extern s32 unlock_handicap;
-extern s32 unlock_control_style;
-extern s32 unlock_aim_sight;
+extern int selected_num_players;
+extern int player_1_char;
+extern int player_2_char;
+extern int player_3_char;
+extern int player_4_char;
+extern int MP_stage_selected;
+extern int game_length;
+extern int aim_sight_adjustment;
+extern int scenario;
+extern int unlock_stage_select;
+extern int unlock_game_length;
+extern int unlock_chars;
+extern int unlock_weapon_select;
+extern int unlock_handicap;
+extern int unlock_control_style;
+extern int unlock_aim_sight;
 /*
 dword_D_8002B560:.word 0
                 solo_target_times <0, 160, 0>
@@ -799,11 +607,11 @@ dword_D_8002B5DC:.word 0
 dword_D_8002B5E0:.word 0
 MP_menu_selected_option:.word 0
 */
-extern u32 do_not_play_intro_movie;
-extern u32 randomly_selected_intro_animation;
-extern u32 intro_animation_count;
-extern u32 objinstance;
-extern u32 ptrobjinstance;
-extern u32 full_actor_intro;
+extern unsigned int do_not_play_intro_movie;
+extern unsigned int randomly_selected_intro_animation;
+extern unsigned int intro_animation_count;
+extern unsigned int objinstance;
+extern unsigned int ptrobjinstance;
+extern unsigned int full_actor_intro;
 
 #endif

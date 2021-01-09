@@ -1,0 +1,4 @@
+import folder/system
+rom_header.o (.data)
+import folder/system
+rom_header2.o (.data)

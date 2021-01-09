@@ -1,0 +1,52 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+genrule(
+    name = "lexer_template",
+    srcs = [
+        "lexer.l.template",
+    ],
+    outs = ["lexer.l"],
+    cmd = "./$(location //tools/mips2ir/cmd:opcodes) $< > $@",
+    tools = [
+        "//tools/mips2ir/cmd:opcodes",
+    ],
+)
+
+genrule(
+    name = "lexer",
+    srcs = [":lexer_template"],
+    outs = ["lex.yy.go"],
+    cmd = "golex -o $@ $<",
+)
+
+genrule(
+    name = "parser",
+    srcs = ["parser.y"],
+    outs = ["y.go"],
+    cmd = "goyacc -o $@ $<",
+)
+
+go_library(
+    name = "frontend",
+    srcs = [
+        "parser.go",
+        ":lexer",
+        ":parser",
+    ],
+    importpath = "mips2ir/frontend",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//tools/mips2ir/statements",
+        "//tools/mips2ir/reassembler",
+    ]
+)
+
+go_test(
+    name = "frontend_test",
+    srcs = [
+        "lexer_test.go",
+        "parser_test.go",
+    ],
+    embed = [":frontend"],
+    deps = ["//tools/mips2ir/opcodes:opcodes_lib"],
+)

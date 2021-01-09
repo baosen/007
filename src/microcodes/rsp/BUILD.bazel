@@ -1,0 +1,10 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+
+mips_library(
+    name = "rspboot",
+    srcs = [
+        "rspboot.s",
+        "rspboot.text.bin",
+    ],
+    visibility = ["//visibility:public"],
+)

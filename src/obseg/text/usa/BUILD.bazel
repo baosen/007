@@ -1,0 +1,43 @@
+load("//tools/rz/deflate:deflate.bzl", "deflate")
+load("//tools/rz/inflate:inflate.bzl", "inflate")
+
+inflate(
+    name = "usa",
+    srcs = [
+        "data.json",
+        "//roms:usa.z64",
+    ],
+    outs = [
+        "LarecJ.bin",
+        "LarkJ.bin",
+        "LaztJ.bin",
+        "LcradJ.bin",
+        "LcrypJ.bin",
+        "LdamJ.bin",
+        "LdepoJ.bin",
+        "LgunJ.bin",
+        "LjunJ.bin",
+        "LlenJ.bin",
+        "LmiscJ.bin",
+        "LmpmenuJ.bin",
+        "LmpweaponsJ.bin",
+        "LoptionsJ.bin",
+        "LpeteJ.bin",
+        "LpropobjJ.bin",
+        "LsevJ.bin",
+        "LsevbJ.bin",
+        "LsevxJ.bin",
+        "LsiloJ.bin",
+        "LstatJ.bin",
+        "LtitleJ.bin",
+        "LtraJ.bin",
+    ],
+)
+
+deflate(
+    name = "rz",
+    srcs = [
+        ":usa",
+    ],
+    visibility = ["//visibility:public"],
+)

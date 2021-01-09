@@ -1,0 +1,120 @@
+{
+    "compressed": true,
+    "files": [
+        {
+            "offset": 9340560,
+            "length": 1424,
+            "name": "LarecJ.bin"
+        },
+        {
+            "offset": 9343680,
+            "length": 1712,
+            "name": "LarkJ.bin"
+        },
+        {
+            "offset": 9346512,
+            "length": 1200,
+            "name": "LaztJ.bin"
+        },
+        {
+            "offset": 9351120,
+            "length": 1200,
+            "name": "LcradJ.bin"
+        },
+        {
+            "offset": 9352912,
+            "length": 704,
+            "name": "LcrypJ.bin"
+        },
+        {
+            "offset": 9354720,
+            "length": 1136,
+            "name": "LdamJ.bin"
+        },
+        {
+            "offset": 9356736,
+            "length": 832,
+            "name": "LdepoJ.bin"
+        },
+        {
+            "offset": 9361776,
+            "length": 1872,
+            "name": "LgunJ.bin"
+        },
+        {
+            "offset": 9364992,
+            "length": 1344,
+            "name": "LjunJ.bin"
+        },
+        {
+            "offset": 9367968,
+            "length": 688,
+            "name": "LlenJ.bin"
+        },
+        {
+            "offset": 9369392,
+            "length": 736,
+            "name": "LmiscJ.bin"
+        },
+        {
+            "offset": 9370544,
+            "length": 400,
+            "name": "LmpmenuJ.bin"
+        },
+        {
+            "offset": 9371136,
+            "length": 224,
+            "name": "LmpweaponsJ.bin"
+        },
+        {
+            "offset": 9371952,
+            "length": 592,
+            "name": "LoptionsJ.bin"
+        },
+        {
+            "offset": 9373728,
+            "length": 1136,
+            "name": "LpeteJ.bin"
+        },
+        {
+            "offset": 9375536,
+            "length": 704,
+            "name": "LpropobjJ.bin"
+        },
+        {
+            "offset": 9378960,
+            "length": 1296,
+            "name": "LsevJ.bin"
+        },
+        {
+            "offset": 9382128,
+            "length": 2032,
+            "name": "LsevbJ.bin"
+        },
+        {
+            "offset": 9385280,
+            "length": 960,
+            "name": "LsevxJ.bin"
+        },
+        {
+            "offset": 9390000,
+            "length": 1504,
+            "name": "LsiloJ.bin"
+        },
+        {
+            "offset": 9393840,
+            "length": 2160,
+            "name": "LstatJ.bin"
+        },
+        {
+            "offset": 9398752,
+            "length": 2960,
+            "name": "LtitleJ.bin"
+        },
+        {
+            "offset": 9402784,
+            "length": 1056,
+            "name": "LtraJ.bin"
+        }
+    ]
+}

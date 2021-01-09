@@ -1,0 +1,13 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+exports_files([
+    "room_model_buffer.h",
+])
+
+gecc_library(
+    name = "room_model_buffer",
+    srcs = [
+        "room_model_buffer.c",
+    ],
+    visibility = ["//visibility:public"],
+)

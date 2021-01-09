@@ -1,0 +1,90 @@
+%{
+package frontend
+
+import (
+    "fmt"
+    "os"
+)
+
+type mipsLexer struct {
+    input   string
+    prev, i int
+}
+
+func (l *mipsLexer) get() byte {
+    if l.i < len(l.input) {
+        return l.input[l.i]
+    }
+    return 0
+}
+
+func (l *mipsLexer) next() {
+    l.i++
+}
+
+func (l *mipsLexer) set(lval *yySymType) {
+    lval.val = l.input[l.prev:l.i]
+    l.prev = l.i
+}
+
+func (l *mipsLexer) Lex(lval *yySymType) int {
+%}
+
+%yyn l.next()
+%yyc l.get()
+
+%%
+[ \t\n\r]+
+    l.prev = l.i
+
+glabel
+    l.set(lval)
+    return GLABEL
+
+\%hi
+    return HI
+
+\%lo
+    return LO
+
+{{.Opcodes}}
+    l.set(lval)
+    return OPCODE
+
+\.[A-Z0-9]+\:
+    l.set(lval)
+    return LABEL
+
+($zero|$gp|$sp|$fp|$ra|$at|$v0|$v1|$a0|$a1|$a2|$a3|$t0|$t1|$t2|$t3|$t4|$t5|$t6|$t7|$t8|$t9|$s0|$s1|$s2|$s3|$s4|$s5|$s6|$s7|$s8)
+    l.set(lval)
+    return REGISTER
+
+,
+    l.set(lval)
+    return ','
+
+\(
+    return '('
+
+\)
+    return ')'
+
+0x[a-f0-9]+
+    l.set(lval)
+    return HEXADECIMAL
+
+[0-9]+
+    l.set(lval)
+    return DECIMAL
+
+[0-9A-Za-z_]+
+    l.set(lval)
+    return IDENTIFIER
+
+%%
+    return 0
+}
+
+func (l *mipsLexer) Error(s string) {
+	fmt.Fprintf(os.Stderr, "%s\n", s)
+}

@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "c_data_filler",
+    srcs = [
+        "c_data_filler.c",
+    ],
+    visibility = ["//visibility:public"],
+)

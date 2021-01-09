@@ -1,0 +1,225 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+load("//tools/gnu:mips.bzl", "link", "objcopy")
+load("//tools/rz/inflate:inflate.bzl", "inflate")
+
+inflate(
+    name = "usa",
+    srcs = [
+        "data.json",
+        "//roms:usa.z64",
+    ],
+    outs = [
+        "bg_arch_all_p.seg",
+        "bg_arec_all_p.seg",
+        "bg_ark_all_p.seg",
+        "bg_ash_all_p.seg",
+        "bg_cave_all_p.seg",
+        "bg_dam_all_p.seg",
+        "bg_depo_all_p.seg",
+        "bg_dest_all_p.seg",
+        "bg_ear_all_p.seg",
+        "bg_imp_all_p.seg",
+        "bg_jun_all_p.seg",
+        "bg_lee_all_p.seg",
+        "bg_len_all_p.seg",
+        "bg_oat_all_p.seg",
+        "bg_pam_all_p.seg",
+        "bg_pete_all_p.seg",
+        "bg_sho_all_p.seg",
+        "bg_stat_all_p.seg",
+        "bg_tra_all_p.seg",
+        "bg_wax_all_p.seg",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "bg_ame_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_ame_all_p.c",
+        "bg_ame_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_arch_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_arch_all_p.c",
+        "bg_arch_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_arec_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_arec_all_p.c",
+        "bg_arec_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_ark_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_ark_all_p.c",
+        "bg_ark_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_azt_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_azt_all_p.c",
+        "bg_azt_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_cat_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_cat_all_p.c",
+        "bg_cat_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_cave_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_cave_all_p.c",
+        "bg_cave_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_crad_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_crad_all_p.c",
+        "bg_crad_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_cryp_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_cryp_all_p.c",
+        "bg_cryp_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_dish_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_dish_all_p.c",
+        "bg_dish_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_lip_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_lip_all_p.c",
+        "bg_lip_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_ref_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_ref_all_p.c",
+        "bg_ref_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_rit_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_rit_all_p.c",
+        "bg_rit_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_run_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_run_all_p.c",
+        "bg_run_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_sev_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_sev_all_p.c",
+        "bg_sev_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_sevb_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_sevb_all_p.c",
+        "bg_sevb_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_sevx_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_sevx_all_p.c",
+        "bg_sevx_all_p.h",
+    ],
+)
+
+gecc_library(
+    name = "bg_silo_all_p",
+    srcs = [
+        "bg_all_p.h",
+        "bg_silo_all_p.c",
+        "bg_silo_all_p.h",
+    ],
+)
+
+link(
+    name = "bg",
+    srcs = [
+        ":bg_ame_all_p",
+        ":bg_azt_all_p",
+        ":bg_cat_all_p",
+        ":bg_crad_all_p",
+        ":bg_cryp_all_p",
+        ":bg_dish_all_p",
+        ":bg_lip_all_p",
+        ":bg_ref_all_p",
+        ":bg_rit_all_p",
+        ":bg_run_all_p",
+        ":bg_sev_all_p",
+        ":bg_sevb_all_p",
+        ":bg_sevx_all_p",
+        ":bg_silo_all_p",
+    ],
+    ld = "bg_all_p.ld",
+)
+
+objcopy(
+    name = "seg",
+    srcs = [
+        ":bg",
+    ],
+    visibility = ["//visibility:public"],
+)

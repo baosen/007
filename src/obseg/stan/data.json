@@ -1,0 +1,140 @@
+{
+    "compressed": true,
+    "files": [
+        {
+            "offset": 8538160,
+            "length": 6448,
+            "name": "Tbg_ame_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8544608,
+            "length": 23792,
+            "name": "Tbg_arch_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8568400,
+            "length": 33616,
+            "name": "Tbg_arec_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8602016,
+            "length": 36800,
+            "name": "Tbg_ark_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8638816,
+            "length": 6448,
+            "name": "Tbg_ash_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8645264,
+            "length": 21888,
+            "name": "Tbg_azt_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8667152,
+            "length": 10032,
+            "name": "Tbg_cat_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8677184,
+            "length": 20208,
+            "name": "Tbg_cave_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8697392,
+            "length": 10512,
+            "name": "Tbg_crad_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8707904,
+            "length": 12400,
+            "name": "Tbg_cryp_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8720304,
+            "length": 41952,
+            "name": "Tbg_dam_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8762256,
+            "length": 28480,
+            "name": "Tbg_depo_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8790736,
+            "length": 26864,
+            "name": "Tbg_dest_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8817600,
+            "length": 2832,
+            "name": "Tbg_dish_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8820432,
+            "length": 6448,
+            "name": "Tbg_imp_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8826880,
+            "length": 29008,
+            "name": "Tbg_jun_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8855888,
+            "length": 2752,
+            "name": "Tbg_len_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8858640,
+            "length": 6400,
+            "name": "Tbg_oat_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8865040,
+            "length": 18064,
+            "name": "Tbg_pete_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8883104,
+            "length": 7632,
+            "name": "Tbg_ref_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8890736,
+            "length": 6784,
+            "name": "Tbg_run_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8897520,
+            "length": 15824,
+            "name": "Tbg_sev_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8913344,
+            "length": 20288,
+            "name": "Tbg_sevb_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8933632,
+            "length": 37680,
+            "name": "Tbg_sevx_all_p_stanZ.bin"
+        },
+        {
+            "offset": 8971312,
+            "length": 37024,
+            "name": "Tbg_silo_all_p_stanZ.bin"
+        },
+        {
+            "offset": 9008336,
+            "length": 20160,
+            "name": "Tbg_stat_all_p_stanZ.bin"
+        },
+        {
+            "offset": 9028496,
+            "length": 9168,
+            "name": "Tbg_tra_all_p_stanZ.bin"
+        }
+    ]
+}

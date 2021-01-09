@@ -1,0 +1,13 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+exports_files([
+    "cfb.h",
+])
+
+gecc_library(
+    name = "cfb",
+    srcs = [
+        "cfb.c",
+    ],
+    visibility = ["//visibility:public"],
+)

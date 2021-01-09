@@ -1,0 +1,13 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+
+exports_files([
+    "header.segment",
+])
+
+mips_library(
+    name = "rom_header",
+    srcs = [
+        "rom_header.s",
+    ],
+    visibility = ["//visibility:public"],
+)

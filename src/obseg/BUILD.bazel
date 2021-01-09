@@ -1,0 +1,35 @@
+load("//tools/gnu:mips.bzl", "mips_library")
+
+exports_files([
+    "obseg.segment",
+])
+
+genrule(
+    name = "ob_end",
+    srcs = [
+        "//roms:usa.z64",
+    ],
+    outs = ["ob_end.seg"],
+    cmd = "dd bs=1 skip=9403872 count=16 if=$< of=$@ status=none",
+)
+
+mips_library(
+    name = "ob_seg",
+    srcs = [
+        "ob_seg.s",
+        ":ob_end",
+        "//src/obseg/bg:seg",
+        "//src/obseg/bg:usa",
+        "//src/obseg/brief:rz",
+        "//src/obseg/chr:rz",
+        "//src/obseg/gun:rz",
+        "//src/obseg/prop:rz",
+        "//src/obseg/setup:rz",
+        "//src/obseg/setup/usa:rz",
+        "//src/obseg/stan:rz",
+        "//src/obseg/text:rz",
+        "//src/obseg/text:rzbin",
+        "//src/obseg/text/usa:rz",
+    ],
+    visibility = ["//visibility:public"],
+)

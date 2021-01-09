@@ -1,0 +1,30 @@
+{
+    "compressed": true,
+    "files": [
+        {
+            "offset": 9337440,
+            "length": 1632,
+            "name": "LarchJ.bin"
+        },
+        {
+            "offset": 9348768,
+            "length": 1120,
+            "name": "LcaveJ.bin"
+        },
+        {
+            "offset": 9358736,
+            "length": 1120,
+            "name": "LdestJ.bin"
+        },
+        {
+            "offset": 9376928,
+            "length": 656,
+            "name": "LrunJ.bin"
+        },
+        {
+            "offset": 9387408,
+            "length": 1104,
+            "name": "LsevxbJ.bin"
+        }
+    ]
+}
