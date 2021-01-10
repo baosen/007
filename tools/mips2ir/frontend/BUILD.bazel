@@ -30,6 +30,7 @@ go_library(
     name = "frontend",
     srcs = [
         "parser.go",
+        "registers.go",
         ":lexer",
         ":parser",
     ],
