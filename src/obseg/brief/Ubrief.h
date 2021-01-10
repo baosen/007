@@ -1,8 +1,7 @@
 #include "bondconstants.h"
 
 struct BriefObjectiveStruct {
-  unsigned short text;
-  unsigned short difficulty;
+  unsigned short text, difficulty;
 };
 
 #define OBJECTIVES_MAX 10
