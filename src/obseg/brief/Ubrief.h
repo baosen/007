@@ -1,4 +1,4 @@
-#include "bondtypes.h" // game structs and types
+#include "bondconstants.h"
 
 struct BriefObjectiveStruct {
   unsigned short text;
