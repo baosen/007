@@ -1,53 +1,13 @@
 #include "bond.h"
 #include "unk_093880.h"
 
-extern int camera_80036424;
-extern int resolution;
 extern int camera_8003642C;
-extern int camera_80036430;
-extern int camera_80036434;
-extern int camera_80036438;
-extern int D_8003643C;
-extern int D_80036440;
 extern int D_80036444;
 extern int in_tank_flag;
-extern int D_8003644C;
-extern int ptr_playerstank;
-extern int D_80036454;
-extern int D_80036460;
-extern int D_80036464;
-extern int D_80036468;
-extern int D_8003646C;
-extern int D_80036470;
-extern int D_80036474;
-extern int D_80036478;
-extern int D_8003647C;
-extern int D_80036480;
-extern int D_80036484;
-extern int D_80036488;
-extern int D_8003648C;
-extern int D_80036490;
 extern int cameramode;
-extern int enable_move_after_cinema;
-extern int D_8003649C;
-extern int stop_time_flag;
-extern int D_800364A4;
-extern int D_800364A8;
-extern int D_800364AC;
-extern int D_800364B0;
-extern int disable_player_pickups_flag;
-extern int D_800364B8;
-extern int D_800364BC;
-extern int ptr_random06cam_entry;
 extern int invisible_to_guards_flag;
 extern int obj_collision_flag;
 extern float D_800364CC;
-extern float D_800364D0;
-extern float D_800364D4;
-extern int D_800364D8[];
-extern int D_8003650C;
-extern int D_80036510;
-extern int D_80036514;
 
 void nullsub_75(void) {}
 
