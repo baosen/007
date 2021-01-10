@@ -4,7 +4,6 @@ cc_binary(
     name = "n64cksum",
     srcs = [
         "n64cksum.c",
-        "n64cksum.h",
         "utils.c",
         "utils.h",
     ],

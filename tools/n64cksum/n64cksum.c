@@ -1,5 +1,5 @@
-#include "n64cksum.h"
 #include "utils.h"
+#include <stdint.h>
 #include <stdlib.h>
 
 #define N64CKSUM_VERSION "0.1"
@@ -56,6 +56,9 @@ void n64cksum_calc_6102(unsigned char *buf, unsigned int cksum[]) {
   cksum[1] = (s0 ^ a2) ^ t4;
 }
 
+// update N64 header checksums
+// buf: buffer containing ROM data
+// checksums are written into the buffer
 void n64cksum_update_checksums(uint8_t *buf) {
   unsigned int cksum_offsets[] = {0x10, 0x14};
   uint32_t read_cksum[2];
@@ -98,10 +101,8 @@ static void print_usage(void) {
 
 int main(int argc, char *argv[]) {
   unsigned char *rom_data;
-  char *file_in;
-  char *file_out;
-  long length;
-  long write_length;
+  char *file_in, *file_out;
+  long length, write_length;
   if (argc < 2) {
     print_usage();
     return EXIT_FAILURE;
