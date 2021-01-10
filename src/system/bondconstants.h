@@ -25,8 +25,6 @@
 
 #define PAD_PRESET 9000 /* stored as chr->padpreset1 */
 
-#define OBJECTIVES_MAX 10
-
 typedef unsigned short PAD;
 typedef unsigned short PADEXTRA;
 
