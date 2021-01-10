@@ -30,7 +30,7 @@ glabel memaMerge
   sw    $t8, 4($a0)
   sw    $zero, ($a1)
   jr    $ra
-   sw    $zero, 4($a1)
+  sw    $zero, 4($a1)
 ");
 
 asm(R"
@@ -364,23 +364,23 @@ glabel mem_related_something_find_first
    move  $a0, $s3
   addiu $s0, $s0, 1
   bne   $s0, $s4, .L70009F10
-   nop   
+  nop
   lw    $t1, 0x14($s3)
   sltu  $at, $t1, $s2
   beql  $at, $zero, .L70009F4C
-   lw    $t3, ($s1)
+  lw    $t3, ($s1)
   lw    $t2, 0xc($s1)
 .L70009F38:
   addiu $s1, $s1, 8
   sltu  $at, $t2, $s2
   bnezl $at, .L70009F38
-   lw    $t2, 0xc($s1)
+  lw    $t2, 0xc($s1)
   lw    $t3, ($s1)
 .L70009F4C:
   bnel  $s5, $t3, .L70009F60
-   move  $a1, $s1
+  move  $a1, $s1
   b     .L70009F84
-   move  $v0, $zero
+  move  $v0, $zero
   move  $a1, $s1
 .L70009F60:
   lw    $v1, ($a1)
@@ -390,7 +390,7 @@ glabel mem_related_something_find_first
   subu  $t6, $t5, $s2
   sw    $t4, ($a1)
   bnez  $t6, .L70009F80
-   sw    $t6, 4($a1)
+  sw    $t6, 4($a1)
   sw    $zero, ($a1)
 .L70009F80:
   move  $v0, $v1
@@ -403,7 +403,7 @@ glabel mem_related_something_find_first
   lw    $s4, 0x24($sp)
   lw    $s5, 0x28($sp)
   jr    $ra
-   addiu $sp, $sp, 0x30
+  addiu $sp, $sp, 0x30
 ");
 
 asm(R"
@@ -415,35 +415,34 @@ glabel mem_related_something_find_first_0
   addiu $t8, %lo(ptr_table_allocated_mem_blocks + 0x10) # addiu $t8, $t8, 0x3c38
   move  $a3, $a1
   beq   $t2, $t9, .L70009FF4
-   move  $v1, $t8
+  move  $v1, $t8
   lw    $a1, ($t8)
 .L70009FCC:
   bnel  $a0, $a1, .L70009FE8
-   lw    $a1, 8($v1)
+  lw    $a1, 8($v1)
   lw    $a2, 4($v1)
   sltu  $at, $a2, $a3
   beql  $at, $zero, .L7000A000
-   addu  $t3, $a1, $a3
+  addu  $t3, $a1, $a3
   lw    $a1, 8($v1)
 .L70009FE8:
   addiu $v1, $v1, 8
   bne   $t2, $a1, .L70009FCC
-   nop   
+  nop   
 .L70009FF4:
   jr    $ra
-   move  $v0, $zero
-
+  move  $v0, $zero
   addu  $t3, $a1, $a3
 .L7000A000:
   subu  $t4, $a2, $a3
   sw    $t3, ($v1)
   bnez  $t4, .L7000A014
-   sw    $t4, 4($v1)
+  sw    $t4, 4($v1)
   sw    $zero, ($v1)
 .L7000A014:
   move  $v0, $a0
   jr    $ra
-   nop   
+  nop   
 ");
 
 void mem_related_model_room_buffers_0(unsigned int addr, unsigned int size) {
@@ -459,9 +458,9 @@ glabel mem_related_allocated_table_related
   addiu $v1, $v1, 0x20
 .L7000A054:
   bnel  $v1, $v0, .L7000A054
-   addiu $v1, $v1, 0x20
+  addiu $v1, $v1, 0x20
   jr    $ra
-   nop   
+  nop   
 ");
 
 asm(R"
