@@ -35,7 +35,6 @@ gecc_library(
 gecc_library(
     name = "boss",
     srcs = [
-        "bondconstants.h",
         "boss.c",
         ":includes",
         "//src/roombuf:room_model_buffer.h",
