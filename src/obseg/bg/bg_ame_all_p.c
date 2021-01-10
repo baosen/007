@@ -2602,7 +2602,4 @@ unsigned int pri_mapping_binary_92[] = {
     0x1CDFBC7,0xC0F0E6CE,0xEA83A00
 };
 
-unsigned int pri_mapping_binary_end[] = {
-    0,
-    0
-};
+unsigned int pri_mapping_binary_end[2] = {0};
