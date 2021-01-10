@@ -7,32 +7,9 @@ typedef struct s_mem_alloc_table {
   struct s_mem_alloc_entry entries[0x200];
 } s_mem_alloc_table;
 
-extern struct s_mem_alloc_table ptr_table_allocated_mem_blocks;
-
-void memaSwap(unsigned char *a, unsigned char *b);
-unsigned int memaSortMergeEntries(struct s_mem_alloc_table *param_1);
-void memaSortMergeAllEntries(void);
-unsigned int mem_related(int arg0);
-void memaAllocRoomBuffer(unsigned int addr, unsigned int size);
-void something_with_mema_c_debug(void);
-void mempInitMallocTable(void *ptr_allocmem, unsigned int size);
-void mem_related_calls_sort_merge_entries(void);
-int mem_related_something_find_first(unsigned int arg0);
-int mem_related_something_find_first_0(int arg0, unsigned int arg1);
-void mem_related_model_room_buffers_0(unsigned int addr, unsigned int size);
-void *mem_related_allocated_table_related(void);
-float mem_related_something_first_related(void);
-void generate_list_alloc_mem(void);
-void memaGenerateListsBeforeAfterMerge(void);
-void mem_related_something_first_related_0(void *arg0);
-unsigned int mem_related_0(void);
-unsigned int mem_related_1(unsigned int addr, unsigned int length,
-                           unsigned int maxsize);
-
 void *ptr_model_room_buf_secondary;
 unsigned int size_modelroom_buf;
 struct s_mem_alloc_table ptr_table_allocated_mem_blocks;
-
 void *ptr_mema_c_debug_notice_list = 0;
 
 void memaSwap(unsigned char *a, unsigned char *b) {
