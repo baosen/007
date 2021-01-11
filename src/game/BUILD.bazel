@@ -220,7 +220,6 @@ gecc_library(
 gecc_library(
     name = "cleanup_alarms",
     srcs = [
-        "chrai.h",
         "cleanup_alarms.c",
     ],
     visibility = ["//visibility:public"],

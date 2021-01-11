@@ -106,7 +106,4 @@ extern float gas_damage_flag;
 extern unsigned int gas_cutoff_flag;
 extern struct object_standard *ptr_setup_objects;
 
-void stop_alarm(void);
-void check_deactivate_gas_sound(void);
-
 #endif
