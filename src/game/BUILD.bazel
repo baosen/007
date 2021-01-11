@@ -1,19 +1,5 @@
 load("//tools/gecc:gecc.bzl", "gecc_library")
 
-exports_files([
-    "mainmenu.h",
-    "objecthandler.h",
-    "chrobjdata.h",
-    "bondtypes.h",
-    "bss.segment",
-    "data.segment",
-    "game.segment",
-    "rodata.segment",
-    "romfiles.segment",
-    "roombuf.segment",
-    "text.segment",
-])
-
 gecc_library(
     name = "initgamedata",
     srcs = [
