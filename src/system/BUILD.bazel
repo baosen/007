@@ -204,7 +204,6 @@ gecc_library(
     name = "rmon",
     srcs = [
         "rmon.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -282,7 +281,6 @@ gecc_library(
     name = "tlb_resolve",
     srcs = [
         "tlb_resolve.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
