@@ -5,7 +5,6 @@ gecc_library(
     srcs = [
         "initgamedata.c",
         "//src/game:mainmenu.h",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -22,7 +21,6 @@ gecc_library(
     name = "initactorpropstuff",
     srcs = [
         "initactorpropstuff.c",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -85,7 +83,6 @@ gecc_library(
     name = "blood_animation",
     srcs = [
         "blood_animation.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -94,7 +91,6 @@ gecc_library(
     name = "blood_decrypt",
     srcs = [
         "blood_decrypt.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -108,7 +104,6 @@ gecc_library(
         "player.h",
         "unk_093880.h",
         "xyzpoint.h",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -122,7 +117,6 @@ gecc_library(
         "player.h",
         "unk_093880.h",
         "xyzpoint.h",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -156,7 +150,6 @@ gecc_library(
     name = "bondwalk2",
     srcs = [
         "bondwalk2.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -165,7 +158,6 @@ gecc_library(
     name = "cheat_buttons",
     srcs = [
         "cheat_buttons.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -197,7 +189,6 @@ gecc_library(
     srcs = [
         "chrai.c",
         "chrai.h",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -239,7 +230,6 @@ gecc_library(
     name = "cleanup_objectives",
     srcs = [
         "cleanup_objectives.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -248,7 +238,6 @@ gecc_library(
     name = "cleanup_objects",
     srcs = [
         "cleanup_objects.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -257,9 +246,7 @@ gecc_library(
     name = "cleanupSFXRelated",
     srcs = [
         "bond.h",
-        "chr.h",
         "cleanupSFXRelated.c",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -276,7 +263,6 @@ gecc_library(
     name = "convertangleusinginverse",
     srcs = [
         "convertangleusinginverse.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -285,7 +271,6 @@ gecc_library(
     name = "deb_loadallmodels",
     srcs = [
         "deb_loadallmodels.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -294,7 +279,6 @@ gecc_library(
     name = "debugmenu_08FE00",
     srcs = [
         "debugmenu_08FE00.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -312,7 +296,6 @@ gecc_library(
     name = "decompress",
     srcs = [
         "decompress.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -321,7 +304,6 @@ gecc_library(
     name = "dyn",
     srcs = [
         "dyn.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -330,7 +312,6 @@ gecc_library(
     name = "ejectedcartridges",
     srcs = [
         "ejectedcartridges.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -339,7 +320,6 @@ gecc_library(
     name = "fog",
     srcs = [
         "fog.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -694,7 +674,6 @@ gecc_library(
         "bond.h",
         "chr.h",
         "mp_music.c",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -723,7 +702,6 @@ gecc_library(
     name = "music_0D2720",
     srcs = [
         "music_0D2720.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -741,7 +719,6 @@ gecc_library(
     srcs = [
         "ob.c",
         "obseg.h",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -750,7 +727,6 @@ gecc_library(
     name = "objecthandler_2",
     srcs = [
         "objecthandler_2.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -759,7 +735,6 @@ gecc_library(
     name = "objecthandler",
     srcs = [
         "objecthandler.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -768,7 +743,6 @@ gecc_library(
     name = "objective",
     srcs = [
         "objective.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -777,7 +751,6 @@ gecc_library(
     name = "objective_status2",
     srcs = [
         "objective_status2.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -796,7 +769,6 @@ gecc_library(
     name = "othermodemicrocode",
     srcs = [
         "othermodemicrocode.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -805,7 +777,6 @@ gecc_library(
     name = "playerstats_007770",
     srcs = [
         "playerstats_007770.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -814,7 +785,6 @@ gecc_library(
     name = "prop",
     srcs = [
         "prop.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -823,7 +793,6 @@ gecc_library(
     name = "radar",
     srcs = [
         "radar.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -832,7 +801,6 @@ gecc_library(
     name = "rsp",
     srcs = [
         "rsp.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -841,7 +809,6 @@ gecc_library(
     name = "setguscale",
     srcs = [
         "setguscale.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -850,7 +817,6 @@ gecc_library(
     name = "sin",
     srcs = [
         "sin.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -859,7 +825,6 @@ gecc_library(
     name = "spectrum",
     srcs = [
         "spectrum.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -868,7 +833,6 @@ gecc_library(
     name = "stan",
     srcs = [
         "stan.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -877,7 +841,6 @@ gecc_library(
     name = "textrelated",
     srcs = [
         "textrelated.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -886,7 +849,6 @@ gecc_library(
     name = "truncf",
     srcs = [
         "truncf.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -895,7 +857,6 @@ gecc_library(
     name = "unk_007800",
     srcs = [
         "unk_007800.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -904,7 +865,6 @@ gecc_library(
     name = "unk_007920",
     srcs = [
         "unk_007920.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -913,7 +873,6 @@ gecc_library(
     name = "unk_007980",
     srcs = [
         "unk_007980.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -922,7 +881,6 @@ gecc_library(
     name = "unk_01B0E0",
     srcs = [
         "unk_01B0E0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -931,7 +889,6 @@ gecc_library(
     name = "unk_01B240",
     srcs = [
         "unk_01B240.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -940,7 +897,6 @@ gecc_library(
     name = "unk_01BAE0",
     srcs = [
         "unk_01BAE0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -949,7 +905,6 @@ gecc_library(
     name = "unk_057FD0",
     srcs = [
         "unk_057FD0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -957,7 +912,6 @@ gecc_library(
 gecc_library(
     name = "unk_05A9E0",
     srcs = [
-        "bondtypes.h",
         "unk_05A9E0.c",
         "//src/libultra/include",
     ],
@@ -968,7 +922,6 @@ gecc_library(
     name = "unk_05AB70",
     srcs = [
         "unk_05AB70.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -977,7 +930,6 @@ gecc_library(
     name = "unk_05ACB0",
     srcs = [
         "unk_05ACB0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -986,7 +938,6 @@ gecc_library(
     name = "unk_05AE00",
     srcs = [
         "unk_05AE00.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -995,7 +946,6 @@ gecc_library(
     name = "unk_05B1E0",
     srcs = [
         "unk_05B1E0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1004,7 +954,6 @@ gecc_library(
     name = "unk_05C440",
     srcs = [
         "unk_05C440.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1013,7 +962,6 @@ gecc_library(
     name = "unk_08DBB0",
     srcs = [
         "unk_08DBB0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1022,7 +970,6 @@ gecc_library(
     name = "unk_091080",
     srcs = [
         "unk_091080.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1031,7 +978,6 @@ gecc_library(
     name = "unk_092890",
     srcs = [
         "unk_092890.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1040,7 +986,6 @@ gecc_library(
     name = "unk_092E50",
     srcs = [
         "unk_092E50.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1055,7 +1000,6 @@ gecc_library(
         "unk_093880.c",
         "unk_093880.h",
         "xyzpoint.h",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1064,7 +1008,6 @@ gecc_library(
     name = "unk_09B600",
     srcs = [
         "unk_09B600.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1073,7 +1016,6 @@ gecc_library(
     name = "unk_09B740",
     srcs = [
         "unk_09B740.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1082,7 +1024,6 @@ gecc_library(
     name = "unk_09B7A0",
     srcs = [
         "unk_09B7A0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1091,7 +1032,6 @@ gecc_library(
     name = "unk_09C250",
     srcs = [
         "unk_09C250.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1100,7 +1040,6 @@ gecc_library(
     name = "unk_0A1DA0",
     srcs = [
         "unk_0A1DA0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1109,7 +1048,6 @@ gecc_library(
     name = "unk_0B3200",
     srcs = [
         "unk_0B3200.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1132,7 +1070,6 @@ gecc_library(
     name = "unk_0C0A70",
     srcs = [
         "unk_0C0A70.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1141,7 +1078,6 @@ gecc_library(
     name = "unk_0CC4C0",
     srcs = [
         "unk_0CC4C0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1150,7 +1086,6 @@ gecc_library(
     name = "unk_0D1AC0",
     srcs = [
         "unk_0D1AC0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -1184,7 +1119,6 @@ gecc_library(
     name = "zlib",
     srcs = [
         "zlib.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
