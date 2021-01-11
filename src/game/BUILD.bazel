@@ -366,7 +366,6 @@ gecc_library(
     name = "image_bank",
     srcs = [
         "image_bank.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -376,7 +375,6 @@ gecc_library(
     srcs = [
         "image.c",
         "//src/images",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -386,7 +384,6 @@ gecc_library(
     srcs = [
         "indy_commands.c",
         "indy_commands.h",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -405,7 +402,6 @@ gecc_library(
     name = "initBondDATA",
     srcs = [
         "initBondDATA.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -414,7 +410,6 @@ gecc_library(
     name = "initBondDATAdefaults",
     srcs = [
         "initBondDATAdefaults.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -423,7 +418,6 @@ gecc_library(
     name = "initcameraandthrown",
     srcs = [
         "initcameraandthrown.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -432,7 +426,6 @@ gecc_library(
     name = "initexplosioncasing",
     srcs = [
         "initexplosioncasing.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -442,7 +435,6 @@ gecc_library(
     srcs = [
         "chr.h",
         "initguards.c",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -451,7 +443,6 @@ gecc_library(
     name = "initimages",
     srcs = [
         "initimages.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -469,7 +460,6 @@ gecc_library(
     name = "inititemslots",
     srcs = [
         "inititemslots.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -478,7 +468,6 @@ gecc_library(
     name = "initmenus",
     srcs = [
         "initmenus.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -487,7 +476,6 @@ gecc_library(
     name = "initmttex",
     srcs = [
         "initmttex.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -505,7 +493,6 @@ gecc_library(
     srcs = [
         "chrai.h",
         "initobjects.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -514,7 +501,6 @@ gecc_library(
     name = "initpathtablelinks",
     srcs = [
         "initpathtablelinks.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -523,7 +509,6 @@ gecc_library(
     name = "initpathtablesomething",
     srcs = [
         "initpathtablesomething.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -532,7 +517,6 @@ gecc_library(
     name = "initunk_005450",
     srcs = [
         "initunk_005450.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -541,7 +525,6 @@ gecc_library(
     name = "initunk_005520",
     srcs = [
         "initunk_005520.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -550,7 +533,6 @@ gecc_library(
     name = "initunk_007180",
     srcs = [
         "initunk_007180.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -559,7 +541,6 @@ gecc_library(
     name = "initunk_007290",
     srcs = [
         "initunk_007290.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -574,7 +555,6 @@ gecc_library(
         "player.h",
         "unk_093880.h",
         "xyzpoint.h",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -583,7 +563,6 @@ gecc_library(
     name = "initunk_0073B0",
     srcs = [
         "initunk_0073B0.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -592,7 +571,6 @@ gecc_library(
     name = "initunk_007460",
     srcs = [
         "initunk_007460.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -611,7 +589,6 @@ gecc_library(
     name = "lightfixture",
     srcs = [
         "lightfixture.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -620,7 +597,6 @@ gecc_library(
     name = "loadobjectmodel",
     srcs = [
         "loadobjectmodel.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
@@ -630,7 +606,6 @@ gecc_library(
     srcs = [
         "lvl.h",
         "lvl_2.c",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
@@ -693,7 +668,6 @@ gecc_library(
     name = "mp_weapon",
     srcs = [
         "mp_weapon.c",
-        "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],
 )
