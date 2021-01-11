@@ -177,7 +177,6 @@ gecc_library(
     name = "chr2",
     srcs = [
         "bondtypes.h",
-        "chr.h",
         "chr2.c",
         "//src/system:includes",
     ],
