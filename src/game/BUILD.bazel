@@ -122,10 +122,10 @@ gecc_library(
 )
 
 gecc_library(
-    name = "bond2",
+    name = "bondinv",
     srcs = [
         "bond.h",
-        "bond2.c",
+        "bondinv.c",
         "chr.h",
         "player.h",
         "unk_093880.h",
