@@ -1086,13 +1086,6 @@ glabel load_rom_resource_index_to_membank
    addiu $sp, $sp, 0x30
 ");
 
-/*
- *this matches except:
- *baserom.u.z64
- *000F 1BC0: AE 0C 00 0C 8F A5 00 2C  0F C2 F2 A8 8F A4 00 28  ......., .......(
- *ge007.u.z64               this   is flipped with   this
- *000F 1BC0: AE 0C 00 0C 8F A4 00 28  0F C2 F2 A8 8F A5 00 2C  .......( .......,
- */
 asm(R"
 glabel load_resource_index_to_buffer
   sll   $t6, $a0, 2
