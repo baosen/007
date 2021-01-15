@@ -98,12 +98,8 @@ gecc_library(
 gecc_library(
     name = "bond_data",
     srcs = [
-        "bond.h",
         "bond_data.c",
         "chr.h",
-        "player.h",
-        "unk_093880.h",
-        "xyzpoint.h",
     ],
     visibility = ["//visibility:public"],
 )
@@ -113,7 +109,6 @@ gecc_library(
     srcs = [
         "bond.c",
         "bond.h",
-        "chr.h",
         "player.h",
         "unk_093880.h",
         "xyzpoint.h",
