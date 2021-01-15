@@ -1,17 +1,6 @@
 #include "chr.h"
 #include <stddef.h>
 
-typedef struct {
-  struct weapon_firing_animation_table *pointer;
-  unsigned int anim;
-  float x, y, z;
-} firing_animation;
-
-struct struct_4 {
-  int anonymous_0;
-  float anonymous_1, anonymous_2, anonymous_3;
-};
-
 float flt_CODE_bss_80079940;
 float flt_CODE_bss_80079944;
 float flt_CODE_bss_80079948;
@@ -141,7 +130,10 @@ int D_8003650C = 0;
 int D_80036510 = 0;
 int D_80036514 = 0;
 
-struct struct_4 stage_intro_anim_table[] = {
+struct {
+  int anonymous_0;
+  float anonymous_1, anonymous_2, anonymous_3;
+} stage_intro_anim_table[] = {
     {0x5744, 95.0, -1.0, 0.02}, {0x6254, 7.0, 40.0, 0.5},
     {0x78C8, 0.0, -1.0, 0.5},   {0x7AA8, 0.0, -1.0, 0.5},
     {0x7C4C, 0.0, -1.0, 0.5},   {0x7D04, 0.0, -1.0, 0.5},
@@ -244,7 +236,11 @@ unsigned short D_800368B8[] = {0x6E00, 0x006E, 0x6500, 0x6500, 0x73, 0x6500,
                                0x7300, 0x0073, 0x7700, 0x7700, 0x6E, 0x7700,
                                0x6E00, 0x0000, 0x0000, 0x0000};
 
-firing_animation firing_animation_groups[] = {
+struct {
+  struct weapon_firing_animation_table *pointer;
+  unsigned int anim;
+  float x, y, z;
+} firing_animation_groups[] = {
     {pistol_firing_animation_group1, 0, 0.1, 79.0, 87.0},
     {&D_800306F0, 0, 0.5, 0.0, -1.0},
     {&D_80030738, 0, 0.5, 0.0, -1.0},

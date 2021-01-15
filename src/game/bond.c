@@ -26810,10 +26810,6 @@ glabel maybe_mp_interface
    nop   
 ");
 
-
-
-
-
 asm(R"
 glabel write_stan_tiles_in_yellow
   lui   $a1, %hi(dword_CODE_bss_80079DA0)
@@ -26841,10 +26837,6 @@ glabel write_stan_tiles_in_yellow
   jr    $ra
    nop   
 ");
-
-
-
-
 
 asm(R"
 glabel sub_GAME_7F089718
