@@ -56,7 +56,7 @@ float flt_CODE_bss_80079A10;
 int dword_CODE_bss_80079A14;
 int dword_CODE_bss_80079A18;
 int dword_CODE_bss_80079A1C;
-float mission_timer;
+int mission_timer;
 float watch_time_0;
 char dword_CODE_bss_80079A28[0x200];
 
