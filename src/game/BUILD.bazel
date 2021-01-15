@@ -184,15 +184,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "chrai",
-    srcs = [
-        "chrai.c",
-        "chrai.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "chrobjdata",
     srcs = [
         "bondtypes.h",
@@ -207,9 +198,9 @@ gecc_library(
     name = "chrobjhandler",
     srcs = [
         "bondtypes.h",
-        "chrai.h",
         "chrobjhandler.c",
         "lvl.h",
+        "//src/game/ai:chrai.h",
         "//src/system:includes",
         "//src/system:music.h",
     ],
@@ -489,8 +480,8 @@ gecc_library(
 gecc_library(
     name = "initobjects",
     srcs = [
-        "chrai.h",
         "initobjects.c",
+        "//src/game/ai:chrai.h",
     ],
     visibility = ["//visibility:public"],
 )

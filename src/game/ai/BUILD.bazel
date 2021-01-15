@@ -1,0 +1,14 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+exports_files([
+    "chrai.h",
+])
+
+gecc_library(
+    name = "chrai",
+    srcs = [
+        "chrai.c",
+        "chrai.h",
+    ],
+    visibility = ["//visibility:public"],
+)
