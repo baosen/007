@@ -1,0 +1,20 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "indy_commands",
+    srcs = [
+        "indy_commands.c",
+        "indy_commands.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "indy_comms",
+    srcs = [
+        "indy_commands.h",
+        "indy_comms.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
