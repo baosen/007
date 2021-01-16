@@ -1,5 +1,5 @@
 // Probably a module that handles players.
-#include "unk_093880.h"
+#include "players.h"
 #include "lvl.h"
 
 int copyof_stagenum, dword_CODE_bss_80079E94;
