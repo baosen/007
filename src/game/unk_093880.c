@@ -7301,35 +7301,18 @@ glabel init_player_data_ptrs_construct_viewports
    addiu $sp, $sp, 0x20
 ");
 
-asm(R"
-glabel getPlayerCount
-  lui   $t6, %hi(ptr_BONDdata_p1) 
-  lw    $t6, %lo(ptr_BONDdata_p1)($t6)
-  move  $v1, $zero
-  lui   $t7, %hi(ptr_BONDdata_p2) 
-  beqz  $t6, .L7F09A480
-   lui   $t8, %hi(ptr_BONDdata_p3) 
-  li    $v1, 1
-.L7F09A480:
-  lw    $t7, %lo(ptr_BONDdata_p2)($t7)
-  lui   $t9, %hi(ptr_BONDdata_p4) 
-  beqz  $t7, .L7F09A494
-   nop   
-  addiu $v1, $v1, 1
-.L7F09A494:
-  lw    $t8, %lo(ptr_BONDdata_p3)($t8)
-  beqz  $t8, .L7F09A4A4
-   nop   
-  addiu $v1, $v1, 1
-.L7F09A4A4:
-  lw    $t9, %lo(ptr_BONDdata_p4)($t9)
-  beqz  $t9, .L7F09A4B4
-   nop   
-  addiu $v1, $v1, 1
-.L7F09A4B4:
-  jr    $ra
-   move  $v0, $v1
-");
+int getPlayerCount(void) {
+  int count = 0;
+  if (ptr_BONDdata_p1)
+    count = 1;
+  if (ptr_BONDdata_p2)
+    count += 1;
+  if (ptr_BONDdata_p3)
+    count += 1;
+  if (ptr_BONDdata_p4)
+    count += 1;
+  return count;
+}
 
 #ifdef VERSION_US
 asm(R"
