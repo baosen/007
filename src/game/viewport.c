@@ -1,7 +1,6 @@
 #include <gbi.h>
 
-int z_buffer_width, z_buffer_height;
-int z_buffer = 0;
+int z_buffer_width, z_buffer_height, z_buffer = 0;
 
 void zbufDeallocate(void) { z_buffer = 0; }
 
