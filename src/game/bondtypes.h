@@ -1,7 +1,6 @@
 #ifndef _BONDTYPES_H_
 #define _BONDTYPES_H_
 #include "bondconstants.h"
-#include <message.h>
 
 struct rgba_val {
   unsigned char r, g, b, a;
