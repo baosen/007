@@ -63,7 +63,7 @@ glabel sinf
   nop   
   mul.s $f18, $f18, $f12
   add.s $f0, $f18, $f12
-  j     func_7F057FC4
+  j     .L7F057FC4
    nop   
 
 .L7F057F28:
@@ -105,9 +105,10 @@ glabel sinf
   add.s $f0, $f18, $f12
   andi  $t1, $t1, 1
   bnezl $t1, .L7F057FC4
-   neg.s $f0, $f0
-glabel func_7F057FC4
+  neg.s $f0, $f0
+
 .L7F057FC4:
   jr    $ra
-   nop   
+  nop
 ");
+
