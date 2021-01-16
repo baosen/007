@@ -1,0 +1,26 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "blood_image",
+    srcs = [
+        "blood_image.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "blood_animation",
+    srcs = [
+        "blood_animation.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "blood_decrypt",
+    srcs = [
+        "blood_decrypt.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
