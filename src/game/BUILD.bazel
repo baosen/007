@@ -236,14 +236,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "compiletime",
-    srcs = [
-        "compiletime.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "convertangleusinginverse",
     srcs = [
         "convertangleusinginverse.c",

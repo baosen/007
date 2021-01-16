@@ -1,0 +1,10 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "compiletime",
+    srcs = [
+        "compiletime.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
