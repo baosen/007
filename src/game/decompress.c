@@ -54,12 +54,8 @@ glabel decompressdata
    addiu $sp, $sp, 0x18
 ");
 
-asm(R"
-glabel sub_GAME_7F0CE894
-  lui   $t6, %hi(dword_CODE_bss_8008D350) 
-  lui   $t7, %hi(dword_CODE_bss_8008D358) 
-  lw    $t7, %lo(dword_CODE_bss_8008D358)($t7)
-  lw    $t6, %lo(dword_CODE_bss_8008D350)($t6)
-  jr    $ra
-   addu  $v0, $t6, $t7
-");
+int sub_GAME_7F0CE894(void) {
+  extern int dword_CODE_bss_8008D350;
+  extern int dword_CODE_bss_8008D358;
+  return dword_CODE_bss_8008D350 + dword_CODE_bss_8008D358;
+}
