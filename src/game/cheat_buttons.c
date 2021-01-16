@@ -8,7 +8,7 @@ struct struct_15 {
   int anonymous_3;
 };
 
-char off_CODE_bss_80079E30[0x4C];
+char off_CODE_bss_80079E30[76];
 
 unsigned int dword_D_8003F430[] = {0x320028, 0x2300120, 0x4100032, 0x280130,
                                    0x340420};
