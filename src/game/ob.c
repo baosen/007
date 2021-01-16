@@ -1,10 +1,10 @@
 #include "obseg.h"
 
-struct resource_lookup_data_entry {
+typedef struct resource_lookup_data_entry {
   unsigned int rom_size, pc_remaining, pc_size, rom_remaining;
   unsigned char loaded_bank, unk_11;
   unsigned short reserved;
-};
+} resource_lookup_data_entry;
 
 struct fileentry {
   int index;
@@ -19,9 +19,9 @@ unsigned char *load_rom_resource_index_to_membank(int index, int type, int size,
                                                   unsigned char bank);
 void resource_load_from_indy(unsigned char *ptrdata, int bytes,
                              struct fileentry *srcfile,
-                             struct resource_lookup_data_entry *lookupdata);
+                             resource_lookup_data_entry *lookupdata);
 
-struct resource_lookup_data_entry resource_lookup_data_array[736];
+resource_lookup_data_entry resource_lookup_data_array[736];
 
 int ob_c_debug_notice_list_entry = 0;
 
