@@ -1,5 +1,9 @@
 load("//tools/gecc:gecc.bzl", "gecc_library")
 
+exports_files([
+    "bondtypes.h",
+])
+
 gecc_library(
     name = "initgamedata",
     srcs = [
@@ -598,33 +602,6 @@ gecc_library(
         "mainmenu.h",
         "//src/system:includes",
         "//src/system:music.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "mp_music",
-    srcs = [
-        "mp_music.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "mp_watch",
-    srcs = [
-        "bondtypes.h",
-        "mp_watch.c",
-        "//src/system:includes",
-        "//src/system:music.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "mp_weapon",
-    srcs = [
-        "mp_weapon.c",
     ],
     visibility = ["//visibility:public"],
 )

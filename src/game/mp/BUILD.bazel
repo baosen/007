@@ -1,0 +1,28 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "mp_music",
+    srcs = [
+        "mp_music.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "mp_watch",
+    srcs = [
+        "mp_watch.c",
+        "//src/game:bondtypes.h",
+        "//src/system:includes",
+        "//src/system:music.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "mp_weapon",
+    srcs = [
+        "mp_weapon.c",
+    ],
+    visibility = ["//visibility:public"],
+)
