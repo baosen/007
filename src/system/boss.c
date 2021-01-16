@@ -757,7 +757,7 @@ glabel mainloop
   sw    $t5, %lo(current_stage_num)($at)
   beqz  $t7, .L7000618C
    sw    $t3, ($v0)
-  jal   sub_GAME_7F0D1A7C
+  jal   null_mem_bank_5
    sw    $s3, 0x1a8($sp)
   lw    $ra, 0x3c($sp)
   lw    $s0, 0x18($sp)

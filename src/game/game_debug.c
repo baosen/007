@@ -10,7 +10,7 @@ void reset_mem_bank_5(void) {
   obBlankResourcesLoadedInBank(5);
 }
 
-void sub_GAME_7F0D1A7C(void) {
+void null_mem_bank_5(void) {
   mempNullNextEntryInBank(5);
   obBlankResourcesLoadedInBank(5);
 }
