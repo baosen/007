@@ -605,8 +605,6 @@ gecc_library(
 gecc_library(
     name = "mp_music",
     srcs = [
-        "bond.h",
-        "chr.h",
         "mp_music.c",
     ],
     visibility = ["//visibility:public"],
