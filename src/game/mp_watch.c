@@ -1,4 +1,4 @@
-#include "bondtypes.h" // game structs and types
+#include "bondtypes.h"
 #include "music.h"
 
 int stop_play_flag, is_gameover_flag, dword_CODE_bss_8008C708,

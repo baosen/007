@@ -1,4 +1,4 @@
-#include "bondtypes.h" // game structs and types
+#include "bondtypes.h"
 #include <types.h>
 
 int dword_CODE_bss_80069550;

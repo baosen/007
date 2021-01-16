@@ -1,4 +1,4 @@
-#include "bondtypes.h" // game structs and types
+#include "bondtypes.h"
 #include "chrai.h"
 #include "lvl.h"
 #include "music.h"

@@ -1,5 +1,5 @@
 #include "mainmenu.h"
-#include "bondtypes.h" // game structs and types
+#include "bondtypes.h"
 #include "music.h"
 #include <gbi.h>
 #include <stddef.h>

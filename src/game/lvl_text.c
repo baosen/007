@@ -1,4 +1,4 @@
-#include "bondtypes.h" // game structs and types
+#include "bondtypes.h"
 #include <stddef.h>
 #include <types.h>
 

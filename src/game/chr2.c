@@ -1,4 +1,4 @@
-#include "bondtypes.h" // game structs and types
+#include "bondtypes.h"
 
 asm(R"
 glabel load_body_head_if_not_loaded

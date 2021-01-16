@@ -1,6 +1,6 @@
 #include "chrobjdata.h"
 #include "bondaicommands.h" // game ai commands
-#include "bondtypes.h" // game structs and types
+#include "bondtypes.h"
 #include <types.h>
 #include <stddef.h>
 
