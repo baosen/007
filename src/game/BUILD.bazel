@@ -716,14 +716,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "othermodemicrocode",
-    srcs = [
-        "othermodemicrocode.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "playerstats_007770",
     srcs = [
         "playerstats_007770.c",

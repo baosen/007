@@ -90,7 +90,7 @@ link_elf(
         "//src/game:objective",
         "//src/game:objective_status",
         "//src/game:objective_status2",
-        "//src/game:othermodemicrocode",
+        "//src/game/othermode:othermodemicrocode",
         "//src/game:playerstats_007770",
         "//src/game:prop",
         "//src/game:radar",
