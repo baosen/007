@@ -414,7 +414,6 @@ gecc_library(
     name = "initintromatrices",
     srcs = [
         "initintromatrices.c",
-        "intro_logos.h",
     ],
     visibility = ["//visibility:public"],
 )
