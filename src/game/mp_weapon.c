@@ -154,16 +154,9 @@ void advance_mp_weapon_set_by_one_save_value(void) {
   mp_weapon_set = (mp_weapon_set + 1) % 0xe;
 }
 
-asm(R"
-glabel get_ptr_current_mp_weapon_set_text_code
-  lui   $t6, %hi(mp_weapon_set) 
-  lw    $t6, %lo(mp_weapon_set)($t6)
-  lui   $t8, %hi(mp_weapon_set_text_table) 
-  addiu $t8, %lo(mp_weapon_set_text_table) # addiu $t8, $t8, -0x6f10
-  sll   $t7, $t6, 3
-  jr    $ra
-   addu  $v0, $t7, $t8
-");
+void *get_ptr_current_mp_weapon_set_text_code(void) {
+  return &mp_weapon_set_text_table[mp_weapon_set];
+}
 
 asm(R"
 glabel get_ptr_mp_weapon_set_data
