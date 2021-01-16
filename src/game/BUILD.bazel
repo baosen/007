@@ -1065,10 +1065,3 @@ gecc_library(
     visibility = ["//visibility:public"],
 )
 
-gecc_library(
-    name = "zlib",
-    srcs = [
-        "zlib.c",
-    ],
-    visibility = ["//visibility:public"],
-)

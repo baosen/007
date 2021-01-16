@@ -131,7 +131,7 @@ link_elf(
         "//src/game:unk_0D1AC0",
         "//src/game:viewport",
         "//src/game:watch",
-        "//src/game:zlib",
+        "//src/game/zlib",
         "//src/game/ai:chrai",
         "//src/game/compiletime",
         "//src/header:rom_header",
