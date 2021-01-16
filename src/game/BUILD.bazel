@@ -649,9 +649,9 @@ gecc_library(
 )
 
 gecc_library(
-    name = "playerstats_007770",
+    name = "playerstats",
     srcs = [
-        "playerstats_007770.c",
+        "playerstats.c",
     ],
     visibility = ["//visibility:public"],
 )
