@@ -1019,7 +1019,7 @@ glabel sub_GAME_7F0BDF10
 
 #ifdef VERSION_US
 asm(R"
-glabel sub_GAME_7F0BE30C
+glabel setup_level
   addiu $sp, $sp, -0x60
   sw    $a0, 0x60($sp)
   addiu $t7, $a0, 8
@@ -1411,7 +1411,7 @@ glabel sub_GAME_7F0BE30C
 
 #ifdef VERSION_JP
 asm(R"
-glabel sub_GAME_7F0BE30C
+glabel setup_level
   addiu $sp, $sp, -0x60
   sw    $a0, 0x60($sp)
   addiu $t7, $a0, 8

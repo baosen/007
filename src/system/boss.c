@@ -559,7 +559,7 @@ glabel mainloop
   bnez  $at, .L700065C4
    nop   
 .L70006610:
-  jal   sub_GAME_7F0BE30C
+  jal   setup_level
    move  $a0, $s3
   jal   get_debug_VisCVG_flag
    move  $s3, $v0
