@@ -136,6 +136,8 @@ gecc_library(
         "bondtypes.h",
         "bondwalk.c",
         "chrobjdata.h",
+        "player.h",
+        "xyzpoint.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -1056,4 +1058,3 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
-

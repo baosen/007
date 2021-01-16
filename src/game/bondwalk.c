@@ -1,5 +1,6 @@
 #include "bondtypes.h"
 #include "chrobjdata.h"
+#include "player.h"
 #include <stddef.h>
 #include <types.h>
 
@@ -24094,13 +24095,9 @@ glabel increment_num_deaths
 ");
 #endif
 
-asm(R"
-glabel get_curplayer_numdeaths
-  lui   $t6, %hi(pPlayer) 
-  lw    $t6, %lo(pPlayer)($t6)
-  jr    $ra
-   lw    $v0, 0x29d8($t6)
-");
+int get_curplayer_numdeaths(void) {
+  return *((int *)((char *)pPlayer + 0x29D8));
+}
 
 #ifdef VERSION_US
 asm(R"

@@ -1,8 +1,6 @@
 #ifndef _UNK_093880_H_
 #define _UNK_093880_H_
-
 #include "player.h"
-extern Player *pPlayer;
 
 typedef struct {
   int shots_fired;

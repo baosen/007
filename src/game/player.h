@@ -2766,4 +2766,6 @@ typedef struct {
   int field_2A7C;
 } Player;
 
+extern Player *pPlayer;
+
 #endif
