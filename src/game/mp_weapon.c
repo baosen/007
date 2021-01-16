@@ -158,16 +158,9 @@ void *get_ptr_current_mp_weapon_set_text_code(void) {
   return &mp_weapon_set_text_table[mp_weapon_set];
 }
 
-asm(R"
-glabel get_ptr_mp_weapon_set_data
-  lui   $t6, %hi(mp_weapon_set) 
-  lw    $t6, %lo(mp_weapon_set)($t6)
-  lui   $v0, %hi(mp_weapon_set_text_table+4)
-  sll   $t7, $t6, 3
-  addu  $v0, $v0, $t7
-  jr    $ra
-   lw    $v0, %lo(mp_weapon_set_text_table+4)($v0)
-");
+struct s_mp_weapon_set *get_ptr_mp_weapon_set_data(void) {
+  return mp_weapon_set_text_table[mp_weapon_set].anonymous_1;
+}
 
 void set_mp_weapon_set(int arg0) { mp_weapon_set = arg0; }
 
