@@ -1,8 +1,8 @@
 // This file contains debug related code.
-extern char dword_CODE_bss_80060890[0x400];
-
 unsigned int D_800232E0[2] = {0};
 unsigned int debug_notice_list[4] = {0};
+
+extern char dword_CODE_bss_80060890[];
 char *debug_notice_list_data = &dword_CODE_bss_80060890;
 
 /*
@@ -104,18 +104,11 @@ glabel add_new_entry_to_debug_notice_list
 
 extern void get_ptr_debug_notice_list_entry(void *arg0, char *string);
 
-/**
- *     V0= p->debug.notice.list entry for boss_c_debug using data at 800241A0
- */
 void add_debug_notice_deb_c_debug(void) {
   get_ptr_debug_notice_list_entry(&D_800232E0, "deb_c_debug");
   init_tlb();
 }
 
-/**
- *     V0=p->debug.notice.list entry for name A1 and data A0; generates if not
- * found accepts: A0=p->data, A1=p->name
- */
 void get_ptr_debug_notice_list_entry(void *data, char *string) {
   if (return_match_in_debug_notice_list(string) == 0)
     add_new_entry_to_debug_notice_list(string, data);
