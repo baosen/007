@@ -23,7 +23,7 @@ glabel get_random_value
 ");
 
 asm(R"
-glabel increment_random_num
+glabel seed_random_number_generator
   daddiu $a0, $a0, 1
   lui   $at, %hi(randseed)
   sd    $a0, %lo(randseed)($at)

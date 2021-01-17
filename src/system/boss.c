@@ -240,7 +240,7 @@ glabel mainloop
 .L70006160:
   jal   osGetCount
    nop   
-  jal   increment_random_num
+  jal   seed_random_number_generator
    move  $a0, $v0
   lui   $s6, %hi(taskgrab)
   lui   $s5, %hi(pPlayer)
