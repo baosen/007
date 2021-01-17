@@ -7,8 +7,6 @@
 extern OSMesg vi_c_debug_MSG[0x8];
 extern OSMesgQueue vi_c_debug_MQ;
 
-extern unsigned int enddl_80024518[];
-
 unsigned int D_80023240 = 0;
 
 typedef struct {

@@ -84,7 +84,7 @@ void initialize_mainthread(void) {
   something_with_memp_c_debug();
   something_with_mema_c_debug();
   something_with_bg_c_debug();
-  something_with_vi_c_debug();
+  init_vi_c_debug();
   init_video_settings();
   init_indy_if_not_ready();
   debug_and_update_stage_flag = rmon_debug_is_final_build();
