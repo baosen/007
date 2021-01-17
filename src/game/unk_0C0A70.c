@@ -11,29 +11,28 @@ int D_8004849C = -1;
 int D_800484A0 = 0;
 int D_800484A4 = 0;
 int D_800484A8 = 0;
-unsigned int copy_of_osgetcount_value_0 = 0;
-unsigned int copy_of_osgetcount_value_1 = 0;
+unsigned int previous_count = 0, current_count = 0;
 int D_800484B4 = 1;
 
-void store_osgetcount(void) {
-  copy_of_osgetcount_value_1 = osGetCount();
-  copy_of_osgetcount_value_0 = copy_of_osgetcount_value_1;
+void initialize_count(void) {
+  current_count = osGetCount();
+  previous_count = current_count;
 }
 
 #ifdef VERSION_US
 asm(R"
 glabel sub_GAME_7F0C0AA0
-  lui   $t6, %hi(copy_of_osgetcount_value_1) 
-  lw    $t6, %lo(copy_of_osgetcount_value_1)($t6)
+  lui   $t6, %hi(current_count) 
+  lw    $t6, %lo(current_count)($t6)
   addiu $sp, $sp, -0x18
   sw    $ra, 0x14($sp)
-  lui   $at, %hi(copy_of_osgetcount_value_0)
+  lui   $at, %hi(previous_count)
   sw    $a0, 0x18($sp)
   jal   osGetCount
-   sw    $t6, %lo(copy_of_osgetcount_value_0)($at)
+   sw    $t6, %lo(previous_count)($at)
   lui   $a0, %hi(D_80048494)
-  lui   $at, %hi(copy_of_osgetcount_value_1)
-  sw    $v0, %lo(copy_of_osgetcount_value_1)($at)
+  lui   $at, %hi(current_count)
+  sw    $v0, %lo(current_count)($at)
   addiu $a0, %lo(D_80048494) # addiu $a0, $a0, -0x7b6c
   lw    $v1, ($a0)
   lw    $a3, 0x18($sp)
@@ -73,19 +72,19 @@ glabel sub_GAME_7F0C0AA0
 #ifdef VERSION_JP
 asm(R"
 glabel sub_GAME_7F0C0AA0
-  lui   $t6, %hi(copy_of_osgetcount_value_1) # $t6, 0x8005
-  lw    $t6, %lo(copy_of_osgetcount_value_1)($t6)
+  lui   $t6, %hi(current_count) # $t6, 0x8005
+  lw    $t6, %lo(current_count)($t6)
   addiu $sp, $sp, -0x18
   sw    $ra, 0x14($sp)
-  lui   $at, %hi(copy_of_osgetcount_value_0) # $at, 0x8005
+  lui   $at, %hi(previous_count) # $at, 0x8005
   sw    $a0, 0x18($sp)
   jal   osGetCount
-   sw    $t6, %lo(copy_of_osgetcount_value_0)($at)
+   sw    $t6, %lo(previous_count)($at)
   lw    $a2, 0x18($sp)
   lui   $a0, %hi(D_80048494) # $a0, 0x8005
-  lui   $at, %hi(copy_of_osgetcount_value_1) # $at, 0x8005
+  lui   $at, %hi(current_count) # $at, 0x8005
   mtc1  $a2, $f4
-  sw    $v0, %lo(copy_of_osgetcount_value_1)($at)
+  sw    $v0, %lo(current_count)($at)
   addiu $a0, %lo(D_80048494) # addiu $a0, $a0, -0x7b3c
   lw    $v1, ($a0)
   cvt.s.w $f6, $f4
@@ -136,13 +135,13 @@ glabel sub_GAME_7F0C0B4C
   sw    $s1, 0x18($sp)
   sw    $s0, 0x14($sp)
   lui   $s0, %hi(D_800484B4)
-  lui   $s1, %hi(copy_of_osgetcount_value_1)
+  lui   $s1, %hi(current_count)
   lui   $s2, (0x0005EB61 >> 16) # lui $s2, 5
   lui   $s3, (0x000BD6C3 >> 16) # lui $s3, 0xb
   sw    $ra, 0x24($sp)
   ori   $s3, (0x000BD6C3 & 0xFFFF) # ori $s3, $s3, 0xd6c3
   ori   $s2, (0x0005EB61 & 0xFFFF) # ori $s2, $s2, 0xeb61
-  addiu $s1, %lo(copy_of_osgetcount_value_1) # addiu $s1, $s1, -0x7b50
+  addiu $s1, %lo(current_count) # addiu $s1, $s1, -0x7b50
   addiu $s0, %lo(D_800484B4) # addiu $s0, $s0, -0x7b4c
 .L7F0C0B84:
   jal   osGetCount

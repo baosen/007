@@ -125,7 +125,7 @@ void initialize_mainthread(void) {
   null_init_main_0();
 
   default_player_perspective_and_height();
-  store_osgetcount();
+  initialize_count();
 
   null_init_main_1();
 
@@ -448,8 +448,8 @@ glabel mainloop
 .L70006464:
   jal   osGetCount
    nop   
-  lui   $t5, %hi(copy_of_osgetcount_value_1) 
-  lw    $t5, %lo(copy_of_osgetcount_value_1)($t5)
+  lui   $t5, %hi(current_count) 
+  lw    $t5, %lo(current_count)($t5)
   lui   $at, (0x0005EB61 >> 16) # lui $at, 5
   ori   $at, (0x0005EB61 & 0xFFFF) # ori $at, $at, 0xeb61
   subu  $v1, $v0, $t5
