@@ -204,8 +204,8 @@ void start_idle_thread(void) {
 
 // Indy board detection thread; now forcably returns INDI_NOT_DETECTED (1).
 void start_rmon_thread(void) {
-  void thread0_rmon(void);
-  osCreateThread(&rmonThread, (OSId)0, thread0_rmon, 0,
+  void rmonproc(void);
+  osCreateThread(&rmonThread, (OSId)0, rmonproc, 0,
                  set_stack_entry(&sp_rmon, 0x300), (OSPri)250);
   osStartThread(&rmonThread);
 }

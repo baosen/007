@@ -1,4 +1,5 @@
-void thread0_rmon(void) {}
+// This file module contains functions for remotely monitoring your game.
+void rmonproc(void) {}
 int rmon_debug_is_final_build(void) { return 1; }
 int rmon_debug_returns_neg_1(void) { return -1; }
 void rmon_debug_stub(void) {}
