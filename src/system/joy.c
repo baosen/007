@@ -47,24 +47,30 @@ int D_800268C0 = 0;
 char *ptr_current_point_in_controller_input_index = controller_input_index;
 int D_800268C8 = 0;
 int D_800268CC = 0;
+
 unsigned char num_controller_plugged_in_flags = 0;
 int num_controller_plugged_in_flags_0 = 0;
+
 int controller_1_rumble_inserted = 0;
 int controller_2_rumble_inserted = 0;
 int controller_3_rumble_inserted = 0;
 int controller_4_rumble_inserted = 0;
+
 int controller_1_rumble_state = 0;
 int controller_2_rumble_state = 0;
 int controller_3_rumble_state = 0;
 int controller_4_rumble_state = 0;
+
 int controller_1_rumble_duration = 0;
 int controller_2_rumble_duration = 0;
 int controller_3_rumble_duration = 0;
 int controller_4_rumble_duration = 0;
+
 int controller_1_rumble_pulse = 0;
 int controller_2_rumble_pulse = 0;
 int controller_3_rumble_pulse = 0;
 int controller_4_rumble_pulse = 0;
+
 int enable_controllers = 0;
 int D_8002691C = 0;
 int D_80026920 = 0;
