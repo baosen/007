@@ -517,7 +517,7 @@ glabel iterate_ramrom_entries_handle_camera_out
   addu  $t8, $t0, $t7
   sw    $t8, %lo(address_demo_loaded)($at)
 .L7F0C034C:
-  jal   sub_GAME_7F0C0AA0
+  jal   set_cpu_cycle_count
    lbu   $a0, ($v1)
   lui   $t9, %hi(ptr_active_demofile) 
   lw    $t9, %lo(ptr_active_demofile)($t9)

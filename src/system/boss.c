@@ -404,7 +404,7 @@ glabel mainloop
    nop   
   jal   debug_text_related_2
    nop   
-  jal   sub_GAME_7F0C0B4C
+  jal   setup_cpu_cycle_count
    nop   
   jal   video_related_2
    nop   
@@ -475,7 +475,7 @@ glabel mainloop
   b     .L700064D8
    nop   
 .L700064D0:
-  jal   sub_GAME_7F0C0B4C
+  jal   setup_cpu_cycle_count
    nop   
 .L700064D8:
   jal   video_DL_related_4

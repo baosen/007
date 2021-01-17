@@ -21,7 +21,7 @@ void initialize_count(void) {
 
 #ifdef VERSION_US
 asm(R"
-glabel sub_GAME_7F0C0AA0
+glabel set_cpu_cycle_count
   lui   $t6, %hi(current_count) 
   lw    $t6, %lo(current_count)($t6)
   addiu $sp, $sp, -0x18
@@ -71,7 +71,7 @@ glabel sub_GAME_7F0C0AA0
 
 #ifdef VERSION_JP
 asm(R"
-glabel sub_GAME_7F0C0AA0
+glabel set_cpu_cycle_count
   lui   $t6, %hi(current_count) # $t6, 0x8005
   lw    $t6, %lo(current_count)($t6)
   addiu $sp, $sp, -0x18
@@ -128,7 +128,7 @@ glabel sub_GAME_7F0C0AA0
 #endif
 
 asm(R"
-glabel sub_GAME_7F0C0B4C
+glabel setup_cpu_cycle_count
   addiu $sp, $sp, -0x28
   sw    $s3, 0x20($sp)
   sw    $s2, 0x1c($sp)
@@ -160,7 +160,7 @@ glabel sub_GAME_7F0C0B4C
   bnez  $at, .L7F0C0B84
    nop   
   li    $t0, 1
-  jal   sub_GAME_7F0C0AA0
+  jal   set_cpu_cycle_count
    sw    $t0, ($s0)
   lw    $ra, 0x24($sp)
   lw    $s0, 0x14($sp)
