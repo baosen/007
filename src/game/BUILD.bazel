@@ -164,6 +164,7 @@ gecc_library(
     name = "chrobjdata",
     srcs = [
         "bondtypes.h",
+        "bondaicommands.h",
         "chrobjdata.c",
         "chrobjdata.h",
         "//src/system:includes",

@@ -17,7 +17,6 @@ gecc_library(
 filegroup(
     name = "includes",
     srcs = [
-        "bondaicommands.h",
         "bondconstants.h",
         "//src/libultra/include",
     ],
