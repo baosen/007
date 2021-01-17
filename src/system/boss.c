@@ -67,7 +67,7 @@ int D_8002431C = 0;
 int D_80024320 = 0;
 int taskgrab_ramdump_num = 1;
 
-void init_mainthread_data(void) {
+void initialize_mainthread(void) {
   void something_with_boss_c_debug(void);
 
   OSMesg bossmsg;
@@ -155,8 +155,8 @@ void mem_bars_flag_toggle(void) { show_mem_bars_flag = show_mem_bars_flag ^ 1; }
 
 // Loads primary resources and starts the main program infinite loop.
 void start_game(void) {
-  init_mainthread_data();
-  allocate_init_rsp_buffers();
+  initialize_mainthread();
+  initialize_rsp_buffers();
   setupaudio();
   for (;;)
     mainloop();

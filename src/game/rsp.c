@@ -19,7 +19,7 @@ void something_with_rsp_c_debug(void) {
 }
 
 asm(R"
-glabel allocate_init_rsp_buffers
+glabel initialize_rsp_buffers
   addiu $sp, $sp, -0x18
   sw    $ra, 0x14($sp)
   li    $a0, 40960
