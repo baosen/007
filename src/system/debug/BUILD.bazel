@@ -51,6 +51,13 @@ gecc_library(
     visibility = ["//visibility:public"],
 )
 
+gecc_library(
+    name = "rmon",
+    srcs = [
+        "rmon.c",
+    ],
+    visibility = ["//visibility:public"],
+)
 
 gecc_library(
     name = "vi",

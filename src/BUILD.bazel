@@ -169,7 +169,7 @@ link_elf(
         "//src/system:pi",
         "//src/system:ramrom",
         "//src/system:random",
-        "//src/system:rmon",
+        "//src/system/debug:rmon",
         "//src/system:sched",
         "//src/system:snd",
         "//src/system:speed_graph",

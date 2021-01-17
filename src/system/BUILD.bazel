@@ -150,14 +150,6 @@ genrule(
 )
 
 gecc_library(
-    name = "rmon",
-    srcs = [
-        "rmon.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "sched",
     srcs = [
         "sched.c",
