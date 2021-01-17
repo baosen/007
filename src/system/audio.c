@@ -284,7 +284,7 @@ glabel amCreateAudioMgr
    addiu $sp, $sp, 0x118
 ");
 
-void startAudioThread(void) { osStartThread((char *)&_am + 24); }
+void startAudioThread(void) { osStartThread(_am + 24); }
 
 asm(R"
 glabel _amMain
