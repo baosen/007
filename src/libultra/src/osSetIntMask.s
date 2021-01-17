@@ -1,7 +1,4 @@
-
-
-
-.section .text, "ax"  
+.section .text
 glabel osSetIntMask
   mfc0  $t4, $12
   andi  $v0, $t4, 0xff01
