@@ -43,18 +43,20 @@ extern void *_inflateRomSegmentEnd;
  * these could have been assembly originally, or more likely part
  * of the code inserted by the custom makerom rare created
  */
+
+// Returns the start memory address of the compressed .text segment (USA).
 void *get_csegmentSegmentStart(void) { return &_compressedSegmentStart; }
 
-// ROM address of main compressed block (USA).
+// Returns the start memory address of the compressed .data segment (USA).
 void *get_cdataRomSegmentStart(void) { return &_cdataRomSegmentStart; }
 
-// Returns the memory address of the zlib functions.
+// Returns the end memory address of the compressed .data segment (USA).
 void *get_cdataRomSegmentEnd(void) { return &_cdataRomSegmentEnd; }
 
-// Returns the memory address of the zlib functions.
+// Returns the start memory address of the DEFLATE compression functions.
 void *get_inflateRomSegmentStart(void) { return &_inflateRomSegmentStart; }
 
-// Returns the memory address of TLB functions.
+// Returns the end memory address of the DEFLATE compression functions.
 void *get_inflateRomSegmentEnd(void) { return &_inflateRomSegmentEnd; }
 
 /*
