@@ -1,6 +1,4 @@
-
-
-.section .text, "ax" 
+.section .text
 glabel osGetTime
   addiu $sp, $sp, -0x38
   sw    $ra, 0x1c($sp)
