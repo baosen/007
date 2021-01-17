@@ -1,6 +1,6 @@
-// This file contains debug related code.
-unsigned int D_800232E0[2] = {0};
-unsigned int debug_notice_list[4] = {0};
+// This file contains debug notification code.
+void *D_800232E0[2] = {0};
+void *debug_notice_list[4] = {0};
 
 extern char dword_CODE_bss_80060890[];
 char *debug_notice_list_data = &dword_CODE_bss_80060890;
@@ -10,7 +10,7 @@ char *debug_notice_list_data = &dword_CODE_bss_80060890;
  * accepts: A0=p->name, A1=p->data
  */
 asm(R"
-glabel return_match_in_debug_notice_list
+glabel is_already_in_debug_notice_list
   addiu $sp, $sp, -0x20
   sw    $s0, 0x14($sp)
   lui   $s0, %hi(debug_notice_list)
@@ -102,15 +102,15 @@ glabel add_new_entry_to_debug_notice_list
    nop   
 ");
 
-extern void get_ptr_debug_notice_list_entry(void *arg0, char *string);
+extern void set_debug_notice_list_entry(void *arg0, char *string);
 
 void add_debug_notice_deb_c_debug(void) {
-  get_ptr_debug_notice_list_entry(&D_800232E0, "deb_c_debug");
+  set_debug_notice_list_entry(&D_800232E0, "deb_c_debug");
   init_tlb();
 }
 
-void get_ptr_debug_notice_list_entry(void *data, char *string) {
-  if (return_match_in_debug_notice_list(string) == 0)
+void set_debug_notice_list_entry(void *data, char *string) {
+  if (!is_already_in_debug_notice_list(string))
     add_new_entry_to_debug_notice_list(string, data);
 }
 

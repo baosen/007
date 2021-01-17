@@ -18,7 +18,7 @@ char membars_string2[] = "=========================";
 char membars_string3[] = "-------------------------";
 
 void something_with_dyn_c_debug(void) {
-  get_ptr_debug_notice_list_entry(&D_800482E0, "dyn_c_debug");
+  set_debug_notice_list_entry(&D_800482E0, "dyn_c_debug");
 }
 
 const char aMgfx[] = "-mgfx";

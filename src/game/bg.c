@@ -515,8 +515,7 @@ int *ptrDynamic_CC_RM_LUT[] = {
 int D_80044DB0 = 0;
 
 void something_with_bg_c_debug(void) {
-  get_ptr_debug_notice_list_entry(&ptr_bg_c_debug_debug_notice_list,
-                                  "bg_c_debug");
+  set_debug_notice_list_entry(&ptr_bg_c_debug_debug_notice_list, "bg_c_debug");
 }
 
 asm(R"

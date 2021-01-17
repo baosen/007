@@ -254,8 +254,7 @@ glabel memaAllocRoomBuffer
 ");
 
 void something_with_mema_c_debug(void) {
-  get_ptr_debug_notice_list_entry(&ptr_mema_c_debug_notice_list,
-                                  "mema_c_debug");
+  set_debug_notice_list_entry(&ptr_mema_c_debug_notice_list, "mema_c_debug");
 }
 
 asm(R"

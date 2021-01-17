@@ -70,8 +70,8 @@ struct s_mempMEMSTARTS sdefaultmemstarts = {
 };
 
 void something_with_memp_c_debug(void) {
-  get_ptr_debug_notice_list_entry(&ptr_memp_c_debug_debug_notice_list,
-                                  "memp_c_debug");
+  set_debug_notice_list_entry(&ptr_memp_c_debug_debug_notice_list,
+                              "memp_c_debug");
 }
 
 const char aMf[] = "-mf";

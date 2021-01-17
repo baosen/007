@@ -102,7 +102,7 @@ glabel something_with_joy_c_debug
   lui   $a0, %hi(D_800268C0)
   lui   $a1, %hi(aJoy_c_debug)
   addiu $a1, %lo(aJoy_c_debug) # addiu $a1, $a1, -0x6c70
-  jal   get_ptr_debug_notice_list_entry
+  jal   set_debug_notice_list_entry
    addiu $a0, %lo(D_800268C0) # addiu $a0, $a0, 0x68c0
   lui   $a0, %hi(controller1_message_queue)
   lui   $a1, %hi(cont1Mesg)

@@ -103,8 +103,7 @@ void sub_GAME_7F0AEFE0(void) { sub_GAME_7F0AEF3C(); }
 unsigned int stanRemovedAnimationRoutine(int arg0) { return 0; }
 
 void something_stan_c_debug_related(void) {
-  get_ptr_debug_notice_list_entry(&stan_c_debug_notice_list_entry,
-                                  &aStan_c_debug);
+  set_debug_notice_list_entry(&stan_c_debug_notice_list_entry, &aStan_c_debug);
 }
 
 asm(R"

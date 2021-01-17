@@ -878,7 +878,7 @@ glabel ob_c_debug_setup
   lui   $a0, %hi(ob_c_debug_notice_list_entry)
   lui   $a1, %hi(aOb_c_debug)
   addiu $a1, %lo(aOb_c_debug) # addiu $a1, $a1, -0x498c
-  jal   get_ptr_debug_notice_list_entry
+  jal   set_debug_notice_list_entry
    addiu $a0, %lo(ob_c_debug_notice_list_entry) # addiu $a0, $a0, 0x6050
   lui   $v1, %hi(file_entry_max)
   lw    $v1, %lo(file_entry_max)($v1)

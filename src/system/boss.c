@@ -798,6 +798,6 @@ int get_debug_parse_flag(void) { return debug_feature_flag; }
 
 // V0 = p->debug.notice.list entry for boss_c_debug using data at 800241A0.
 void something_with_boss_c_debug(void) {
-  get_ptr_debug_notice_list_entry(&boss_c_ptr_debug_notice_list_entry,
-                                  "boss_c_debug");
+  set_debug_notice_list_entry(&boss_c_ptr_debug_notice_list_entry,
+                              "boss_c_debug");
 }

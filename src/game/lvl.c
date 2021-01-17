@@ -79,7 +79,7 @@ glabel something_with_lvl_c_debug
   lui   $a0, %hi(lvl_c_debug_notice_list)
   lui   $a1, %hi(aLv_c_debug)
   addiu $a1, %lo(aLv_c_debug) # addiu $a1, $a1, -0x4950
-  jal   get_ptr_debug_notice_list_entry
+  jal   set_debug_notice_list_entry
    addiu $a0, %lo(lvl_c_debug_notice_list) # addiu $a0, $a0, -0x7ca0
   lui   $t7, %hi(_jfontdlSegmentEnd) # $t7, 0x11
   lui   $t8, %hi(_jfontdlSegmentStart) # $t8, 0x11

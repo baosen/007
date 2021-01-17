@@ -1,7 +1,7 @@
 int D_8004EAE0[4] = {0};
 
 void something_game_c_debug_related(void) {
-  get_ptr_debug_notice_list_entry(&D_8004EAE0, "game_c_debug");
+  set_debug_notice_list_entry(&D_8004EAE0, "game_c_debug");
 }
 
 void reset_mem_bank_5(void) {
