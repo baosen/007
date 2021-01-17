@@ -654,7 +654,7 @@ glabel mainloop
   addiu $s3, $s3, 8
   beqz  $t0, .L700067A8
    nop   
-  jal   nulled_mempLoopAllMemBanks
+  jal   loop_all_mem_banks
    nop   
   jal   memaGenerateListsBeforeAfterMerge
    nop   

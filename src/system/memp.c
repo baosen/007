@@ -34,7 +34,7 @@ void mempSetBankStarts(int *banks);
 unsigned int mempAllocBytesInBank(unsigned int bytes, unsigned char bank);
 unsigned int mempAddEntryOfSizeToBank(int ptrdata, int size,
                                       unsigned char bank);
-void nulled_mempLoopAllMemBanks(void);
+void loop_all_mem_banks(void);
 int mempGetBankSizeLeft(unsigned char bank);
 unsigned int mempAllocPackedBytesInBank(unsigned int param_1);
 void mempResetBank(unsigned char bank);
@@ -355,7 +355,7 @@ glabel mempAllocBytesInBank
   sltu  $at, $a0, $v0
   beql  $at, $zero, .L70009794
    sltu  $at, $a0, $t5
-  jal   nulled_mempLoopAllMemBanks
+  jal   loop_all_mem_banks
    li    $a3, 6
 .L70009788:
   b     .L70009788
@@ -379,7 +379,7 @@ glabel mempAllocBytesInBank
   b     .L70009748
    sll   $t8, $a3, 4
 .L700097D4:
-  jal   nulled_mempLoopAllMemBanks
+  jal   loop_all_mem_banks
    nop   
 .L700097DC:
   b     .L700097DC
@@ -448,7 +448,7 @@ glabel mempAddEntryOfSizeToBank
   sltu  $at, $v0, $a0
   beql  $at, $zero, .L700098C0
    sltu  $at, $v0, $t5
-  jal   nulled_mempLoopAllMemBanks
+  jal   loop_all_mem_banks
    li    $a2, 6
 .L700098B4:
   b     .L700098B4
@@ -457,7 +457,7 @@ glabel mempAddEntryOfSizeToBank
 .L700098C0:
   beqz  $at, .L700098D8
    addu  $t6, $a0, $v1
-  jal   nulled_mempLoopAllMemBanks
+  jal   loop_all_mem_banks
    li    $a2, 6
 .L700098D0:
   b     .L700098D0
@@ -473,11 +473,10 @@ glabel mempAddEntryOfSizeToBank
 ");
 
 /**
- * V0=8 -- loop eight times, needlessly; fries AT,T6
- * used by "show mem use", step 1; probably originally listed all eight memory
- * allocations
+ * Loop eight times, needlessly.
+ * Used by "show mem use". Step 1 probably originally listed all eight memory allocations.
  */
-void nulled_mempLoopAllMemBanks(void) {
+void loop_all_mem_banks(void) {
   int bank;
   for (bank = 1; bank < 7; bank = (bank + 1) & 0xff)
     ;
@@ -516,7 +515,7 @@ void mempResetBank(unsigned char bank) {
 }
 
 void mempNullNextEntryInBank(unsigned char bank) {
-  nulled_mempLoopAllMemBanks();
+  loop_all_mem_banks();
   if (memory_bank_ptrs[bank].nextentry != 0) {
     memory_bank_ptrs[bank].nextentry = 0;
   }
