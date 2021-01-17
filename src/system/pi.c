@@ -1,4 +1,4 @@
-// "Parallel interface" used to asynchronously read and write from ROM and SRAM.
+// "Parallel interface" used to asynchronously/DMA read and write from ROM and SRAM.
 #include <message.h>
 
 #define PI_COMMAND_BUFFER_SIZE 8
