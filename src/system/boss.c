@@ -525,7 +525,7 @@ glabel mainloop
   lui   $at, %hi(debug_feature_flag)
   sw    $v0, %lo(debug_feature_flag)($at)
 .L70006590:
-  jal   manage_mp_game
+  jal   setup_multiplayer_game
    nop   
   jal   sub_GAME_7F09B41C
    nop   

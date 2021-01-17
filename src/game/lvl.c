@@ -2231,7 +2231,7 @@ glabel sub_GAME_7F0BE8D0
 
 #ifdef VERSION_US
 asm(R"
-glabel manage_mp_game
+glabel setup_multiplayer_game
   addiu $sp, $sp, -0x198
   sw    $ra, 0x14($sp)
   jal   mp_tlb_related
@@ -3103,7 +3103,7 @@ glabel manage_mp_game
 
 #ifdef VERSION_JP
 asm(R"
-glabel manage_mp_game
+glabel setup_multiplayer_game
   addiu $sp, $sp, -0x198
   sw    $ra, 0x14($sp)
   jal   mp_tlb_related
