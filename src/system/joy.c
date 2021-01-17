@@ -1,6 +1,8 @@
 #include <message.h>
 #include <thread.h>
 
+enum { OS_MESG_NOBLOCK, OS_MESG_BLOCK };
+
 const char aJoy_c_debug[] = "joy_c_debug";
 
 char controller_input_index[0x1E0];
@@ -186,8 +188,6 @@ glabel something_with_joy_c_debug
 void test_controllers(void) {
   OSMesg message;
   if (enable_controllers) {
-    enum { OS_MESG_NOBLOCK, OS_MESG_BLOCK };
-
     osSendMesg(&controller1_message_queue, &message, OS_MESG_NOBLOCK);
     osRecvMesg(&controller2_message_queue, &message, OS_MESG_BLOCK);
 
@@ -1457,45 +1457,17 @@ glabel controller_7000C60C
    add.s $f0, $f4, $f2
 ");
 
-asm(R"
-glabel controller_7000C67C
-  addiu $sp, $sp, -0x20
-  sw    $ra, 0x14($sp)
-  lui   $a0, %hi(controller1_message_queue)
-  addiu $a0, %lo(controller1_message_queue) # addiu $a0, $a0, 0x5370
-  addiu $a1, $sp, 0x1c
-  jal   osSendMesg
-   move  $a2, $zero
-  lui   $a0, %hi(controller2_message_queue)
-  addiu $a0, %lo(controller2_message_queue) # addiu $a0, $a0, 0x5390
-  addiu $a1, $sp, 0x1c
-  jal   osRecvMesg
-   li    $a2, 1
-  lw    $ra, 0x14($sp)
-  addiu $sp, $sp, 0x20
-  jr    $ra
-   nop   
-");
+void controller_7000C67C() {
+    OSMesg message;
+    osSendMesg(&controller1_message_queue, &message, OS_MESG_NOBLOCK);
+    osRecvMesg(&controller2_message_queue, &message, OS_MESG_BLOCK);
+}
 
-asm(R"
-glabel controller_7000C6BC
-  addiu $sp, $sp, -0x20
-  sw    $ra, 0x14($sp)
-  lui   $a0, %hi(controller3_message_queue)
-  addiu $a0, %lo(controller3_message_queue) # addiu $a0, $a0, 0x53b0
-  addiu $a1, $sp, 0x1c
-  jal   osSendMesg
-   move  $a2, $zero
-  lui   $a0, %hi(controller4_message_queue)
-  addiu $a0, %lo(controller4_message_queue) # addiu $a0, $a0, 0x53d0
-  addiu $a1, $sp, 0x1c
-  jal   osRecvMesg
-   li    $a2, 1
-  lw    $ra, 0x14($sp)
-  addiu $sp, $sp, 0x20
-  jr    $ra
-   nop   
-");
+void controller_7000C6BC() {
+    OSMesg message;
+    osSendMesg(&controller3_message_queue, &message, OS_MESG_NOBLOCK);
+    osRecvMesg(&controller4_message_queue, &message, OS_MESG_BLOCK);
+}
 
 asm(R"
 glabel save_7000C6FC
