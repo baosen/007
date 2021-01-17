@@ -10,16 +10,16 @@ typedef struct s_mem_alloc_table {
 void *ptr_model_room_buf_secondary;
 unsigned int size_modelroom_buf;
 struct s_mem_alloc_table ptr_table_allocated_mem_blocks;
+
 void *ptr_mema_c_debug_notice_list = 0;
 
-void memaSwap(unsigned char *a, unsigned char *b) {
-  unsigned char *tempstart, *tempend;
-  tempstart = *(void **)a;
-  tempend = *(void **)(a + 4);
+void memaSwap(char *a, char *b) {
+  char *start = *(void **)a,
+       *end = *(void **)((char*)a + 4);
   *(int *)a = *(int *)b;
   *(int *)(a + 4) = *(int *)(b + 4);
-  *(void **)b = tempstart;
-  *(void **)(b + 4) = tempend;
+  *(void **)b = start;
+  *(void **)(b + 4) = end;
 }
 
 asm(R"
