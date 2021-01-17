@@ -858,35 +858,16 @@ glabel video_related_8
    nop   
 ");
 
-asm(R"
-glabel video_related_9
-  li    $at, 0x41600000 # 14.000000
-  mtc1  $at, $f0
-  nop   
-  c.lt.s $f0, $f12
-  nop   
-  bc1fl .L70003B28
-   mtc1  $zero, $f0
-  mov.s $f12, $f0
-  mtc1  $zero, $f0
-.L70003B28:
-  nop   
-  c.lt.s $f12, $f0
-  nop   
-  bc1fl .L70003B44
-   trunc.w.s $f4, $f12
-  mov.s $f12, $f0
-  trunc.w.s $f4, $f12
-.L70003B44:
-  lui   $at, %hi(D_800232B4)
-  li    $t8, 10
-  mfc1  $t7, $f4
-  nop   
-  sw    $t7, %lo(D_800232B4)($at)
-  lui   $at, %hi(D_800232B8)
-  jr    $ra
-   sw    $t8, %lo(D_800232B8)($at)
-");
+void video_related_9(float param_1) {
+  if (param_1 > 14.0f) {
+    param_1 = 14.0f;
+  }
+  if (param_1 < 0.0f) {
+    param_1 = 0.0f;
+  }
+  D_800232B4 = param_1;
+  D_800232B8 = 10;
+}
 
 void receive_vi_c_msgs(int msgcount) {
   do {
