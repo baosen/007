@@ -100,7 +100,7 @@ void initialize_mainthread(void) {
     osSetTimer(&bosstimer, OS_USEC_TO_CYCLES(100000), 0, &bossmq, &bossmsg);
     osRecvMesg(&bossmq, &bossmsg, 1);
     if (i == 1)
-      test_controller_presence();
+      test_controllers();
     else if (i >= 2)
       redirect_to_ramrom_replay_and_record_handlers_if_set();
   }
@@ -395,7 +395,7 @@ glabel mainloop
    move  $a0, $s1
   jal   set_vtx_gfx_mem_alloc
    nop   
-  jal   test_controller_presence
+  jal   test_controllers
    nop   
   lui   $a0, %hi(current_stage_num)
   jal   stage_load

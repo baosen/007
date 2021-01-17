@@ -183,9 +183,8 @@ glabel something_with_joy_c_debug
    nop   
 ");
 
-void test_controller_presence(void) {
+void test_controllers(void) {
   OSMesg message;
-
   if (enable_controllers) {
     enum { OS_MESG_NOBLOCK, OS_MESG_BLOCK };
 
