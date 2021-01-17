@@ -1,0 +1,63 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "deb_print",
+    srcs = [
+        "deb_print.c",
+        "//src/cfb:cfb.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "deb_video",
+    srcs = [
+        "deb_video.c",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "deb",
+    srcs = [
+        "deb.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "debug_getlastRA",
+    srcs = [
+        "debug_getlastRA.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "debugmenu_vars",
+    srcs = [
+        "debugmenu_vars.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "debugmenu",
+    srcs = [
+        "debugmenu.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+
+gecc_library(
+    name = "vi",
+    srcs = [
+        "vi.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)
+
