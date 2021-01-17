@@ -186,7 +186,7 @@ void *set_stack_entry(unsigned char *stack, unsigned int size) {
   return stack + size - 8;
 }
 
-void set_hw_address_and_unknown(void) {
+void init_audio_rsp_microcode(void) { // unused.
   unknown_init_val = 1;
   cart_hw_address = 0x10000000;
 }

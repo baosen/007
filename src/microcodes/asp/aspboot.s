@@ -1,7 +1,8 @@
+.section .text
 
-.section .text, "ax"
 glabel aspMainTextStart
 .incbin "aspboot.text.bin"
+
 glabel unknown_init_val
 .word 2
 
@@ -38,7 +39,9 @@ glabel aAudi
 .word 0x61756469, 0x00000000
 
 .section .data
+
 glabel aspMainDataStart
 .incbin "aspboot.data.bin"
+
 .section .rodata
 .section .bss
