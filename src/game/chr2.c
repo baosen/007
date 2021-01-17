@@ -4669,9 +4669,9 @@ glabel play_sound_for_shot_actor
   jal   sub_GAME_7F09B15C
    sw    $zero, 0x60($sp)
   sll   $t8, $v0, 2
-  lui   $t9, %hi(ptr_BONDdata_p1)
+  lui   $t9, %hi(players_p1)
   addu  $t9, $t9, $t8
-  lw    $t9, %lo(ptr_BONDdata_p1)($t9)
+  lw    $t9, %lo(players_p1)($t9)
   lw    $v1, 0x60($sp)
   lw    $t0, 0xd8($t9)
   bnezl $t0, .L7F027270

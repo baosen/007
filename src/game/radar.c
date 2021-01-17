@@ -207,10 +207,10 @@ glabel display_red_blue_on_radar
   lw    $t2, 0x70($sp)
 .L7F0C637C:
   sll   $t3, $s3, 2
-  lui   $a0, %hi(ptr_BONDdata_p1)
+  lui   $a0, %hi(players_p1)
   beq   $s3, $t2, .L7F0C6570
    addu  $a0, $a0, $t3
-  lw    $a0, %lo(ptr_BONDdata_p1)($a0)
+  lw    $a0, %lo(players_p1)($a0)
   lw    $t4, 0xd8($a0)
   bnezl $t4, .L7F0C6574
    lw    $t8, 0x74($sp)

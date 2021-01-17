@@ -4,8 +4,8 @@
 
 int copyof_stagenum, dword_CODE_bss_80079E94;
 char dword_CODE_bss_80079E98[0x48];
-unsigned int *ptr_BONDdata_p1, *ptr_BONDdata_p2, *ptr_BONDdata_p3,
-    *ptr_BONDdata_p4;
+unsigned int *players_p1, *players_p2, *players_p3,
+    *players_p4;
 
 player_statistics player1_player_data, player2_player_data, player3_player_data,
     player4_player_data;
@@ -7213,8 +7213,8 @@ glabel default_player_perspective_and_height
 
 asm(R"
 glabel reset_play_data_ptrs
-  lui   $v0, %hi(ptr_BONDdata_p1)
-  addiu $v0, %lo(ptr_BONDdata_p1) # addiu $v0, $v0, -0x6120
+  lui   $v0, %hi(players_p1)
+  addiu $v0, %lo(players_p1) # addiu $v0, $v0, -0x6120
   sw    $zero, ($v0)
   sw    $zero, 4($v0)
   sw    $zero, 8($v0)
@@ -7241,8 +7241,8 @@ glabel reset_play_data_ptrs
 
 asm(R"
 glabel init_player_data_ptrs_construct_viewports
-  lui   $v0, %hi(ptr_BONDdata_p1)
-  addiu $v0, %lo(ptr_BONDdata_p1) # addiu $v0, $v0, -0x6120
+  lui   $v0, %hi(players_p1)
+  addiu $v0, %lo(players_p1) # addiu $v0, $v0, -0x6120
   addiu $sp, $sp, -0x20
   sw    $ra, 0x1c($sp)
   sw    $s1, 0x18($sp)
@@ -7303,13 +7303,13 @@ glabel init_player_data_ptrs_construct_viewports
 
 int getPlayerCount(void) {
   int count = 0;
-  if (ptr_BONDdata_p1)
+  if (players_p1)
     count = 1;
-  if (ptr_BONDdata_p2)
+  if (players_p2)
     count += 1;
-  if (ptr_BONDdata_p3)
+  if (players_p3)
     count += 1;
-  if (ptr_BONDdata_p4)
+  if (players_p4)
     count += 1;
   return count;
 }
@@ -7354,8 +7354,8 @@ glabel initBONDdataforPlayer
   jal   mempAllocBytesInBank
    li    $a1, 4
   lw    $t4, 0x3d0($sp)
-  lui   $t9, %hi(ptr_BONDdata_p1) 
-  addiu $t9, %lo(ptr_BONDdata_p1) # addiu $t9, $t9, -0x6120
+  lui   $t9, %hi(players_p1) 
+  addiu $t9, %lo(players_p1) # addiu $t9, $t9, -0x6120
   sll   $t5, $t4, 2
   addu  $v1, $t5, $t9
   sw    $v0, ($v1)
@@ -8168,8 +8168,8 @@ glabel initBONDdataforPlayer
   jal   mempAllocBytesInBank
    li    $a1, 4
   lw    $t4, 0x3d0($sp)
-  lui   $t9, %hi(ptr_BONDdata_p1) # $t9, 0x8008
-  addiu $t9, %lo(ptr_BONDdata_p1) # addiu $t9, $t9, -0x60b0
+  lui   $t9, %hi(players_p1) # $t9, 0x8008
+  addiu $t9, %lo(players_p1) # addiu $t9, $t9, -0x60b0
   sll   $t5, $t4, 2
   addu  $v1, $t5, $t9
   sw    $v0, ($v1)
@@ -8945,9 +8945,9 @@ glabel initBONDdataforPlayer
 asm(R"
 glabel set_cur_player
   sll   $t6, $a0, 2
-  lui   $t7, %hi(ptr_BONDdata_p1)
+  lui   $t7, %hi(players_p1)
   addu  $t7, $t7, $t6
-  lw    $t7, %lo(ptr_BONDdata_p1)($t7)
+  lw    $t7, %lo(players_p1)($t7)
   lui   $at, %hi(player_num)
   sw    $a0, %lo(player_num)($at)
   sll   $t8, $a0, 3
@@ -8977,8 +8977,8 @@ glabel sub_GAME_7F09B15C
    move  $s1, $zero
   blez  $v0, .L7F09B1C0
    sll   $t6, $s1, 2
-  lui   $t7, %hi(ptr_BONDdata_p1) 
-  addiu $t7, %lo(ptr_BONDdata_p1) # addiu $t7, $t7, -0x6120
+  lui   $t7, %hi(players_p1) 
+  addiu $t7, %lo(players_p1) # addiu $t7, $t7, -0x6120
   addu  $s0, $t6, $t7
   lw    $t8, ($s0)
 .L7F09B194:
@@ -9313,9 +9313,9 @@ asm(R"
 glabel sub_GAME_7F09B4D8
   lui   $a1, %hi(dword_CODE_bss_8007A0C0)
   lui   $a3, %hi(dword_CODE_bss_8007A0D0)
-  lui   $a2, %hi(ptr_BONDdata_p1)
+  lui   $a2, %hi(players_p1)
   move  $v1, $zero
-  addiu $a2, %lo(ptr_BONDdata_p1) # addiu $a2, $a2, -0x6120
+  addiu $a2, %lo(players_p1) # addiu $a2, $a2, -0x6120
   addiu $a3, %lo(dword_CODE_bss_8007A0D0) # addiu $a3, $a3, -0x5f30
   addiu $a1, %lo(dword_CODE_bss_8007A0C0) # addiu $a1, $a1, -0x5f40
   lw    $v0, ($a1)
@@ -9340,8 +9340,8 @@ asm(R"
 glabel sub_GAME_7F09B528
   lui   $v1, %hi(dword_CODE_bss_8007A0C0)
   lw    $v1, %lo(dword_CODE_bss_8007A0C0)($v1)
-  lui   $v0, %hi(ptr_BONDdata_p1)
-  addiu $v0, %lo(ptr_BONDdata_p1) # addiu $v0, $v0, -0x6120
+  lui   $v0, %hi(players_p1)
+  addiu $v0, %lo(players_p1) # addiu $v0, $v0, -0x6120
   sll   $t6, $v1, 2
   addu  $t7, $v0, $t6
   lw    $t8, ($t7)

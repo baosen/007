@@ -3924,9 +3924,9 @@ glabel sub_GAME_7F020EF0
   jal   sub_GAME_7F09B15C
    move  $a0, $t4
   sll   $t9, $v0, 2
-  lui   $t8, %hi(ptr_BONDdata_p1)
+  lui   $t8, %hi(players_p1)
   addu  $t8, $t8, $t9
-  lw    $t8, %lo(ptr_BONDdata_p1)($t8)
+  lw    $t8, %lo(players_p1)($t8)
   li    $at, 1
   lw    $t0, ($t8)
   beql  $t0, $at, .L7F021120
@@ -4775,9 +4775,9 @@ glabel sub_GAME_7F020EF0
   jal   sub_GAME_7F09B15C
    move  $a0, $t4
   sll   $t9, $v0, 2
-  lui   $t8, %hi(ptr_BONDdata_p1)
+  lui   $t8, %hi(players_p1)
   addu  $t8, $t8, $t9
-  lw    $t8, %lo(ptr_BONDdata_p1)($t8)
+  lw    $t8, %lo(players_p1)($t8)
   li    $at, 1
   lw    $t0, ($t8)
   beql  $t0, $at, .Ljp7F0213B8

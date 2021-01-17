@@ -15815,9 +15815,9 @@ glabel sub_GAME_7F03C574
   blez  $v0, .L7F03C624
    move  $s0, $zero
   li    $at, 0x43C80000 # 400.000000
-  lui   $s1, %hi(ptr_BONDdata_p1)
+  lui   $s1, %hi(players_p1)
   mtc1  $at, $f20
-  addiu $s1, %lo(ptr_BONDdata_p1) # addiu $s1, $s1, -0x6120
+  addiu $s1, %lo(players_p1) # addiu $s1, $s1, -0x6120
 .L7F03C5BC:
   lw    $t7, ($s1)
   lwc1  $f6, 8($s2)
@@ -16076,17 +16076,17 @@ glabel handle_mp_respawn_and_some_things
   jal   sub_GAME_7F09B15C
    move  $a0, $s1
   sll   $t0, $v0, 2
-  lui   $a0, %hi(ptr_BONDdata_p1)
+  lui   $a0, %hi(players_p1)
   addu  $a0, $a0, $t0
-  lw    $a0, %lo(ptr_BONDdata_p1)($a0)
+  lw    $a0, %lo(players_p1)($a0)
   jal   sub_GAME_7F062B00
    addiu $a0, $a0, 0xa54
   jal   sub_GAME_7F09B15C
    move  $a0, $s1
   sll   $t1, $v0, 2
-  lui   $a0, %hi(ptr_BONDdata_p1)
+  lui   $a0, %hi(players_p1)
   addu  $a0, $a0, $t1
-  lw    $a0, %lo(ptr_BONDdata_p1)($a0)
+  lw    $a0, %lo(players_p1)($a0)
   jal   sub_GAME_7F062B00
    addiu $a0, $a0, 0xdfc
   lw    $t2, 4($s1)
@@ -16598,10 +16598,10 @@ glabel sub_GAME_7F03CFE8
   jal   sub_GAME_7F09B15C
    nop   
   sll   $t6, $v0, 2
-  lui   $a0, %hi(ptr_BONDdata_p1)
+  lui   $a0, %hi(players_p1)
   addu  $a0, $a0, $t6
   jal   sub_GAME_7F089778
-   lw    $a0, %lo(ptr_BONDdata_p1)($a0)
+   lw    $a0, %lo(players_p1)($a0)
   b     .L7F03D04C
    lw    $ra, 0x14($sp)
   mtc1  $zero, $f0

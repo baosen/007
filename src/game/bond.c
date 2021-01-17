@@ -1528,9 +1528,9 @@ glabel sub_GAME_7F0790F0
   li    $at, 0x447A0000 # 1000.000000
   lui   $fp, %hi(pPlayer) 
   lui   $s5, %hi(dword_CODE_bss_80079C28)
-  lui   $s4, %hi(ptr_BONDdata_p1)
+  lui   $s4, %hi(players_p1)
   mtc1  $at, $f20
-  addiu $s4, %lo(ptr_BONDdata_p1) # addiu $s4, $s4, -0x6120
+  addiu $s4, %lo(players_p1) # addiu $s4, $s4, -0x6120
   addiu $s5, %lo(dword_CODE_bss_80079C28) # addiu $s5, $s5, -0x63d8
   addiu $fp, %lo(pPlayer) # addiu $fp, $fp, -0x5f50
   lw    $v0, ($fp)
@@ -1602,12 +1602,12 @@ glabel sub_GAME_7F0790F0
    lw    $v0, ($fp)
   sw    $s3, 0x4c($sp)
 .L7F07925C:
-  lui   $s4, %hi(ptr_BONDdata_p1)
+  lui   $s4, %hi(players_p1)
   lui   $s5, %hi(dword_CODE_bss_80079C28)
   lui   $fp, %hi(pPlayer) 
   addiu $fp, %lo(pPlayer) # addiu $fp, $fp, -0x5f50
   addiu $s5, %lo(dword_CODE_bss_80079C28) # addiu $s5, $s5, -0x63d8
-  addiu $s4, %lo(ptr_BONDdata_p1) # addiu $s4, $s4, -0x6120
+  addiu $s4, %lo(players_p1) # addiu $s4, $s4, -0x6120
   beqz  $s1, .L7F079388
    lw    $s3, 0x4c($sp)
   lui   $t8, %hi(dword_CODE_bss_80079C68) 
@@ -2445,9 +2445,9 @@ glabel sub_GAME_7F0799F0
 asm(R"
 glabel sub_GAME_7F079A1C
   sll   $t6, $a0, 2
-  lui   $v0, %hi(ptr_BONDdata_p1)
+  lui   $v0, %hi(players_p1)
   addu  $v0, $v0, $t6
-  lw    $v0, %lo(ptr_BONDdata_p1)($v0)
+  lw    $v0, %lo(players_p1)($v0)
   lw    $v1, 0x9c($v0)
   lw    $a1, 0x29fc($v0)
   slt   $at, $v1, $a1
@@ -27163,12 +27163,12 @@ glabel record_damage_kills
   mul.s $f6, $f0, $f10
   lw    $t0, 0x38($sp)
   li    $at, 0x43B40000 # 360.000000
-  lui   $t2, %hi(ptr_BONDdata_p1)
+  lui   $t2, %hi(players_p1)
   sll   $t1, $t0, 2
   mtc1  $at, $f4
   addu  $t2, $t2, $t1
   div.s $f18, $f6, $f16
-  lw    $t2, %lo(ptr_BONDdata_p1)($t2)
+  lw    $t2, %lo(players_p1)($t2)
   mtc1  $zero, $f12
   lw    $t3, 0x4c($sp)
   lwc1  $f10, 0x148($t2)
@@ -27533,12 +27533,12 @@ glabel record_damage_kills
   mul.s $f8, $f0, $f4
   lw    $t8, 0x38($sp)
   li    $at, 0x43B40000 # 360.000000
-  lui   $t0, %hi(ptr_BONDdata_p1)
+  lui   $t0, %hi(players_p1)
   sll   $t9, $t8, 2
   mtc1  $at, $f16
   addu  $t0, $t0, $t9
   div.s $f6, $f8, $f10
-  lw    $t0, %lo(ptr_BONDdata_p1)($t0)
+  lw    $t0, %lo(players_p1)($t0)
   mtc1  $zero, $f12
   lw    $t1, 0x4c($sp)
   lwc1  $f4, 0x148($t0)
@@ -28042,11 +28042,11 @@ glabel sub_GAME_7F08A03C
    lw    $a1, 0x24($sp)
   lw    $t8, 0x1c($sp)
 .L7F08A088:
-  lui   $t0, %hi(ptr_BONDdata_p1)
+  lui   $t0, %hi(players_p1)
   lw    $t7, 0x24($sp)
   sll   $t9, $t8, 2
   addu  $t0, $t0, $t9
-  lw    $t0, %lo(ptr_BONDdata_p1)($t0)
+  lw    $t0, %lo(players_p1)($t0)
   sw    $t7, 0xac($t0)
   lw    $ra, 0x14($sp)
   addiu $sp, $sp, 0x20
@@ -28067,8 +28067,8 @@ glabel sub_GAME_7F08A0B0
   sw    $a2, 0x28($sp)
   jal   sub_GAME_7F09B15C
    sw    $a3, 0x2c($sp)
-  lui   $a0, %hi(ptr_BONDdata_p1)
-  addiu $a0, %lo(ptr_BONDdata_p1) # addiu $a0, $a0, -0x6120
+  lui   $a0, %hi(players_p1)
+  addiu $a0, %lo(players_p1) # addiu $a0, $a0, -0x6120
   sll   $t6, $v0, 2
   addu  $t7, $a0, $t6
   lw    $t8, ($t7)
@@ -28077,9 +28077,9 @@ glabel sub_GAME_7F08A0B0
    lw    $t6, 0x28($sp)
   jal   getPlayerCount
    sw    $v0, 0x1c($sp)
-  lui   $a0, %hi(ptr_BONDdata_p1)
+  lui   $a0, %hi(players_p1)
   li    $a1, 1
-  addiu $a0, %lo(ptr_BONDdata_p1) # addiu $a0, $a0, -0x6120
+  addiu $a0, %lo(players_p1) # addiu $a0, $a0, -0x6120
   beq   $v0, $a1, .L7F08A118
    lw    $v1, 0x1c($sp)
   sll   $t0, $v1, 2
@@ -28204,8 +28204,8 @@ glabel sub_GAME_7F08A274
   sw    $a2, 0x20($sp)
   jal   sub_GAME_7F09B15C
    sw    $a3, 0x24($sp)
-  lui   $t7, %hi(ptr_BONDdata_p1) 
-  addiu $t7, %lo(ptr_BONDdata_p1) # addiu $t7, $t7, -0x6120
+  lui   $t7, %hi(players_p1) 
+  addiu $t7, %lo(players_p1) # addiu $t7, $t7, -0x6120
   sll   $t6, $v0, 2
   addu  $v1, $t6, $t7
   lw    $t8, ($v1)
@@ -30095,10 +30095,10 @@ glabel sub_GAME_7F08B0F0
   lw    $t1, 0xf0($sp)
 .L7F08B148:
   lw    $t2, 0xf4($sp)
-  lui   $t4, %hi(ptr_BONDdata_p1) 
+  lui   $t4, %hi(players_p1) 
   beqz  $t1, .L7F08B288
    sll   $t3, $t2, 2
-  addiu $t4, %lo(ptr_BONDdata_p1) # addiu $t4, $t4, -0x6120
+  addiu $t4, %lo(players_p1) # addiu $t4, $t4, -0x6120
   addu  $s1, $t3, $t4
   lw    $t5, ($s1)
   lw    $t6, 0xd4($t5)
@@ -30180,10 +30180,10 @@ glabel sub_GAME_7F08B0F0
   lw    $t7, 0xf0($sp)
 .L7F08B28C:
   lw    $t8, 0xf4($sp)
-  lui   $t1, %hi(ptr_BONDdata_p1) 
+  lui   $t1, %hi(players_p1) 
   beqz  $t7, .L7F08BC90
    sll   $t9, $t8, 2
-  addiu $t1, %lo(ptr_BONDdata_p1) # addiu $t1, $t1, -0x6120
+  addiu $t1, %lo(players_p1) # addiu $t1, $t1, -0x6120
   addu  $s1, $t9, $t1
   lw    $t2, ($s1)
   lw    $t3, 0xd4($t2)

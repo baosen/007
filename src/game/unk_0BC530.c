@@ -16,8 +16,8 @@ glabel sub_GAME_7F0BC530
    move  $s0, $zero
   blez  $v0, .L7F0BC584
    sll   $t6, $s0, 2
-  lui   $t7, %hi(ptr_BONDdata_p1) 
-  addiu $t7, %lo(ptr_BONDdata_p1) # addiu $t7, $t7, -0x6120
+  lui   $t7, %hi(players_p1) 
+  addiu $t7, %lo(players_p1) # addiu $t7, $t7, -0x6120
   addu  $s1, $t6, $t7
   li    $s2, -1
   lw    $t8, ($s1)

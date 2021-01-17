@@ -3118,9 +3118,9 @@ glabel sub_GAME_7F041E0C
   jal   sub_GAME_7F09B15C
    move  $a0, $s0
   sll   $t3, $v0, 2
-  lui   $t4, %hi(ptr_BONDdata_p1)
+  lui   $t4, %hi(players_p1)
   addu  $t4, $t4, $t3
-  lw    $t4, %lo(ptr_BONDdata_p1)($t4)
+  lw    $t4, %lo(players_p1)($t4)
   andi  $t6, $s2, 4
   lw    $t5, 0xac($t4)
   beql  $t5, $zero, .L7F0421B8
@@ -3165,9 +3165,9 @@ glabel sub_GAME_7F041E0C
   jal   sub_GAME_7F09B15C
    move  $a0, $s0
   sll   $t3, $v0, 2
-  lui   $t4, %hi(ptr_BONDdata_p1)
+  lui   $t4, %hi(players_p1)
   addu  $t4, $t4, $t3
-  lw    $t4, %lo(ptr_BONDdata_p1)($t4)
+  lw    $t4, %lo(players_p1)($t4)
   move  $a0, $s0
   move  $a1, $s4
   lw    $t5, 0xac($t4)
@@ -31360,8 +31360,8 @@ glabel sub_GAME_7F053894
   jal   getPlayerCount
    lwc1  $f20, 0x38($sp)
   blez  $v0, .L7F05393C
-   lui   $t6, %hi(ptr_BONDdata_p1)
-  addiu $s0, $t6, %lo(ptr_BONDdata_p1)
+   lui   $t6, %hi(players_p1)
+  addiu $s0, $t6, %lo(players_p1)
   sll   $t7, $v0, 2
   addu  $s2, $t7, $s0
   lw    $t8, ($s0)

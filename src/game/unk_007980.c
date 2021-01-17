@@ -11,8 +11,8 @@ glabel cleanupplayersoundrelated
    move  $s4, $zero
   blez  $v0, .L7F007A14
    sll   $t6, $s4, 2
-  lui   $t7, %hi(ptr_BONDdata_p1) 
-  addiu $t7, %lo(ptr_BONDdata_p1) # addiu $t7, $t7, -0x6120
+  lui   $t7, %hi(players_p1) 
+  addiu $t7, %lo(players_p1) # addiu $t7, $t7, -0x6120
   addu  $s2, $t6, $t7
   li    $s3, 1872
   move  $s1, $zero
