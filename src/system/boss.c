@@ -91,7 +91,7 @@ void initialize_mainthread(void) {
   ob_c_debug_setup();
   something_with_rsp_c_debug();
   something_with_dyn_c_debug();
-  something_with_joy_c_debug();
+  joyInitDebugNoticeList();
   osCreateMesgQueue(&bossmq, &bossmsg, 1);
 
   for (i = 0; i != 4; i++) {

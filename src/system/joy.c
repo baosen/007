@@ -98,7 +98,7 @@ int pl4_controller_failure_pressed = 0;
 int D_80026970 = 0;
 
 asm(R"
-glabel something_with_joy_c_debug
+glabel joyInitDebugNoticeList
   addiu $sp, $sp, -0x18
   sw    $ra, 0x14($sp)
   lui   $a0, %hi(D_800268C0)
