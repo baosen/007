@@ -1101,9 +1101,8 @@ glabel video_related_10
 ");
 
 /**
- * generate a generic fillrect; fries: AT,A1,A2,A3,T0,T1,T2,T3,T4,T5,T6,T7,T8,T9
- *     V0=new display list address
- *     accepts: A0=p->display list
+ * Generate a generic fillrect.
+ * V0=new display list address, accepts: A0=p->display list.
  */
 asm(R"
 glabel insert_generic_fillrect
