@@ -59,7 +59,6 @@ void CheckDisplayErrorBufferEvery16Frames(unsigned int framecount) {
 // Count to 800230A4.
 void osCreateLog(void) { currentcount = osGetCount(); }
 
-// Thread management.
 asm(R"
 glabel osCreateScheduler
   addiu $sp, $sp, -0x28
