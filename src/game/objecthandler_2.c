@@ -11902,28 +11902,12 @@ glabel load_object_fill_header
    nop   
 ");
 
-asm(R"
-glabel load_object_into_memory
-  addiu $sp, $sp, -0x20
-  sw    $ra, 0x1c($sp)
-  sw    $zero, 0x10($sp)
-  move  $a2, $zero
-  jal   load_object_fill_header
-   move  $a3, $zero
-  lw    $ra, 0x1c($sp)
-  addiu $sp, $sp, 0x20
-  jr    $ra
-   nop   
-");
+void load_object_into_memory(unsigned short **param_1, char *param_2) {
+  load_object_fill_header(param_1, param_2, 0, 0, 0);
+}
 
-asm(R"
-glabel load_object_into_memory_unused_maybe
-  addiu $sp, $sp, -0x20
-  sw    $ra, 0x1c($sp)
-  jal   load_object_fill_header
-   sw    $zero, 0x10($sp)
-  lw    $ra, 0x1c($sp)
-  addiu $sp, $sp, 0x20
-  jr    $ra
-   nop   
-");
+void load_object_into_memory_unused_maybe(unsigned short **param_1,
+                                          char *param_2, char *param_3,
+                                          int param_4) {
+  load_object_fill_header(param_1, param_2, param_3, param_4, 0x0);
+}
