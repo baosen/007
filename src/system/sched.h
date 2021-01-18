@@ -79,7 +79,7 @@ void __scMain(void *arg);
 void __scYield(OSSched *sc);
 void __scAppendList(OSSched *sc, OSScTask *t);
 void osCreateScheduler(OSSched *s, void *stack, unsigned char mode,
-                       unsigned char numFields);
+                       unsigned char retraceCount);
 void osScAddClient(OSSched *s, OSScClient *c, OSMesgQueue *msgQ,
                    OSScClient *next);
 void osScRemoveClient(OSSched *s, OSScClient *c);
