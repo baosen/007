@@ -405,49 +405,25 @@ glabel controller_check_for_rumble_maybe
    nop   
 ");
 
-asm(R"
-glabel get_attached_controller_count
-  lui   $t6, %hi(ptr_current_point_in_controller_input_index) 
-  lw    $t6, %lo(ptr_current_point_in_controller_input_index)($t6)
-  lui   $v0, %hi(num_controller_plugged_in_flags)
-  lw    $v1, 0x1f8($t6)
-  bltz  $v1, .L7000BA20
-   nop   
-  sll   $v0, $v1, 0x18
-  sra   $t7, $v0, 0x18
-  jr    $ra
-   move  $v0, $t7
-
-.L7000BA20:
-  lbu   $v0, %lo(num_controller_plugged_in_flags)($v0)
-  andi  $t8, $v0, 1
-  bnez  $t8, .L7000BA38
-   andi  $t9, $v0, 2
-  jr    $ra
-   move  $v0, $zero
-
-.L7000BA38:
-  bnez  $t9, .L7000BA48
-   andi  $t0, $v0, 4
-  jr    $ra
-   li    $v0, 1
-
-.L7000BA48:
-  bnez  $t0, .L7000BA58
-   andi  $t1, $v0, 8
-  jr    $ra
-   li    $v0, 2
-
-.L7000BA58:
-  bnez  $t1, .L7000BA68
-   li    $v0, 4
-  jr    $ra
-   li    $v0, 3
-
-.L7000BA68:
-  jr    $ra
-   nop   
-");
+int get_attached_controller_count(void) {
+  if (-1 < *(int *)(ptr_current_point_in_controller_input_index + 0x1f8)) {
+    return (int)(char)*(int *)(ptr_current_point_in_controller_input_index +
+                               0x1f8);
+  }
+  if ((num_controller_plugged_in_flags & 1) == 0) {
+    return 0;
+  }
+  if ((num_controller_plugged_in_flags & 2) == 0) {
+    return 1;
+  }
+  if ((num_controller_plugged_in_flags & 4) == 0) {
+    return 2;
+  }
+  if ((num_controller_plugged_in_flags & 8) == 0) {
+    return 3;
+  }
+  return 4;
+}
 
 unsigned char get_num_controllers_plugged_in(void) {
   return num_controller_plugged_in_flags;
@@ -1458,15 +1434,15 @@ glabel controller_7000C60C
 ");
 
 void controller_7000C67C() {
-    OSMesg message;
-    osSendMesg(&controller1_message_queue, &message, OS_MESG_NOBLOCK);
-    osRecvMesg(&controller2_message_queue, &message, OS_MESG_BLOCK);
+  OSMesg message;
+  osSendMesg(&controller1_message_queue, &message, OS_MESG_NOBLOCK);
+  osRecvMesg(&controller2_message_queue, &message, OS_MESG_BLOCK);
 }
 
 void controller_7000C6BC() {
-    OSMesg message;
-    osSendMesg(&controller3_message_queue, &message, OS_MESG_NOBLOCK);
-    osRecvMesg(&controller4_message_queue, &message, OS_MESG_BLOCK);
+  OSMesg message;
+  osSendMesg(&controller3_message_queue, &message, OS_MESG_NOBLOCK);
+  osRecvMesg(&controller4_message_queue, &message, OS_MESG_BLOCK);
 }
 
 asm(R"
