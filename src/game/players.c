@@ -4,8 +4,7 @@
 
 int copyof_stagenum, dword_CODE_bss_80079E94;
 char dword_CODE_bss_80079E98[0x48];
-unsigned int *players_p1, *players_p2, *players_p3,
-    *players_p4;
+unsigned int *players_p1, *players_p2, *players_p3, *players_p4;
 
 player_statistics player1_player_data, player2_player_data, player3_player_data,
     player4_player_data;
@@ -9336,66 +9335,27 @@ glabel sub_GAME_7F09B4D8
    move  $v0, $v1
 ");
 
-asm(R"
-glabel sub_GAME_7F09B528
-  lui   $v1, %hi(dword_CODE_bss_8007A0C0)
-  lw    $v1, %lo(dword_CODE_bss_8007A0C0)($v1)
-  lui   $v0, %hi(players_p1)
-  addiu $v0, %lo(players_p1) # addiu $v0, $v0, -0x6120
-  sll   $t6, $v1, 2
-  addu  $t7, $v0, $t6
-  lw    $t8, ($t7)
-  beqz  $t8, .L7F09B560
-   nop   
-  bnezl $a0, .L7F09B560
-   addiu $a0, $a0, -1
-  jr    $ra
-   move  $v0, $v1
-
-  addiu $a0, $a0, -1
-.L7F09B560:
-  lui   $v1, %hi(dword_CODE_bss_8007A0C4)
-  lw    $v1, %lo(dword_CODE_bss_8007A0C4)($v1)
-  sll   $t9, $v1, 2
-  addu  $t0, $v0, $t9
-  lw    $t1, ($t0)
-  beqz  $t1, .L7F09B590
-   nop   
-  bnezl $a0, .L7F09B590
-   addiu $a0, $a0, -1
-  jr    $ra
-   move  $v0, $v1
-
-  addiu $a0, $a0, -1
-.L7F09B590:
-  lui   $v1, %hi(dword_CODE_bss_8007A0C8)
-  lw    $v1, %lo(dword_CODE_bss_8007A0C8)($v1)
-  sll   $t2, $v1, 2
-  addu  $t3, $v0, $t2
-  lw    $t4, ($t3)
-  beqz  $t4, .L7F09B5C0
-   nop   
-  bnezl $a0, .L7F09B5C0
-   addiu $a0, $a0, -1
-  jr    $ra
-   move  $v0, $v1
-
-  addiu $a0, $a0, -1
-.L7F09B5C0:
-  lui   $v1, %hi(dword_CODE_bss_8007A0CC)
-  lw    $v1, %lo(dword_CODE_bss_8007A0CC)($v1)
-  sll   $t5, $v1, 2
-  addu  $t6, $v0, $t5
-  lw    $t7, ($t6)
-  move  $v0, $zero
-  beqz  $t7, .L7F09B5F0
-   nop   
-  bnez  $a0, .L7F09B5F0
-   nop   
-  jr    $ra
-   move  $v0, $v1
-
-.L7F09B5F0:
-  jr    $ra
-   nop   
-");
+int sub_GAME_7F09B528(int param_1) {
+  if ((&players_p1)[dword_CODE_bss_8007A0C0] != 0) {
+    if (param_1 == 0) {
+      return dword_CODE_bss_8007A0C0;
+    }
+    param_1 = param_1 + -1;
+  }
+  if ((&players_p1)[dword_CODE_bss_8007A0C4] != 0) {
+    if (param_1 == 0) {
+      return dword_CODE_bss_8007A0C4;
+    }
+    param_1 = param_1 + -1;
+  }
+  if ((&players_p1)[dword_CODE_bss_8007A0C8] != 0) {
+    if (param_1 == 0) {
+      return dword_CODE_bss_8007A0C8;
+    }
+    param_1 = param_1 + -1;
+  }
+  if (((&players_p1)[dword_CODE_bss_8007A0CC] != 0) && (param_1 == 0)) {
+    return dword_CODE_bss_8007A0CC;
+  }
+  return 0;
+}
