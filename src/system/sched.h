@@ -46,7 +46,6 @@ typedef struct SCClient_s {
   OSMesgQueue *msgQ;
 } OSScClient;
 
-// fixme im wrong size, shouldn't copy paste from sample code anyway
 typedef struct {
   OSScMsg retraceMsg;
   OSScMsg prenmiMsg;
