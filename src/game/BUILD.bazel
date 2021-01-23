@@ -881,9 +881,9 @@ gecc_library(
 )
 
 gecc_library(
-    name = "unk_09B740",
+    name = "random",
     srcs = [
-        "unk_09B740.c",
+        "random.c",
     ],
     visibility = ["//visibility:public"],
 )
