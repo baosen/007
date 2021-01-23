@@ -778,9 +778,9 @@ gecc_library(
 )
 
 gecc_library(
-    name = "unk_05A9E0",
+    name = "sqrt_tan_angle_plus_one",
     srcs = [
-        "unk_05A9E0.c",
+        "sqrt_tan_angle_plus_one.c",
         "//src/libultra/include",
     ],
     visibility = ["//visibility:public"],

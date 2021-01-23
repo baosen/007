@@ -1656,7 +1656,7 @@ glabel sub_GAME_7F06D8B0
   nop   
   bc1fl .L7F06DB10
    mtc1  $at, $f12
-  jal   sub_GAME_7F05A9E0
+  jal   sqrt_tan_angle_plus_one
    nop   
   b     .L7F06DB14
    mov.s $f12, $f0
@@ -1859,7 +1859,7 @@ glabel sub_GAME_7F06DB5C
   nop   
   bc1fl .L7F06DDB8
    mtc1  $at, $f12
-  jal   sub_GAME_7F05A9E0
+  jal   sqrt_tan_angle_plus_one
    nop   
   b     .L7F06DDBC
    mov.s $f12, $f0
@@ -2388,7 +2388,7 @@ glabel sub_GAME_7F06E2B8
   nop   
   bc1fl .L7F06E4F0
    mtc1  $at, $f12
-  jal   sub_GAME_7F05A9E0
+  jal   sqrt_tan_angle_plus_one
    mov.s $f12, $f20
   b     .L7F06E4F4
    mov.s $f12, $f0
