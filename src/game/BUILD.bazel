@@ -163,8 +163,8 @@ gecc_library(
 gecc_library(
     name = "chrobjdata",
     srcs = [
-        "bondtypes.h",
         "bondaicommands.h",
+        "bondtypes.h",
         "chrobjdata.c",
         "chrobjdata.h",
         "//src/system:includes",
@@ -693,14 +693,6 @@ gecc_library(
     name = "sin",
     srcs = [
         "sin.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "spectrum",
-    srcs = [
-        "spectrum.c",
     ],
     visibility = ["//visibility:public"],
 )
