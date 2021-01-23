@@ -107,7 +107,7 @@ link_elf(
         "//src/game:unk_05ACB0",
         "//src/game:unk_05AE00",
         "//src/game:unk_05B1E0",
-        "//src/game:unk_05C440",
+        "//src/game:float2int",
         "//src/game:unk_08DBB0",
         "//src/game:unk_091080",
         "//src/game:unk_092890",

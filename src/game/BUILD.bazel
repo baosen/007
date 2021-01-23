@@ -819,9 +819,9 @@ gecc_library(
 )
 
 gecc_library(
-    name = "unk_05C440",
+    name = "float2int",
     srcs = [
-        "unk_05C440.c",
+        "float2int.c",
     ],
     visibility = ["//visibility:public"],
 )
