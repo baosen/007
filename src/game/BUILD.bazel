@@ -770,9 +770,9 @@ gecc_library(
 )
 
 gecc_library(
-    name = "unk_057FD0",
+    name = "matrixmath",
     srcs = [
-        "unk_057FD0.c",
+        "matrixmath.c",
     ],
     visibility = ["//visibility:public"],
 )

@@ -1,3 +1,4 @@
+// Matrix math.
 float flt_CODE_bss_80075DA0;
 
 float D_80032310 = 65536.0;
