@@ -227,38 +227,15 @@ glabel sub_GAME_7F05B024
    swc1  $f10, 8($t6)
 ");
 
-asm(R"
-glabel sub_GAME_7F05B154
-  lwc1  $f4, 0x10($sp)
-  li    $at, 0x40400000 # 3.000000
-  mtc1  $at, $f8
-  mul.s $f2, $f4, $f4
-  li    $at, 0x3F800000 # 1.000000
-  sw    $a2, 8($sp)
-  sw    $a3, 0xc($sp)
-  mul.s $f16, $f2, $f4
-  add.s $f6, $f16, $f16
-  mul.s $f10, $f8, $f2
-  sub.s $f8, $f6, $f10
-  mtc1  $at, $f6
-  nop   
-  add.s $f18, $f8, $f6
-  mtc1  $at, $f8
-  nop   
-  sub.s $f6, $f8, $f18
-  mul.s $f10, $f12, $f18
-  nop   
-  mul.s $f8, $f14, $f6
-  add.s $f6, $f10, $f8
-  add.s $f10, $f2, $f2
-  sub.s $f8, $f16, $f10
-  add.s $f10, $f8, $f4
-  lwc1  $f8, 8($sp)
-  mul.s $f4, $f8, $f10
-  lwc1  $f10, 0xc($sp)
-  add.s $f8, $f6, $f4
-  sub.s $f6, $f16, $f2
-  mul.s $f4, $f10, $f6
-  jr    $ra
-   add.s $f0, $f8, $f4
-");
+float sub_GAME_7F05B154(float arg0, float arg1, float arg2, float arg3,
+                        float arg4) {
+  float temp_f16;
+  float temp_f18;
+  float temp_f2;
+  temp_f2 = arg4 * arg4;
+  temp_f16 = temp_f2 * arg4;
+  temp_f18 = ((2.0f * temp_f16) - (3.0f * temp_f2)) + 1.0f;
+  return (arg0 * temp_f18) + (arg1 * (1.0f - temp_f18)) +
+         (arg2 * ((temp_f16 - (2.0f * temp_f2)) + arg4)) +
+         (arg3 * (temp_f16 - temp_f2));
+}
