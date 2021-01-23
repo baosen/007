@@ -2974,18 +2974,7 @@ void sub_GAME_7F0A47FC(void) {
   sub_GAME_7F0A46A0();
 }
 
-asm(R"
-glabel sub_GAME_7F0A4824
-  addiu $sp, $sp, -0x18
-  sw    $ra, 0x14($sp)
-  sw    $a0, 0x18($sp)
-  jal   sub_GAME_7F0A4528
-   sw    $a1, 0x1c($sp)
-  lw    $a0, 0x18($sp)
-  jal   sub_GAME_7F0A4768
-   lw    $a1, 0x1c($sp)
-  lw    $ra, 0x14($sp)
-  addiu $sp, $sp, 0x18
-  jr    $ra
-   nop   
-");
+void sub_GAME_7F0A4824(int arg0, int arg1) {
+  sub_GAME_7F0A4528();
+  sub_GAME_7F0A4768(arg0, arg1);
+}
