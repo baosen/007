@@ -2895,19 +2895,19 @@ glabel sub_GAME_7F05A928
   lw    $a3, 0x48($sp)
   lwc1  $f14, 0x30($sp)
   lw    $a2, 0x44($sp)
-  jal   sub_GAME_7F05A9B8
+  jal   matrix_2x2_determinant
    lwc1  $f12, 0x2c($sp)
   swc1  $f0, 0x1c($sp)
   lwc1  $f12, 0x38($sp)
   lwc1  $f14, 0x3c($sp)
   lw    $a2, 0x44($sp)
-  jal   sub_GAME_7F05A9B8
+  jal   matrix_2x2_determinant
    lw    $a3, 0x48($sp)
   swc1  $f0, 0x20($sp)
   lwc1  $f12, 0x2c($sp)
   lwc1  $f14, 0x30($sp)
   lw    $a2, 0x38($sp)
-  jal   sub_GAME_7F05A9B8
+  jal   matrix_2x2_determinant
    lw    $a3, 0x3c($sp)
   lwc1  $f4, 0x28($sp)
   lwc1  $f6, 0x20($sp)
@@ -2924,15 +2924,6 @@ glabel sub_GAME_7F05A928
    add.s $f0, $f10, $f4
 ");
 
-asm(R"
-glabel sub_GAME_7F05A9B8
-  sw    $a3, 0xc($sp)
-  lwc1  $f4, 0xc($sp)
-  sw    $a2, 8($sp)
-  lwc1  $f8, 8($sp)
-  mul.s $f6, $f12, $f4
-  nop   
-  mul.s $f10, $f14, $f8
-  jr    $ra
-   sub.s $f0, $f6, $f10
-");
+float matrix_2x2_determinant(float a, float c, float b, float d) {
+  return (a * d) - (c * b);
+}
