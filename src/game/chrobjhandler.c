@@ -20810,7 +20810,7 @@ glabel sub_GAME_7F04B610
   lh    $t0, 2($v0)
   addu  $t7, $t8, $t9
   addu  $t1, $t7, $t0
-  jal   sub_GAME_7F09B788
+  jal   set_rand_val
    addu  $a0, $t1, $t2
   lw    $t3, 0x70($sp)
   move  $s0, $zero
@@ -20869,7 +20869,7 @@ glabel sub_GAME_7F04B610
   b     .L7F04BB40
    li    $s0, 90
 .L7F04BB40:
-  jal   sub_GAME_7F09B740
+  jal   get_rand_val
    nop   
   li    $at, 100
   divu  $zero, $v0, $at
@@ -20913,7 +20913,7 @@ glabel sub_GAME_7F04B610
   add.s $f18, $f16, $f10
   trunc.w.s $f4, $f18
   mfc1  $t9, $f4
-  jal   sub_GAME_7F09B740
+  jal   get_rand_val
    sh    $t9, 2($s0)
   divu  $zero, $v0, $s4
   lw    $t0, ($s3)
@@ -20926,7 +20926,7 @@ glabel sub_GAME_7F04B610
 .L7F04BC0C:
   addu  $t3, $t1, $t2
   addiu $t5, $t3, -0x28
-  jal   sub_GAME_7F09B740
+  jal   get_rand_val
    sh    $t5, ($s0)
   divu  $zero, $v0, $s4
   lw    $t4, ($s3)
@@ -20939,7 +20939,7 @@ glabel sub_GAME_7F04B610
 .L7F04BC3C:
   addu  $t7, $t6, $t8
   addiu $t9, $t7, -0x28
-  jal   sub_GAME_7F09B740
+  jal   get_rand_val
    sh    $t9, 2($s0)
   divu  $zero, $v0, $s4
   lw    $t0, ($s3)

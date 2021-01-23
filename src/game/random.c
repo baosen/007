@@ -1,7 +1,7 @@
 unsigned long long random_val = 0xAB8D9F7781280783;
 
 asm(R"
-glabel sub_GAME_7F09B740
+glabel get_rand_val
   lui   $a0, %hi(random_val)
   ld    $a0, %lo(random_val)($a0)
   lui   $at, %hi(random_val)
@@ -23,7 +23,7 @@ glabel sub_GAME_7F09B740
 ");
 
 asm(R"
-glabel sub_GAME_7F09B788
+glabel set_rand_val
   daddiu $a0, $a0, 1
   lui   $at, %hi(random_val)
   sd    $a0, %lo(random_val)($at)
