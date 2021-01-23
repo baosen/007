@@ -120,7 +120,7 @@ link_elf(
         "//src/game:unk_0A1DA0",
         "//src/game:unk_0B3200",
         "//src/game:unk_0BC530",
-        "//src/game:unk_0C0A70",
+        "//src/game:cpu_cycle_count",
         "//src/game:unk_0CC4C0",
         "//src/game:unk_0D1AC0",
         "//src/game:viewport",

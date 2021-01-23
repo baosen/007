@@ -1,3 +1,4 @@
+// CPU cycle count.
 int D_80048490 = -1;
 int D_80048494 = 0;
 int D_80048498 = 1;

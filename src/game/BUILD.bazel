@@ -935,9 +935,9 @@ gecc_library(
 )
 
 gecc_library(
-    name = "unk_0C0A70",
+    name = "cpu_cycle_count",
     srcs = [
-        "unk_0C0A70.c",
+        "cpu_cycle_count.c",
     ],
     visibility = ["//visibility:public"],
 )
