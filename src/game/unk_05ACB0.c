@@ -58,55 +58,14 @@ glabel sub_GAME_7F05ACB0
    div.s $f0, $f10, $f16
 ");
 
-asm(R"
-.late_rodata
-glabel D_8005372C
-.word 0x46fffe00 /*32767.0*/
-glabel D_80053730
-.word 0x40490fdb /*3.1415927*/
-glabel D_80053734
-.word 0x477fff00 /*65535.0*/
-.text
-glabel sub_GAME_7F05AD5C
-  li    $at, 0x3F800000 # 1.000000
-  mtc1  $at, $f4
-  addiu $sp, $sp, -0x18
-  sw    $ra, 0x14($sp)
-  c.le.s $f4, $f12
-  li    $at, 0xBF800000 # -1.000000
-  bc1fl .L7F05AD88
-   mtc1  $at, $f6
-  b     .L7F05ADC0
-   li    $a0, 32767
-  mtc1  $at, $f6
-.L7F05AD88:
-  lui   $at, %hi(D_8005372C)
-  c.le.s $f12, $f6
-  nop   
-  bc1f  .L7F05ADA4
-   nop   
-  b     .L7F05ADC0
-   li    $a0, -32767
-.L7F05ADA4:
-  lwc1  $f8, %lo(D_8005372C)($at)
-  mul.s $f10, $f12, $f8
-  trunc.w.s $f16, $f10
-  mfc1  $a0, $f16
-  nop   
-  sll   $t7, $a0, 0x10
-  sra   $a0, $t7, 0x10
-.L7F05ADC0:
-  jal   sub_GAME_7F05AC44
-   nop   
-  mtc1  $v0, $f18
-  lui   $at, %hi(D_80053730)
-  lwc1  $f6, %lo(D_80053730)($at)
-  cvt.s.w $f4, $f18
-  lw    $ra, 0x14($sp)
-  lui   $at, %hi(D_80053734)
-  lwc1  $f10, %lo(D_80053734)($at)
-  addiu $sp, $sp, 0x18
-  mul.s $f8, $f4, $f6
-  jr    $ra
-   div.s $f0, $f8, $f10
-");
+float sub_GAME_7F05AD5C(float arg0) {
+  short phi_a0;
+  if (arg0 >= 1.0f) {
+    phi_a0 = (unsigned short)0x7FFF;
+  } else if (arg0 <= -1.0f) {
+    phi_a0 = (unsigned short)-0x7FFF;
+  } else {
+    phi_a0 = (short)(int)(arg0 * 32767.0f);
+  }
+  return ((float)sub_GAME_7F05AC44(phi_a0) * 3.1415927f) / 65535.0f;
+}
