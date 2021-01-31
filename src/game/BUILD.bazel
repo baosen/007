@@ -558,9 +558,9 @@ gecc_library(
 )
 
 gecc_library(
-    name = "music_0D2720",
+    name = "music",
     srcs = [
-        "music_0D2720.c",
+        "music.c",
     ],
     visibility = ["//visibility:public"],
 )
