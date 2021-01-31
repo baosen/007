@@ -19,7 +19,7 @@ glabel get_rand_val
   dsll32 $v0, $a0, 0
   sd    $a0, %lo(random_val)($at)
   jr    $ra
-   dsra32 $v0, $v0, 0
+  dsra32 $v0, $v0, 0
 ");
 
 asm(R"
@@ -28,5 +28,5 @@ glabel set_rand_val
   lui   $at, %hi(random_val)
   sd    $a0, %lo(random_val)($at)
   jr    $ra
-   li    $a0, 0
+  li    $a0, 0
 ");
