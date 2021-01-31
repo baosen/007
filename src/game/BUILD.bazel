@@ -666,14 +666,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "radar",
-    srcs = [
-        "radar.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "rsp",
     srcs = [
         "rsp.c",

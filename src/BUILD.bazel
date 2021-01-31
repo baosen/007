@@ -87,7 +87,7 @@ link_elf(
         "//src/game:objective_status2",
         "//src/game:playerstats",
         "//src/game:prop",
-        "//src/game:radar",
+        "//src/game/radar",
         "//src/game:rsp",
         "//src/game:setguscale",
         "//src/game:sin",
