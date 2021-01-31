@@ -1788,7 +1788,7 @@ glabel sub_GAME_7F05C594
   jal   sub_GAME_7F058714
    addiu $a1, $sp, 0x18
   lw    $a0, 0x58($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x18
   lui   $t0, %hi(D_80034CA0) 
   lw    $t0, %lo(D_80034CA0)($t0)
@@ -4625,7 +4625,7 @@ glabel sub_GAME_7F05EB0C
    sw    $t1, 0x88($t2)
   lw    $a1, 0x6c($s0)
   lw    $a0, 0x34($sp)
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $a1, 0x20
   lw    $v0, 0x30($sp)
   lw    $t3, 0x6c($s0)
@@ -4880,20 +4880,20 @@ glabel sub_GAME_7F05EE24
   lwc1  $f10, 0xb0c($v0)
   swc1  $f10, 0xe4($sp)
   lwc1  $f18, 0xb10($v0)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    swc1  $f18, 0xe8($sp)
   lui   $t9, %hi(pPlayer) 
   lw    $t9, %lo(pPlayer)($t9)
   addiu $a1, $sp, 0x40
   addu  $a0, $t9, $s0
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a0, $a0, 0xad8
   mtc1  $zero, $f0
   addiu $a0, $sp, 0x40
   addiu $a1, $sp, 0xa0
   swc1  $f0, 0x70($sp)
   swc1  $f0, 0x74($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    swc1  $f0, 0x78($sp)
   li    $a0, 196
   jal   create_new_item_instance_of_model
@@ -5063,21 +5063,21 @@ glabel sub_GAME_7F05F09C
   jal   sub_GAME_7F058570
    addiu $a1, $sp, 0x38
   addiu $a0, $sp, 0x38
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x90
   lui   $t9, %hi(pPlayer) 
   lw    $t9, %lo(pPlayer)($t9)
   lw    $t0, 0x28($sp)
   addiu $a1, $sp, 0x38
   addu  $a0, $t9, $t0
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a0, $a0, 0xad8
   mtc1  $zero, $f0
   addiu $a0, $sp, 0x38
   addiu $a1, $sp, 0x90
   swc1  $f0, 0x68($sp)
   swc1  $f0, 0x6c($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    swc1  $f0, 0x70($sp)
   jal   get_random_value
    nop   
@@ -5334,21 +5334,21 @@ glabel generate_player_thrown_object
   swc1  $f18, 0xe4($sp)
   lwc1  $f6, 0xb10($v0)
   sw    $t7, 0x2c($sp)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    swc1  $f6, 0xe8($sp)
   lui   $t9, %hi(pPlayer) 
   lw    $v1, 0x2c($sp)
   lw    $t9, %lo(pPlayer)($t9)
   addiu $a1, $sp, 0x40
   addu  $a0, $t9, $v1
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a0, $a0, 0xad8
   mtc1  $zero, $f0
   addiu $a0, $sp, 0x40
   addiu $a1, $sp, 0xa0
   swc1  $f0, 0x70($sp)
   swc1  $f0, 0x74($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    swc1  $f0, 0x78($sp)
   lw    $a1, 0x38($sp)
   li    $at, 61
@@ -5553,7 +5553,7 @@ glabel sub_GAME_7F05F73C
   jal   get_BONDdata_field408
    sw    $v0, 0x34($sp)
   sw    $v0, 0x30($sp)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0xa0
   addiu $a0, $sp, 0x44
   addiu $a1, $sp, 0x38
@@ -5606,7 +5606,7 @@ glabel sub_GAME_7F05F73C
   lw    $t2, 0x28($sp)
   addiu $a1, $sp, 0x50
   addu  $a0, $t1, $t2
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a0, $a0, 0xad8
   mtc1  $zero, $f0
   li    $a0, 203
@@ -5693,7 +5693,7 @@ glabel sub_GAME_7F05F928
   sw    $v0, 0x30($sp)
   lw    $s1, 0x14($s0)
   move  $a1, $s2
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a0, $a0, 0x268
   mtc1  $zero, $f0
   move  $a1, $s2
@@ -5719,7 +5719,7 @@ glabel sub_GAME_7F05F928
    move  $a0, $t1
   sw    $v0, 0xc($s1)
   addiu $a0, $s0, 0x18
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a1, $s2
   addiu $a0, $s0, 0x58
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
@@ -5851,7 +5851,7 @@ glabel sub_GAME_7F05FB64
   jal   get_item_in_hand
    lw    $a0, 0x108($sp)
   sw    $v0, 0x40($sp)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0xc0
   lw    $t0, 0x40($sp)
   li    $at, 32
@@ -6021,7 +6021,7 @@ glabel sub_GAME_7F05FB64
   lw    $t4, 0x24($sp)
   addiu $a1, $sp, 0x64
   addu  $a0, $t3, $t4
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a0, $a0, 0xad8
   mtc1  $zero, $f0
   lw    $v1, 0x100($sp)
@@ -6833,7 +6833,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
 .L7F060950:
   jal   sub_GAME_7F05C614
    nop   
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0x154
   lw    $v0, 0xfc($sp)
   li    $at, 30
@@ -6990,18 +6990,18 @@ glabel handles_firing_or_throwing_weapon_in_hand
   jal   sub_GAME_7F058098
    addiu $a1, $sp, 0x154
   addiu $a0, $sp, 0x154
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $sp, 0x264
   addiu $a0, $sp, 0x194
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    addiu $a1, $sp, 0x264
   addiu $a1, $s0, 0x228
   sw    $a1, 0x44($sp)
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a0, $sp, 0x264
   addiu $a0, $s0, 0x268
   sw    $a0, 0x40($sp)
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $s0, 0x2a8
   jal   sub_GAME_7F078444
    nop   
@@ -7075,7 +7075,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
    move  $a0, $v0
   sw    $v1, 0x100($sp)
 .L7F060CF0:
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    sw    $a0, 0x44($sp)
   lw    $t6, 0x1a0($sp)
   lw    $v1, 0x100($sp)
@@ -7138,7 +7138,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
   jal   matrix_multiply_A1_by_F12
    addiu $a1, $sp, 0x264
   addiu $a0, $sp, 0x264
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    lw    $a1, 0x2a4($sp)
   lw    $t7, 0x1a0($sp)
   lui   $t6, %hi(weapon_gun_revolver) 
@@ -7344,11 +7344,11 @@ glabel handles_firing_or_throwing_weapon_in_hand
   jal   sub_GAME_7F058A14
    addiu $a1, $sp, 0x224
   addiu $a0, $sp, 0x264
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x224
   lw    $a1, 0x2a4($sp)
   addiu $a0, $sp, 0x224
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $a1, 0x40
   lwc1  $f6, 0x254($sp)
   swc1  $f6, 0x2e8($s0)
@@ -7469,20 +7469,20 @@ glabel handles_firing_or_throwing_weapon_in_hand
   jal   sub_GAME_7F059B58
    swc1  $f10, 0x10($sp)
   addiu $a0, $sp, 0x114
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x1e4
   lwc1  $f12, 0x7c($sp)
   jal   sub_GAME_7F058B80
    addiu $a1, $sp, 0x1e4
   addiu $a0, $sp, 0x154
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x1e4
   addiu $a0, $sp, 0x84
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    addiu $a1, $sp, 0x1e4
   lw    $a1, 0x2a4($sp)
   addiu $a0, $sp, 0x1e4
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $a1, 0x80
   lw    $t7, 0x1a0($sp)
 .L7F061308:
@@ -7592,19 +7592,19 @@ glabel handles_firing_or_throwing_weapon_in_hand
   jal   sub_GAME_7F059B58
    swc1  $f4, 0x10($sp)
   addiu $a0, $sp, 0x114
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x1e4
   lwc1  $f12, 0x7c($sp)
   jal   sub_GAME_7F058B80
    addiu $a1, $sp, 0x1e4
   addiu $a0, $sp, 0x154
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x1e4
   addiu $a0, $sp, 0x84
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    addiu $a1, $sp, 0x1e4
   addiu $a0, $sp, 0x1e4
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    lw    $a1, 0x40($sp)
 .L7F0614E4:
   lw    $t8, 0x1a0($sp)
@@ -8616,7 +8616,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
 .Ljp7F060E70:
   jal   sub_GAME_7F05C614
    nop   
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0x154
   lw    $v0, 0xfc($sp)
   li    $at, 30
@@ -8773,18 +8773,18 @@ glabel handles_firing_or_throwing_weapon_in_hand
   jal   sub_GAME_7F058098
    addiu $a1, $sp, 0x154
   addiu $a0, $sp, 0x154
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $sp, 0x264
   addiu $a0, $sp, 0x194
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    addiu $a1, $sp, 0x264
   addiu $a1, $s0, 0x228
   sw    $a1, 0x44($sp)
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a0, $sp, 0x264
   addiu $a0, $s0, 0x268
   sw    $a0, 0x40($sp)
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $s0, 0x2a8
   jal   sub_GAME_7F078444
    nop   
@@ -8858,7 +8858,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
    move  $a0, $v0
   sw    $v1, 0x100($sp)
 .Ljp7F061210:
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    sw    $a0, 0x44($sp)
   lw    $t6, 0x1a0($sp)
   lw    $v1, 0x100($sp)
@@ -8921,7 +8921,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
   jal   matrix_multiply_A1_by_F12
    addiu $a1, $sp, 0x264
   addiu $a0, $sp, 0x264
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    lw    $a1, 0x2a4($sp)
   lw    $t7, 0x1a0($sp)
   lui   $t6, %hi(weapon_gun_revolver) # $t6, 0x8004
@@ -9127,11 +9127,11 @@ glabel handles_firing_or_throwing_weapon_in_hand
   jal   sub_GAME_7F058A14
    addiu $a1, $sp, 0x224
   addiu $a0, $sp, 0x264
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x224
   lw    $a1, 0x2a4($sp)
   addiu $a0, $sp, 0x224
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $a1, 0x40
   lwc1  $f6, 0x254($sp)
   swc1  $f6, 0x2e8($s0)
@@ -9252,20 +9252,20 @@ glabel handles_firing_or_throwing_weapon_in_hand
   jal   sub_GAME_7F059B58
    swc1  $f10, 0x10($sp)
   addiu $a0, $sp, 0x114
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x1e4
   lwc1  $f12, 0x7c($sp)
   jal   sub_GAME_7F058B80
    addiu $a1, $sp, 0x1e4
   addiu $a0, $sp, 0x154
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x1e4
   addiu $a0, $sp, 0x84
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    addiu $a1, $sp, 0x1e4
   lw    $a1, 0x2a4($sp)
   addiu $a0, $sp, 0x1e4
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $a1, 0x80
   lw    $t7, 0x1a0($sp)
 .Ljp7F061828:
@@ -9375,19 +9375,19 @@ glabel handles_firing_or_throwing_weapon_in_hand
   jal   sub_GAME_7F059B58
    swc1  $f4, 0x10($sp)
   addiu $a0, $sp, 0x114
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x1e4
   lwc1  $f12, 0x7c($sp)
   jal   sub_GAME_7F058B80
    addiu $a1, $sp, 0x1e4
   addiu $a0, $sp, 0x154
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x1e4
   addiu $a0, $sp, 0x84
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    addiu $a1, $sp, 0x1e4
   addiu $a0, $sp, 0x1e4
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    lw    $a1, 0x40($sp)
 .Ljp7F061A04:
   lw    $t8, 0x1a0($sp)
@@ -11426,7 +11426,7 @@ glabel set_enviro_fog_for_items_in_solo_watch_menu
   blez  $t2, .L7F06311C
    sll   $t3, $s1, 6
 .L7F0630FC:
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addu  $a0, $t3, $s0
   lh    $t4, 0xe($s2)
   addiu $s1, $s1, 1
@@ -11460,7 +11460,7 @@ glabel set_enviro_fog_for_items_in_solo_watch_menu
   sw    $zero, ($v0)
   lw    $a0, 0x1a0($sp)
 .L7F06317C:
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a1, $s0
   lw    $t8, 4($s2)
   lui   $t9, %hi(weapon_gun_revolver) 
@@ -11668,7 +11668,7 @@ glabel set_enviro_fog_for_items_in_solo_watch_menu
   lw    $t1, 0x144($sp)
 .L7F063478:
   addiu $a1, $sp, 0x74
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t1, $s0
   lw    $t3, 0x144($sp)
   sll   $t2, $s1, 6
@@ -11733,22 +11733,22 @@ glabel sub_GAME_7F06351C
   jal   init_something_copy_posdata_to_it
    move  $a1, $s0
   lw    $a0, 0x64($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    move  $a1, $s0
   lw    $a0, 0x68($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    move  $a1, $s0
   lw    $a0, 0x6c($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    move  $a1, $s0
   lw    $a0, 0x70($sp)
   jal   init_something_copy_posdata_to_it
    addiu $a1, $sp, 0x20
   addiu $a0, $sp, 0x20
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    move  $a1, $s0
   lw    $a0, 0x74($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    move  $a1, $s0
   lw    $ra, 0x1c($sp)
   lw    $s0, 0x18($sp)
@@ -11867,7 +11867,7 @@ glabel sub_GAME_7F06359C
    addiu $a2, $sp, 0x460
   sw    $s7, 0x4e4($sp)
   lw    $a0, 0x53c($sp)
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a1, $s7
   li    $t2, 4
   sw    $t2, 0x70($sp)
@@ -11918,7 +11918,7 @@ glabel sub_GAME_7F06359C
   jal   sub_GAME_7F058570
    div.s $f12, $f8, $f10
   addiu $a0, $sp, 0x3dc
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x41c
   move  $a0, $s0
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
@@ -11973,7 +11973,7 @@ glabel sub_GAME_7F06359C
   lw    $t7, 0x4e4($sp)
 .L7F063824:
   addiu $a1, $sp, 0x41c
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t7, $s0
   lw    $t1, 0x4e4($sp)
   sll   $t6, $s1, 6
@@ -12054,12 +12054,12 @@ glabel sub_GAME_7F06359C
   swc1  $f2, 0x18($sp)
   jal   sub_GAME_7F059694
    swc1  $f18, 0x24($sp)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    move  $a0, $s3
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    move  $a0, $s6
   move  $a0, $s6
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $sp, 0x2cc
   li    $at, 2
   bnel  $s1, $at, .L7F063A78
@@ -12108,10 +12108,10 @@ glabel sub_GAME_7F06359C
   jal   sub_GAME_7F058570
    div.s $f12, $f8, $f10
   addiu $a0, $sp, 0x3dc
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x41c
   addiu $a0, $sp, 0x34c
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x41c
   move  $a0, $s5
   addiu $a1, $sp, 0x41c
@@ -12119,7 +12119,7 @@ glabel sub_GAME_7F06359C
    addiu $a2, $sp, 0x30c
   sll   $t6, $s1, 6
   addu  $a1, $t6, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a0, $sp, 0x30c
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12166,7 +12166,7 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t7, $s1, 6
   addu  $a1, $t7, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12211,7 +12211,7 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t0, $s1, 6
   addu  $a1, $t0, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12256,7 +12256,7 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t8, $s1, 6
   addu  $a1, $t8, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12301,7 +12301,7 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t5, $s1, 6
   addu  $a1, $t5, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12346,7 +12346,7 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t4, $s1, 6
   addu  $a1, $t4, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12391,7 +12391,7 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t2, $s1, 6
   addu  $a1, $t2, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12436,7 +12436,7 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t3, $s1, 6
   addu  $a1, $t3, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12483,7 +12483,7 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t1, $s1, 6
   addu  $a1, $t1, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12506,7 +12506,7 @@ glabel sub_GAME_7F06359C
   lw    $t0, 0x68($fp)
   sw    $t0, 4($t8)
   lw    $at, 0x6c($fp)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    sw    $at, 8($t8)
   lb    $a0, ($s4)
   jal   get_controller_buttons_held
@@ -12551,7 +12551,7 @@ glabel sub_GAME_7F06359C
 .L7F0640C4:
   addiu $a0, $sp, 0xb4
 .L7F0640C8:
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    move  $a1, $s3
   lui   $at, %hi(D_80053F18)
   lwc1  $f12, %lo(D_80053F18)($at)
@@ -12568,7 +12568,7 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t6, $s1, 6
   addu  $a1, $t6, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12613,7 +12613,7 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t7, $s1, 6
   addu  $a1, $t7, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
@@ -12661,13 +12661,13 @@ glabel sub_GAME_7F06359C
    sw    $s0, 0x18($sp)
   sll   $t0, $s1, 6
   addu  $a1, $t0, $s7
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a0, $s0
   b     .L7F064290
    addiu $s1, $s1, 1
 .L7F064280:
   sll   $t7, $s1, 6
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a1, $t7, $s7
   addiu $s1, $s1, 1
 .L7F064290:
@@ -12693,7 +12693,7 @@ glabel sub_GAME_7F06359C
   lw    $t9, 0x4e4($sp)
 .L7F0642E0:
   addiu $a1, $sp, 0x41c
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t9, $s0
   lw    $t5, 0x4e4($sp)
   sll   $t4, $s1, 6
@@ -15583,7 +15583,7 @@ weapon_switchstyle_NONE:
   jal   sub_GAME_7F058570
    addiu $a1, $sp, 0x12c
   addiu $a0, $sp, 0x12c
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a1, 0x30($sp)
   jal   sinf
    lwc1  $f12, 0x3c($sp)
@@ -15691,7 +15691,7 @@ weapon_reload_none_sfx:
   jal   sub_GAME_7F058570
    addiu $a1, $sp, 0xe4
   addiu $a0, $sp, 0xe4
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a1, 0x30($sp)
   mtc1  $zero, $f12
   jal   sinf
@@ -15793,7 +15793,7 @@ weapon_reload_none_sfx:
   jal   sub_GAME_7F058570
    addiu $a1, $sp, 0x9c
   addiu $a0, $sp, 0x9c
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a1, 0x30($sp)
   jal   sinf
    lwc1  $f12, 0x3c($sp)
@@ -18433,7 +18433,7 @@ weapon_switchstyle_NONE:
   jal   sub_GAME_7F058570
    addiu $a1, $sp, 0x130
   addiu $a0, $sp, 0x130
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a1, 0x34($sp)
   jal   sinf
    lwc1  $f12, 0x40($sp)
@@ -18548,7 +18548,7 @@ weapon_reload_none_sfx:
   jal   sub_GAME_7F058570
    addiu $a1, $sp, 0xe8
   addiu $a0, $sp, 0xe8
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a1, 0x34($sp)
   mtc1  $zero, $f12
   jal   sinf
@@ -18650,7 +18650,7 @@ weapon_reload_none_sfx:
   jal   sub_GAME_7F058570
    addiu $a1, $sp, 0xa0
   addiu $a0, $sp, 0xa0
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a1, 0x34($sp)
   jal   sinf
    lwc1  $f12, 0x40($sp)
@@ -21246,7 +21246,7 @@ glabel sub_GAME_7F068508
   sll   $s1, $s1, 3
   addu  $a0, $t9, $s1
   addiu $a0, $a0, 0xad8
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x7c
   b     .L7F068610
    lw    $a0, 0x70($sp)
@@ -21254,7 +21254,7 @@ glabel sub_GAME_7F068508
   sll   $s1, $s1, 3
   addu  $a0, $v0, $s1
   addiu $a0, $a0, 0xad8
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $sp, 0x7c
   lw    $a0, 0x70($sp)
 .L7F068610:
@@ -22009,7 +22009,7 @@ glabel sub_GAME_7F068EC4
   lw    $a0, 0xe8($sp)
   addiu $a1, $sp, 0x3c
   sw    $t5, 0xc8($sp)
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a0, $a0, 0x1c
   lui   $at, %hi(D_80054408)
   lwc1  $f12, %lo(D_80054408)($at)

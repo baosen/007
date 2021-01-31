@@ -616,7 +616,7 @@ glabel sub_GAME_7F007F30
   lw    $t2, 0xc($v0)
 .L7F0081F4:
   move  $a1, $s1
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t2, $s0
   lw    $t3, ($s3)
   sll   $t5, $s2, 6
@@ -644,7 +644,7 @@ glabel sub_GAME_7F007F30
   lw    $t6, 0xc($a2)
 .L7F00825C:
   move  $a1, $s1
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t6, $s0
   lw    $t1, ($s4)
   sll   $t3, $s2, 6

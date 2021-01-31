@@ -2025,10 +2025,10 @@ glabel sub_GAME_7F003480
   jal   sub_GAME_7F058688
    addiu $a1, $sp, 0x88
   addiu $a0, $sp, 0x88
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0xd4
   addiu $a0, $sp, 0x12c
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0xd4
   move  $a0, $s0
   jal   sub_GAME_7F001BD4

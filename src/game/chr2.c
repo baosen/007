@@ -13028,7 +13028,7 @@ glabel sub_GAME_7F02D734
    li    $a1, 86
   beqz  $v0, .L7F02E224
    sw    $v0, 0x208($sp)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0x1c8
   lwc1  $f12, 0x24c($sp)
   jal   sub_GAME_7F058570
@@ -13143,7 +13143,7 @@ glabel sub_GAME_7F02D734
    li    $a1, 87
   beqz  $v0, .L7F02E224
    sw    $v0, 0x128($sp)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0xe8
   lui   $at, %hi(D_80051F6C)
   lwc1  $f0, %lo(D_80051F6C)($at)

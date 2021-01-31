@@ -13197,7 +13197,7 @@ glabel sub_GAME_7F080B34
   jal   sub_GAME_7F059908
    swc1  $f6, 0x24($sp)
   addiu $a0, $sp, 0x4c
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x8c
   lw    $t6, ($s0)
   li    $at, 0x43B40000 # 360.000000
@@ -13211,7 +13211,7 @@ glabel sub_GAME_7F080B34
   jal   sub_GAME_7F0585FC
    nop   
   addiu $a0, $sp, 0x4c
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x8c
   lwc1  $f4, 0xac($sp)
   lw    $t7, ($s0)
@@ -19933,7 +19933,7 @@ glabel MoveBond
   mul.s $f8, $f0, $f4
   sub.s $f10, $f20, $f8
   add.s $f4, $f10, $f6
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    swc1  $f4, 0xe8($sp)
   lw    $a0, 0x138($sp)
   lwc1  $f0, 0xe4($sp)
@@ -22473,7 +22473,7 @@ glabel MoveBond
   mul.s $f8, $f0, $f4
   sub.s $f10, $f20, $f8
   add.s $f4, $f10, $f6
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    swc1  $f4, 0xe8($sp)
   lw    $a0, 0x138($sp)
   lwc1  $f0, 0xe4($sp)
@@ -24982,7 +24982,7 @@ glabel sub_GAME_7F087E74
   jal   sub_GAME_7F0584D0
    sw    $a2, 0x40($sp)
   lw    $a1, 0x40($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a0, 0x164($sp)
   lw    $t6, 0x160($sp)
   lwc1  $f14, 0x98($sp)
@@ -24995,7 +24995,7 @@ glabel sub_GAME_7F087E74
   jal   sub_GAME_7F0584D0
    sw    $a2, 0x40($sp)
   lw    $a1, 0x40($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a0, 0x164($sp)
   lw    $t7, 0x160($sp)
   lwc1  $f12, 0x9c($sp)
@@ -25008,7 +25008,7 @@ glabel sub_GAME_7F087E74
   jal   sub_GAME_7F0584D0
    sw    $a2, 0x40($sp)
   lw    $a1, 0x40($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a0, 0x164($sp)
   lw    $t8, 0x1f8($sp)
   lui   $v0, %hi(pPlayer)
@@ -25057,7 +25057,7 @@ glabel sub_GAME_7F087E74
   jal   init_something_copy_posdata_to_it
    addiu $a1, $sp, 0x4c
   lw    $a0, 0x164($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x4c
   jal   sub_GAME_7F058C64
    nop   
@@ -25504,7 +25504,7 @@ glabel sub_GAME_7F087E74
   jal   sub_GAME_7F0584D0
    sw    $a2, 0x40($sp)
   lw    $a1, 0x40($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a0, 0x164($sp)
   lw    $t4, 0x160($sp)
   lwc1  $f14, 0x98($sp)
@@ -25517,7 +25517,7 @@ glabel sub_GAME_7F087E74
   jal   sub_GAME_7F0584D0
    sw    $a2, 0x40($sp)
   lw    $a1, 0x40($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a0, 0x164($sp)
   lw    $t2, 0x160($sp)
   lwc1  $f12, 0x9c($sp)
@@ -25530,7 +25530,7 @@ glabel sub_GAME_7F087E74
   jal   sub_GAME_7F0584D0
    sw    $a2, 0x40($sp)
   lw    $a1, 0x40($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    lw    $a0, 0x164($sp)
   lw    $t6, 0x1f8($sp)
   lui   $v0, %hi(pPlayer) # $v0, 0x8008
@@ -25579,7 +25579,7 @@ glabel sub_GAME_7F087E74
   jal   init_something_copy_posdata_to_it
    addiu $a1, $sp, 0x4c
   lw    $a0, 0x164($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x4c
   jal   sub_GAME_7F058C64
    nop   
@@ -30931,7 +30931,7 @@ glabel sub_GAME_7F08BD18
   addiu $sp, $sp, -0x58
   sw    $ra, 0x14($sp)
   sw    $a0, 0x58($sp)
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $sp, 0x18
   addiu $a0, $sp, 0x18
   jal   sub_GAME_7F058C9C
@@ -30959,7 +30959,7 @@ glabel sub_GAME_7F08BD48
   addiu $s2, $sp, 0x38
 .L7F08BD7C:
   move  $a0, $s1
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a1, $s2
   sll   $t6, $s0, 6
   addu  $a1, $t6, $s4
@@ -30984,7 +30984,7 @@ glabel sub_GAME_7F08BDC4
   addiu $sp, $sp, -0x60
   sw    $ra, 0x14($sp)
   sw    $a0, 0x60($sp)
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addiu $a1, $sp, 0x20
   lui   $v0, %hi(pPlayer)
   lw    $v0, %lo(pPlayer)($v0)
@@ -31029,7 +31029,7 @@ glabel sub_GAME_7F08BE2C
   addiu $s2, $sp, 0x38
 .L7F08BE6C:
   move  $a0, $s1
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a1, $s2
   lw    $v0, ($s5)
   lwc1  $f4, 0x68($sp)

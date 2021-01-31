@@ -4510,7 +4510,7 @@ glabel sub_GAME_7F020EF0
    lw    $a0, 0xc($t0)
   lw    $t8, 0xfc($sp)
   addiu $a0, $sp, 0x64
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    lw    $a1, 0xc($t8)
   lw    $t9, 0x60($sp)
   li    $at, 2
@@ -5381,7 +5381,7 @@ glabel sub_GAME_7F020EF0
    lw    $a0, 0xc($t6)
   lw    $t0, 0xfc($sp)
   addiu $a0, $sp, 0x64
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    lw    $a1, 0xc($t0)
   lw    $t7, 0x60($sp)
   li    $at, 2

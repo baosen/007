@@ -1,35 +1,39 @@
 // Matrix math.
+
+// Float version of a graphics matrix, which has higher precision than an Mtx.
+// Matrices are stored as Mtxfs then converted to an Mtx when passed to the GPU.
+// Mtxs use a union and a long long int to force alignments. Mtxfs are not
+// aligned but still use the union for consistency with Mtx.
+typedef union {
+  float m[4][4];
+  int unused;
+} Mtxf;
+
 float flt_CODE_bss_80075DA0;
 
-float D_80032310 = 65536.0;
-float D_80032314 = 65536.0;
+float D_80032310[2] = {65536.0, 65536.0};
+
+void matrix_4x4_set_identity(Mtxf *matrix) {
+  matrix->m[0][0] = 1.0f;
+  matrix->m[0][1] = 0.0f;
+  matrix->m[0][2] = 0.0f;
+  matrix->m[0][3] = 0.0f;
+  matrix->m[1][0] = 0.0f;
+  matrix->m[1][1] = 1.0f;
+  matrix->m[1][2] = 0.0f;
+  matrix->m[1][3] = 0.0f;
+  matrix->m[2][0] = 0.0f;
+  matrix->m[2][1] = 0.0f;
+  matrix->m[2][2] = 1.0f;
+  matrix->m[2][3] = 0.0f;
+  matrix->m[3][0] = 0.0f;
+  matrix->m[3][1] = 0.0f;
+  matrix->m[3][2] = 0.0f;
+  matrix->m[3][3] = 1.0f;
+}
 
 asm(R"
-glabel reset_array_of_0x10_floats
-  mtc1  $zero, $f2
-  li    $at, 0x3F800000 # 1.000000
-  mtc1  $at, $f0
-  swc1  $f2, 4($a0)
-  swc1  $f2, 8($a0)
-  swc1  $f2, 0xc($a0)
-  swc1  $f2, 0x10($a0)
-  swc1  $f2, 0x18($a0)
-  swc1  $f2, 0x1c($a0)
-  swc1  $f2, 0x20($a0)
-  swc1  $f2, 0x24($a0)
-  swc1  $f2, 0x2c($a0)
-  swc1  $f2, 0x30($a0)
-  swc1  $f2, 0x34($a0)
-  swc1  $f2, 0x38($a0)
-  swc1  $f0, ($a0)
-  swc1  $f0, 0x14($a0)
-  swc1  $f0, 0x28($a0)
-  jr    $ra
-   swc1  $f0, 0x3c($a0)
-");
-
-asm(R"
-glabel sub_GAME_7F058020
+glabel matrix_4x4_copy
   move  $a2, $a0
   li    $a0, 4
   move  $v0, $zero
@@ -51,21 +55,12 @@ glabel sub_GAME_7F058020
    nop   
 ");
 
-asm(R"
-glabel sub_GAME_7F058068
-  addiu $sp, $sp, -0x58
-  sw    $ra, 0x14($sp)
-  sw    $a1, 0x5c($sp)
-  jal   sub_GAME_7F0580C8
-   addiu $a2, $sp, 0x18
-  addiu $a0, $sp, 0x18
-  jal   sub_GAME_7F058020
-   lw    $a1, 0x5c($sp)
-  lw    $ra, 0x14($sp)
-  addiu $sp, $sp, 0x58
-  jr    $ra
-   nop   
-");
+void matrix_4x4_multiply_in_place(Mtxf *lhs, Mtxf *rhs) {
+  void sub_GAME_7F0580C8(Mtxf * lhs, Mtxf * rhs, Mtxf * result);
+  Mtxf result;
+  sub_GAME_7F0580C8(lhs, rhs, &result);
+  matrix_4x4_copy(&result, rhs);
+}
 
 asm(R"
 glabel sub_GAME_7F058098
@@ -75,7 +70,7 @@ glabel sub_GAME_7F058098
   jal   sub_GAME_7F05818C
    addiu $a2, $sp, 0x18
   addiu $a0, $sp, 0x18
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    lw    $a1, 0x5c($sp)
   lw    $ra, 0x14($sp)
   addiu $sp, $sp, 0x58
@@ -705,7 +700,7 @@ glabel init_something_copy_posdata_to_it
   sw    $ra, 0x14($sp)
   sw    $a0, 0x18($sp)
   sw    $a1, 0x1c($sp)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    move  $a0, $a1
   lw    $a0, 0x18($sp)
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
@@ -948,7 +943,7 @@ glabel sub_GAME_7F058C64
    swc1  $f6, ($v0)
 ");
 
-void sub_GAME_7F058C88(void) { D_80032310 = flt_CODE_bss_80075DA0; }
+void sub_GAME_7F058C88(void) { D_80032310[0] = flt_CODE_bss_80075DA0; }
 
 asm(R"
 glabel sub_GAME_7F058C9C
@@ -2052,7 +2047,7 @@ glabel sub_GAME_7F059B58
   b     .L7F059CD4
    swc1  $f6, 0x3c($s0)
 .L7F059CCC:
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    move  $a0, $s0
 .L7F059CD4:
   lw    $ra, 0x24($sp)

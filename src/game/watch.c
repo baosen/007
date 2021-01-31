@@ -4327,7 +4327,7 @@ glabel debug_gun_watch_move_related
   jal   sub_GAME_7F058688
    sub.s $f12, $f0, $f16
   addiu $a0, $sp, 0x90
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0xd0
   mtc1  $zero, $f0
   lwc1  $f2, 0x68($sp)
@@ -4346,7 +4346,7 @@ glabel debug_gun_watch_move_related
   jal   sub_GAME_7F059694
    swc1  $f18, 0x20($sp)
   addiu $a0, $sp, 0x90
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0xd0
   jal   sub_GAME_7F0A6EE8
    move  $a0, $s0
@@ -4692,7 +4692,7 @@ glabel debug_gun_watch_move_related2
   jal   sub_GAME_7F058688
    sub.s $f12, $f0, $f16
   move  $a0, $s0
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x8e0
   lui   $at, %hi(D_80040B14)
   jal   cosf
@@ -4723,7 +4723,7 @@ glabel debug_gun_watch_move_related2
   jal   sub_GAME_7F059694
    swc1  $f16, 0x20($sp)
   move  $a0, $s0
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x8e0
   jal   sub_GAME_7F0A6EE8
    lw    $a0, 0x928($sp)
@@ -5174,7 +5174,7 @@ glabel debug_gun_watch_move_related2
   jal   sub_GAME_7F058688
    sub.s $f12, $f0, $f16
   move  $a0, $s0
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x8e8
   lui   $at, %hi(D_80040B14) # $at, 0x8004
   jal   cosf
@@ -5205,7 +5205,7 @@ glabel debug_gun_watch_move_related2
   jal   sub_GAME_7F059694
    swc1  $f16, 0x20($sp)
   move  $a0, $s0
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    addiu $a1, $sp, 0x8e8
   jal   sub_GAME_7F0A6EE8
    lw    $a0, 0x930($sp)
@@ -8015,7 +8015,7 @@ glabel sub_GAME_7F0AADC0
   move  $a0, $zero
   jal   sub_GAME_7F0A9684
    sw    $at, ($t5)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0x4fc
   lui   $t0, %hi(D_80048498) 
   lw    $t0, %lo(D_80048498)($t0)
@@ -8215,7 +8215,7 @@ glabel sub_GAME_7F0AADC0
   addiu $a2, %lo(D_80040B38) # addiu $a2, $a2, 0xb38
   jal   sub_GAME_7F0A9684
    addiu $a1, %lo(D_80040B3C) # addiu $a1, $a1, 0xb3c
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0x4fc
   lui   $t5, %hi(D_80048498) 
   lw    $t5, %lo(D_80048498)($t5)
@@ -8489,7 +8489,7 @@ glabel sub_GAME_7F0AADC0
   move  $a0, $zero
   jal   sub_GAME_7F0A9684
    sw    $at, ($t5)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0x4fc
   lui   $at, %hi(D_80040B28) # $at, 0x8004
   lwc1  $f4, %lo(D_80040B28)($at)
@@ -8686,7 +8686,7 @@ glabel sub_GAME_7F0AADC0
   addiu $a2, %lo(D_80040B38) # addiu $a2, $a2, 0xb68
   jal   sub_GAME_7F0A9684
    addiu $a1, %lo(D_80040B3C) # addiu $a1, $a1, 0xb6c
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0x4fc
   lui   $at, %hi(D_80040B38) # $at, 0x8004
   lwc1  $f16, %lo(D_80040B38)($at)

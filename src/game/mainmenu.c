@@ -2652,7 +2652,7 @@ glabel constructor_menu00_legalscreen
    move  $a0, $t3
   sw    $v0, 0xf4($sp)
   move  $a0, $s0
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a1, $v0
   lw    $t4, 0xf4($sp)
   lw    $t5, ($s3)
@@ -2678,7 +2678,7 @@ glabel constructor_menu00_legalscreen
   lw    $t6, 0xc($v0)
 .L7F00AA14:
   move  $a1, $s2
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t6, $s1
   lw    $t0, ($s3)
   sll   $t2, $s0, 6
@@ -3032,10 +3032,10 @@ glabel constructor_menu01_nintendo
   jal   sub_GAME_7F059694
    swc1  $f0, 0x24($sp)
   move  $a0, $s0
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    move  $a1, $s1
   move  $a0, $s1
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a1, $s0
   lui   $s3, %hi(something_legalscreen_constructor)
   addiu $s3, %lo(something_legalscreen_constructor) # addiu $s3, $s3, -0x56a8
@@ -3048,7 +3048,7 @@ glabel constructor_menu01_nintendo
    move  $a0, $t3
   sw    $v0, 0x138($sp)
   move  $a0, $s0
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a1, $v0
   lw    $t4, 0x138($sp)
   lw    $t5, ($s3)
@@ -3076,7 +3076,7 @@ glabel constructor_menu01_nintendo
   lw    $t1, 0xc($v0)
 .L7F00B000:
   move  $a1, $s2
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t1, $s1
   lw    $t2, ($s3)
   sll   $t4, $s0, 6
@@ -3426,7 +3426,7 @@ glabel constructor_menu04_goldeneyelogo
   jal   matrix_multiply_A1_by_F12
    move  $a1, $s1
   move  $a0, $s1
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    lw    $a1, 0x150($sp)
   lw    $t5, 0x150($sp)
   lw    $t8, ($s3)
@@ -3452,7 +3452,7 @@ glabel constructor_menu04_goldeneyelogo
   lw    $t1, 0xc($v0)
 .L7F00B6BC:
   move  $a1, $s2
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t1, $s1
   lw    $t2, ($s3)
   sll   $t4, $s0, 6
@@ -3875,7 +3875,7 @@ glabel interface_menu05_fileselect
   jal   matrix_multiply_A1_by_F12
    move  $a1, $s3
   addiu $a0, $sp, 0xc8
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    move  $a1, $s3
   lw    $t0, ($s0)
   lw    $t1, 8($t0)
@@ -3887,7 +3887,7 @@ glabel interface_menu05_fileselect
   move  $a0, $s3
   sw    $v0, 0xc($t3)
   lw    $t4, ($s0)
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    lw    $a1, 0xc($t4)
   lw    $a0, ($s0)
   lw    $t5, 0xc($a0)
@@ -4475,7 +4475,7 @@ glabel constructor_menu05_fileselect
   lw    $t8, 0xc($v0)
 .L7F00C5D4:
   move  $a1, $s3
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t8, $s0
   lw    $t7, ($s2)
   sll   $t9, $s1, 6
@@ -5614,7 +5614,7 @@ glabel sub_GAME_7F00D5E8
   jal   matrix_multiply_A1_by_F12
    move  $a1, $s0
   addiu $a0, $sp, 0xc8
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    move  $a1, $s0
   lui   $s3, %hi(ptr_folder_object_instance)
   addiu $s3, %lo(ptr_folder_object_instance) # addiu $s3, $s3, -0x56a4
@@ -5627,7 +5627,7 @@ glabel sub_GAME_7F00D5E8
    move  $a0, $t7
   sw    $v0, 0x11c($sp)
   move  $a0, $s0
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    move  $a1, $v0
   lw    $t1, 0x11c($sp)
   lw    $t0, ($s3)
@@ -5653,7 +5653,7 @@ glabel sub_GAME_7F00D5E8
   lw    $t5, 0xc($v0)
 .L7F00D798:
   move  $a1, $s2
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t5, $s1
   lw    $t6, ($s3)
   sll   $t1, $s0, 6
@@ -19451,7 +19451,7 @@ glabel constructor_menu18_displaycast
    move  $a0, $t8
   addiu $s2, $sp, 0x1e8
   sw    $v0, 0x1b8($sp)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    move  $a0, $s2
   sw    $s2, 0x1a8($sp)
   addiu $a0, $sp, 0x1a8
@@ -19758,7 +19758,7 @@ glabel constructor_menu18_displaycast
   jal   sub_GAME_7F058688
    lwc1  $f12, %lo(D_80051B38)($at)
   lw    $a0, 0x1a8($sp)
-  jal   sub_GAME_7F058068
+  jal   matrix_4x4_multiply_in_place
    move  $a1, $s2
   lui   $a3, %hi(ptrobjinstance)
   lw    $a3, %lo(ptrobjinstance)($a3)
@@ -19804,7 +19804,7 @@ glabel constructor_menu18_displaycast
   lw    $t7, 0xc($v0)
 .L7F019D24:
   move  $a1, $s2
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t7, $s0
   lw    $t5, ($s4)
   sll   $t4, $s1, 6
@@ -19834,7 +19834,7 @@ glabel constructor_menu18_displaycast
   lw    $t5, 0xc($a3)
 .L7F019D94:
   move  $a1, $s2
-  jal   sub_GAME_7F058020
+  jal   matrix_4x4_copy
    addu  $a0, $t5, $s0
   lui   $t8, %hi(ptrobjinstance) 
   lw    $t8, %lo(ptrobjinstance)($t8)

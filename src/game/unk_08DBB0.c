@@ -679,7 +679,7 @@ glabel sub_GAME_7F08E240
   lw    $a0, ($s0)
   jal   subcalcpos
    addiu $a0, $a0, 0x598
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $sp, 0x40
   lw    $v0, ($s0)
   addiu $t4, $sp, 0x40

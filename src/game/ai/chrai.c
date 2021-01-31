@@ -7320,7 +7320,7 @@ actionFC_Launch_Shuttle_2:
    sw    $v1, 0x88($sp)
   lw    $v1, 0x88($sp)
   lw    $a0, 0x6c($v1)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $a0, 0x20
   lw    $v1, 0x88($sp)
   lui   $at, %hi(D_80052974)
@@ -13188,7 +13188,7 @@ actionFC_Launch_Shuttle_2:
    sw    $v1, 0x88($sp)
   lw    $v1, 0x88($sp)
   lw    $a0, 0x6c($v1)
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    addiu $a0, $a0, 0x20
   lw    $v1, 0x88($sp)
   lui   $at, %hi(D_80052974)

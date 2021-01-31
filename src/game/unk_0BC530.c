@@ -301,7 +301,7 @@ glabel sub_GAME_7F0BC85C
   lw    $t3, 0x108c($t2)
   addu  $at, $at, $t4
   addiu $a0, $sp, 0x2c
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    sw    $t3, %lo(dword_CODE_bss_80083900)($at)
   lw    $t6, 0x70($sp)
   lui   $at, %hi(room_data_float2)

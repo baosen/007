@@ -266,7 +266,7 @@ glabel sets_a_bunch_of_BONDdata_values_to_default
   jal   subcalcpos
    addiu $a0, $a0, 0x598
   addiu $s3, $sp, 0x50
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    move  $a0, $s3
   lw    $s0, ($s1)
   sw    $s3, 0x90($sp)
@@ -560,7 +560,7 @@ glabel sets_a_bunch_of_BONDdata_values_to_default
   jal   subcalcpos
    addiu $a0, $a0, 0x598
   addiu $s3, $sp, 0x50
-  jal   reset_array_of_0x10_floats
+  jal   matrix_4x4_set_identity
    move  $a0, $s3
   lw    $s0, ($s1)
   sw    $s3, 0x90($sp)
