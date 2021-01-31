@@ -2212,11 +2212,9 @@ glabel sub_GAME_7F020018
    nop   
 ");
 
-asm(R"
-glabel sub_GAME_7F02004C
-  jr    $ra
-   lwc1  $f0, 0x100($a0)
-");
+float sub_GAME_7F02004C(float arg0[]) {
+    return arg0[64];
+}
 
 asm(R"
 glabel sub_GAME_7F020054
