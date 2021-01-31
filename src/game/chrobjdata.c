@@ -2152,17 +2152,11 @@ struct c_itementry c_item_entries[] = {
     {&CspicebondZ_struct, "CspicebondZ", 0.94999999, 0.96609998, 0x10000},
 };
 
-
-
 unsigned int D_8003E450 = 0;
 unsigned int D_8003E454 = 0;
-
 float D_8003E458 = 1.0;
-
 unsigned int D_8003E45C = 0;
-
 unsigned int D_8003E460 = 0;
-
 
 struct headHat headHat_array_8003E464[] = 
 {
