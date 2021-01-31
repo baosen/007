@@ -227,31 +227,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "deb_loadallmodels",
-    srcs = [
-        "deb_loadallmodels.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "debugmenu_08FE00",
-    srcs = [
-        "debugmenu_08FE00.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "debugmenu_090490",
-    srcs = [
-        "debugmenu_090490.c",
-        "//src/libultra/include",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "decompress",
     srcs = [
         "decompress.c",
