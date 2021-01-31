@@ -375,16 +375,11 @@ glabel retrieve_header_for_body_and_head
    nop   
 ");
 
-asm(R"
-glabel get_current_random_body
-  lui   $t6, %hi(current_random_body) 
-  lw    $t6, %lo(current_random_body)($t6)
-  lui   $v0, %hi(list_of_bodies)
-  sll   $t7, $t6, 2
-  addu  $v0, $v0, $t7
-  jr    $ra
-   lw    $v0, %lo(list_of_bodies)($v0)
-");
+int get_current_random_body(void) {
+  extern int list_of_bodies[];
+  extern int current_random_body;
+  return list_of_bodies[current_random_body];
+}
 
 asm(R"
 glabel select_psuedorandom_heads
