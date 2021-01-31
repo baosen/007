@@ -596,13 +596,7 @@ glabel sub_GAME_7F03FE14
    nop   
 ");
 
-asm(R"
-glabel sub_GAME_7F03FE88
-  lw    $t6, ($a0)
-  ori   $t7, $t6, 1
-  jr    $ra
-   sw    $t7, ($a0)
-");
+void sub_GAME_7F03FE88(int *arg0) { *arg0 |= 1; }
 
 asm(R"
 glabel sub_GAME_7F03FE98
