@@ -384,24 +384,10 @@ glabel sub_GAME_7F091080
    nop   
 ");
 
-asm(R"
-glabel sub_GAME_7F091580
-  addiu $sp, $sp, -0x18
-  sw    $a0, 0x18($sp)
-  sw    $ra, 0x14($sp)
-  lui   $a0, %hi(stanbondx)
-  lui   $a1, %hi(D_80037020)
-  lui   $a2, %hi(D_8003702C)
-  addiu $a2, %lo(D_8003702C) # addiu $a2, $a2, 0x702c
-  addiu $a1, %lo(D_80037020) # addiu $a1, $a1, 0x7020
-  jal   sub_GAME_7F0876C4
-   addiu $a0, %lo(stanbondx) # addiu $a0, $a0, 0x7014
-  lw    $ra, 0x14($sp)
-  lw    $v0, 0x18($sp)
-  addiu $sp, $sp, 0x18
-  jr    $ra
-   nop   
-");
+int sub_GAME_7F091580(int arg0) {
+  sub_GAME_7F0876C4(&stanbondx, &D_80037020, &D_8003702C);
+  return arg0;
+}
 
 asm(R"
 glabel sub_GAME_7F0915BC
