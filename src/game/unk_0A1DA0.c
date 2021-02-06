@@ -5,12 +5,9 @@ unsigned int dword_CODE_bss_8007A16C;
 unsigned char dword_CODE_bss_8007A170[0x370];
 unsigned char dword_CODE_bss_8007A4E0[0xBB8];
 unsigned char dword_CODE_bss_8007B098[8];
-
 unsigned int D_80040940[8] = {0};
-
 unsigned int D_80040960[] = {0xFFFFFFFF, 0xFFFFC8FF, 0xFF0000FF, 0xFFFFFFFF,
                              0xFFFFFFFF, 0xFFFFFFFF, 0,          0};
-
 unsigned int D_80040980 = 0;
 unsigned int D_80040984 = 0;
 unsigned int D_80040988 = 0;
