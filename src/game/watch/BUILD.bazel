@@ -1,0 +1,17 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "watch",
+    srcs = [
+        "//src/game:bond.h",
+        "//src/game:chr.h",
+        "//src/game:player.h",
+        "//src/game:players.h",
+        "//src/game:unk_0A1DA0.h",
+        "//src/game:xyzpoint.h",
+        "//src/system:music.h",
+        "//src/system:includes",
+        "watch.c",
+    ],
+    visibility = ["//visibility:public"],
+)

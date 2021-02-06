@@ -124,7 +124,7 @@ link_elf(
         "//src/game:unk_0CC4C0",
         "//src/game:unk_0D1AC0",
         "//src/game/viewport",
-        "//src/game:watch",
+        "//src/game/watch",
         "//src/game/ai:chrai",
         "//src/game/compiletime",
         "//src/game/indy:indy_commands",

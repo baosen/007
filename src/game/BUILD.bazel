@@ -2,6 +2,12 @@ load("//tools/gecc:gecc.bzl", "gecc_library")
 
 exports_files([
     "bondtypes.h",
+    "bond.h",
+    "chr.h",
+    "player.h",
+    "players.h",
+    "unk_0A1DA0.h",
+    "xyzpoint.h",
 ])
 
 gecc_library(
@@ -911,22 +917,6 @@ gecc_library(
     name = "unk_0D1AC0",
     srcs = [
         "unk_0D1AC0.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "watch",
-    srcs = [
-        "bond.h",
-        "chr.h",
-        "player.h",
-        "players.h",
-        "unk_0A1DA0.h",
-        "watch.c",
-        "xyzpoint.h",
-        "//src/system:includes",
-        "//src/system:music.h",
     ],
     visibility = ["//visibility:public"],
 )
