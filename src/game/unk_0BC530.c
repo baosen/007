@@ -371,17 +371,10 @@ glabel sub_GAME_7F0BC9C4
    addiu $sp, $sp, 0x18
 ");
 
-asm(R"
-glabel sub_GAME_7F0BCA14
-  lui   $t7, %hi(ptr_bgdata_room_fileposition_list) 
-  lw    $t7, %lo(ptr_bgdata_room_fileposition_list)($t7)
-  sll   $t6, $a0, 2
-  subu  $t6, $t6, $a0
-  sll   $t6, $t6, 3
-  addu  $v0, $t6, $t7
-  jr    $ra
-   addiu $v0, $v0, 0xc
-");
+int sub_GAME_7F0BCA14(int arg0) {
+  extern char *ptr_bgdata_room_fileposition_list;
+  return (arg0 * 0x18) + ptr_bgdata_room_fileposition_list + 0xC;
+}
 
 asm(R"
 glabel sub_GAME_7F0BCA34
