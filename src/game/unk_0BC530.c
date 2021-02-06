@@ -1,9 +1,9 @@
 #include "players.h"
 
-char dword_CODE_bss_80083320[0x130];
-char dword_CODE_bss_80083450[0x4B0];
-char dword_CODE_bss_80083900[0x4B0];
-char dword_CODE_bss_80083DB0[0x4B00];
+char dword_CODE_bss_80083320[304];
+char dword_CODE_bss_80083450[1200];
+char dword_CODE_bss_80083900[1200];
+char dword_CODE_bss_80083DB0[19200];
 
 asm(R"
 glabel sub_GAME_7F0BC530
