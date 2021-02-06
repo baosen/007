@@ -11,7 +11,7 @@ link_elf(
         "//src/decompbuf:decompressbuffer",
         "//src/font",
         "//src/game:GlobalImageTable",
-        "//src/game:bg",
+        "//src/game/bg",
         "//src/game/blood:blood_animation",
         "//src/game/blood:blood_decrypt",
         "//src/game/blood:blood_image",

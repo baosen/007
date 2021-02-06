@@ -66,16 +66,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "bg",
-    srcs = [
-        "bg.c",
-        "bondtypes.h",
-        "//src/system:includes",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "bond_data",
     srcs = [
         "bond_data.c",
