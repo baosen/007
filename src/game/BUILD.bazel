@@ -844,14 +844,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "random",
-    srcs = [
-        "random.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "unk_09B7A0",
     srcs = [
         "unk_09B7A0.c",
