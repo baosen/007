@@ -128,14 +128,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "cheat_buttons",
-    srcs = [
-        "cheat_buttons.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "chr",
     srcs = [
         "bondtypes.h",

@@ -20,7 +20,7 @@ link_elf(
         "//src/game:bondinv",
         "//src/game:bondwalk",
         "//src/game:bondwalk2",
-        "//src/game:cheat_buttons",
+        "//src/game/cheat_buttons",
         "//src/game:chr",
         "//src/game:chr2",
         "//src/game:chrobjdata",
