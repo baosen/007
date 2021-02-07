@@ -39,7 +39,7 @@ link_elf(
         "//src/game:ejectedcartridges",
         "//src/game:fog",
         "//src/game:game_debug",
-        "//src/game:gamefile",
+        "//src/game/gamefile",
         "//src/game:image",
         "//src/game:image_bank",
         "//src/game:initBondDATA",

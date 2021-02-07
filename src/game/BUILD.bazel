@@ -8,6 +8,7 @@ exports_files([
     "players.h",
     "unk_0A1DA0.h",
     "xyzpoint.h",
+    "mainmenu.h",
 ])
 
 gecc_library(
@@ -250,17 +251,6 @@ gecc_library(
     name = "game_debug",
     srcs = [
         "game_debug.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "gamefile",
-    srcs = [
-        "bondtypes.h",
-        "gamefile.c",
-        "mainmenu.h",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
