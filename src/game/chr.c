@@ -2212,9 +2212,7 @@ glabel sub_GAME_7F020018
    nop   
 ");
 
-float sub_GAME_7F02004C(float arg0[]) {
-    return arg0[64];
-}
+float sub_GAME_7F02004C(float arg0[]) { return arg0[64]; }
 
 asm(R"
 glabel sub_GAME_7F020054
@@ -2235,22 +2233,12 @@ glabel sub_GAME_7F020054
    nop   
 ");
 
-asm(R"
-glabel sub_GAME_7F020090
-  mtc1  $zero, $f12
-  lwc1  $f2, 0xfc($a0)
-  c.lt.s $f2, $f12
-  nop   
-  bc1fl .L7F0200B4
-   mov.s $f0, $f12
-  jr    $ra
-   neg.s $f0, $f2
-
-  mov.s $f0, $f12
-.L7F0200B4:
-  jr    $ra
-   nop   
-");
+float sub_GAME_7F020090(float *arg0) {
+  float temp_f2 = arg0[63];
+  if (temp_f2 < 0.0f)
+    return -temp_f2;
+  return 0.0f;
+}
 
 asm(R"
 glabel init_GUARDdata_with_set_values
