@@ -103,30 +103,26 @@ save blank_eeprom = {0,    0,    0x80, 0x00, 0xFF, 0xFF, DEFAULT_OPTIONS,
                      0};
 
 float get_007_reaction_speed(void) {
-  if (get_current_difficulty() == DIFFICULTY_007) {
+  if (get_current_difficulty() == DIFFICULTY_007)
     return slider_007_mode_reaction;
-  }
   return 0.f;
 }
 
 float get_007_health_mod(void) {
-  if (get_current_difficulty() == DIFFICULTY_007) {
+  if (get_current_difficulty() == DIFFICULTY_007)
     return slider_007_mode_health;
-  }
   return 1.f;
 }
 
 float get_007_damage_mod(void) {
-  if (get_current_difficulty() == DIFFICULTY_007) {
+  if (get_current_difficulty() == DIFFICULTY_007)
     return slider_007_mode_accuracy;
-  }
   return 1.f;
 }
 
 float get_007_accuracy_mod(void) {
-  if (get_current_difficulty() == DIFFICULTY_007) {
+  if (get_current_difficulty() == DIFFICULTY_007)
     return slider_007_mode_damage;
-  }
   return 1.f;
 }
 
@@ -345,32 +341,29 @@ void set_selected_folder_num(unsigned int foldernum) {
 asm(R"
 glabel set_selected_difficulty
   beqz  $a0, .L7F01D5C4
-   li    $v0, 1
+  li    $v0, 1
   beq   $a0, $v0, .L7F01D5D0
-   lui   $at, %hi(selected_difficulty)
+  lui   $at, %hi(selected_difficulty)
   li    $v0, 2
   beq   $a0, $v0, .L7F01D5D8
-   lui   $at, %hi(selected_difficulty)
+  lui   $at, %hi(selected_difficulty)
   li    $v0, 3
   beq   $a0, $v0, .L7F01D5E0
-   lui   $at, %hi(selected_difficulty)
+  lui   $at, %hi(selected_difficulty)
 .L7F01D5C4:
   lui   $at, %hi(selected_difficulty)
   jr    $ra
-   sw    $zero, %lo(selected_difficulty)($at)
-
+  sw    $zero, %lo(selected_difficulty)($at)
 .L7F01D5D0:
   jr    $ra
-   sw    $v0, %lo(selected_difficulty)($at)
-
+  sw    $v0, %lo(selected_difficulty)($at)
 .L7F01D5D8:
   jr    $ra
-   sw    $v0, %lo(selected_difficulty)($at)
-
+  sw    $v0, %lo(selected_difficulty)($at)
 .L7F01D5E0:
   sw    $v0, %lo(selected_difficulty)($at)
   jr    $ra
-   nop   
+  nop   
 ");
 
 void set_solo_and_ptr_briefing(LEVELID stage) {
@@ -383,24 +376,11 @@ void sub_GAME_7F01D61C(struct save_file *savefile) {
   copy_eeprom_from_to(selected_folder_num, savefile);
 }
 
-asm(R"
-glabel sub_GAME_7F01D644
-  lui   $v0, %hi(selected_folder_num)
-  addiu $v0, %lo(selected_folder_num) # addiu $v0, $v0, -0x5718
-  lw    $t6, ($v0)
-  addiu $sp, $sp, -0x18
-  move  $a1, $a0
-  lui   $at, %hi(selected_folder_num_copy)
-  sw    $ra, 0x14($sp)
-  li    $a0, 100
-  sw    $t6, %lo(selected_folder_num_copy)($at)
-  jal   copy_eepromfile_a0_from_a1_to_buffer
-   sw    $a0, ($v0)
-  lw    $ra, 0x14($sp)
-  addiu $sp, $sp, 0x18
-  jr    $ra
-   nop   
-");
+void sub_GAME_7F01D644(int arg0) {
+  selected_folder_num_copy = selected_folder_num;
+  selected_folder_num = 0x64;
+  copy_eepromfile_a0_from_a1_to_buffer(selected_folder_num, arg0);
+}
 
 void store_favorite_weapon_current_player(unsigned int right,
                                           unsigned int left) {
