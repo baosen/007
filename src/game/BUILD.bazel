@@ -184,14 +184,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "game_debug",
-    srcs = [
-        "game_debug.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "GlobalImageTable",
     srcs = [
         "GlobalImageTable.c",

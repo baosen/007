@@ -38,7 +38,7 @@ link_elf(
         "//src/game/eeprom",
         "//src/game:ejectedcartridges",
         "//src/game/fog",
-        "//src/game:game_debug",
+        "//src/game/game_debug",
         "//src/game/gamefile",
         "//src/game/image",
         "//src/game:image_bank",
