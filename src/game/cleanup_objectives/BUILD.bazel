@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "cleanup_objectives",
+    srcs = [
+        "cleanup_objectives.c",
+    ],
+    visibility = ["//visibility:public"],
+)
