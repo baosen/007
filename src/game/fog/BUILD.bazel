@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "fog",
+    srcs = [
+        "fog.c",
+    ],
+    visibility = ["//visibility:public"],
+)
