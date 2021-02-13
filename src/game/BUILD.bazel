@@ -12,15 +12,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "initgamedata",
-    srcs = [
-        "initgamedata.c",
-        "//src/game:mainmenu.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initnull_0009D0",
     srcs = [
         "initnull_0009D0.c",

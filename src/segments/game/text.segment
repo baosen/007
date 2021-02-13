@@ -1,4 +1,4 @@
-initgamedata.o (.text)
+initgamedata/initgamedata.o (.text)
 initweaponanigroups/initweaponanigroups.o (.text)
 initactorpropstuff/initactorpropstuff.o (.text)
 initnull_0009D0.o (.text)
