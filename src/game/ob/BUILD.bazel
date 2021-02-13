@@ -1,0 +1,10 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "ob",
+    srcs = [
+        "ob.c",
+        "obseg.h",
+    ],
+    visibility = ["//visibility:public"],
+)

@@ -552,15 +552,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "ob",
-    srcs = [
-        "ob.c",
-        "obseg.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "objecthandler_2",
     srcs = [
         "objecthandler_2.c",
