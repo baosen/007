@@ -322,8 +322,8 @@ gecc_library(
     name = "lvl",
     srcs = [
         "lvl.c",
-        "//src/game:bondtypes.h",
         "//src/game:mainmenu.h",
+        "//src/game:bondtypes.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -343,8 +343,8 @@ gecc_library(
     name = "mainmenu",
     srcs = [
         "mainmenu.c",
-        "//src/game:bondtypes.h",
         "//src/game:mainmenu.h",
+        "//src/game:bondtypes.h",
         "//src/system:includes",
         "//src/system:music.h",
     ],
