@@ -32,8 +32,8 @@ gecc_library(
 gecc_library(
     name = "initunk_000B60",
     srcs = [
-        "bondtypes.h",
         "initunk_000B60.c",
+        "//src/game:bondtypes.h",
         "//src/game:chrobjdata.h",
     ],
     visibility = ["//visibility:public"],
@@ -43,7 +43,7 @@ gecc_library(
     name = "bond_data",
     srcs = [
         "bond_data.c",
-        "chr.h",
+        "//src/game:chr.h",
     ],
     visibility = ["//visibility:public"],
 )
@@ -52,10 +52,10 @@ gecc_library(
     name = "bond",
     srcs = [
         "bond.c",
-        "bond.h",
-        "player.h",
-        "players.h",
-        "xyzpoint.h",
+        "//src/game:bond.h",
+        "//src/game:player.h",
+        "//src/game:players.h",
+        "//src/game:xyzpoint.h",
     ],
     visibility = ["//visibility:public"],
 )
@@ -63,12 +63,12 @@ gecc_library(
 gecc_library(
     name = "bondinv",
     srcs = [
-        "bond.h",
         "bondinv.c",
-        "chr.h",
-        "player.h",
-        "players.h",
-        "xyzpoint.h",
+        "//src/game:bond.h",
+        "//src/game:chr.h",
+        "//src/game:player.h",
+        "//src/game:players.h",
+        "//src/game:xyzpoint.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -77,11 +77,11 @@ gecc_library(
 gecc_library(
     name = "bondwalk",
     srcs = [
-        "bondtypes.h",
         "bondwalk.c",
-        "chrobjdata.h",
-        "player.h",
-        "xyzpoint.h",
+        "//src/game:bondtypes.h",
+        "//src/game:chrobjdata.h",
+        "//src/game:player.h",
+        "//src/game:xyzpoint.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -90,9 +90,9 @@ gecc_library(
 gecc_library(
     name = "chr",
     srcs = [
-        "bondtypes.h",
         "chr.c",
-        "chr.h",
+        "//src/game:bondtypes.h",
+        "//src/game:chr.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -101,8 +101,8 @@ gecc_library(
 gecc_library(
     name = "chr2",
     srcs = [
-        "bondtypes.h",
         "chr2.c",
+        "//src/game:bondtypes.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -111,10 +111,10 @@ gecc_library(
 gecc_library(
     name = "chrobjdata",
     srcs = [
-        "bondaicommands.h",
-        "bondtypes.h",
         "chrobjdata.c",
-        "chrobjdata.h",
+        "//src/game:bondaicommands.h",
+        "//src/game:bondtypes.h",
+        "//src/game:chrobjdata.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -123,9 +123,9 @@ gecc_library(
 gecc_library(
     name = "chrobjhandler",
     srcs = [
-        "bondtypes.h",
         "chrobjhandler.c",
-        "lvl.h",
+        "//src/game:bondtypes.h",
+        "//src/game:lvl.h",
         "//src/game/ai:chrai.h",
         "//src/system:includes",
         "//src/system:music.h",
@@ -136,7 +136,7 @@ gecc_library(
 gecc_library(
     name = "cleanupSFXRelated",
     srcs = [
-        "bond.h",
+        "//src/game:bond.h",
         "cleanupSFXRelated.c",
     ],
     visibility = ["//visibility:public"],
@@ -146,7 +146,7 @@ gecc_library(
     name = "GlobalImageTable",
     srcs = [
         "GlobalImageTable.c",
-        "bondtypes.h",
+        "//src/game:bondtypes.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -163,8 +163,8 @@ gecc_library(
 gecc_library(
     name = "initguards",
     srcs = [
-        "chr.h",
         "initguards.c",
+        "//src/game:chr.h",
     ],
     visibility = ["//visibility:public"],
 )
