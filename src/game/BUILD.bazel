@@ -624,14 +624,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "matrixmath",
-    srcs = [
-        "matrixmath.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "sqrt_tan_angle_plus_one",
     srcs = [
         "sqrt_tan_angle_plus_one.c",

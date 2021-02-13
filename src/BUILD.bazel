@@ -101,7 +101,7 @@ link_elf(
         "//src/game:unk_01B0E0",
         "//src/game:unk_01B240",
         "//src/game:unk_01BAE0",
-        "//src/game:matrixmath",
+        "//src/game/matrixmath",
         "//src/game:sqrt_tan_angle_plus_one",
         "//src/game:unk_05AB70",
         "//src/game:unk_05ACB0",
