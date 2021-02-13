@@ -153,14 +153,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "initBondDATAdefaults",
-    srcs = [
-        "initBondDATAdefaults.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initexplosioncasing",
     srcs = [
         "initexplosioncasing.c",
