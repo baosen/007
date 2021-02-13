@@ -153,14 +153,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "initimages",
-    srcs = [
-        "initimages.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initintromatrices",
     srcs = [
         "initintromatrices.c",

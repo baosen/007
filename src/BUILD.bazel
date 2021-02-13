@@ -50,7 +50,7 @@ link_elf(
         "//src/game/initexplosioncasing",
         "//src/game/initgamedata",
         "//src/game:initguards",
-        "//src/game:initimages",
+        "//src/game/initimages",
         "//src/game:initintromatrices",
         "//src/game:inititemslots",
         "//src/game:initmenus",
