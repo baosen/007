@@ -44,7 +44,7 @@ link_elf(
         "//src/game:image_bank",
         "//src/game:initBondDATA",
         "//src/game:initBondDATAdefaults",
-        "//src/game:initactorpropstuff",
+        "//src/game/initactorpropstuff",
         "//src/game:initanitable",
         "//src/game:initcameraandthrown",
         "//src/game:initexplosioncasing",

@@ -1,4 +1,4 @@
-initactorpropstuff.o (.rodata)
+initactorpropstuff/initactorpropstuff.o (.rodata)
 setguscale.o (.rodata)
 prop.o (.rodata)
 initBondDATA.o (.rodata)

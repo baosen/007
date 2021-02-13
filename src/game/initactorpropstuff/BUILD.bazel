@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "initactorpropstuff",
+    srcs = [
+        "initactorpropstuff.c",
+    ],
+    visibility = ["//visibility:public"],
+)

@@ -21,14 +21,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "initactorpropstuff",
-    srcs = [
-        "initactorpropstuff.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initnull_0009D0",
     srcs = [
         "initnull_0009D0.c",
