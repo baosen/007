@@ -6,7 +6,7 @@ typedef struct ObjectRecord {
   unsigned short obj;
 } ObjectRecord;
 
-typedef struct PropRecord {
+typedef struct {
   unsigned char type;
   union {
     ObjectRecord *obj;
@@ -18,7 +18,7 @@ typedef struct invitem_weap {
 } invitem_weap;
 
 typedef struct invitem_prop {
-  struct PropRecord *prop;
+  PropRecord *prop;
 } invitem_prop;
 
 typedef struct invitem_dual {
@@ -38,7 +38,7 @@ typedef struct InvItem {
   struct InvItem *prev;
 } InvItem;
 
-typedef struct textoverride {
+typedef struct {
   int unk1;
   int objoffset;
   int weapon;
