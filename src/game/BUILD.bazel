@@ -669,12 +669,8 @@ gecc_library(
     name = "unk_0BC530",
     srcs = [
         "unk_0BC530.c",
-        "//src/game:bond.h",
-        "//src/game:chr.h",
         "//src/game:player.h",
-        "//src/game:players.h",
         "//src/game:xyzpoint.h",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
