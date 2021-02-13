@@ -278,11 +278,7 @@ gecc_library(
     name = "initunk_0072B0",
     srcs = [
         "initunk_0072B0.c",
-        "//src/game:bond.h",
-        "//src/game:chr.h",
-        "//src/game:lvl.h",
         "//src/game:player.h",
-        "//src/game:players.h",
         "//src/game:xyzpoint.h",
     ],
     visibility = ["//visibility:public"],
