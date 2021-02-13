@@ -26,7 +26,7 @@ link_elf(
         "//src/game:chrobjdata",
         "//src/game:chrobjhandler",
         "//src/game:cleanupSFXRelated",
-        "//src/game:cleanup_alarms",
+        "//src/game/cleanup_alarms",
         "//src/game:cleanup_objectives",
         "//src/game:cleanup_objects",
         "//src/game:convertangleusinginverse",
