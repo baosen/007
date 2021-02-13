@@ -21,15 +21,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "initanitable",
-    srcs = [
-        "initanitable.c",
-        "//src/libultra/include",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initunk_000B60",
     srcs = [
         "initunk_000B60.c",

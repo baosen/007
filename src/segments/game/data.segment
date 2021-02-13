@@ -1,4 +1,4 @@
-initanitable.o (.data)
+initanitable/initanitable.o (.data)
 debugmenu/deb_loadallmodels.o (.data)
 initobjects.o (.data)
 initBondDATA/initBondDATA.o (.data)
