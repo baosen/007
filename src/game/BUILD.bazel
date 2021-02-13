@@ -136,8 +136,8 @@ gecc_library(
 gecc_library(
     name = "cleanupSFXRelated",
     srcs = [
-        "//src/game:bond.h",
         "cleanupSFXRelated.c",
+        "//src/game:bond.h",
     ],
     visibility = ["//visibility:public"],
 )
@@ -277,13 +277,13 @@ gecc_library(
 gecc_library(
     name = "initunk_0072B0",
     srcs = [
-        "bond.h",
-        "chr.h",
         "initunk_0072B0.c",
-        "lvl.h",
-        "player.h",
-        "players.h",
-        "xyzpoint.h",
+        "//src/game:bond.h",
+        "//src/game:chr.h",
+        "//src/game:lvl.h",
+        "//src/game:player.h",
+        "//src/game:players.h",
+        "//src/game:xyzpoint.h",
     ],
     visibility = ["//visibility:public"],
 )
@@ -307,8 +307,8 @@ gecc_library(
 gecc_library(
     name = "intro_logos",
     srcs = [
-        "bondtypes.h",
         "intro_logos.c",
+        "//src/game:bondtypes.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -342,9 +342,9 @@ gecc_library(
 gecc_library(
     name = "lvl",
     srcs = [
-        "bondtypes.h",
         "lvl.c",
-        "mainmenu.h",
+        "//src/game:bondtypes.h",
+        "//src/game:mainmenu.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -353,8 +353,8 @@ gecc_library(
 gecc_library(
     name = "lvl_text",
     srcs = [
-        "bondtypes.h",
         "lvl_text.c",
+        "//src/game:bondtypes.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
@@ -363,9 +363,9 @@ gecc_library(
 gecc_library(
     name = "mainmenu",
     srcs = [
-        "bondtypes.h",
         "mainmenu.c",
-        "mainmenu.h",
+        "//src/game:bondtypes.h",
+        "//src/game:mainmenu.h",
         "//src/system:includes",
         "//src/system:music.h",
     ],
@@ -618,13 +618,13 @@ gecc_library(
 gecc_library(
     name = "players",
     srcs = [
-        "bond.h",
-        "chr.h",
-        "lvl.h",
-        "player.h",
         "players.c",
-        "players.h",
-        "xyzpoint.h",
+        "//src/game:bond.h",
+        "//src/game:chr.h",
+        "//src/game:lvl.h",
+        "//src/game:player.h",
+        "//src/game:players.h",
+        "//src/game:xyzpoint.h",
     ],
     visibility = ["//visibility:public"],
 )
@@ -672,12 +672,12 @@ gecc_library(
 gecc_library(
     name = "unk_0BC530",
     srcs = [
-        "bond.h",
-        "chr.h",
-        "player.h",
-        "players.h",
         "unk_0BC530.c",
-        "xyzpoint.h",
+        "//src/game:bond.h",
+        "//src/game:chr.h",
+        "//src/game:player.h",
+        "//src/game:players.h",
+        "//src/game:xyzpoint.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
