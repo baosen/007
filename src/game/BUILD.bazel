@@ -159,14 +159,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "cleanup_objects",
-    srcs = [
-        "cleanup_objects.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "cleanupSFXRelated",
     srcs = [
         "bond.h",
