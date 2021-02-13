@@ -1,7 +1,7 @@
 initactorpropstuff/initactorpropstuff.o (.rodata)
 setguscale.o (.rodata)
 prop.o (.rodata)
-initBondDATA.o (.rodata)
+initBondDATA/initBondDATA.o (.rodata)
 initcameraandthrown.o (.rodata)
 initBondDATAdefaults.o (.rodata)
 initmttex.o (.rodata)

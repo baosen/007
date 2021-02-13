@@ -1,7 +1,7 @@
 initanitable.o (.data)
 debugmenu/deb_loadallmodels.o (.data)
 initobjects.o (.data)
-initBondDATA.o (.data)
+initBondDATA/initBondDATA.o (.data)
 initcameraandthrown.o (.data)
 initBondDATAdefaults.o (.data)
 intro_logos.o (.data)

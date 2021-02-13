@@ -143,27 +143,11 @@ gecc_library(
 )
 
 gecc_library(
-    name = "ejectedcartridges",
-    srcs = [
-        "ejectedcartridges.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "GlobalImageTable",
     srcs = [
         "GlobalImageTable.c",
         "bondtypes.h",
         "//src/system:includes",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "initBondDATA",
-    srcs = [
-        "initBondDATA.c",
     ],
     visibility = ["//visibility:public"],
 )
