@@ -1,5 +1,5 @@
 initgamedata.o (.bss)
-initweaponanigroups.o (.bss)
+initweaponanigroups/initweaponanigroups.o (.bss)
 initactorpropstuff.o (.bss)
 initnull_0009D0.o (.bss)
 initunk_0009E0.o (.bss)

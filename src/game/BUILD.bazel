@@ -21,14 +21,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "initweaponanigroups",
-    srcs = [
-        "initweaponanigroups.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initactorpropstuff",
     srcs = [
         "initactorpropstuff.c",
