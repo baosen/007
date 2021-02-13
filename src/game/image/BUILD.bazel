@@ -1,0 +1,10 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "image",
+    srcs = [
+        "image.c",
+        "//src/images",
+    ],
+    visibility = ["//visibility:public"],
+)

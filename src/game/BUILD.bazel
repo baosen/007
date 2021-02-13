@@ -275,15 +275,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "image",
-    srcs = [
-        "image.c",
-        "//src/images",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initBondDATA",
     srcs = [
         "initBondDATA.c",
