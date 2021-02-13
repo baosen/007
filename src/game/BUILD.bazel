@@ -462,14 +462,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "music",
-    srcs = [
-        "music.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "null_007970",
     srcs = [
         "null_007970.c",
