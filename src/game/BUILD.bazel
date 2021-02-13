@@ -184,14 +184,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "decompress",
-    srcs = [
-        "decompress.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "ejectedcartridges",
     srcs = [
         "ejectedcartridges.c",

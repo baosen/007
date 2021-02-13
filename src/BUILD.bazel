@@ -33,7 +33,7 @@ link_elf(
         "//src/game/debugmenu:deb_loadallmodels",
         "//src/game/debugmenu:debugmenu_08FE00",
         "//src/game/debugmenu:debugmenu_090490",
-        "//src/game:decompress",
+        "//src/game/decompress",
         "//src/game/dyn",
         "//src/game:eeprom",
         "//src/game:ejectedcartridges",
