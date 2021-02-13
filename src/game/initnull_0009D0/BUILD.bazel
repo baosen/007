@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "initnull_0009D0",
+    srcs = [
+        "initnull_0009D0.c",
+    ],
+    visibility = ["//visibility:public"],
+)
