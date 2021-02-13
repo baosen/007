@@ -765,14 +765,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "cpu_cycle_count",
-    srcs = [
-        "cpu_cycle_count.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "unk_0CC4C0",
     srcs = [
         "unk_0CC4C0.c",

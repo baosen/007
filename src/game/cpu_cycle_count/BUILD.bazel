@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "cpu_cycle_count",
+    srcs = [
+        "cpu_cycle_count.c",
+    ],
+    visibility = ["//visibility:public"],
+)
