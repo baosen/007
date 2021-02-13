@@ -200,15 +200,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "eeprom",
-    srcs = [
-        "eeprom.c",
-        "//src/libultra/include",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "GlobalImageTable",
     srcs = [
         "GlobalImageTable.c",
