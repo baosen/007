@@ -29,7 +29,7 @@ link_elf(
         "//src/game/cleanup_alarms",
         "//src/game/cleanup_objectives",
         "//src/game/cleanup_objects",
-        "//src/game:convertangleusinginverse",
+        "//src/game/convertangleusinginverse",
         "//src/game/debugmenu:deb_loadallmodels",
         "//src/game/debugmenu:debugmenu_08FE00",
         "//src/game/debugmenu:debugmenu_090490",
