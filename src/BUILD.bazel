@@ -71,7 +71,7 @@ link_elf(
         "//src/game:initunk_007460",
         "//src/game/initweaponanigroups",
         "//src/game:intro_logos",
-        "//src/game:lightfixture",
+        "//src/game/lightfixture",
         "//src/game:loadobjectmodel",
         "//src/game:lvl",
         "//src/game:lvl_2",
