@@ -161,14 +161,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "initcameraandthrown",
-    srcs = [
-        "initcameraandthrown.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initexplosioncasing",
     srcs = [
         "initexplosioncasing.c",

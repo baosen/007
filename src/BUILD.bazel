@@ -46,7 +46,7 @@ link_elf(
         "//src/game:initBondDATAdefaults",
         "//src/game/initactorpropstuff",
         "//src/game:initanitable",
-        "//src/game:initcameraandthrown",
+        "//src/game/initcameraandthrown",
         "//src/game:initexplosioncasing",
         "//src/game/initgamedata",
         "//src/game:initguards",
