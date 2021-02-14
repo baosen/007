@@ -8286,8 +8286,7 @@ glabel sub_GAME_7F02A1E8
 ");
 
 int true_if_actor_dying_fading_limping_shot(struct CHRdata* chr) {
-  signed char currentaction = chr->actiontype;
-
+  char currentaction = chr->actiontype;
   if ((currentaction == ACT_DIE) || (currentaction == ACT_DEAD) ||
       (currentaction == ACT_PREARGH) ||
       (currentaction == ACT_ARGH) && !(chr->chrflags & CHRFLAG_00000200))
@@ -8296,8 +8295,7 @@ int true_if_actor_dying_fading_limping_shot(struct CHRdata* chr) {
 }
 
 int true_if_actor_dying_fading(struct CHRdata* chr) {
-  signed char currentaction = chr->actiontype;
-
+  char currentaction = chr->actiontype;
   return ((currentaction == ACT_DIE) || (currentaction == ACT_DEAD));
 }
 
