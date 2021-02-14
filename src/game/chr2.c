@@ -8285,7 +8285,7 @@ glabel sub_GAME_7F02A1E8
    nop   
 ");
 
-int true_if_actor_dying_fading_limping_shot(PCHRdata chr) {
+int true_if_actor_dying_fading_limping_shot(struct CHRdata* chr) {
   signed char currentaction = chr->actiontype;
 
   if ((currentaction == ACT_DIE) || (currentaction == ACT_DEAD) ||
@@ -8295,7 +8295,7 @@ int true_if_actor_dying_fading_limping_shot(PCHRdata chr) {
   return 1;
 }
 
-int true_if_actor_dying_fading(PCHRdata chr) {
+int true_if_actor_dying_fading(struct CHRdata* chr) {
   signed char currentaction = chr->actiontype;
 
   return ((currentaction == ACT_DIE) || (currentaction == ACT_DEAD));
@@ -9647,7 +9647,7 @@ glabel sub_GAME_7F02AD98
    nop   
 ");
 
-void actor_reset_sleep(PCHRdata actor) { actor->sleep = 0; }
+void actor_reset_sleep(struct CHRdata* actor) { actor->sleep = 0; }
 
 asm(R"
 glabel sub_GAME_7F02B4E8

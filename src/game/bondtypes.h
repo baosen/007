@@ -10,7 +10,7 @@ struct colorfloat {
   float r, g, b, a;
 };
 
-typedef struct CHRdata CHRdata, *PCHRdata;
+typedef struct CHRdata CHRdata;
 
 /* unfinished struct, WIP */
 struct CHRdata {
