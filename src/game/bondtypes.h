@@ -2,11 +2,11 @@
 #define _BONDTYPES_H_
 #include "bondconstants.h"
 
-struct rgba_val {
+struct color {
   unsigned char r, g, b, a;
 };
 
-struct rgba_valfloat {
+struct colorfloat {
   float r, g, b, a;
 };
 

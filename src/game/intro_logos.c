@@ -57,11 +57,11 @@ float D_8002A850 = 0.24f;
 unsigned int D_8002A854 = 0;
 float D_8002A858 = 1.0f;
 unsigned int D_8002A85C = 0x80000000;
-struct rgba_val D_8002A860 = {0xDC, 0xDC, 0xDC, 0};
-struct rgba_val D_8002A864 = {0xDC, 0xDC, 0xDC, 0};
-struct rgba_val D_8002A868 = {0xFF, 0xFF, 0xFF, 0};
-struct rgba_val D_8002A86C = {0xFF, 0xFF, 0xFF, 0};
-struct rgba_val D_8002A870 = {0x00, 0x7F, 0x00, 0};
+struct color D_8002A860 = {0xDC, 0xDC, 0xDC, 0};
+struct color D_8002A864 = {0xDC, 0xDC, 0xDC, 0};
+struct color D_8002A868 = {0xFF, 0xFF, 0xFF, 0};
+struct color D_8002A86C = {0xFF, 0xFF, 0xFF, 0};
+struct color D_8002A870 = {0x00, 0x7F, 0x00, 0};
 unsigned int D_8002A874 = 0;
 
 unsigned int D_8002A878 = 0;

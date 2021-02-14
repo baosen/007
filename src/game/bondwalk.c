@@ -62,8 +62,8 @@ int dword_CODE_bss_80075E64;
 char dword_CODE_bss_80075E68[0xBE0];
 int dword_CODE_bss_80076A48;
 
-struct rgba_val D_80032440[] = {{0x96, 0x96, 0x96, 0}, {0x96, 0x96, 0x96, 0}};
-struct rgba_val D_80032448[] = {
+struct color D_80032440[] = {{0x96, 0x96, 0x96, 0}, {0x96, 0x96, 0x96, 0}};
+struct color D_80032448[] = {
     {0xFF, 0xFF, 0xFF, 0}, {0xFF, 0xFF, 0xFF, 0}, {0xB2, 0x4D, 0x2E, 0}};
 unsigned int D_80032454 = 0;
 unsigned int D_80032458 = 0;
