@@ -144,14 +144,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "initintromatrices",
-    srcs = [
-        "initintromatrices.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "inititemslots",
     srcs = [
         "inititemslots.c",
