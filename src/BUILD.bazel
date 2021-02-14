@@ -49,7 +49,7 @@ link_elf(
         "//src/game/initcameraandthrown",
         "//src/game/initexplosioncasing",
         "//src/game/initgamedata",
-        "//src/game:initguards",
+        "//src/game/initguards",
         "//src/game/initimages",
         "//src/game/initintromatrices",
         "//src/game/inititemslots",

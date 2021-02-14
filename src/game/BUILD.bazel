@@ -57,15 +57,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "initguards",
-    srcs = [
-        "initguards.c",
-        "//src/game/chr:chr.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initnull_000BC0",
     srcs = [
         "initnull_000BC0.c",
