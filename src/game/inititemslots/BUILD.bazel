@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "inititemslots",
+    srcs = [
+        "inititemslots.c",
+    ],
+    visibility = ["//visibility:public"],
+)
