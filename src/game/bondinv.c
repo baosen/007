@@ -132,10 +132,7 @@ void add_additional_weapon_slot_to_player_inventory_guess(InvItem *item) {
 }
 
 void reorder_inventory_ptrs_based_on_id_code(InvItem *item) {
-  InvItem *prev, *next;
-
-  next = item->next;
-  prev = item->prev;
+  InvItem *next = item->next, *prev = item->prev;
 
   if (item == pPlayer->ptr_inventory_first_in_cycle) {
     if (item == item->next) {
