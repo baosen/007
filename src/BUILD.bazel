@@ -17,7 +17,7 @@ link_elf(
         "//src/game/blood:blood_image",
         "//src/game:bond",
         "//src/game:bond_data",
-        "//src/game:bondinv",
+        "//src/game/bondinv",
         "//src/game:bondwalk",
         "//src/game/bondwalk2",
         "//src/game/cheat_buttons",
