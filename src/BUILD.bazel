@@ -90,7 +90,7 @@ link_elf(
         "//src/game/radar",
         "//src/game:rsp",
         "//src/game:setguscale",
-        "//src/game:sin",
+        "//src/game/sin",
         "//src/game/spectrum",
         "//src/game:stan",
         "//src/game:textrelated",

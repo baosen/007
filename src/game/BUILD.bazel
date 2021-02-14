@@ -264,14 +264,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "sin",
-    srcs = [
-        "sin.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "stan",
     srcs = [
         "stan.c",

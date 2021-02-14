@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "sin",
+    srcs = [
+        "sin.c",
+    ],
+    visibility = ["//visibility:public"],
+)
