@@ -24,7 +24,7 @@ link_elf(
         "//src/game/chr",
         "//src/game/chr2",
         "//src/game/chrobjdata",
-        "//src/game:chrobjhandler",
+        "//src/game/chrobjhandler",
         "//src/game/cleanupSFXRelated",
         "//src/game/cleanup_alarms",
         "//src/game/cleanup_objectives",

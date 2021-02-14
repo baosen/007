@@ -1,0 +1,14 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "chrobjhandler",
+    srcs = [
+        "chrobjhandler.c",
+        "//src/game:bondtypes.h",
+        "//src/game:lvl.h",
+        "//src/game/ai:chrai.h",
+        "//src/system:includes",
+        "//src/system:music.h",
+    ],
+    visibility = ["//visibility:public"],
+)
