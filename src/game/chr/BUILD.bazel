@@ -1,0 +1,12 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "chr",
+    srcs = [
+        "chr.c",
+        "//src/game:bondtypes.h",
+        "//src/game:chr.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
