@@ -245,14 +245,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "loadobjectmodel",
-    srcs = [
-        "loadobjectmodel.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "lvl_2",
     srcs = [
         "lvl.h",
