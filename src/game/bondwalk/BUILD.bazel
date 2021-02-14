@@ -1,0 +1,14 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "bondwalk",
+    srcs = [
+        "bondwalk.c",
+        "//src/game:bondtypes.h",
+        "//src/game:chrobjdata.h",
+        "//src/game:player.h",
+        "//src/game:xyzpoint.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)

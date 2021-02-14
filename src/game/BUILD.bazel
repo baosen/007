@@ -4,6 +4,7 @@ exports_files([
     "bondtypes.h",
     "bond.h",
     "chr.h",
+    "chrobjdata.h",
     "player.h",
     "players.h",
     "unk_0A1DA0.h",
@@ -47,19 +48,6 @@ gecc_library(
         "//src/game:player.h",
         "//src/game:players.h",
         "//src/game:xyzpoint.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "bondwalk",
-    srcs = [
-        "bondwalk.c",
-        "//src/game:bondtypes.h",
-        "//src/game:chrobjdata.h",
-        "//src/game:player.h",
-        "//src/game:xyzpoint.h",
-        "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
 )
