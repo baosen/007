@@ -1,6 +1,7 @@
 load("//tools/gecc:gecc.bzl", "gecc_library")
 
 exports_files([
+    "bondaicommands.h",
     "bondtypes.h",
     "chr.h",
     "chrobjdata.h",
@@ -17,7 +18,7 @@ gecc_library(
     srcs = [
         "initunk_000B60.c",
         "//src/game:bondtypes.h",
-        "//src/game:chrobjdata.h",
+        "//src/game/chrobjdata:chrobjdata.h",
     ],
     visibility = ["//visibility:public"],
 )
@@ -27,18 +28,6 @@ gecc_library(
     srcs = [
         "chr2.c",
         "//src/game:bondtypes.h",
-        "//src/system:includes",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "chrobjdata",
-    srcs = [
-        "chrobjdata.c",
-        "//src/game:bondaicommands.h",
-        "//src/game:bondtypes.h",
-        "//src/game:chrobjdata.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],

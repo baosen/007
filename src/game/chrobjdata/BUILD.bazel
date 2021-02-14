@@ -1,13 +1,16 @@
 load("//tools/gecc:gecc.bzl", "gecc_library")
 
+exports_files([
+    "chrobjdata.h"
+])
+
 gecc_library(
-    name = "bondwalk",
+    name = "chrobjdata",
     srcs = [
-        "bondwalk.c",
+        "chrobjdata.c",
+        "chrobjdata.h",
+        "//src/game:bondaicommands.h",
         "//src/game:bondtypes.h",
-        "//src/game/chrobjdata:chrobjdata.h",
-        "//src/game:player.h",
-        "//src/game:xyzpoint.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
