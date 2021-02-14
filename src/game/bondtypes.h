@@ -240,6 +240,7 @@ struct watchMenuObjectiveText {
   unsigned short text;
   struct watchMenuObjectiveText *nextentry;
 };
+
 //! FIXME all but text field cannot be trusted
 struct objective_entry {
   unsigned int id;
