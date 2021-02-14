@@ -22,7 +22,7 @@ link_elf(
         "//src/game/bondwalk2",
         "//src/game/cheat_buttons",
         "//src/game/chr",
-        "//src/game:chr2",
+        "//src/game/chr2",
         "//src/game/chrobjdata",
         "//src/game:chrobjhandler",
         "//src/game/cleanupSFXRelated",

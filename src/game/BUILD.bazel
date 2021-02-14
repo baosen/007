@@ -24,16 +24,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "chr2",
-    srcs = [
-        "chr2.c",
-        "//src/game:bondtypes.h",
-        "//src/system:includes",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "chrobjhandler",
     srcs = [
         "chrobjhandler.c",
