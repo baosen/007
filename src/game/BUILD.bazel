@@ -345,14 +345,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "playerstats",
-    srcs = [
-        "playerstats.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "prop",
     srcs = [
         "prop.c",

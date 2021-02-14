@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "playerstats",
+    srcs = [
+        "playerstats.c",
+    ],
+    visibility = ["//visibility:public"],
+)
