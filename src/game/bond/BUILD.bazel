@@ -1,0 +1,26 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+exports_files([
+    "bond.h",
+])
+
+gecc_library(
+    name = "bond",
+    srcs = [
+        "bond.c",
+        "bond.h",
+        "//src/game:player.h",
+        "//src/game:players.h",
+        "//src/game:xyzpoint.h",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+gecc_library(
+    name = "bond_data",
+    srcs = [
+        "bond_data.c",
+        "//src/game:chr.h",
+    ],
+    visibility = ["//visibility:public"],
+)

@@ -4,7 +4,7 @@ gecc_library(
     name = "bondinv",
     srcs = [
         "bondinv.c",
-        "//src/game:bond.h",
+        "//src/game/bond:bond.h",
         "//src/game:chr.h",
         "//src/game:player.h",
         "//src/game:players.h",

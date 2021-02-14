@@ -4,7 +4,7 @@ gecc_library(
     name = "cleanupSFXRelated",
     srcs = [
         "cleanupSFXRelated.c",
-        "//src/game:bond.h",
+        "//src/game/bond:bond.h",
     ],
     visibility = ["//visibility:public"],
 )
