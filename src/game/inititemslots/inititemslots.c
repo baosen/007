@@ -51,7 +51,7 @@ glabel alloc_additional_item_slots
    xori  $a0, $t0, 0xf
   lui   $t2, %hi(pPlayer) 
   lw    $t2, %lo(pPlayer)($t2)
-  jal   reinit_BONDdata_inventory
+  jal   reinit_player_inventory
    sw    $v0, 0x11e4($t2)
   lw    $ra, 0x14($sp)
   addiu $sp, $sp, 0x18

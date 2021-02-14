@@ -9,7 +9,7 @@ typedef enum INV_ITEM_TYPE {
   INV_ITEM_DUAL
 } INV_ITEM_TYPE;
 
-void reinit_BONDdata_inventory(void) {
+void reinit_player_inventory(void) {
   int i;
   for (i = 0; i < pPlayer->equipmaxitems; i++) {
     pPlayer->p_itemcur[i].type = -1;

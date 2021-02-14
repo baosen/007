@@ -25996,7 +25996,7 @@ glabel mp_respawn_handler
   lw    $v0, ($s1)
   lwc1  $f8, 0x4bc($v0)
   div.s $f10, $f8, $f12
-  jal   reinit_BONDdata_inventory
+  jal   reinit_player_inventory
    swc1  $f10, 0x3c0($v0)
   lw    $t1, ($s1)
   li    $v0, 8
