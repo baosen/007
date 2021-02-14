@@ -4593,20 +4593,7 @@ glabel stanMatchTileName
    nop   
 ");
 
-asm(R"
-glabel sub_GAME_7F0B2F00
-  addiu $sp, $sp, -0x18
-  sw    $ra, 0x14($sp)
-  sw    $a0, 0x18($sp)
-  jal   stanMatchTileName
-   lw    $a0, ($a0)
-  lw    $t7, 0x18($sp)
-  sw    $v0, ($t7)
-  lw    $ra, 0x14($sp)
-  addiu $sp, $sp, 0x18
-  jr    $ra
-   nop   
-");
+void sub_GAME_7F0B2F00(int *arg0) { *arg0 = stanMatchTileName(*arg0); }
 
 asm(R"
 glabel stanDetermineEOF
