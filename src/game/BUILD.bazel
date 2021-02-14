@@ -125,15 +125,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "cleanupSFXRelated",
-    srcs = [
-        "cleanupSFXRelated.c",
-        "//src/game:bond.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "GlobalImageTable",
     srcs = [
         "GlobalImageTable.c",
