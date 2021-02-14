@@ -20,7 +20,7 @@ gecc_library(
     name = "bond_data",
     srcs = [
         "bond_data.c",
-        "//src/game:chr.h",
+        "//src/game/chr:chr.h",
     ],
     visibility = ["//visibility:public"],
 )
