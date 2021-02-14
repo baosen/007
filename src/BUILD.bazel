@@ -53,7 +53,7 @@ link_elf(
         "//src/game/initimages",
         "//src/game/initintromatrices",
         "//src/game/inititemslots",
-        "//src/game:initmenus",
+        "//src/game/initmenus",
         "//src/game:initmttex",
         "//src/game/initnull_0009D0",
         "//src/game:initnull_000BC0",
