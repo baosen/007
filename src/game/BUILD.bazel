@@ -144,14 +144,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "initmttex",
-    srcs = [
-        "initmttex.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initnull_000BC0",
     srcs = [
         "initnull_000BC0.c",
