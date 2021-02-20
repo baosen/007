@@ -14,14 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "initunk_007460",
-    srcs = [
-        "initunk_007460.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "lvl_2",
     srcs = [
         "lvl.h",

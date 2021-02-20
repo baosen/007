@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "initunk_007460",
+    srcs = [
+        "initunk_007460.c",
+    ],
+    visibility = ["//visibility:public"],
+)
