@@ -97,7 +97,7 @@ link_elf(
         "//src/game/truncf",
         "//src/game/unk_007800",
         "//src/game/unk_007920",
-        "//src/game:unk_007980",
+        "//src/game/unk_007980",
         "//src/game:unk_01B0E0",
         "//src/game:unk_01B240",
         "//src/game:unk_01BAE0",

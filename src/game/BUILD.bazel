@@ -14,14 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "unk_007980",
-    srcs = [
-        "unk_007980.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "unk_01B0E0",
     srcs = [
         "unk_01B0E0.c",
