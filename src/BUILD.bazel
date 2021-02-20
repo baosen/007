@@ -80,7 +80,7 @@ link_elf(
         "//src/game/music",
         "//src/game/null_007970",
         "//src/game/ob",
-        "//src/game:objecthandler",
+        "//src/game/objecthandler",
         "//src/game/objecthandler_2",
         "//src/game:objective",
         "//src/game:objective_status",
