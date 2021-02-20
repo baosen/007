@@ -14,14 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "objective",
-    srcs = [
-        "objective.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "objective_status2",
     srcs = [
         "objective_status2.c",

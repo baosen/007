@@ -82,7 +82,7 @@ link_elf(
         "//src/game/ob",
         "//src/game/objecthandler",
         "//src/game/objecthandler_2",
-        "//src/game:objective",
+        "//src/game/objective",
         "//src/game:objective_status",
         "//src/game:objective_status2",
         "//src/game/playerstats",
