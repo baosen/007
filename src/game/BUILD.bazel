@@ -14,24 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "objective_status",
-    srcs = [
-        "objective_status.c",
-        "//src/game:bondtypes.h",
-        "//src/system:includes",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
-    name = "prop",
-    srcs = [
-        "prop.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "rsp",
     srcs = [
         "rsp.c",
