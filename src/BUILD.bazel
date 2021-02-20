@@ -73,7 +73,7 @@ link_elf(
         "//src/game/intro_logos",
         "//src/game/lightfixture",
         "//src/game/loadobjectmodel",
-        "//src/game:lvl",
+        "//src/game/lvl",
         "//src/game/lvl_2",
         "//src/game:lvl_text",
         "//src/game:mainmenu",

@@ -1,0 +1,12 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "lvl",
+    srcs = [
+        "lvl.c",
+        "//src/game:mainmenu.h",
+        "//src/game:bondtypes.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)
