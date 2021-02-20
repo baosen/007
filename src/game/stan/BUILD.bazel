@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "stan",
+    srcs = [
+        "stan.c",
+    ],
+    visibility = ["//visibility:public"],
+)

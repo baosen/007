@@ -121,14 +121,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "stan",
-    srcs = [
-        "stan.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "textrelated",
     srcs = [
         "textrelated.c",

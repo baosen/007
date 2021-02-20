@@ -92,7 +92,7 @@ link_elf(
         "//src/game:setguscale",
         "//src/game/sin",
         "//src/game/spectrum",
-        "//src/game:stan",
+        "//src/game/stan",
         "//src/game:textrelated",
         "//src/game:truncf",
         "//src/game:unk_007800",
