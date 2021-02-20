@@ -7215,7 +7215,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
   lw    $a2, 0x2a4($sp)
   addiu $a0, $sp, 0x264
   addiu $a1, $sp, 0x1a4
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $a2, 0xc0
   lw    $t5, 0x1a0($sp)
   lw    $v0, 8($t5)
@@ -7270,7 +7270,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
 .L7F060FC4:
   addiu $a0, $sp, 0x264
   addiu $a1, $sp, 0x1a4
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $a2, 0x100
   lw    $v0, 0x10c($sp)
 .L7F060FD8:
@@ -7729,7 +7729,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
   addiu $a0, $sp, 0x264
   addiu $a1, $sp, 0x1a4
   swc1  $f10, 0x1dc($sp)
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addu  $a2, $t5, $t7
   lw    $t9, 0x1a0($sp)
 .L7F0616BC:
@@ -8998,7 +8998,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
   lw    $a2, 0x2a4($sp)
   addiu $a0, $sp, 0x264
   addiu $a1, $sp, 0x1a4
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $a2, 0xc0
   lw    $t5, 0x1a0($sp)
   lw    $v0, 8($t5)
@@ -9053,7 +9053,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
 .Ljp7F0614E4:
   addiu $a0, $sp, 0x264
   addiu $a1, $sp, 0x1a4
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $a2, 0x100
   lw    $v0, 0x10c($sp)
 .Ljp7F0614F8:
@@ -9512,7 +9512,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
   addiu $a0, $sp, 0x264
   addiu $a1, $sp, 0x1a4
   swc1  $f10, 0x1dc($sp)
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addu  $a2, $t5, $t7
   lw    $t9, 0x1a0($sp)
 .Ljp7F061BDC:
@@ -11476,7 +11476,7 @@ glabel set_enviro_fog_for_items_in_solo_watch_menu
    lw    $a0, 4($v1)
   lw    $a0, 0x1a0($sp)
   addiu $a1, $sp, 0x74
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $s0, 0xc0
   lw    $v0, 8($s2)
   lw    $v1, 0x14($v0)
@@ -11488,7 +11488,7 @@ glabel set_enviro_fog_for_items_in_solo_watch_menu
    lw    $a0, 4($v1)
   lw    $a0, 0x1a0($sp)
   addiu $a1, $sp, 0x74
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $s0, 0x100
   lw    $v0, 8($s2)
 .L7F0631F4:
@@ -11507,7 +11507,7 @@ glabel set_enviro_fog_for_items_in_solo_watch_menu
   lw    $a0, 0x1a0($sp)
   addiu $a1, $sp, 0x74
   sll   $t6, $t7, 6
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addu  $a2, $t6, $s0
   lw    $v0, 8($s2)
   lw    $a0, 0x1c($v0)
@@ -11526,7 +11526,7 @@ glabel set_enviro_fog_for_items_in_solo_watch_menu
   lw    $a0, 0x1a0($sp)
   addiu $a1, $sp, 0x74
   sll   $t3, $t2, 6
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addu  $a2, $t3, $s0
   lh    $t4, 0xc($s2)
 .L7F063284:
@@ -11932,7 +11932,7 @@ glabel sub_GAME_7F06359C
 .L7F063788:
   addu  $a2, $t0, $s7
   lw    $a0, 0x53c($sp)
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a1, $sp, 0x41c
   lw    $t7, 0x70($sp)
   addiu $s1, $s1, 1
@@ -12115,7 +12115,7 @@ glabel sub_GAME_7F06359C
    addiu $a1, $sp, 0x41c
   move  $a0, $s5
   addiu $a1, $sp, 0x41c
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x30c
   sll   $t6, $s1, 6
   addu  $a1, $t6, $s7

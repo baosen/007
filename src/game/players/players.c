@@ -2178,7 +2178,7 @@ def_7F094A38:
    move  $s0, $v0
   move  $a0, $s0
   move  $a1, $v0
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x3cc
   li    $at, 0x3F800000 # 1.000000
   mtc1  $at, $f8
@@ -2193,7 +2193,7 @@ def_7F094A38:
   lui   $a1, %hi(dword_CODE_bss_80079E98)
   addiu $a1, %lo(dword_CODE_bss_80079E98) # addiu $a1, $a1, -0x6168
   addiu $a0, $sp, 0x3cc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x38c
   blez  $s1, .L7F09594C
    sw    $zero, 0x270($sp)
@@ -3708,7 +3708,7 @@ def_7F095E0C:
    move  $s0, $v0
   move  $a0, $s0
   move  $a1, $v0
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x1e4
   lwc1  $f8, 0x58($sp)
   lui   $a0, %hi(dword_CODE_bss_80079E98)
@@ -3721,7 +3721,7 @@ def_7F095E0C:
   lui   $a1, %hi(dword_CODE_bss_80079E98)
   addiu $a1, %lo(dword_CODE_bss_80079E98) # addiu $a1, $a1, -0x6168
   addiu $a0, $sp, 0x1e4
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x1a4
   blez  $s1, .L7F097024
    sw    $zero, 0x88($sp)

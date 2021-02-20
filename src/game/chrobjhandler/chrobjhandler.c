@@ -4428,7 +4428,7 @@ glabel sub_GAME_7F0431E4
    addiu $a1, $sp, 0x8c
   addiu $a0, $sp, 0x8c
   lw    $a1, 0x28($sp)
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x4c
   lwc1  $f2, 0x4c($sp)
   lwc1  $f14, 0x50($sp)
@@ -4922,7 +4922,7 @@ glabel sub_GAME_7F043838
    sub.s $f12, $f8, $f4
   addiu $a0, $sp, 0x70
   addiu $a1, $sp, 0x30
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    lw    $a2, 0x12c($sp)
   lw    $ra, 0x14($sp)
   addiu $sp, $sp, 0x128
@@ -11070,7 +11070,7 @@ glabel object_interaction
   addiu $a2, $s2, 0x40
   sw    $a2, 0x6c($sp)
   addiu $a0, $sp, 0x320
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a1, $v0, 0x84
   lwc1  $f8, ($s0)
   addiu $s2, $sp, 0x360
@@ -16176,7 +16176,7 @@ glabel object_interaction
   addiu $a2, $s2, 0x40
   sw    $a2, 0x70($sp)
   addiu $a0, $sp, 0x324
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a1, $v0, 0x84
   lwc1  $f8, ($s0)
   addiu $s2, $sp, 0x364

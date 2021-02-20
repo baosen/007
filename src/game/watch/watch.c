@@ -8084,18 +8084,18 @@ glabel sub_GAME_7F0AADC0
    sub.s $f12, $f8, $f10
   addiu $a0, $sp, 0x4fc
   addiu $a1, $sp, 0x4bc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x43c
   addiu $a0, $sp, 0x43c
   addiu $a1, $sp, 0x47c
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x3fc
   addiu $a0, $sp, 0x370
   jal   init_something_copy_posdata_to_it
    addiu $a1, $sp, 0x43c
   addiu $a0, $sp, 0x43c
   addiu $a1, $sp, 0x3fc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x3bc
   jal   controllerCheckDualControllerTypesAllowed
    nop   
@@ -8149,7 +8149,7 @@ glabel sub_GAME_7F0AADC0
   addiu $a0, $sp, 0x32c
 .L7F0AB0E0:
   addiu $a1, $sp, 0x3bc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x37c
   li    $at, 0x447A0000 # 1000.000000
   mtc1  $at, $f10
@@ -8284,18 +8284,18 @@ glabel sub_GAME_7F0AADC0
    sub.s $f12, $f8, $f10
   addiu $a0, $sp, 0x4fc
   addiu $a1, $sp, 0x4bc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x43c
   addiu $a0, $sp, 0x43c
   addiu $a1, $sp, 0x47c
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x3fc
   addiu $a0, $sp, 0x370
   jal   init_something_copy_posdata_to_it
    addiu $a1, $sp, 0x43c
   addiu $a0, $sp, 0x43c
   addiu $a1, $sp, 0x3fc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x3bc
   lui   $at, %hi(D_80058568)
   lwc1  $f0, %lo(D_80058568)($at)
@@ -8318,7 +8318,7 @@ glabel sub_GAME_7F0AADC0
    swc1  $f4, 0x24($sp)
   addiu $a0, $sp, 0x2ec
   addiu $a1, $sp, 0x3bc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x37c
   li    $at, 0x447A0000 # 1000.000000
   mtc1  $at, $f6
@@ -8555,18 +8555,18 @@ glabel sub_GAME_7F0AADC0
    sub.s $f12, $f6, $f8
   addiu $a0, $sp, 0x4fc
   addiu $a1, $sp, 0x4bc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x43c
   addiu $a0, $sp, 0x43c
   addiu $a1, $sp, 0x47c
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x3fc
   addiu $a0, $sp, 0x370
   jal   init_something_copy_posdata_to_it
    addiu $a1, $sp, 0x43c
   addiu $a0, $sp, 0x43c
   addiu $a1, $sp, 0x3fc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x3bc
   jal   controllerCheckDualControllerTypesAllowed
    nop   
@@ -8620,7 +8620,7 @@ glabel sub_GAME_7F0AADC0
   addiu $a0, $sp, 0x32c
 .Ljp7F0ABC94:
   addiu $a1, $sp, 0x3bc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x37c
   li    $at, 0x447A0000 # 1000.000000
   mtc1  $at, $f8
@@ -8752,18 +8752,18 @@ glabel sub_GAME_7F0AADC0
    sub.s $f12, $f4, $f6
   addiu $a0, $sp, 0x4fc
   addiu $a1, $sp, 0x4bc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x43c
   addiu $a0, $sp, 0x43c
   addiu $a1, $sp, 0x47c
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x3fc
   addiu $a0, $sp, 0x370
   jal   init_something_copy_posdata_to_it
    addiu $a1, $sp, 0x43c
   addiu $a0, $sp, 0x43c
   addiu $a1, $sp, 0x3fc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x3bc
   lui   $at, %hi(D_80058568) # $at, 0x8006
   lwc1  $f0, %lo(D_80058568)($at)
@@ -8786,7 +8786,7 @@ glabel sub_GAME_7F0AADC0
    swc1  $f18, 0x24($sp)
   addiu $a0, $sp, 0x2ec
   addiu $a1, $sp, 0x3bc
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a2, $sp, 0x37c
   li    $at, 0x447A0000 # 1000.000000
   mtc1  $at, $f10

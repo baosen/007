@@ -56,9 +56,9 @@ glabel matrix_4x4_copy
 ");
 
 void matrix_4x4_multiply_in_place(Mtxf *lhs, Mtxf *rhs) {
-  void sub_GAME_7F0580C8(Mtxf * lhs, Mtxf * rhs, Mtxf * result);
+  void matrix_4x4_multiply(Mtxf * lhs, Mtxf * rhs, Mtxf * result);
   Mtxf result;
-  sub_GAME_7F0580C8(lhs, rhs, &result);
+  matrix_4x4_multiply(lhs, rhs, &result);
   matrix_4x4_copy(&result, rhs);
 }
 
@@ -79,7 +79,7 @@ glabel matrix_4x4_multiply_homogeneous_in_place
 ");
 
 asm(R"
-glabel sub_GAME_7F0580C8
+glabel matrix_4x4_multiply
   move  $v1, $zero
   move  $t0, $a0
   li    $t2, 16

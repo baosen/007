@@ -24178,7 +24178,7 @@ glabel sub_GAME_7F0876C4
   addiu $s1, $sp, 0x60
   move  $a2, $s1
   move  $a0, $v0
-  jal   sub_GAME_7F0580C8
+  jal   matrix_4x4_multiply
    addiu $a1, $sp, 0xc4
   li    $at, 0xC6FA0000 # -32000.000000
   mtc1  $at, $f12
