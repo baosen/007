@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "setguscale",
+    srcs = [
+        "setguscale.c",
+    ],
+    visibility = ["//visibility:public"],
+)
