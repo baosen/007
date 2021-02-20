@@ -57,7 +57,7 @@ link_elf(
         "//src/game/initmttex",
         "//src/game/initnull_0009D0",
         "//src/game/initnull_000BC0",
-        "//src/game:initobjects",
+        "//src/game/initobjects",
         "//src/game:initpathtablelinks",
         "//src/game:initpathtablesomething",
         "//src/game/initunk_0009E0",

@@ -1,6 +1,6 @@
 initanitable/initanitable.o (.data)
 debugmenu/deb_loadallmodels.o (.data)
-initobjects.o (.data)
+initobjects/initobjects.o (.data)
 initBondDATA/initBondDATA.o (.data)
 initcameraandthrown/initcameraandthrown.o (.data)
 initBondDATAdefaults/initBondDATAdefaults.o (.data)

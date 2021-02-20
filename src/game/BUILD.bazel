@@ -14,15 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "initobjects",
-    srcs = [
-        "initobjects.c",
-        "//src/game/ai:chrai.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initpathtablelinks",
     srcs = [
         "initpathtablelinks.c",
