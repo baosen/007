@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "rsp",
+    srcs = [
+        "rsp.c",
+    ],
+    visibility = ["//visibility:public"],
+)

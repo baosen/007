@@ -14,14 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "rsp",
-    srcs = [
-        "rsp.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "textrelated",
     srcs = [
         "textrelated.c",
