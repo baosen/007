@@ -62,15 +62,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "sqrt_tan_angle_plus_one",
-    srcs = [
-        "sqrt_tan_angle_plus_one.c",
-        "//src/libultra/include",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "unk_05AB70",
     srcs = [
         "unk_05AB70.c",
