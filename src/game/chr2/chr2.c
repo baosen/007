@@ -12600,7 +12600,7 @@ glabel sub_GAME_7F02D630
    swc1  $f8, 8($s0)
   move  $a0, $v0
   lw    $a1, 0xb4($sp)
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a2, $sp, 0x74
   addiu $a0, $sp, 0x74
   jal   sub_GAME_7F058474
@@ -12617,7 +12617,7 @@ glabel sub_GAME_7F02D630
    sw    $v0, 0x6c($sp)
   move  $a0, $v0
   lw    $a1, 0x6c($sp)
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a2, $sp, 0x2c
   lwc1  $f10, 0x5c($sp)
   li    $a2, 1

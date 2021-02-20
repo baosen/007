@@ -30151,7 +30151,7 @@ glabel sub_GAME_7F08B0F0
    lw    $s0, 0xc($t3)
   move  $a0, $v0
   move  $a1, $s0
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a2, $sp, 0xa4
   li    $at, 0x40E00000 # 7.000000
   mtc1  $at, $f0
@@ -31086,7 +31086,7 @@ glabel sub_GAME_7F08BEEC
    nop   
   move  $a0, $v0
   move  $a1, $s0
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    move  $a2, $s2
   lw    $v0, ($s3)
   lwc1  $f4, 0x70($sp)

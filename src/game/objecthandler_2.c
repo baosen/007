@@ -1457,7 +1457,7 @@ glabel process_01_group_heading
   move  $a0, $a3
 .L7F06D858:
   addiu $a1, $sp, 0x20
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    lw    $a2, 0x60($sp)
   b     .L7F06D8A4
    lw    $ra, 0x14($sp)
@@ -1542,7 +1542,7 @@ glabel sub_GAME_7F06D8B0
   sll   $t0, $t9, 6
   addu  $a2, $t0, $t8
   sw    $a2, 0x1c($sp)
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a1, $sp, 0x68
   lui   $v0, %hi(D_80036090)
   lw    $v0, %lo(D_80036090)($v0)
@@ -1584,7 +1584,7 @@ glabel sub_GAME_7F06D8B0
   lw    $a0, 0xac($sp)
   sll   $t9, $t7, 6
   addiu $a1, $sp, 0x68
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addu  $a2, $t9, $t0
   b     .L7F06DA1C
    lw    $t4, 0xb4($sp)
@@ -1676,7 +1676,7 @@ glabel sub_GAME_7F06D8B0
    move  $a0, $t3
   sll   $t2, $t4, 6
   addu  $a2, $t2, $t5
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    lw    $a1, 0x28($sp)
 .L7F06DB4C:
   lw    $ra, 0x14($sp)
@@ -1746,7 +1746,7 @@ glabel sub_GAME_7F06DB5C
   sll   $t0, $t9, 6
   addu  $a2, $t0, $t8
   sw    $a2, 0x1c($sp)
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a1, $sp, 0x58
   lui   $v0, %hi(D_80036090)
   lw    $v0, %lo(D_80036090)($v0)
@@ -1785,7 +1785,7 @@ glabel sub_GAME_7F06DB5C
   lw    $a0, 0x9c($sp)
   sll   $t9, $t7, 6
   addiu $a1, $sp, 0x58
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addu  $a2, $t9, $t0
   b     .L7F06DCBC
    lw    $t4, 0xa4($sp)
@@ -1879,7 +1879,7 @@ glabel sub_GAME_7F06DB5C
    move  $a0, $t3
   sll   $t2, $t4, 6
   addu  $a2, $t2, $t5
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    lw    $a1, 0x28($sp)
 .L7F06DDF4:
   lw    $ra, 0x14($sp)
@@ -2285,7 +2285,7 @@ glabel sub_GAME_7F06E2B8
   lw    $a0, 0x94($sp)
   sll   $t5, $v1, 6
   addiu $a1, $sp, 0x50
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addu  $a2, $t5, $t6
   b     .L7F06E388
    lw    $t8, 0x9c($sp)
@@ -2341,7 +2341,7 @@ glabel sub_GAME_7F06E2B8
   lw    $a0, 0x94($sp)
   sll   $t3, $t1, 6
   addiu $a1, $sp, 0x50
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addu  $a2, $t3, $t4
   b     .L7F06E464
    lw    $v1, 0x24($sp)
@@ -2408,7 +2408,7 @@ glabel sub_GAME_7F06E2B8
    move  $a0, $t4
   sll   $t6, $t5, 6
   addu  $a2, $t6, $t7
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    lw    $a1, 0x30($sp)
 .L7F06E52C:
   lw    $ra, 0x1c($sp)
@@ -2631,7 +2631,7 @@ glabel process_15_subposition
   lw    $a0, 0x68($sp)
   sll   $t9, $v1, 6
   addiu $a1, $sp, 0x28
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addu  $a2, $t9, $t0
   b     .L7F06E84C
    lw    $ra, 0x14($sp)

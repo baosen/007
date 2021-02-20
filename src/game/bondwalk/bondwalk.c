@@ -5728,7 +5728,7 @@ glabel sub_GAME_7F05F928
    nop   
   move  $a0, $v0
   move  $a1, $s2
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    lw    $a2, 0xc($s1)
   lw    $t2, 8($s1)
   move  $a0, $s1
@@ -7007,7 +7007,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
    nop   
   move  $a0, $v0
   lw    $a1, 0x44($sp)
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    lw    $a2, 0x40($sp)
   li    $t7, 1
   sb    $t7, 0xf($s0)
@@ -7692,7 +7692,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
   addiu $a0, $sp, 0x264
   sll   $t9, $t7, 6
   addiu $a1, $sp, 0x1a4
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addu  $a2, $t9, $t6
   lw    $t5, 0x1a0($sp)
 .L7F061630:
@@ -8790,7 +8790,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
    nop   
   move  $a0, $v0
   lw    $a1, 0x44($sp)
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    lw    $a2, 0x40($sp)
   li    $t7, 1
   sb    $t7, 0xf($s0)
@@ -9475,7 +9475,7 @@ glabel handles_firing_or_throwing_weapon_in_hand
   addiu $a0, $sp, 0x264
   sll   $t9, $t7, 6
   addiu $a1, $sp, 0x1a4
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addu  $a2, $t9, $t6
   lw    $t5, 0x1a0($sp)
 .Ljp7F061B50:
@@ -22023,7 +22023,7 @@ glabel sub_GAME_7F068EC4
    nop   
   move  $a0, $v0
   addiu $a1, $sp, 0x3c
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    lw    $a2, 0xc8($sp)
   lui   $at, %hi(D_8005440C)
   lwc1  $f12, %lo(D_8005440C)($at)

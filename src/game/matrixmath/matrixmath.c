@@ -67,7 +67,7 @@ glabel matrix_4x4_multiply_homogeneous_in_place
   addiu $sp, $sp, -0x58
   sw    $ra, 0x14($sp)
   sw    $a1, 0x5c($sp)
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a2, $sp, 0x18
   addiu $a0, $sp, 0x18
   jal   matrix_4x4_copy
@@ -134,7 +134,7 @@ glabel matrix_4x4_multiply
 ");
 
 asm(R"
-glabel sub_GAME_7F05818C
+glabel matrix_4x4_multiply_homogeneous
   move  $v1, $zero
   move  $t0, $a0
   li    $t4, 12

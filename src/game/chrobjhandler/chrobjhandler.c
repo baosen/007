@@ -5041,7 +5041,7 @@ glabel sub_GAME_7F043A6C
    nop   
   move  $a0, $v0
   lw    $a1, 0x28($sp)
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a2, $sp, 0x6c
   addiu $a0, $sp, 0x6c
   jal   sub_GAME_7F059FB8
@@ -5049,7 +5049,7 @@ glabel sub_GAME_7F043A6C
   lw    $a2, 0x6c($s0)
   addiu $a0, $sp, 0x2c
   move  $a1, $s1
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a2, $a2, 4
   b     .L7F043B68
    li    $v0, 1
@@ -6110,7 +6110,7 @@ glabel sub_GAME_7F0442DC
   lw    $a1, 0x6c($s1)
   lw    $a0, 0x2c($sp)
   move  $a2, $v0
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a1, $a1, 4
   lw    $t3, 8($s0)
   move  $a0, $s0
@@ -11040,7 +11040,7 @@ glabel object_interaction
    nop   
   move  $a0, $v0
   addiu $a1, $sp, 0x3a4
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    move  $a2, $s2
   lbu   $v0, 3($s1)
   li    $at, 6
@@ -11720,7 +11720,7 @@ glabel object_interaction
   addiu $s0, $sp, 0x16c
   move  $a2, $s0
   move  $a0, $v0
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    lw    $a1, 0x6c($sp)
   lw    $a0, 0x158($sp)
   move  $a1, $s0
@@ -11984,7 +11984,7 @@ glabel object_interaction
   addiu $s1, $sp, 0xb8
   move  $a2, $s1
   move  $a0, $v0
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    move  $a1, $s2
   move  $a0, $s1
   jal   sub_GAME_7F058474
@@ -16146,7 +16146,7 @@ glabel object_interaction
    nop   
   move  $a0, $v0
   addiu $a1, $sp, 0x3a8
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    move  $a2, $s2
   lbu   $v0, 3($s1)
   li    $at, 6
@@ -16826,7 +16826,7 @@ glabel object_interaction
   addiu $s0, $sp, 0x170
   move  $a2, $s0
   move  $a0, $v0
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    lw    $a1, 0x70($sp)
   lw    $a0, 0x15c($sp)
   move  $a1, $s0
@@ -17090,7 +17090,7 @@ glabel object_interaction
   addiu $s1, $sp, 0xbc
   move  $a2, $s1
   move  $a0, $v0
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    move  $a1, $s2
   move  $a0, $s1
   jal   sub_GAME_7F058474
@@ -21877,7 +21877,7 @@ glabel sub_GAME_7F04C130
    sw    $t6, 0x54($sp)
   move  $a0, $v0
   lw    $a1, 0x58($sp)
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a2, $sp, 0xb8
   lw    $t4, ($s1)
   li    $t9, 29
@@ -23593,7 +23593,7 @@ glabel sub_GAME_7F04DE18
    sw    $v0, 0x84($sp)
   move  $a0, $v0
   lw    $a1, 0x84($sp)
-  jal   sub_GAME_7F05818C
+  jal   matrix_4x4_multiply_homogeneous
    addiu $a2, $sp, 0x44
   lw    $v1, 0x88($sp)
   addiu $a0, $sp, 0x74
