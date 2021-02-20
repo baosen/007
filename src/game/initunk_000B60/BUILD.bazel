@@ -1,0 +1,11 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "initunk_000B60",
+    srcs = [
+        "initunk_000B60.c",
+        "//src/game:bondtypes.h",
+        "//src/game/chrobjdata:chrobjdata.h",
+    ],
+    visibility = ["//visibility:public"],
+)

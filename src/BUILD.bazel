@@ -61,7 +61,7 @@ link_elf(
         "//src/game:initpathtablelinks",
         "//src/game:initpathtablesomething",
         "//src/game/initunk_0009E0",
-        "//src/game:initunk_000B60",
+        "//src/game/initunk_000B60",
         "//src/game:initunk_005450",
         "//src/game:initunk_005520",
         "//src/game:initunk_007180",
