@@ -14,14 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "initpathtablelinks",
-    srcs = [
-        "initpathtablelinks.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initpathtablesomething",
     srcs = [
         "initpathtablesomething.c",
