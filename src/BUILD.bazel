@@ -110,7 +110,7 @@ link_elf(
         "//src/game/float2int",
         "//src/game/unk_08DBB0",
         "//src/game/unk_091080",
-        "//src/game:unk_092890",
+        "//src/game/unk_092890",
         "//src/game:unk_092E50",
         "//src/game/players",
         "//src/game:unk_09B600",
