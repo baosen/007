@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "objective_status2",
+    srcs = [
+        "objective_status2.c",
+    ],
+    visibility = ["//visibility:public"],
+)
