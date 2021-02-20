@@ -14,14 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "objecthandler_2",
-    srcs = [
-        "objecthandler_2.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "objecthandler",
     srcs = [
         "objecthandler.c",

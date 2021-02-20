@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "objecthandler_2",
+    srcs = [
+        "objecthandler_2.c",
+    ],
+    visibility = ["//visibility:public"],
+)
