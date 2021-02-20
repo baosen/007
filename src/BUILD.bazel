@@ -94,7 +94,7 @@ link_elf(
         "//src/game/spectrum",
         "//src/game/stan",
         "//src/game:textrelated",
-        "//src/game:truncf",
+        "//src/game/truncf",
         "//src/game:unk_007800",
         "//src/game:unk_007920",
         "//src/game:unk_007980",

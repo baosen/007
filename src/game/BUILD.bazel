@@ -22,14 +22,6 @@ gecc_library(
 )
 
 gecc_library(
-    name = "truncf",
-    srcs = [
-        "truncf.c",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "unk_007800",
     srcs = [
         "unk_007800.c",
