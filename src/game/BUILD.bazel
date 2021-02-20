@@ -13,13 +13,6 @@ exports_files([
     "lvl.h",
 ])
 
-gecc_library(
-    name = "initunk_007290",
-    srcs = [
-        "initunk_007290.c",
-    ],
-    visibility = ["//visibility:public"],
-)
 
 gecc_library(
     name = "initunk_0072B0",
