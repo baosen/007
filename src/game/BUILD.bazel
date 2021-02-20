@@ -14,18 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "mainmenu",
-    srcs = [
-        "mainmenu.c",
-        "//src/game:mainmenu.h",
-        "//src/game:bondtypes.h",
-        "//src/system:includes",
-        "//src/system:music.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "null_007970",
     srcs = [
         "null_007970.c",
