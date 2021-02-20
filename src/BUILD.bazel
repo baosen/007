@@ -75,7 +75,7 @@ link_elf(
         "//src/game/loadobjectmodel",
         "//src/game/lvl",
         "//src/game/lvl_2",
-        "//src/game:lvl_text",
+        "//src/game/lvl_text",
         "//src/game:mainmenu",
         "//src/game/music",
         "//src/game:null_007970",

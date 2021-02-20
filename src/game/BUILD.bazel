@@ -14,16 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "lvl_text",
-    srcs = [
-        "lvl_text.c",
-        "//src/game:bondtypes.h",
-        "//src/system:includes",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "mainmenu",
     srcs = [
         "mainmenu.c",
