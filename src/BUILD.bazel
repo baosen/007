@@ -67,7 +67,7 @@ link_elf(
         "//src/game/initunk_007180",
         "//src/game/initunk_007290",
         "//src/game/initunk_0072B0",
-        "//src/game:initunk_0073B0",
+        "//src/game/initunk_0073B0",
         "//src/game:initunk_007460",
         "//src/game/initweaponanigroups",
         "//src/game/intro_logos",
