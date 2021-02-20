@@ -1,0 +1,11 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "intro_logos",
+    srcs = [
+        "intro_logos.c",
+        "//src/game:bondtypes.h",
+        "//src/system:includes",
+    ],
+    visibility = ["//visibility:public"],
+)

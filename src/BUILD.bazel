@@ -70,7 +70,7 @@ link_elf(
         "//src/game:initunk_0073B0",
         "//src/game:initunk_007460",
         "//src/game/initweaponanigroups",
-        "//src/game:intro_logos",
+        "//src/game/intro_logos",
         "//src/game/lightfixture",
         "//src/game/loadobjectmodel",
         "//src/game:lvl",
