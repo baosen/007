@@ -10,7 +10,7 @@ link_elf(
         "//src/cfb",
         "//src/decompbuf:decompressbuffer",
         "//src/font",
-        "//src/game:GlobalImageTable",
+        "//src/game/GlobalImageTable",
         "//src/game/bg",
         "//src/game/blood:blood_animation",
         "//src/game/blood:blood_decrypt",

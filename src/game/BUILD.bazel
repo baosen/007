@@ -14,16 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "GlobalImageTable",
-    srcs = [
-        "GlobalImageTable.c",
-        "//src/game:bondtypes.h",
-        "//src/system:includes",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initnull_000BC0",
     srcs = [
         "initnull_000BC0.c",
