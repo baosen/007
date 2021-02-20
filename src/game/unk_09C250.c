@@ -4993,7 +4993,7 @@ glabel sub_GAME_7F0A0034
   jal   get_BONDdata_field_10CC
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s4
   lwc1  $f0, 0xb0($sp)
   c.lt.s $f0, $f20

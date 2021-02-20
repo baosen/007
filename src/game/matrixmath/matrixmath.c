@@ -63,7 +63,7 @@ void matrix_4x4_multiply_in_place(Mtxf *lhs, Mtxf *rhs) {
 }
 
 asm(R"
-glabel sub_GAME_7F058098
+glabel matrix_4x4_multiply_homogeneous_in_place
   addiu $sp, $sp, -0x58
   sw    $ra, 0x14($sp)
   sw    $a1, 0x5c($sp)

@@ -24718,7 +24718,7 @@ glabel sub_GAME_7F087E74
   jal   get_BONDdata_field_10CC
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    addiu $a1, $sp, 0x178
   lw    $t9, 0x160($sp)
   lh    $a0, 0xe($t9)
@@ -25238,7 +25238,7 @@ glabel sub_GAME_7F087E74
   jal   get_BONDdata_field_10CC
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    addiu $a1, $sp, 0x178
   lw    $t9, 0x160($sp)
   lh    $a0, 0xe($t9)

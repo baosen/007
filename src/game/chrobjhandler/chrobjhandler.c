@@ -10859,7 +10859,7 @@ glabel object_interaction
   jal   get_BONDdata_field_10CC
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s2
   lw    $v0, 8($s4)
   lui   $t3, %hi(prop_eyelid_door_related) 
@@ -11088,7 +11088,7 @@ glabel object_interaction
   jal   get_BONDdata_field_10CC
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x6c($sp)
   b     .L7F0491C8
    lw    $t7, 8($s4)
@@ -11139,7 +11139,7 @@ glabel object_interaction
   jal   get_BONDdata_field_10CC
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x6c($sp)
   lw    $t5, 8($s4)
   addiu $a1, $s2, 0x80
@@ -11153,7 +11153,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x68($sp)
   lw    $a0, 0x6c($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x68($sp)
   lw    $t0, 8($s4)
   move  $a0, $s4
@@ -11177,7 +11177,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    move  $a1, $s2
   lw    $a0, 0x68($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s2
   lw    $t2, 8($s4)
   lw    $v1, 8($t2)
@@ -11196,7 +11196,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    lw    $a0, 4($t8)
   lw    $a0, 0x68($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s2
   lw    $t7, 8($s4)
   lw    $v1, 8($t7)
@@ -11220,7 +11220,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    move  $a1, $s2
   lw    $a0, 0x68($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s2
   b     .L7F0491C8
    lw    $t7, 8($s4)
@@ -11262,7 +11262,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    sw    $a1, 0x6c($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x6c($sp)
   lw    $t3, 8($s4)
   addiu $a1, $s2, 0x80
@@ -11272,7 +11272,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    sw    $a1, 0x68($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x68($sp)
   lw    $t4, 8($s4)
   addiu $a1, $s2, 0xc0
@@ -11282,7 +11282,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    sw    $a1, 0x74($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x74($sp)
   lw    $t5, 8($s4)
   addiu $s0, $s2, 0x100
@@ -11292,7 +11292,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    lw    $a0, 4($t7)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s0
   b     .L7F0491C8
    lw    $t7, 8($s4)
@@ -11458,7 +11458,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x74($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x74($sp)
   addiu $s0, $s2, 0x100
   move  $a1, $s0
@@ -11468,10 +11468,10 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    move  $a1, $s0
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s0
   addiu $a0, $sp, 0x26c
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    addiu $a1, $sp, 0x2ac
   addiu $a1, $s2, 0x40
   sw    $a1, 0x6c($sp)
@@ -11481,7 +11481,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x6c($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x6c($sp)
   addiu $a1, $s2, 0x80
   sw    $a1, 0x68($sp)
@@ -11491,7 +11491,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x68($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x68($sp)
   b     .L7F0491C8
    lw    $t7, 8($s4)
@@ -11600,7 +11600,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x68($sp)
   lw    $a0, 0x6c($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x68($sp)
   lw    $t6, 8($s4)
   move  $a0, $s4
@@ -11622,7 +11622,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    move  $a1, $s0
   lw    $a0, 0x6c($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s0
   lw    $t5, 8($s4)
   lw    $v1, 8($t5)
@@ -11639,7 +11639,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    move  $a1, $v0
   lw    $a0, 0x6c($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s0
   b     .L7F0491C8
    lw    $t7, 8($s4)
@@ -11685,7 +11685,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x6c($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x6c($sp)
   addiu $a1, $s2, 0xc0
   lwc1  $f12, 0x154($sp)
@@ -11695,7 +11695,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x74($sp)
   lw    $a0, 0x6c($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x74($sp)
   lui   $at, %hi(D_80052B70)
   addiu $s0, $s2, 0x100
@@ -11706,14 +11706,14 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    move  $a1, $s0
   lw    $a0, 0x74($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s0
   addiu $a1, $s2, 0x80
   sw    $a1, 0x68($sp)
   jal   init_something_copy_posdata_to_it
    lw    $a0, 0x15c($sp)
   lw    $a0, 0x6c($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x68($sp)
   jal   sub_GAME_7F078444
    nop   
@@ -15965,7 +15965,7 @@ glabel object_interaction
   jal   get_BONDdata_field_10CC
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s2
   lw    $v0, 8($s4)
   lui   $t7, %hi(prop_eyelid_door_related) # $t7, 0x8004
@@ -16194,7 +16194,7 @@ glabel object_interaction
   jal   get_BONDdata_field_10CC
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x70($sp)
   b     .Ljp7F0495CC
    lw    $t4, 8($s4)
@@ -16245,7 +16245,7 @@ glabel object_interaction
   jal   get_BONDdata_field_10CC
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x70($sp)
   lw    $t3, 8($s4)
   addiu $a1, $s2, 0x80
@@ -16259,7 +16259,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x6c($sp)
   lw    $a0, 0x70($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x6c($sp)
   lw    $t2, 8($s4)
   move  $a0, $s4
@@ -16283,7 +16283,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    move  $a1, $s2
   lw    $a0, 0x6c($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s2
   lw    $t8, 8($s4)
   lw    $v1, 8($t8)
@@ -16302,7 +16302,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    lw    $a0, 4($t6)
   lw    $a0, 0x6c($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s2
   lw    $t4, 8($s4)
   lw    $v1, 8($t4)
@@ -16326,7 +16326,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    move  $a1, $s2
   lw    $a0, 0x6c($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s2
   b     .Ljp7F0495CC
    lw    $t4, 8($s4)
@@ -16368,7 +16368,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    sw    $a1, 0x70($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x70($sp)
   lw    $t7, 8($s4)
   addiu $a1, $s2, 0x80
@@ -16378,7 +16378,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    sw    $a1, 0x6c($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x6c($sp)
   lw    $t0, 8($s4)
   addiu $a1, $s2, 0xc0
@@ -16388,7 +16388,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    sw    $a1, 0x78($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x78($sp)
   lw    $t3, 8($s4)
   addiu $s0, $s2, 0x100
@@ -16398,7 +16398,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    lw    $a0, 4($t4)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s0
   b     .Ljp7F0495CC
    lw    $t4, 8($s4)
@@ -16564,7 +16564,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x78($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x78($sp)
   addiu $s0, $s2, 0x100
   move  $a1, $s0
@@ -16574,10 +16574,10 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    move  $a1, $s0
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s0
   addiu $a0, $sp, 0x270
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    addiu $a1, $sp, 0x2b0
   addiu $a1, $s2, 0x40
   sw    $a1, 0x70($sp)
@@ -16587,7 +16587,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x70($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x70($sp)
   addiu $a1, $s2, 0x80
   sw    $a1, 0x6c($sp)
@@ -16597,7 +16597,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x6c($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x6c($sp)
   b     .Ljp7F0495CC
    lw    $t4, 8($s4)
@@ -16706,7 +16706,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x6c($sp)
   lw    $a0, 0x70($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x6c($sp)
   lw    $t1, 8($s4)
   move  $a0, $s4
@@ -16728,7 +16728,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    move  $a1, $s0
   lw    $a0, 0x70($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s0
   lw    $t3, 8($s4)
   lw    $v1, 8($t3)
@@ -16745,7 +16745,7 @@ glabel object_interaction
   jal   init_something_copy_posdata_to_it
    move  $a1, $v0
   lw    $a0, 0x70($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s0
   b     .Ljp7F0495CC
    lw    $t4, 8($s4)
@@ -16791,7 +16791,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x70($sp)
   move  $a0, $s2
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x70($sp)
   addiu $a1, $s2, 0xc0
   lwc1  $f12, 0x158($sp)
@@ -16801,7 +16801,7 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    lw    $a1, 0x78($sp)
   lw    $a0, 0x70($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x78($sp)
   lui   $at, %hi(D_80052B70) # $at, 0x8005
   addiu $s0, $s2, 0x100
@@ -16812,14 +16812,14 @@ glabel object_interaction
   jal   copies_first_3_floats_from_a0_to_a1_plus_0x30
    move  $a1, $s0
   lw    $a0, 0x78($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s0
   addiu $a1, $s2, 0x80
   sw    $a1, 0x6c($sp)
   jal   init_something_copy_posdata_to_it
    lw    $a0, 0x160($sp)
   lw    $a0, 0x70($sp)
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x6c($sp)
   jal   sub_GAME_7F078444
    nop   

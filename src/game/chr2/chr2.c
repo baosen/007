@@ -11575,7 +11575,7 @@ glabel sub_GAME_7F02C4C0
   jal   sub_GAME_7F078454
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    addiu $a1, $sp, 0xbc
   lw    $v0, 0xb8($sp)
   addiu $a0, $sp, 0xbc
@@ -11609,7 +11609,7 @@ glabel sub_GAME_7F02C4C0
   jal   sub_GAME_7F078454
    nop   
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    addiu $a1, $sp, 0x68
   lwc1  $f6, 0x98($sp)
   lwc1  $f10, 0x9c($sp)
@@ -13035,7 +13035,7 @@ glabel sub_GAME_7F02D734
   jal   sub_GAME_7F0585FC
    addiu $a1, $sp, 0x12c
   addiu $a0, $sp, 0x12c
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    addiu $a1, $sp, 0x16c
   lui   $at, %hi(D_80051F64)
   lwc1  $f2, %lo(D_80051F64)($at)
@@ -13162,7 +13162,7 @@ glabel sub_GAME_7F02D734
   jal   sub_GAME_7F0585FC
    addiu $a1, $sp, 0x5c
   addiu $a0, $sp, 0x5c
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    addiu $a1, $sp, 0x9c
   lw    $a0, 0x128($sp)
   li    $t8, 180

@@ -276,7 +276,7 @@ glabel sub_GAME_7F057DF8
    move  $s0, $zero
   move  $a0, $s2
 .L7F057E28:
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    move  $a1, $s3
   addiu $s0, $s0, 1
   bnel  $s0, $s1, .L7F057E28

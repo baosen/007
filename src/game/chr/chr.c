@@ -3167,7 +3167,7 @@ glabel sub_GAME_7F02083C
   jal   sub_GAME_7F078444
    swc1  $f14, 0x90($sp)
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   lw    $v0, 0x9c($sp)
   lwc1  $f14, 0x90($sp)
@@ -3204,7 +3204,7 @@ glabel sub_GAME_7F02083C
   jal   sub_GAME_7F0585FC
    swc1  $f14, 0x90($sp)
   addiu $a0, $sp, 0x30
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   lwc1  $f14, 0x90($sp)
   mtc1  $zero, $f18
@@ -3216,7 +3216,7 @@ glabel sub_GAME_7F02083C
   jal   sub_GAME_7F058570
    mov.s $f12, $f14
   addiu $a0, $sp, 0x30
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   mtc1  $zero, $f18
   nop   
@@ -3230,14 +3230,14 @@ glabel sub_GAME_7F02083C
   jal   sub_GAME_7F058688
    mov.s $f12, $f8
   addiu $a0, $sp, 0x30
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   lwc1  $f12, 0x70($sp)
 .L7F020D00:
   jal   sub_GAME_7F0585FC
    addiu $a1, $sp, 0x30
   addiu $a0, $sp, 0x30
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   b     .L7F020D34
    lui   $at, 0x3f80
@@ -3245,7 +3245,7 @@ glabel sub_GAME_7F02083C
   jal   sub_GAME_7F0585FC
    addiu $a1, $sp, 0x30
   addiu $a0, $sp, 0x30
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   li    $at, 0x3F800000 # 1.000000
 .L7F020D34:
@@ -3268,7 +3268,7 @@ glabel sub_GAME_7F02083C
   jal   get_BONDdata_field_10CC
    swc1  $f4, 0x38($t0)
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   lw    $ra, 0x14($sp)
 .L7F020D88:
@@ -3560,7 +3560,7 @@ glabel sub_GAME_7F02083C
   jal   sub_GAME_7F078444
    swc1  $f14, 0x90($sp)
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   lw    $v0, 0x9c($sp)
   lwc1  $f14, 0x90($sp)
@@ -3597,7 +3597,7 @@ glabel sub_GAME_7F02083C
   jal   sub_GAME_7F0585FC
    swc1  $f14, 0x90($sp)
   addiu $a0, $sp, 0x30
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   lwc1  $f14, 0x90($sp)
   mtc1  $zero, $f18
@@ -3609,7 +3609,7 @@ glabel sub_GAME_7F02083C
   jal   sub_GAME_7F058570
    mov.s $f12, $f14
   addiu $a0, $sp, 0x30
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   mtc1  $zero, $f18
   nop   
@@ -3623,14 +3623,14 @@ glabel sub_GAME_7F02083C
   jal   sub_GAME_7F058688
    mov.s $f12, $f8
   addiu $a0, $sp, 0x30
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   lwc1  $f12, 0x70($sp)
 .L7F020F98:
   jal   sub_GAME_7F0585FC
    addiu $a1, $sp, 0x30
   addiu $a0, $sp, 0x30
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   b     .L7F020FCC
    lui   $at, 0x3f80
@@ -3638,7 +3638,7 @@ glabel sub_GAME_7F02083C
   jal   sub_GAME_7F0585FC
    addiu $a1, $sp, 0x30
   addiu $a0, $sp, 0x30
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   li    $at, 0x3F800000 # 1.000000
 .L7F020FCC:
@@ -3661,7 +3661,7 @@ glabel sub_GAME_7F02083C
   jal   get_BONDdata_field_10CC
    swc1  $f4, 0x38($t1)
   move  $a0, $v0
-  jal   sub_GAME_7F058098
+  jal   matrix_4x4_multiply_homogeneous_in_place
    lw    $a1, 0x9c($sp)
   lw    $ra, 0x14($sp)
 .L7F021020:
