@@ -121,7 +121,7 @@ void initialize_game(void) {
 
   something_with_boss_c_debug();
 
-  null_init_main_7f0acb70();
+  null_init_textrelated();
   null_init_main_0();
 
   default_player_perspective_and_height();

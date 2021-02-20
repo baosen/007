@@ -36,7 +36,7 @@ int D_80040F20 = 0xB;
 int D_80040F24 = 0;
 int D_80040F28 = 0;
 
-void null_init_main_7f0acb70(void) {}
+void null_init_textrelated(void) {}
 
 void setTextSpacingInverted(int spacing) { text_spacing = -spacing; }
 
