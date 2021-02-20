@@ -14,16 +14,6 @@ exports_files([
 ])
 
 gecc_library(
-    name = "initunk_0072B0",
-    srcs = [
-        "initunk_0072B0.c",
-        "//src/game:player.h",
-        "//src/game:xyzpoint.h",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-gecc_library(
     name = "initunk_0073B0",
     srcs = [
         "initunk_0073B0.c",
