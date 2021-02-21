@@ -418,10 +418,9 @@ glabel cheat_buttons_mp_related
    nop   
 ");
 
-unsigned int is_cheat_index_equal_to_1C(unsigned int cheatindex) {
-  if (cheatindex == 0x1c) {
+int is_cheat_index_equal_to_1C(int cheatindex) {
+  if (cheatindex == 28)
     return 1;
-  }
   return 0;
 }
 
