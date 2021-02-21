@@ -6,23 +6,6 @@ struct color {
   unsigned char r, g, b, a;
 };
 
-struct watchMenuObjectiveText {
-  unsigned int id;
-  enum WATCH_BRIEFING_PAGE menu;
-  unsigned short reserved;
-  unsigned short text;
-  struct watchMenuObjectiveText *nextentry;
-};
-
-//! FIXME all but text field cannot be trusted
-struct objective_entry {
-  unsigned int id;
-  enum WATCH_BRIEFING_PAGE menu;
-  unsigned short reserved;
-  unsigned short text;
-  struct watchMenuObjectiveText *nextentry;
-};
-
 typedef struct sImageTableEntry {
   unsigned int index;
   unsigned char width;

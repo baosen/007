@@ -1,5 +1,14 @@
 #include "bondtypes.h"
 
+//! FIXME all but text field cannot be trusted
+struct objective_entry {
+  unsigned int id;
+  enum WATCH_BRIEFING_PAGE menu;
+  unsigned short reserved;
+  unsigned short text;
+  struct watchMenuObjectiveText *nextentry;
+};
+
 struct objective_entry *objective_ptrs[10];
 unsigned int dword_CODE_bss_80075D58, dword_CODE_bss_80075D5C;
 char dword_CODE_bss_80075D60[0x20];
