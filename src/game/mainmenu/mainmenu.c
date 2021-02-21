@@ -289,6 +289,13 @@ unsigned int D_8002A9C0 = 0;
 unsigned int D_8002A9C4 = 0;
 unsigned int D_8002A9C8 = 0;
 
+struct legal_screen_text {
+  int h_pos, v_pos;
+  int flag, flag2;
+  short txtID;
+  short anonymous_5;
+};
+
 struct legal_screen_text D_8002A9CC[] = {
     {220, 30, 1, 1, TEXT(LTITLE, 0x07), 0},
     {34, 83, 0, 1, TEXT(LTITLE, 0x08), 0},

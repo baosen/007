@@ -1,95 +1,88 @@
 #ifndef _MAINMENU_H_
 #define _MAINMENU_H_
 
-struct legal_screen_text {
-    int h_pos, v_pos;
-    int flag, flag2;
-    short txtID;
-    short anonymous_5;
-};
-
 struct mission_folder_setup {
-    void * string_ptr;
-    short folder_text_preset;
-    short icon_text_preset;
-    int stage_id;
-    int unknown;
-    int type;
-    int mission_num;
-    void * briefing_name_ptr;
+  void *string_ptr;
+  short folder_text_preset;
+  short icon_text_preset;
+  int stage_id;
+  int unknown;
+  int type;
+  int mission_num;
+  void *briefing_name_ptr;
 };
 
 struct MP_game_length_settings {
-    unsigned short text_preset;
-    unsigned short padding;
-    int time;
-    int points;
+  unsigned short text_preset;
+  unsigned short padding;
+  int time;
+  int points;
 };
 
 struct mp_stage_playercount {
-    short stage;
-    char min, max;
+  short stage;
+  char min, max;
 };
 
 struct mp_stage_setup {
-    short folder_text_preset;
-    short select_screen_text_preset;
-    int photo;
-    int stage_id;
-    int unlock_after;
-    int min_player, max_player;
+  short folder_text_preset;
+  short select_screen_text_preset;
+  int photo;
+  int stage_id;
+  int unlock_after;
+  int min_player, max_player;
 };
 
 struct MP_selectable_chars {
-    short text_preset;
-    char gender;
-    char select_photo;
-    short body;
-    short head;
-    float pov;
+  short text_preset;
+  char gender;
+  char select_photo;
+  short body;
+  short head;
+  float pov;
 };
 
 struct MP_handicap_menu {
-    short text_preset;
-    short padding;
-    float damage_modifier;
+  short text_preset;
+  short padding;
+  float damage_modifier;
 };
 
 struct MP_controller_configuration_menu {
-    char anonymous_0;
-    char field_1;
-    char field_2;
-    char field_3;
+  char anonymous_0;
+  char field_1;
+  char field_2;
+  char field_3;
 };
 
 struct MP_sight_aim_settings {
-    char anonymous_0;
-    char field_1;
-    char sight;
-    char autoaim;
+  char anonymous_0;
+  char field_1;
+  char sight;
+  char autoaim;
 };
 
 struct intro_char {
-    int body;
-    int head;
-    short text1;
-    short text2;
-    short text3;
-    short RESERVED;
-    int flag;
+  int body;
+  int head;
+  short text1;
+  short text2;
+  short text3;
+  short RESERVED;
+  int flag;
 };
 
 struct intro_animation {
-    int animID;
-    float startframeoffset;
-    float playback_speed;
-    int camera_preset;
+  int animID;
+  float startframeoffset;
+  float playback_speed;
+  int camera_preset;
 };
 
 struct solo_target_times {
-    unsigned short agent_time;
-    unsigned short secret_agent_time;
-    unsigned short OO_agent_time;
+  unsigned short agent_time;
+  unsigned short secret_agent_time;
+  unsigned short OO_agent_time;
 };
 
 extern int array_favweapon[4][2];
