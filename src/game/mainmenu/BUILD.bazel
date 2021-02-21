@@ -1,11 +1,15 @@
 load("//tools/gecc:gecc.bzl", "gecc_library")
 
+exports_files([
+    "mainmenu.h",
+])
+
 gecc_library(
     name = "mainmenu",
     srcs = [
         "mainmenu.c",
         "//src/game:bondtypes.h",
-        "//src/game:mainmenu.h",
+        "//src/game/mainmenu:mainmenu.h",
         "//src/system:includes",
         "//src/system:music.h",
     ],

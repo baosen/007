@@ -7,9 +7,9 @@ exports_files([
 gecc_library(
     name = "chrobjdata",
     srcs = [
+        "bondaicommands.h",
         "chrobjdata.c",
         "chrobjdata.h",
-        "bondaicommands.h",
         "//src/game:bondtypes.h",
         "//src/system:includes",
     ],

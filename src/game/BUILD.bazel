@@ -9,6 +9,5 @@ exports_files([
     "players.h",
     "unk_0A1DA0.h",
     "xyzpoint.h",
-    "mainmenu.h",
     "lvl.h",
 ])

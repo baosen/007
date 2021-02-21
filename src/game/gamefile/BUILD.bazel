@@ -5,7 +5,7 @@ gecc_library(
     srcs = [
         "gamefile.c",
         "//src/game:bondtypes.h",
-        "//src/game:mainmenu.h",
+        "//src/game/mainmenu:mainmenu.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
