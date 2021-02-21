@@ -1,17 +1,6 @@
 #ifndef _MAINMENU_H_
 #define _MAINMENU_H_
 
-struct mission_folder_setup {
-  void *string_ptr;
-  short folder_text_preset;
-  short icon_text_preset;
-  int stage_id;
-  int unknown;
-  int type;
-  int mission_num;
-  void *briefing_name_ptr;
-};
-
 struct MP_game_length_settings {
   unsigned short text_preset;
   unsigned short padding;

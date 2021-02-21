@@ -390,6 +390,17 @@ float folder_option_ERASE_upper_bound = 0.0f;
 float folder_option_ERASE_right_bound = 0.0f;
 float folder_option_ERASE_lower_bound = 0.0f;
 
+struct mission_folder_setup {
+  void *string_ptr;
+  short folder_text_preset;
+  short icon_text_preset;
+  int stage_id;
+  int unknown;
+  int type;
+  int mission_num;
+  void *briefing_name_ptr;
+};
+
 struct mission_folder_setup mission_folder_setup_entries[] = {
     {"1", TEXT(LTITLE, 0x78), 0, LEVELID_NONE, 0, MISSION_HEADER, -1, 0},
     {"i", TEXT(LTITLE, 0x79), 0, LEVELID_DAM, 0, MISSION_PART, 0, "UbriefdamZ"},
