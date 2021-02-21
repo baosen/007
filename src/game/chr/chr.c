@@ -9,6 +9,20 @@ int D_8002C908 = 0;
 int D_8002C90C = 0;
 int D_8002C910 = 0;
 
+struct animation_something {
+  int anonymous_0;
+  int field_4;
+  int field_8;
+  float field_C;
+  int field_10;
+  int field_14;
+  float field_18;
+  struct struck_animation_table *field_1C;
+  int field_20;
+  struct struck_animation_table *field_24;
+  int field_28;
+};
+
 struct animation_something D_8002C914 = {0, 0, 0, 0, 0, 0, 0, NULL, 0, NULL, 0};
 struct animation_something D_8002C940 = {1,    1,          0, 17.0,       3, 0,
                                          34.0, D_8002CE54, 0, D_8002DF10, 0};

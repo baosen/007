@@ -1,20 +1,6 @@
 #ifndef _CHR_H_
 #define _CHR_H_
 
-struct animation_something {
-  int anonymous_0;
-  int field_4;
-  int field_8;
-  float field_C;
-  int field_10;
-  int field_14;
-  float field_18;
-  struct struck_animation_table *field_1C;
-  int field_20;
-  struct struck_animation_table *field_24;
-  int field_28;
-};
-
 struct struck_animation_table {
   void *anonymous_0;
   int anonymous_1;
@@ -187,4 +173,5 @@ extern int num_female_heads;
 extern int list_of_bodies[];
 extern int random_male_heads[];
 extern int random_female_heads[];
+
 #endif
