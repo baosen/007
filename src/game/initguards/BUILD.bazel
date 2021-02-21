@@ -4,7 +4,6 @@ gecc_library(
     name = "initguards",
     srcs = [
         "initguards.c",
-        "//src/game/chr:chr.h",
     ],
     visibility = ["//visibility:public"],
 )

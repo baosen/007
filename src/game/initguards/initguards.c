@@ -1,6 +1,14 @@
-#include "chr.h"
-
 void init_guards(void) {
+  extern float animation_rate;
+  extern int D_8002C904;
+  extern int D_8002C908;
+  extern int D_8002C90C;
+  extern int D_8002C910;
+  extern int D_8002CC58;
+  extern int show_patrols_flag;
+  extern int player1_guardID;
+  extern int ptr_guard_data;
+  extern int num_guards;
   animation_rate = 1.0f;
   D_8002C904 = 0;
   D_8002C908 = 0;

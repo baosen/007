@@ -135,17 +135,6 @@ extern struct weapon_firing_animation_table D_800308A0;
 extern struct weapon_firing_animation_table D_800308E8;
 extern struct weapon_firing_animation_table D_80030930;
 
-extern float animation_rate;
-extern int D_8002C904;
-extern int D_8002C908;
-extern int D_8002C90C;
-extern int D_8002C910;
-
-extern int D_8002CC58;
-extern int show_patrols_flag;
-extern int player1_guardID;
-extern int ptr_guard_data;
-extern int num_guards;
 extern int D_8002CC6C[];
 extern int D_8002CCA8;
 extern int D_8002CCAC;
