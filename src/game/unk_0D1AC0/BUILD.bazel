@@ -1,0 +1,9 @@
+load("//tools/gecc:gecc.bzl", "gecc_library")
+
+gecc_library(
+    name = "unk_0D1AC0",
+    srcs = [
+        "unk_0D1AC0.c",
+    ],
+    visibility = ["//visibility:public"],
+)
