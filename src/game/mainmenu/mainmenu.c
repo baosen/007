@@ -489,11 +489,25 @@ struct MP_game_length_settings multi_game_lengths[] = {
     {TEXT(LTITLE, 0x34), 0, 0, 0} /* last person alive wins */
 };
 
+struct mp_stage_playercount {
+  short stage;
+  char min, max;
+};
+
 struct mp_stage_playercount mp_player_counts[] = {
     {TEXT(LTITLE, 0x35), 2, 4}, {TEXT(LTITLE, 0x36), 2, 4},
     {TEXT(LTITLE, 0x37), 2, 4}, {TEXT(LTITLE, 0x38), 2, 4},
     {TEXT(LTITLE, 0x39), 2, 4}, {TEXT(LTITLE, 0x3A), 4, 4},
     {TEXT(LTITLE, 0x3B), 4, 4}, {TEXT(LTITLE, 0x3C), 3, 3}};
+
+struct mp_stage_setup {
+  short folder_text_preset;
+  short select_screen_text_preset;
+  int photo;
+  int stage_id;
+  int unlock_after;
+  int min_player, max_player;
+};
 
 struct mp_stage_setup multi_stage_setups[] = {
     /* unlocked by default */
@@ -517,6 +531,15 @@ struct mp_stage_setup multi_stage_setups[] = {
      1, 2}};
 
 unsigned int num_chars_selectable_mp = 8;
+
+struct MP_selectable_chars {
+  short text_preset;
+  char gender;
+  char select_photo;
+  short body;
+  short head;
+  float pov;
+};
 
 #ifdef VERSION_US
 struct MP_selectable_chars mp_chr_setup[] = {
@@ -713,6 +736,12 @@ struct MP_selectable_chars mp_chr_setup[] = {
     {TEXT(LTITLE, 0xE2), FEMALE, 0xE, BODY_Tuxedo, HEAD_Female_Vivien, 1.0446}};
 #endif
 
+struct MP_handicap_menu {
+  short text_preset;
+  short padding;
+  float damage_modifier;
+};
+
 struct MP_handicap_menu MP_handicap_table[] = {
     {TEXT(LTITLE, 0x3D), 0, 10.0},       {TEXT(LTITLE, 0x3E), 0, 2.8560996},
     {TEXT(LTITLE, 0x3F), 0, 2.1969998},  {TEXT(LTITLE, 0x40), 0, 1.6899998},
@@ -721,10 +750,24 @@ struct MP_handicap_menu MP_handicap_table[] = {
     {TEXT(LTITLE, 0x45), 0, 0.45516616}, {TEXT(LTITLE, 0x46), 0, 0.35012782},
     {TEXT(LTITLE, 0x47), 0, 0.1}};
 
+struct MP_controller_configuration_menu {
+  char anonymous_0;
+  char field_1;
+  char field_2;
+  char field_3;
+};
+
 struct MP_controller_configuration_menu MP_controller_configuration_table[] = {
     {0x9D, 0x15, 0, 1}, {0x9D, 0x16, 1, 1}, {0x9D, 0x17, 2, 1},
     {0x9D, 0x18, 3, 1}, {0x9D, 0x19, 4, 2}, {0x9D, 0x1A, 5, 2},
     {0x9D, 0x1B, 6, 2}, {0x9D, 0x1C, 7, 2}};
+
+struct MP_sight_aim_settings {
+  char anonymous_0;
+  char field_1;
+  char sight;
+  char autoaim;
+};
 
 struct MP_sight_aim_settings mp_sight_adjust_table[] = {{0x9C, 0x48, 0, 0},
                                                         {0x9C, 0x49, 1, 0},
@@ -750,6 +793,12 @@ int unlock_aim_sight = 1;
 
 unsigned int D_8002B560 = 0;
 
+struct solo_target_times {
+  unsigned short agent_time;
+  unsigned short secret_agent_time;
+  unsigned short OO_agent_time;
+};
+
 struct solo_target_times solo_target_time_array[] = {
     {0, 160, 0}, {0, 0, 125}, {300, 0, 0}, {0, 210, 0}, {0, 0, 240},
     {180, 0, 0}, {0, 270, 0}, {0, 0, 255}, {90, 0, 0},  {0, 195, 0},
@@ -766,6 +815,16 @@ unsigned int intro_animation_count = 0;
 unsigned int objinstance = 0;
 unsigned int ptrobjinstance = 0;
 unsigned int full_actor_intro = 0;
+
+struct intro_char {
+  int body;
+  int head;
+  short text1;
+  short text2;
+  short text3;
+  short RESERVED;
+  int flag;
+};
 
 struct intro_char intro_char_table[] = {
     {BODY_Tuxedo, 0x4E, TEXT(LTITLE, 0xE3), TEXT(LTITLE, 0xE4),
@@ -837,6 +896,13 @@ struct intro_char intro_char_table[] = {
     {BODY_Baron_Samedi, 0xFFFFFFFF, TEXT(LTITLE, 0xE7), TEXT(LTITLE, 0xF9),
      TEXT(LTITLE, 0xE3), 0, 0},
     {0xFFFFFFFF, 0, 0, 0, 0, 0, 0}};
+
+struct intro_animation {
+  int animID;
+  float startframeoffset;
+  float playback_speed;
+  int camera_preset;
+};
 
 struct intro_animation intro_animation_table[] = {
     {0x3F, 98.0, 1.0, 0},       {0x42, 21.0, 1.0, 1},
