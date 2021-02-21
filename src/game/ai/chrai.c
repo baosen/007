@@ -267,7 +267,7 @@ glabel set_sound_effect_to_slot
 ");
 
 asm(R"
-glabel sub_GAME_7F0349BC
+glabel deactivate_sound_effect
   addiu $sp, $sp, -0x18
   bltz  $a0, .L7F0349EC
    sw    $ra, 0x14($sp)
@@ -6036,7 +6036,7 @@ actionC4_Play_Sound_Effect_num_In_Slot_num_0_7_4:
   b     GetByteS1_ParseCommandByte_SwitchCase
    addiu $s1, $s1, 4
 actionC9_Shut_Off_Sound_In_Slot_Number_2:
-  jal   sub_GAME_7F0349BC
+  jal   deactivate_sound_effect
    lb    $a0, 1($s1)
   addiu $s2, $s2, 2
   b     GetByteS1_ParseCommandByte_SwitchCase
@@ -11904,7 +11904,7 @@ actionC4_Play_Sound_Effect_num_In_Slot_num_0_7_4:
   b     GetByteS1_ParseCommandByte_SwitchCase
    addiu $s1, $s1, 4
 actionC9_Shut_Off_Sound_In_Slot_Number_2:
-  jal   sub_GAME_7F0349BC
+  jal   deactivate_sound_effect
    lb    $a0, 1($s1)
   addiu $s2, $s2, 2
   b     GetByteS1_ParseCommandByte_SwitchCase
