@@ -139,10 +139,10 @@ float scale_1_0_item_related = 1.0f;
 
 asm(R"
 glabel init_sound_effects_registers
-  lui   $v1, %hi(sfx_related)
+  lui   $v1, %hi(sound_effects)
   lui   $v0, %hi(ptr_list_object_lookup_indices)
   addiu $v0, %lo(ptr_list_object_lookup_indices) # addiu $v0, $v0, -0x63d0
-  addiu $v1, %lo(sfx_related) # addiu $v1, $v1, -0x6490
+  addiu $v1, %lo(sound_effects) # addiu $v1, $v1, -0x6490
 .L7F0014C0:
   addiu $v1, $v1, 0x60
   sw    $zero, -0x48($v1)

@@ -1,6 +1,6 @@
 #include "chrai.h"
 
-struct sfx_register_struct sfx_related[8];
+struct sound_effect sound_effects[8];
 void *ptr_list_object_lookup_indices;
 unsigned int num_obj_position_data_entries;
 
@@ -125,9 +125,9 @@ glabel set_sound_effect_source_to_location
   sll   $t6, $a0, 2
   addiu $sp, $sp, -0x28
   subu  $t6, $t6, $a0
-  lui   $t7, %hi(sfx_related) 
+  lui   $t7, %hi(sound_effects) 
   sw    $s0, 0x18($sp)
-  addiu $t7, %lo(sfx_related) # addiu $t7, $t7, -0x6490
+  addiu $t7, %lo(sound_effects) # addiu $t7, $t7, -0x6490
   sll   $t6, $t6, 3
   addu  $s0, $t6, $t7
   lw    $a1, ($s0)
@@ -233,8 +233,8 @@ glabel set_sound_effect_to_slot
   beqz  $at, .L7F03499C
    sll   $t6, $a0, 2
   subu  $t6, $t6, $a0
-  lui   $t7, %hi(sfx_related) 
-  addiu $t7, %lo(sfx_related) # addiu $t7, $t7, -0x6490
+  lui   $t7, %hi(sound_effects) 
+  addiu $t7, %lo(sound_effects) # addiu $t7, $t7, -0x6490
   sll   $t6, $t6, 3
   addu  $v1, $t6, $t7
   lw    $a1, ($v1)
@@ -276,10 +276,10 @@ glabel sub_GAME_7F0349BC
    sll   $t6, $a0, 2
   subu  $t6, $t6, $a0
   sll   $t6, $t6, 3
-  lui   $a0, %hi(sfx_related)
+  lui   $a0, %hi(sound_effects)
   addu  $a0, $a0, $t6
   jal   sfxDeactivate
-   lw    $a0, %lo(sfx_related)($a0)
+   lw    $a0, %lo(sound_effects)($a0)
 .L7F0349EC:
   lw    $ra, 0x14($sp)
   addiu $sp, $sp, 0x18
@@ -6059,8 +6059,8 @@ actionC7_Sound_In_Slot_num_Crecendos_To_Volume_Over_ms_6:
   beqz  $at, .L7F038FFC
    li    $a3, 24
   multu $v1, $a3
-  lui   $a2, %hi(sfx_related)
-  addiu $a2, %lo(sfx_related) # addiu $a2, $a2, -0x6490
+  lui   $a2, %hi(sound_effects)
+  addiu $a2, %lo(sound_effects) # addiu $a2, $a2, -0x6490
   move  $v0, $t3
   mflo  $t8
   addu  $t9, $a2, $t8
@@ -6106,16 +6106,16 @@ actionC8_Sound_In_Slot_num_Fades_To_Volume_Over_ms_6:
    sll   $t9, $v1, 2
   subu  $t9, $t9, $v1
   sll   $t9, $t9, 3
-  lui   $at, %hi(sfx_related+8)
+  lui   $at, %hi(sound_effects+8)
   addu  $at, $at, $t9
-  sw    $t8, %lo(sfx_related+8)($at)
+  sw    $t8, %lo(sound_effects+8)($at)
   jal   sub_GAME_7F0539B8
    move  $s0, $t8
   lb    $t5, 1($s1)
   li    $a0, 24
-  lui   $v1, %hi(sfx_related)
+  lui   $v1, %hi(sound_effects)
   multu $t5, $a0
-  addiu $v1, %lo(sfx_related) # addiu $v1, $v1, -0x6490
+  addiu $v1, %lo(sound_effects) # addiu $v1, $v1, -0x6490
   mflo  $t6
   addu  $t7, $v1, $t6
   sw    $v0, 0xc($t7)
@@ -6153,24 +6153,24 @@ actionC5_EmanateSoundSlotnumFrom16ObjectWithAudibleRV_5:
    sll   $t1, $v1, 2
   subu  $t1, $t1, $v1
   sll   $t1, $t1, 3
-  lui   $at, %hi(sfx_related+8)
+  lui   $at, %hi(sound_effects+8)
   addu  $at, $at, $t1
-  sw    $t2, %lo(sfx_related+8)($at)
+  sw    $t2, %lo(sound_effects+8)($at)
   lb    $t4, 1($s1)
-  lui   $at, %hi(sfx_related+16)
+  lui   $at, %hi(sound_effects+16)
   sll   $t3, $t4, 2
   subu  $t3, $t3, $t4
   sll   $t3, $t3, 3
   addu  $at, $at, $t3
-  sw    $zero, %lo(sfx_related+16)($at)
+  sw    $zero, %lo(sound_effects+16)($at)
   lb    $t8, 1($s1)
-  lui   $at, %hi(sfx_related+20)
+  lui   $at, %hi(sound_effects+20)
   sll   $t9, $t8, 2
   subu  $t9, $t9, $t8
   sll   $t9, $t9, 3
   addu  $at, $at, $t9
   bnez  $t2, .L7F039154
-   sw    $v0, %lo(sfx_related+20)($at)
+   sw    $v0, %lo(sound_effects+20)($at)
   jal   set_sound_effect_source_to_location
    lb    $a0, 1($s1)
 .L7F039154:
@@ -6222,24 +6222,24 @@ actionC6_EmanateSoundSlotnumFromPresetWithAudibleRV_6:
    sll   $t2, $v1, 2
   subu  $t2, $t2, $v1
   sll   $t2, $t2, 3
-  lui   $at, %hi(sfx_related+8)
+  lui   $at, %hi(sound_effects+8)
   addu  $at, $at, $t2
-  sw    $a1, %lo(sfx_related+8)($at)
+  sw    $a1, %lo(sound_effects+8)($at)
   lb    $t1, 1($s1)
-  lui   $at, %hi(sfx_related+16)
+  lui   $at, %hi(sound_effects+16)
   sll   $t4, $t1, 2
   subu  $t4, $t4, $t1
   sll   $t4, $t4, 3
   addu  $at, $at, $t4
-  sw    $a0, %lo(sfx_related+16)($at)
+  sw    $a0, %lo(sound_effects+16)($at)
   lb    $t3, 1($s1)
-  lui   $at, %hi(sfx_related+20)
+  lui   $at, %hi(sound_effects+20)
   sll   $t8, $t3, 2
   subu  $t8, $t8, $t3
   sll   $t8, $t8, 3
   addu  $at, $at, $t8
   bnez  $a1, .L7F039254
-   sw    $zero, %lo(sfx_related+20)($at)
+   sw    $zero, %lo(sound_effects+20)($at)
   jal   set_sound_effect_source_to_location
    lb    $a0, 1($s1)
 .L7F039254:
@@ -6261,9 +6261,9 @@ actionCA_If_Value_GreaterThan_Volume_7FFF_Max_RVL_5:
    sll   $t1, $v1, 2
   subu  $t1, $t1, $v1
   sll   $t1, $t1, 3
-  lui   $t4, %hi(sfx_related+4)
+  lui   $t4, %hi(sound_effects+4)
   addu  $t4, $t4, $t1
-  lw    $t4, %lo(sfx_related+4)($t4)
+  lw    $t4, %lo(sound_effects+4)($t4)
   move  $a0, $s6
   move  $a1, $s2
   slt   $at, $t4, $t2
@@ -11927,8 +11927,8 @@ actionC7_Sound_In_Slot_num_Crecendos_To_Volume_Over_ms_6:
   beqz  $at, .L7F038FFC
    li    $a3, 24
   multu $v1, $a3
-  lui   $a2, %hi(sfx_related)
-  addiu $a2, %lo(sfx_related) # addiu $a2, $a2, -0x6490
+  lui   $a2, %hi(sound_effects)
+  addiu $a2, %lo(sound_effects) # addiu $a2, $a2, -0x6490
   move  $v0, $t3
   mflo  $t8
   addu  $t9, $a2, $t8
@@ -11974,16 +11974,16 @@ actionC8_Sound_In_Slot_num_Fades_To_Volume_Over_ms_6:
    sll   $t9, $v1, 2
   subu  $t9, $t9, $v1
   sll   $t9, $t9, 3
-  lui   $at, %hi(sfx_related+8)
+  lui   $at, %hi(sound_effects+8)
   addu  $at, $at, $t9
-  sw    $t8, %lo(sfx_related+8)($at)
+  sw    $t8, %lo(sound_effects+8)($at)
   jal   sub_GAME_7F0539B8
    move  $s0, $t8
   lb    $t5, 1($s1)
   li    $a0, 24
-  lui   $v1, %hi(sfx_related)
+  lui   $v1, %hi(sound_effects)
   multu $t5, $a0
-  addiu $v1, %lo(sfx_related) # addiu $v1, $v1, -0x6490
+  addiu $v1, %lo(sound_effects) # addiu $v1, $v1, -0x6490
   mflo  $t6
   addu  $t7, $v1, $t6
   sw    $v0, 0xc($t7)
@@ -12021,24 +12021,24 @@ actionC5_EmanateSoundSlotnumFrom16ObjectWithAudibleRV_5:
    sll   $t1, $v1, 2
   subu  $t1, $t1, $v1
   sll   $t1, $t1, 3
-  lui   $at, %hi(sfx_related+8)
+  lui   $at, %hi(sound_effects+8)
   addu  $at, $at, $t1
-  sw    $t2, %lo(sfx_related+8)($at)
+  sw    $t2, %lo(sound_effects+8)($at)
   lb    $t4, 1($s1)
-  lui   $at, %hi(sfx_related+16)
+  lui   $at, %hi(sound_effects+16)
   sll   $t3, $t4, 2
   subu  $t3, $t3, $t4
   sll   $t3, $t3, 3
   addu  $at, $at, $t3
-  sw    $zero, %lo(sfx_related+16)($at)
+  sw    $zero, %lo(sound_effects+16)($at)
   lb    $t8, 1($s1)
-  lui   $at, %hi(sfx_related+20)
+  lui   $at, %hi(sound_effects+20)
   sll   $t9, $t8, 2
   subu  $t9, $t9, $t8
   sll   $t9, $t9, 3
   addu  $at, $at, $t9
   bnez  $t2, .L7F039154
-   sw    $v0, %lo(sfx_related+20)($at)
+   sw    $v0, %lo(sound_effects+20)($at)
   jal   set_sound_effect_source_to_location
    lb    $a0, 1($s1)
 .L7F039154:
@@ -12090,24 +12090,24 @@ actionC6_EmanateSoundSlotnumFromPresetWithAudibleRV_6:
    sll   $t2, $v1, 2
   subu  $t2, $t2, $v1
   sll   $t2, $t2, 3
-  lui   $at, %hi(sfx_related+8)
+  lui   $at, %hi(sound_effects+8)
   addu  $at, $at, $t2
-  sw    $a1, %lo(sfx_related+8)($at)
+  sw    $a1, %lo(sound_effects+8)($at)
   lb    $t1, 1($s1)
-  lui   $at, %hi(sfx_related+16)
+  lui   $at, %hi(sound_effects+16)
   sll   $t4, $t1, 2
   subu  $t4, $t4, $t1
   sll   $t4, $t4, 3
   addu  $at, $at, $t4
-  sw    $a0, %lo(sfx_related+16)($at)
+  sw    $a0, %lo(sound_effects+16)($at)
   lb    $t3, 1($s1)
-  lui   $at, %hi(sfx_related+20)
+  lui   $at, %hi(sound_effects+20)
   sll   $t8, $t3, 2
   subu  $t8, $t8, $t3
   sll   $t8, $t8, 3
   addu  $at, $at, $t8
   bnez  $a1, .L7F039254
-   sw    $zero, %lo(sfx_related+20)($at)
+   sw    $zero, %lo(sound_effects+20)($at)
   jal   set_sound_effect_source_to_location
    lb    $a0, 1($s1)
 .L7F039254:
@@ -12129,9 +12129,9 @@ actionCA_If_Value_GreaterThan_Volume_7FFF_Max_RVL_5:
    sll   $t1, $v1, 2
   subu  $t1, $t1, $v1
   sll   $t1, $t1, 3
-  lui   $t4, %hi(sfx_related+4)
+  lui   $t4, %hi(sound_effects+4)
   addu  $t4, $t4, $t1
-  lw    $t4, %lo(sfx_related+4)($t4)
+  lw    $t4, %lo(sound_effects+4)($t4)
   move  $a0, $s6
   move  $a1, $s2
   slt   $at, $t4, $t2

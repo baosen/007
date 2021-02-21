@@ -1,7 +1,7 @@
 #ifndef _CHRAI_H_
 #define _CHRAI_H_
 
-struct sfx_register_struct {
+struct sound_effect {
   unsigned int field_0x0;
   unsigned int field_0x4;
   unsigned int field_0x8;
