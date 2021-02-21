@@ -9,7 +9,7 @@ gecc_library(
     srcs = [
         "chrobjdata.c",
         "chrobjdata.h",
-        "//src/game:bondaicommands.h",
+        "bondaicommands.h",
         "//src/game:bondtypes.h",
         "//src/system:includes",
     ],
