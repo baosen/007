@@ -1,5 +1,9 @@
 load("//tools/gecc:gecc.bzl", "gecc_library")
 
+exports_files([
+    "unk_0A1DA0.h",
+])
+
 gecc_library(
     name = "unk_0A1DA0",
     srcs = [
