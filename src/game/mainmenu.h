@@ -1,13 +1,6 @@
 #ifndef _MAINMENU_H_
 #define _MAINMENU_H_
 
-struct MP_game_length_settings {
-  unsigned short text_preset;
-  unsigned short padding;
-  int time;
-  int points;
-};
-
 struct mp_stage_playercount {
   short stage;
   char min, max;

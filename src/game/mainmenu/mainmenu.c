@@ -471,6 +471,13 @@ float D_8002AFCC = -3300.0;
 unsigned int cursor_xpos_table_mission_select[] = {73, 142, 212, 282, 352};
 unsigned int cursor_ypos_table_mission_select[] = {62, 131, 201, 270};
 
+struct MP_game_length_settings {
+  unsigned short text_preset;
+  unsigned short padding;
+  int time;
+  int points;
+};
+
 struct MP_game_length_settings multi_game_lengths[] = {
     {TEXT(LTITLE, 0x2D), 0, 0, 0},                   /* unlimited */
     {TEXT(LTITLE, 0x2E), 0, MINS_TO_TIMER60(5), 0},  /* 5 minutes */
