@@ -113,7 +113,7 @@ link_elf(
         "//src/game/unk_092890",
         "//src/game/unk_092E50",
         "//src/game/players",
-        "//src/game:unk_09B600",
+        "//src/game/unk_09B600",
         "//src/game/random",
         "//src/game:unk_09B7A0",
         "//src/game:unk_09C250",
