@@ -8953,24 +8953,24 @@ glabel copy_aim_settings_to_playerdata
   sll   $t7, $t6, 2
   addu  $v0, $t7, $t8
   lbu   $v1, 3($v0)
-  lui   $at, %hi(player1_player_data+0x6A)
-  sb    $v1, %lo(player1_player_data+0x6A)($at)
+  lui   $at, %hi(player1_statistics+0x6A)
+  sb    $v1, %lo(player1_statistics+0x6A)($at)
   lbu   $a0, 2($v0)
-  lui   $at, %hi(player1_player_data+0x6B)
-  sb    $a0, %lo(player1_player_data+0x6B)($at)
-  lui   $at, %hi(player2_player_data+0x6A)
-  sb    $v1, %lo(player2_player_data+0x6A)($at)
-  lui   $at, %hi(player2_player_data+0x6B)
-  sb    $a0, %lo(player2_player_data+0x6B)($at)
-  lui   $at, %hi(player3_player_data+0x6A)
-  sb    $v1, %lo(player3_player_data+0x6A)($at)
-  lui   $at, %hi(player3_player_data+0x6B)
-  sb    $a0, %lo(player3_player_data+0x6B)($at)
-  lui   $at, %hi(player4_player_data+0x6A)
-  sb    $v1, %lo(player4_player_data+0x6A)($at)
-  lui   $at, %hi(player4_player_data+0x6B)
+  lui   $at, %hi(player1_statistics+0x6B)
+  sb    $a0, %lo(player1_statistics+0x6B)($at)
+  lui   $at, %hi(player2_statistics+0x6A)
+  sb    $v1, %lo(player2_statistics+0x6A)($at)
+  lui   $at, %hi(player2_statistics+0x6B)
+  sb    $a0, %lo(player2_statistics+0x6B)($at)
+  lui   $at, %hi(player3_statistics+0x6A)
+  sb    $v1, %lo(player3_statistics+0x6A)($at)
+  lui   $at, %hi(player3_statistics+0x6B)
+  sb    $a0, %lo(player3_statistics+0x6B)($at)
+  lui   $at, %hi(player4_statistics+0x6A)
+  sb    $v1, %lo(player4_statistics+0x6A)($at)
+  lui   $at, %hi(player4_statistics+0x6B)
   jr    $ra
-   sb    $a0, %lo(player4_player_data+0x6B)($at)
+   sb    $a0, %lo(player4_statistics+0x6B)($at)
 ");
 
 asm(R"
@@ -14175,10 +14175,10 @@ glabel get_players_team_or_scenario_item_flag
   sll   $t6, $a0, 3
   subu  $t6, $t6, $a0
   sll   $t6, $t6, 4
-  lui   $v0, %hi(player1_player_data+105)
+  lui   $v0, %hi(player1_statistics+105)
   addu  $v0, $v0, $t6
   jr    $ra
-   lbu   $v0, %lo(player1_player_data+105)($v0)
+   lbu   $v0, %lo(player1_statistics+105)($v0)
 ");
 
 asm(R"
@@ -14186,10 +14186,10 @@ glabel set_players_team_or_scenario_item_flag
   sll   $t6, $a0, 3
   subu  $t6, $t6, $a0
   sll   $t6, $t6, 4
-  lui   $at, %hi(player1_player_data+105)
+  lui   $at, %hi(player1_statistics+105)
   addu  $at, $at, $t6
   jr    $ra
-   sb    $a1, %lo(player1_player_data+105)($at)
+   sb    $a1, %lo(player1_statistics+105)($at)
 ");
 
 void init_menu14_mpteamsel(void) {

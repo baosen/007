@@ -261,9 +261,9 @@ glabel stage_load
    nop   
   jal   sub_GAME_7F0C11FC
    lw    $a0, 0x38($sp)
-  lui   $t2, %hi(player1_player_data)
+  lui   $t2, %hi(player1_statistics)
   li    $at, 0x43480000 # 200.000000
-  addiu $s2, $t2, %lo(player1_player_data)
+  addiu $s2, $t2, %lo(player1_statistics)
   mtc1  $at, $f20
   move  $s4, $s2
   li    $s3, 4
@@ -282,8 +282,8 @@ glabel stage_load
   b     .L7F0BDD34
    swc1  $f6, 0x64($s4)
 .L7F0BDCC8:
-  lui   $s1, %hi(player1_player_data)
-  addiu $s1, %lo(player1_player_data) # addiu $s1, $s1, -0x6110
+  lui   $s1, %hi(player1_statistics)
+  addiu $s1, %lo(player1_statistics) # addiu $s1, $s1, -0x6110
 .L7F0BDCD0:
   jal   get_scenario
    nop   
@@ -565,9 +565,9 @@ glabel stage_load
    nop   
   jal   sub_GAME_7F0C11FC
    lw    $a0, 0x38($sp)
-  lui   $t2, %hi(player1_player_data)
+  lui   $t2, %hi(player1_statistics)
   li    $at, 0x43480000 # 200.000000
-  addiu $s2, $t2, %lo(player1_player_data)
+  addiu $s2, $t2, %lo(player1_statistics)
   mtc1  $at, $f20
   move  $s4, $s2
   li    $s3, 4
@@ -586,8 +586,8 @@ glabel stage_load
   b     .Ljp7F0BE8F4
    swc1  $f8, 0x64($s4)
 .Ljp7F0BE888:
-  lui   $s1, %hi(player1_player_data) # $s1, 0x8008
-  addiu $s1, %lo(player1_player_data) # addiu $s1, $s1, -0x60a0
+  lui   $s1, %hi(player1_statistics) # $s1, 0x8008
+  addiu $s1, %lo(player1_statistics) # addiu $s1, $s1, -0x60a0
 .Ljp7F0BE890:
   jal   get_scenario
    nop   
@@ -2553,10 +2553,10 @@ glabel setup_multiplayer_game
   sll   $t9, $zero, 3
   subu  $t9, $t9, $zero
   addu  $v1, $t6, $t8
-  lui   $t6, %hi(player1_player_data) 
+  lui   $t6, %hi(player1_statistics) 
   sll   $t9, $t9, 4
   addu  $t7, $t9, $t3
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x6110
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x6110
   addu  $a0, $t7, $t6
   move  $t0, $t1
 .L7F0BF044:
@@ -2582,8 +2582,8 @@ glabel setup_multiplayer_game
   addu  $v1, $t6, $t8
   sll   $t9, $t9, 4
   addu  $t7, $t9, $t3
-  lui   $t6, %hi(player1_player_data) 
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x6110
+  lui   $t6, %hi(player1_statistics) 
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x6110
   sll   $t9, $t2, 2
   addu  $t0, $t9, $t8
   addu  $a0, $t7, $t6
@@ -2628,8 +2628,8 @@ glabel setup_multiplayer_game
   bnez  $at, .L7F0BF19C
    sll   $t7, $t4, 3
   subu  $t7, $t7, $t4
-  lui   $t6, %hi(player1_player_data) 
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x6110
+  lui   $t6, %hi(player1_statistics) 
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x6110
   sll   $t7, $t7, 4
   addu  $v1, $t7, $t6
   lbu   $t7, 0x68($v1)
@@ -3430,10 +3430,10 @@ glabel setup_multiplayer_game
   sll   $t9, $zero, 3
   subu  $t9, $t9, $zero
   addu  $v1, $t6, $t8
-  lui   $t6, %hi(player1_player_data) # $t6, 0x8008
+  lui   $t6, %hi(player1_statistics) # $t6, 0x8008
   sll   $t9, $t9, 4
   addu  $t7, $t9, $t3
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x60a0
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x60a0
   addu  $a0, $t7, $t6
   move  $t0, $t1
 .Ljp7F0BFC7C:
@@ -3459,8 +3459,8 @@ glabel setup_multiplayer_game
   addu  $v1, $t6, $t8
   sll   $t9, $t9, 4
   addu  $t7, $t9, $t3
-  lui   $t6, %hi(player1_player_data) # $t6, 0x8008
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x60a0
+  lui   $t6, %hi(player1_statistics) # $t6, 0x8008
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x60a0
   sll   $t9, $t2, 2
   addu  $t0, $t9, $t8
   addu  $a0, $t7, $t6
@@ -3505,8 +3505,8 @@ glabel setup_multiplayer_game
   bnez  $at, .Ljp7F0BFDD4
    sll   $t7, $t4, 3
   subu  $t7, $t7, $t4
-  lui   $t6, %hi(player1_player_data) # $t6, 0x8008
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x60a0
+  lui   $t6, %hi(player1_statistics) # $t6, 0x8008
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x60a0
   sll   $t7, $t7, 4
   addu  $v1, $t7, $t6
   lbu   $t7, 0x68($v1)

@@ -162,13 +162,13 @@ glabel display_red_blue_on_radar
    lw    $a0, 0x88($sp)
 .L7F0C62DC:
   lw    $t4, 0x70($sp)
-  lui   $t6, %hi(player1_player_data+0x69)
+  lui   $t6, %hi(player1_statistics+0x69)
   lw    $a0, 0x88($sp)
   sll   $t5, $t4, 3
   subu  $t5, $t5, $t4
   sll   $t5, $t5, 4
   addu  $t6, $t6, $t5
-  lbu   $t6, %lo(player1_player_data+0x69)($t6)
+  lbu   $t6, %lo(player1_statistics+0x69)($t6)
   addiu $a1, $s5, -1
   addiu $a2, $s6, -1
   bnez  $t6, .L7F0C6318
@@ -263,8 +263,8 @@ glabel display_red_blue_on_radar
    c.lt.s $f2, $f24
 .L7F0C6458:
   c.lt.s $f2, $f24
-  lui   $t7, %hi(player1_player_data) 
-  addiu $t7, %lo(player1_player_data) # addiu $t7, $t7, -0x6110
+  lui   $t7, %hi(player1_statistics) 
+  addiu $t7, %lo(player1_statistics) # addiu $t7, $t7, -0x6110
   sll   $t1, $t1, 4
   bc1f  .L7F0C6494
    addu  $v0, $t1, $t7

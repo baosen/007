@@ -6,8 +6,8 @@ int copyof_stagenum, dword_CODE_bss_80079E94;
 char dword_CODE_bss_80079E98[0x48];
 unsigned int *players_p1, *players_p2, *players_p3, *players_p4;
 
-player_statistics player1_player_data, player2_player_data, player3_player_data,
-    player4_player_data;
+player_statistics player1_statistics, player2_statistics, player3_statistics,
+    player4_statistics;
 
 Player *pPlayer;
 
@@ -7191,23 +7191,23 @@ asm(R"
 glabel default_player_perspective_and_height
   li    $at, 0x3F800000 # 1.000000
   mtc1  $at, $f0
-  lui   $at, %hi(player1_player_data+0x64)
-  swc1  $f0, %lo(player1_player_data+0x64)($at)
-  lui   $at, %hi(player1_player_data+0x5c)
-  swc1  $f0, %lo(player1_player_data+0x5c)($at)
-  lui   $at, %hi(player2_player_data+0x64)
-  swc1  $f0, %lo(player2_player_data+0x64)($at)
-  lui   $at, %hi(player2_player_data+0x5C)
-  swc1  $f0, %lo(player2_player_data+0x5C)($at)
-  lui   $at, %hi(player3_player_data+0x64)
-  swc1  $f0, %lo(player3_player_data+0x64)($at)
-  lui   $at, %hi(player3_player_data+0x5C)
-  swc1  $f0, %lo(player3_player_data+0x5C)($at)
-  lui   $at, %hi(player4_player_data+0x64)
-  swc1  $f0, %lo(player4_player_data+0x64)($at)
-  lui   $at, %hi(player4_player_data+92)
+  lui   $at, %hi(player1_statistics+0x64)
+  swc1  $f0, %lo(player1_statistics+0x64)($at)
+  lui   $at, %hi(player1_statistics+0x5c)
+  swc1  $f0, %lo(player1_statistics+0x5c)($at)
+  lui   $at, %hi(player2_statistics+0x64)
+  swc1  $f0, %lo(player2_statistics+0x64)($at)
+  lui   $at, %hi(player2_statistics+0x5C)
+  swc1  $f0, %lo(player2_statistics+0x5C)($at)
+  lui   $at, %hi(player3_statistics+0x64)
+  swc1  $f0, %lo(player3_statistics+0x64)($at)
+  lui   $at, %hi(player3_statistics+0x5C)
+  swc1  $f0, %lo(player3_statistics+0x5C)($at)
+  lui   $at, %hi(player4_statistics+0x64)
+  swc1  $f0, %lo(player4_statistics+0x64)($at)
+  lui   $at, %hi(player4_statistics+92)
   jr    $ra
-   swc1  $f0, %lo(player4_player_data+92)($at)
+   swc1  $f0, %lo(player4_statistics+92)($at)
 ");
 
 asm(R"
@@ -8952,8 +8952,8 @@ glabel set_cur_player
   sll   $t8, $a0, 3
   lui   $at, %hi(pPlayer)
   subu  $t8, $t8, $a0
-  lui   $t9, %hi(player1_player_data) 
-  addiu $t9, %lo(player1_player_data) # addiu $t9, $t9, -0x6110
+  lui   $t9, %hi(player1_statistics) 
+  addiu $t9, %lo(player1_statistics) # addiu $t9, $t9, -0x6110
   sll   $t8, $t8, 4
   sw    $t7, %lo(pPlayer)($at)
   lui   $at, %hi(pPlayersPerm)

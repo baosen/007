@@ -36,10 +36,11 @@ typedef struct {
   int killed_civilians;
 } player_statistics;
 
-extern player_statistics player1_player_data;
-extern player_statistics player2_player_data;
-extern player_statistics player3_player_data;
-extern player_statistics player4_player_data;
+extern player_statistics player1_statistics;
+extern player_statistics player2_statistics;
+extern player_statistics player3_statistics;
+extern player_statistics player4_statistics;
+
 extern player_statistics *pPlayersPerm;
 
 #endif

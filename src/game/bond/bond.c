@@ -26750,8 +26750,8 @@ glabel maybe_mp_interface
   blez  $v0, .L7F089614
    move  $v1, $zero
   lw    $t0, 0x3c($sp)
-  lui   $t2, %hi(player1_player_data) 
-  addiu $t2, %lo(player1_player_data) # addiu $t2, $t2, -0x6110
+  lui   $t2, %hi(player1_statistics) 
+  addiu $t2, %lo(player1_statistics) # addiu $t2, $t2, -0x6110
   sll   $t1, $t0, 2
   addu  $v0, $t1, $t2
 .L7F0895FC:
@@ -27174,11 +27174,11 @@ glabel record_damage_kills
   lwc1  $f10, 0x148($t2)
   li    $at, 0x42B40000 # 90.000000
   sll   $t4, $t3, 3
-  lui   $t5, %hi(player1_player_data) 
+  lui   $t5, %hi(player1_statistics) 
   subu  $t4, $t4, $t3
   mtc1  $at, $f6
   sll   $t4, $t4, 4
-  addiu $t5, %lo(player1_player_data) # addiu $t5, $t5, -0x6110
+  addiu $t5, %lo(player1_statistics) # addiu $t5, $t5, -0x6110
   li    $at, 0x43870000 # 270.000000
   addu  $v0, $t4, $t5
   sub.s $f8, $f4, $f18
@@ -27308,13 +27308,13 @@ glabel record_damage_kills
    lw    $a0, 0x2c($sp)
   lw    $t5, 0x4c($sp)
   lw    $t7, 0x2c($sp)
-  lui   $t0, %hi(player1_player_data) 
+  lui   $t0, %hi(player1_statistics) 
   sll   $t6, $t5, 3
   subu  $t6, $t6, $t5
   sll   $t6, $t6, 4
   sll   $t8, $t7, 2
   addu  $t9, $t6, $t8
-  addiu $t0, %lo(player1_player_data) # addiu $t0, $t0, -0x6110
+  addiu $t0, %lo(player1_statistics) # addiu $t0, $t0, -0x6110
   addu  $v0, $t9, $t0
   lw    $t1, 0x24($v0)
   addiu $t2, $t1, 1
@@ -27544,11 +27544,11 @@ glabel record_damage_kills
   lwc1  $f4, 0x148($t0)
   li    $at, 0x42B40000 # 90.000000
   sll   $t2, $t1, 3
-  lui   $t3, %hi(player1_player_data) # $t3, 0x8008
+  lui   $t3, %hi(player1_statistics) # $t3, 0x8008
   subu  $t2, $t2, $t1
   mtc1  $at, $f8
   sll   $t2, $t2, 4
-  addiu $t3, %lo(player1_player_data) # addiu $t3, $t3, -0x60a0
+  addiu $t3, %lo(player1_statistics) # addiu $t3, $t3, -0x60a0
   li    $at, 0x43870000 # 270.000000
   addu  $v0, $t2, $t3
   sub.s $f18, $f16, $f6
@@ -27677,13 +27677,13 @@ glabel record_damage_kills
    lw    $a0, 0x2c($sp)
   lw    $t3, 0x4c($sp)
   lw    $t5, 0x2c($sp)
-  lui   $t8, %hi(player1_player_data) # $t8, 0x8008
+  lui   $t8, %hi(player1_statistics) # $t8, 0x8008
   sll   $t4, $t3, 3
   subu  $t4, $t4, $t3
   sll   $t4, $t4, 4
   sll   $t6, $t5, 2
   addu  $t7, $t4, $t6
-  addiu $t8, %lo(player1_player_data) # addiu $t8, $t8, -0x60a0
+  addiu $t8, %lo(player1_statistics) # addiu $t8, $t8, -0x60a0
   addu  $v0, $t7, $t8
   lw    $t9, 0x24($v0)
   addiu $t0, $t9, 1

@@ -644,10 +644,10 @@ glabel sub_GAME_7F0C2530
   lui   $at, %hi(D_8005BC80)
   lwc1  $f8, %lo(D_8005BC80)($at)
   cvt.s.w $f6, $f4
-  lui   $s4, %hi(player1_player_data)
+  lui   $s4, %hi(player1_statistics)
   lui   $s5, %hi(pPlayer)
   addiu $s5, %lo(pPlayer) # addiu $s5, $s5, -0x5f50
-  addiu $s4, %lo(player1_player_data) # addiu $s4, $s4, -0x6110
+  addiu $s4, %lo(player1_statistics) # addiu $s4, $s4, -0x6110
   addiu $s2, $sp, 0x6c
   div.s $f10, $f6, $f8
   li    $s7, 3
@@ -686,8 +686,8 @@ glabel sub_GAME_7F0C2530
   sll   $t0, $s6, 3
   subu  $t0, $t0, $s6
   subu  $t6, $t6, $s1
-  lui   $t9, %hi(player1_player_data) 
-  addiu $t9, %lo(player1_player_data) # addiu $t9, $t9, -0x6110
+  lui   $t9, %hi(player1_statistics) 
+  addiu $t9, %lo(player1_statistics) # addiu $t9, $t9, -0x6110
   sll   $t6, $t6, 4
   sll   $t0, $t0, 4
   sll   $t7, $s6, 2
@@ -1021,9 +1021,9 @@ glabel sub_GAME_7F0C2530
   blez  $fp, .L7F0C2D0C
    move  $s6, $zero
   beqz  $v0, .L7F0C2C04
-   lui   $t9, %hi(player1_player_data) 
-  lui   $v0, %hi(player1_player_data + 0x58)
-  lw    $v0, %lo(player1_player_data + 0x58)($v0)
+   lui   $t9, %hi(player1_statistics) 
+  lui   $v0, %hi(player1_statistics + 0x58)
+  lw    $v0, %lo(player1_statistics + 0x58)($v0)
   li    $v1, 4
   li    $s6, 1
   bne   $v1, $v0, .L7F0C2BD8
@@ -1050,7 +1050,7 @@ glabel sub_GAME_7F0C2530
    sll   $t2, $s6, 3
   subu  $t2, $t2, $s6
   sll   $t2, $t2, 4
-  addiu $t9, %lo(player1_player_data) # addiu $t9, $t9, -0x6110
+  addiu $t9, %lo(player1_statistics) # addiu $t9, $t9, -0x6110
   addu  $s4, $t2, $t9
   li    $v1, 4
   lui   $a0, 1
@@ -1975,9 +1975,9 @@ glabel jpt_MP_overlays_scoring
 .text
 glabel get_points_for_mp_player
   sll   $t6, $a0, 3
-  lui   $v1, %hi(player1_player_data)
+  lui   $v1, %hi(player1_statistics)
   subu  $t6, $t6, $a0
-  addiu $v1, %lo(player1_player_data) # addiu $v1, $v1, -0x6110
+  addiu $v1, %lo(player1_statistics) # addiu $v1, $v1, -0x6110
   sll   $t6, $t6, 4
   addiu $sp, $sp, -0x38
   addu  $t3, $v1, $t6
@@ -1990,9 +1990,9 @@ glabel get_points_for_mp_player
   sw    $zero, 0x24($sp)
   jal   get_scenario
    sw    $v0, 0x30($sp)
-  lui   $v1, %hi(player1_player_data)
+  lui   $v1, %hi(player1_statistics)
   sltiu $at, $v0, 8
-  addiu $v1, %lo(player1_player_data) # addiu $v1, $v1, -0x6110
+  addiu $v1, %lo(player1_statistics) # addiu $v1, $v1, -0x6110
   lw    $a0, 0x24($sp)
   lw    $a1, 0x38($sp)
   lw    $a3, 0x34($sp)
@@ -2143,8 +2143,8 @@ time_with_flag:
 team_player_kills:
   blez  $t2, .L7F0C3C80
    move  $t1, $zero
-  lui   $t4, %hi(player1_player_data) 
-  addiu $t4, %lo(player1_player_data) # addiu $t4, $t4, -0x6110
+  lui   $t4, %hi(player1_statistics) 
+  addiu $t4, %lo(player1_statistics) # addiu $t4, $t4, -0x6110
 .L7F0C3B3C:
   lbu   $t8, 0x69($t4)
   bnel  $a3, $t8, .L7F0C3C78
@@ -2153,8 +2153,8 @@ team_player_kills:
    move  $a1, $zero
   sll   $t9, $t1, 3
   subu  $t9, $t9, $t1
-  lui   $t5, %hi(player1_player_data) 
-  addiu $t5, %lo(player1_player_data) # addiu $t5, $t5, -0x6110
+  lui   $t5, %hi(player1_statistics) 
+  addiu $t5, %lo(player1_statistics) # addiu $t5, $t5, -0x6110
   sll   $t9, $t9, 4
   andi  $t0, $t2, 3
   beqz  $t0, .L7F0C3BC0
@@ -2185,8 +2185,8 @@ team_player_kills:
 .L7F0C3BC0:
    sll   $t5, $a1, 3
   subu  $t5, $t5, $a1
-  lui   $t6, %hi(player1_player_data) 
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x6110
+  lui   $t6, %hi(player1_statistics) 
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x6110
   sll   $t5, $t5, 4
   sll   $a2, $a1, 2
   addu  $v0, $t3, $a2
@@ -3116,9 +3116,9 @@ def_7F0C40C0:
    sll   $t4, $t1, 3
   subu  $t4, $t4, $t1
   sll   $t4, $t4, 4
-  lui   $t3, %hi(player1_player_data+105)
+  lui   $t3, %hi(player1_statistics+105)
   addu  $t3, $t3, $t4
-  lbu   $t3, %lo(player1_player_data+105)($t3)
+  lbu   $t3, %lo(player1_statistics+105)($t3)
   li    $t9, 5
   li    $t2, 4
   bnez  $t3, .L7F0C4878
@@ -3163,11 +3163,11 @@ def_7F0C40C0:
   sll   $t9, $t0, 3
   subu  $t9, $t9, $t0
   sll   $t9, $t9, 4
-  lui   $t2, %hi(player1_player_data + 0x69)
+  lui   $t2, %hi(player1_statistics + 0x69)
   addu  $t2, $t2, $t9
-  lui   $t7, %hi(player1_player_data + 0x69) 
-  lbu   $t7, %lo(player1_player_data + 0x69)($t7)
-  lbu   $t2, %lo(player1_player_data + 0x69)($t2)
+  lui   $t7, %hi(player1_statistics + 0x69) 
+  lbu   $t7, %lo(player1_statistics + 0x69)($t7)
+  lbu   $t2, %lo(player1_statistics + 0x69)($t2)
   lw    $a2, 0x84($sp)
   bne   $t7, $t2, .L7F0C4914
    nop   
@@ -3203,8 +3203,8 @@ def_7F0C40C0:
 .L7F0C4978:
   sll   $t9, $a0, 3
   subu  $t9, $t9, $a0
-  lui   $v0, %hi(player1_player_data)
-  addiu $v0, %lo(player1_player_data) # addiu $v0, $v0, -0x6110
+  lui   $v0, %hi(player1_statistics)
+  addiu $v0, %lo(player1_statistics) # addiu $v0, $v0, -0x6110
   sll   $t9, $t9, 4
   addu  $t7, $v0, $t9
   lbu   $t2, 0x69($t7)
@@ -3247,11 +3247,11 @@ def_7F0C40C0:
   sll   $t7, $t0, 3
   subu  $t7, $t7, $t0
   sll   $t7, $t7, 4
-  lui   $t6, %hi(player1_player_data + 0x69)
+  lui   $t6, %hi(player1_statistics + 0x69)
   addu  $t6, $t6, $t7
-  lui   $t9, %hi(player1_player_data + 0x69) 
-  lbu   $t9, %lo(player1_player_data + 0x69)($t9)
-  lbu   $t6, %lo(player1_player_data + 0x69)($t6)
+  lui   $t9, %hi(player1_statistics + 0x69) 
+  lbu   $t9, %lo(player1_statistics + 0x69)($t9)
+  lbu   $t6, %lo(player1_statistics + 0x69)($t6)
   lw    $a2, 0x84($sp)
   bne   $t9, $t6, .L7F0C4A48
    nop   
@@ -3288,11 +3288,11 @@ def_7F0C40C0:
   sll   $t7, $t0, 3
   subu  $t7, $t7, $t0
   sll   $t7, $t7, 4
-  lui   $t9, %hi(player1_player_data + 0x69)
+  lui   $t9, %hi(player1_statistics + 0x69)
   addu  $t9, $t9, $t7
-  lui   $t5, %hi(player2_player_data + 0x69) 
-  lbu   $t5, %lo(player2_player_data + 0x69)($t5)
-  lbu   $t9, %lo(player1_player_data + 0x69)($t9)
+  lui   $t5, %hi(player2_statistics + 0x69) 
+  lbu   $t5, %lo(player2_statistics + 0x69)($t5)
+  lbu   $t9, %lo(player1_statistics + 0x69)($t9)
   lw    $a2, 0x84($sp)
   bne   $t5, $t9, .L7F0C4AE0
    nop   
@@ -3329,11 +3329,11 @@ def_7F0C40C0:
   sll   $t7, $t0, 3
   subu  $t7, $t7, $t0
   sll   $t7, $t7, 4
-  lui   $t5, %hi(player1_player_data + 0x69)
+  lui   $t5, %hi(player1_statistics + 0x69)
   addu  $t5, $t5, $t7
-  lui   $t3, %hi(player3_player_data + 0x69) 
-  lbu   $t3, %lo(player3_player_data + 0x69)($t3)
-  lbu   $t5, %lo(player1_player_data + 0x69)($t5)
+  lui   $t3, %hi(player3_statistics + 0x69) 
+  lbu   $t3, %lo(player3_statistics + 0x69)($t3)
+  lbu   $t5, %lo(player1_statistics + 0x69)($t5)
   lw    $a2, 0x84($sp)
   bne   $t3, $t5, .L7F0C4B78
    nop   
@@ -3374,8 +3374,8 @@ def_7F0C40C0:
 .L7F0C4BF0:
   sll   $t3, $a0, 3
   subu  $t3, $t3, $a0
-  lui   $v0, %hi(player1_player_data)
-  addiu $v0, %lo(player1_player_data) # addiu $v0, $v0, -0x6110
+  lui   $v0, %hi(player1_statistics)
+  addiu $v0, %lo(player1_statistics) # addiu $v0, $v0, -0x6110
   sll   $t3, $t3, 4
   addu  $t5, $v0, $t3
   lbu   $t9, 0x69($t5)
@@ -3548,14 +3548,14 @@ def_7F0C40C0:
    move  $s0, $t4
   lw    $t7, 0xd4($sp)
   lw    $t3, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t5, $t7, 3
   subu  $t5, $t5, $t7
   sll   $t5, $t5, 4
   addu  $a3, $a3, $t5
   addu  $a1, $s0, $t3
   addiu $a1, $a1, 0x50
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   addiu $a2, $v0, 0x46
   jal   display_text_for_playerdata_on_MP_menu
@@ -3567,8 +3567,8 @@ def_7F0C40C0:
   beq   $v0, $at, .L7F0C50C8
    sll   $t9, $v0, 3
   subu  $t9, $t9, $v0
-  lui   $t6, %hi(player1_player_data) 
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x6110
+  lui   $t6, %hi(player1_statistics) 
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x6110
   sll   $t9, $t9, 4
   addu  $t8, $t9, $t6
   jal   get_video2_settings_ulx
@@ -3599,14 +3599,14 @@ def_7F0C40C0:
    move  $s0, $t3
   lw    $t5, 0xd4($sp)
   lw    $t7, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t9, $t5, 3
   subu  $t9, $t9, $t5
   sll   $t9, $t9, 4
   addu  $a3, $a3, $t9
   addu  $a1, $s0, $t7
   addiu $a1, $a1, 0x40
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   addiu $a2, $v0, 0x46
   jal   display_text_for_playerdata_on_MP_menu
@@ -3618,8 +3618,8 @@ def_7F0C40C0:
   beq   $v0, $at, .L7F0C4FF8
    sll   $t6, $v0, 3
   subu  $t6, $t6, $v0
-  lui   $t8, %hi(player1_player_data) 
-  addiu $t8, %lo(player1_player_data) # addiu $t8, $t8, -0x6110
+  lui   $t8, %hi(player1_statistics) 
+  addiu $t8, %lo(player1_statistics) # addiu $t8, $t8, -0x6110
   sll   $t6, $t6, 4
   addu  $t2, $t6, $t8
   jal   get_video2_settings_ulx
@@ -3644,8 +3644,8 @@ def_7F0C40C0:
   beq   $v0, $at, .L7F0C505C
    sll   $t7, $v0, 3
   subu  $t7, $t7, $v0
-  lui   $t5, %hi(player1_player_data) 
-  addiu $t5, %lo(player1_player_data) # addiu $t5, $t5, -0x6110
+  lui   $t5, %hi(player1_statistics) 
+  addiu $t5, %lo(player1_statistics) # addiu $t5, $t5, -0x6110
   sll   $t7, $t7, 4
   addu  $t9, $t7, $t5
   jal   get_video2_settings_ulx
@@ -3673,8 +3673,8 @@ def_7F0C40C0:
   beq   $v0, $at, .L7F0C50C8
    sll   $t4, $v0, 3
   subu  $t4, $t4, $v0
-  lui   $t3, %hi(player1_player_data) 
-  addiu $t3, %lo(player1_player_data) # addiu $t3, $t3, -0x6110
+  lui   $t3, %hi(player1_statistics) 
+  addiu $t3, %lo(player1_statistics) # addiu $t3, $t3, -0x6110
   sll   $t4, $t4, 4
   addu  $t7, $t4, $t3
   jal   get_video2_settings_ulx
@@ -3833,7 +3833,7 @@ def_7F0C40C0:
   bne   $t2, $at, .L7F0C5468
    lw    $t8, 0xd4($sp)
   lw    $v0, 0xd4($sp)
-  lui   $t5, %hi(player1_player_data + 0x24) 
+  lui   $t5, %hi(player1_statistics + 0x24) 
   beqz  $v0, .L7F0C5348
    nop   
   jal   get_video2_settings_ulx
@@ -3844,12 +3844,12 @@ def_7F0C40C0:
    move  $s0, $t1
   lw    $t7, 0xd4($sp)
   lw    $t4, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t3, $t7, 2
   addu  $a3, $a3, $t3
   addu  $a1, $s0, $t4
   addiu $a1, $a1, 0x50
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   addiu $a2, $v0, 0x46
   jal   display_text_for_playerdata_on_MP_menu
@@ -3858,7 +3858,7 @@ def_7F0C40C0:
   b     .L7F0C53A8
    lw    $v0, 0xd4($sp)
 .L7F0C5348:
-  lw    $t5, %lo(player1_player_data + 0x24)($t5)
+  lw    $t5, %lo(player1_statistics + 0x24)($t5)
   blezl $t5, .L7F0C53AC
    li    $at, 1
   jal   get_video2_settings_ulx
@@ -3869,14 +3869,14 @@ def_7F0C40C0:
    move  $s0, $t9
   lw    $t6, 0xd4($sp)
   lw    $t8, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t2, $t6, 2
   addu  $a3, $a3, $t2
   li    $t1, 3
   addu  $a1, $s0, $t8
   addiu $a1, $a1, 0x50
   sw    $t1, 0x10($sp)
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   jal   display_text_for_playerdata_on_MP_menu
    addiu $a2, $v0, 0x46
@@ -3886,9 +3886,9 @@ def_7F0C40C0:
   li    $at, 1
 .L7F0C53AC:
   beq   $v0, $at, .L7F0C5408
-   lui   $t6, %hi(player2_player_data + 0x28) 
-  lui   $t7, %hi(player1_player_data) 
-  addiu $t7, %lo(player1_player_data) # addiu $t7, $t7, -0x6110
+   lui   $t6, %hi(player2_statistics + 0x28) 
+  lui   $t7, %hi(player1_statistics) 
+  addiu $t7, %lo(player1_statistics) # addiu $t7, $t7, -0x6110
   sll   $t4, $v0, 2
   addu  $t3, $t4, $t7
   jal   get_video2_settings_ulx
@@ -3909,9 +3909,9 @@ def_7F0C40C0:
   b     .L7F0C5774
    move  $s1, $v0
 .L7F0C5408:
-  lw    $t6, %lo(player2_player_data + 0x28)($t6)
-  lui   $t1, %hi(player1_player_data) 
-  addiu $t1, %lo(player1_player_data) # addiu $t1, $t1, -0x6110
+  lw    $t6, %lo(player2_statistics + 0x28)($t6)
+  lui   $t1, %hi(player1_statistics) 
+  addiu $t1, %lo(player1_statistics) # addiu $t1, $t1, -0x6110
   blez  $t6, .L7F0C5774
    sll   $t2, $v0, 2
   addu  $t4, $t2, $t1
@@ -3935,7 +3935,7 @@ def_7F0C40C0:
    move  $s1, $v0
 .L7F0C5468:
   beqz  $t8, .L7F0C54C0
-   lui   $t7, %hi(player1_player_data + 0x24) 
+   lui   $t7, %hi(player1_statistics + 0x24) 
   jal   get_video2_settings_ulx
    nop   
   sll   $s0, $v0, 0x10
@@ -3944,12 +3944,12 @@ def_7F0C40C0:
    move  $s0, $t6
   lw    $t1, 0xd4($sp)
   lw    $t2, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t4, $t1, 2
   addu  $a3, $a3, $t4
   addu  $a1, $s0, $t2
   addiu $a1, $a1, 0x40
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   addiu $a2, $v0, 0x46
   jal   display_text_for_playerdata_on_MP_menu
@@ -3957,7 +3957,7 @@ def_7F0C40C0:
   b     .L7F0C551C
    move  $s1, $v0
 .L7F0C54C0:
-  lw    $t7, %lo(player1_player_data + 0x24)($t7)
+  lw    $t7, %lo(player1_statistics + 0x24)($t7)
   blezl $t7, .L7F0C5520
    lw    $t2, 0xd4($sp)
   jal   get_video2_settings_ulx
@@ -3968,14 +3968,14 @@ def_7F0C40C0:
    move  $s0, $t3
   lw    $t9, 0xd4($sp)
   lw    $t5, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t8, $t9, 2
   addu  $a3, $a3, $t8
   li    $t6, 3
   addu  $a1, $s0, $t5
   addiu $a1, $a1, 0x40
   sw    $t6, 0x10($sp)
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   jal   display_text_for_playerdata_on_MP_menu
    addiu $a2, $v0, 0x46
@@ -3984,11 +3984,11 @@ def_7F0C40C0:
   lw    $t2, 0xd4($sp)
 .L7F0C5520:
   li    $at, 1
-  lui   $t8, %hi(player2_player_data + 0x28) 
+  lui   $t8, %hi(player2_statistics + 0x28) 
   beq   $t2, $at, .L7F0C5580
    sll   $t1, $t2, 2
-  lui   $t4, %hi(player1_player_data) 
-  addiu $t4, %lo(player1_player_data) # addiu $t4, $t4, -0x6110
+  lui   $t4, %hi(player1_statistics) 
+  addiu $t4, %lo(player1_statistics) # addiu $t4, $t4, -0x6110
   addu  $t7, $t1, $t4
   jal   get_video2_settings_ulx
    sw    $t7, 0x44($sp)
@@ -4008,12 +4008,12 @@ def_7F0C40C0:
   b     .L7F0C55E0
    move  $s1, $v0
 .L7F0C5580:
-  lw    $t8, %lo(player2_player_data + 0x28)($t8)
+  lw    $t8, %lo(player2_statistics + 0x28)($t8)
   lw    $t6, 0xd4($sp)
-  lui   $t1, %hi(player1_player_data) 
+  lui   $t1, %hi(player1_statistics) 
   blez  $t8, .L7F0C55E0
    sll   $t2, $t6, 2
-  addiu $t1, %lo(player1_player_data) # addiu $t1, $t1, -0x6110
+  addiu $t1, %lo(player1_statistics) # addiu $t1, $t1, -0x6110
   addu  $t4, $t2, $t1
   jal   get_video2_settings_ulx
    sw    $t4, 0x44($sp)
@@ -4035,11 +4035,11 @@ def_7F0C40C0:
 .L7F0C55E0:
   lw    $t8, 0xd4($sp)
   li    $at, 2
-  lui   $t5, %hi(player3_player_data + 0x2C) 
+  lui   $t5, %hi(player3_statistics + 0x2C) 
   beq   $t8, $at, .L7F0C5644
    sll   $t6, $t8, 2
-  lui   $t2, %hi(player1_player_data) 
-  addiu $t2, %lo(player1_player_data) # addiu $t2, $t2, -0x6110
+  lui   $t2, %hi(player1_statistics) 
+  addiu $t2, %lo(player1_statistics) # addiu $t2, $t2, -0x6110
   addu  $t1, $t6, $t2
   jal   get_video2_settings_ulx
    sw    $t1, 0x44($sp)
@@ -4059,12 +4059,12 @@ def_7F0C40C0:
   b     .L7F0C56A4
    move  $s1, $v0
 .L7F0C5644:
-  lw    $t5, %lo(player3_player_data + 0x2C)($t5)
+  lw    $t5, %lo(player3_statistics + 0x2C)($t5)
   lw    $t9, 0xd4($sp)
-  lui   $t6, %hi(player1_player_data) 
+  lui   $t6, %hi(player1_statistics) 
   blez  $t5, .L7F0C56A4
    sll   $t8, $t9, 2
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x6110
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x6110
   addu  $t2, $t8, $t6
   jal   get_video2_settings_ulx
    sw    $t2, 0x44($sp)
@@ -4090,9 +4090,9 @@ def_7F0C40C0:
   bne   $t5, $at, .L7F0C5774
    li    $at, 3
   beq   $t9, $at, .L7F0C5714
-   lui   $t3, %hi(player3_player_data + 0x30) 
-  lui   $t6, %hi(player1_player_data) 
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x6110
+   lui   $t3, %hi(player3_statistics + 0x30) 
+  lui   $t6, %hi(player1_statistics) 
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x6110
   sll   $t8, $t9, 2
   addu  $t2, $t8, $t6
   jal   get_video2_settings_ulx
@@ -4113,12 +4113,12 @@ def_7F0C40C0:
   b     .L7F0C5774
    move  $s1, $v0
 .L7F0C5714:
-  lw    $t3, %lo(player4_player_data+0x30)($t3)
+  lw    $t3, %lo(player4_statistics+0x30)($t3)
   lw    $t5, 0xd4($sp)
-  lui   $t8, %hi(player1_player_data) 
+  lui   $t8, %hi(player1_statistics) 
   blez  $t3, .L7F0C5774
    sll   $t9, $t5, 2
-  addiu $t8, %lo(player1_player_data) # addiu $t8, $t8, -0x6110
+  addiu $t8, %lo(player1_statistics) # addiu $t8, $t8, -0x6110
   addu  $t6, $t9, $t8
   jal   get_video2_settings_ulx
    sw    $t6, 0x44($sp)
@@ -4605,10 +4605,10 @@ def_7F0C40C0:
   sll   $t5, $zero, 3
   subu  $t5, $t5, $zero
   sll   $t5, $t5, 4
-  lui   $t6, %hi(player1_player_data) 
+  lui   $t6, %hi(player1_statistics) 
   sll   $t8, $t9, 2
   addu  $t3, $t5, $t8
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x6110
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x6110
   addu  $v1, $t3, $t6
 .L7F0C5EA0:
   lw    $t2, 0x24($v1)
@@ -4623,10 +4623,10 @@ def_7F0C40C0:
   sll   $t4, $a1, 3
   subu  $t4, $t4, $a1
   sll   $t4, $t4, 4
-  lui   $t5, %hi(player1_player_data) 
+  lui   $t5, %hi(player1_statistics) 
   sll   $t7, $t1, 2
   addu  $t9, $t4, $t7
-  addiu $t5, %lo(player1_player_data) # addiu $t5, $t5, -0x6110
+  addiu $t5, %lo(player1_statistics) # addiu $t5, $t5, -0x6110
   addu  $v1, $t9, $t5
 .L7F0C5EE0:
   lw    $t8, 0x24($v1)
@@ -5294,9 +5294,9 @@ def_7F0C40C0:
   sll   $t6, $t3, 3
   subu  $t6, $t6, $t3
   sll   $t6, $t6, 4
-  lui   $t5, %hi(player1_player_data+105)
+  lui   $t5, %hi(player1_statistics+105)
   addu  $t5, $t5, $t6
-  lbu   $t5, %lo(player1_player_data+105)($t5)
+  lbu   $t5, %lo(player1_statistics+105)($t5)
   li    $t9, 5
   li    $t3, 4
   bnez  $t5, .Ljp7F0C552C
@@ -5340,11 +5340,11 @@ def_7F0C40C0:
   sll   $t6, $v1, 3
   subu  $t6, $t6, $v1
   sll   $t6, $t6, 4
-  lui   $t5, %hi(player1_player_data + 0x69)
+  lui   $t5, %hi(player1_statistics + 0x69)
   addu  $t5, $t5, $t6
-  lui   $t3, %hi(player1_player_data + 0x69) # $t3, 0x8008
-  lbu   $t3, %lo(player1_player_data + 0x69)($t3)
-  lbu   $t5, %lo(player1_player_data + 0x69)($t5)
+  lui   $t3, %hi(player1_statistics + 0x69) # $t3, 0x8008
+  lbu   $t3, %lo(player1_statistics + 0x69)($t3)
+  lbu   $t5, %lo(player1_statistics + 0x69)($t5)
   lw    $a2, 0x84($sp)
   bne   $t3, $t5, .Ljp7F0C55C4
    nop   
@@ -5380,8 +5380,8 @@ def_7F0C40C0:
 .Ljp7F0C5628:
   sll   $t5, $v1, 3
   subu  $t5, $t5, $v1
-  lui   $v0, %hi(player1_player_data) # $v0, 0x8008
-  addiu $v0, %lo(player1_player_data) # addiu $v0, $v0, -0x60a0
+  lui   $v0, %hi(player1_statistics) # $v0, 0x8008
+  addiu $v0, %lo(player1_statistics) # addiu $v0, $v0, -0x60a0
   sll   $t5, $t5, 4
   addu  $t7, $v0, $t5
   lbu   $t4, 0x69($t7)
@@ -5424,11 +5424,11 @@ def_7F0C40C0:
   sll   $t4, $v1, 3
   subu  $t4, $t4, $v1
   sll   $t4, $t4, 4
-  lui   $t8, %hi(player1_player_data + 0x69)
+  lui   $t8, %hi(player1_statistics + 0x69)
   addu  $t8, $t8, $t4
-  lui   $t3, %hi(player1_player_data + 0x69) # $t3, 0x8008
-  lbu   $t3, %lo(player1_player_data + 0x69)($t3)
-  lbu   $t8, %lo(player1_player_data + 0x69)($t8)
+  lui   $t3, %hi(player1_statistics + 0x69) # $t3, 0x8008
+  lbu   $t3, %lo(player1_statistics + 0x69)($t3)
+  lbu   $t8, %lo(player1_statistics + 0x69)($t8)
   lw    $a2, 0x84($sp)
   bne   $t3, $t8, .Ljp7F0C56F8
    nop   
@@ -5465,11 +5465,11 @@ def_7F0C40C0:
   sll   $t8, $v1, 3
   subu  $t8, $t8, $v1
   sll   $t8, $t8, 4
-  lui   $t9, %hi(player1_player_data + 0x69)
+  lui   $t9, %hi(player1_statistics + 0x69)
   addu  $t9, $t9, $t8
-  lui   $t3, %hi(player2_player_data + 0x69) # $t3, 0x8008
-  lbu   $t3, %lo(player2_player_data + 0x69)($t3)
-  lbu   $t9, %lo(player1_player_data + 0x69)($t9)
+  lui   $t3, %hi(player2_statistics + 0x69) # $t3, 0x8008
+  lbu   $t3, %lo(player2_statistics + 0x69)($t3)
+  lbu   $t9, %lo(player1_statistics + 0x69)($t9)
   lw    $a2, 0x84($sp)
   bne   $t3, $t9, .Ljp7F0C5790
    nop   
@@ -5506,11 +5506,11 @@ def_7F0C40C0:
   sll   $t9, $v1, 3
   subu  $t9, $t9, $v1
   sll   $t9, $t9, 4
-  lui   $t6, %hi(player1_player_data + 0x69)
+  lui   $t6, %hi(player1_statistics + 0x69)
   addu  $t6, $t6, $t9
-  lui   $t3, %hi(player3_player_data + 0x69) # $t3, 0x8008
-  lbu   $t3, %lo(player3_player_data + 0x69)($t3)
-  lbu   $t6, %lo(player1_player_data + 0x69)($t6)
+  lui   $t3, %hi(player3_statistics + 0x69) # $t3, 0x8008
+  lbu   $t3, %lo(player3_statistics + 0x69)($t3)
+  lbu   $t6, %lo(player1_statistics + 0x69)($t6)
   lw    $a2, 0x84($sp)
   bne   $t3, $t6, .Ljp7F0C5828
    nop   
@@ -5551,8 +5551,8 @@ def_7F0C40C0:
 .Ljp7F0C58A0:
   sll   $t5, $v1, 3
   subu  $t5, $t5, $v1
-  lui   $v0, %hi(player1_player_data) # $v0, 0x8008
-  addiu $v0, %lo(player1_player_data) # addiu $v0, $v0, -0x60a0
+  lui   $v0, %hi(player1_statistics) # $v0, 0x8008
+  addiu $v0, %lo(player1_statistics) # addiu $v0, $v0, -0x60a0
   sll   $t5, $t5, 4
   addu  $t7, $v0, $t5
   lbu   $t4, 0x69($t7)
@@ -5725,14 +5725,14 @@ def_7F0C40C0:
    move  $s0, $t5
   lw    $t8, 0xd4($sp)
   lw    $t7, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t6, $t8, 3
   subu  $t6, $t6, $t8
   sll   $t6, $t6, 4
   addu  $a3, $a3, $t6
   addu  $a1, $s0, $t7
   addiu $a1, $a1, 0x50
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   addiu $a2, $v0, 0x46
   jal   display_text_for_playerdata_on_MP_menu
@@ -5744,8 +5744,8 @@ def_7F0C40C0:
   beq   $v0, $at, .Ljp7F0C5D78
    sll   $t4, $v0, 3
   subu  $t4, $t4, $v0
-  lui   $t9, %hi(player1_player_data) # $t9, 0x8008
-  addiu $t9, %lo(player1_player_data) # addiu $t9, $t9, -0x60a0
+  lui   $t9, %hi(player1_statistics) # $t9, 0x8008
+  addiu $t9, %lo(player1_statistics) # addiu $t9, $t9, -0x60a0
   sll   $t4, $t4, 4
   addu  $t3, $t4, $t9
   jal   get_video2_settings_ulx
@@ -5776,14 +5776,14 @@ def_7F0C40C0:
    move  $s0, $t6
   lw    $t9, 0xd4($sp)
   lw    $t4, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t3, $t9, 3
   subu  $t3, $t3, $t9
   sll   $t3, $t3, 4
   addu  $a3, $a3, $t3
   addu  $a1, $s0, $t4
   addiu $a1, $a1, 0x40
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   addiu $a2, $v0, 0x46
   jal   display_text_for_playerdata_on_MP_menu
@@ -5795,8 +5795,8 @@ def_7F0C40C0:
   beq   $v0, $at, .Ljp7F0C5CA8
    sll   $t5, $v0, 3
   subu  $t5, $t5, $v0
-  lui   $t7, %hi(player1_player_data) # $t7, 0x8008
-  addiu $t7, %lo(player1_player_data) # addiu $t7, $t7, -0x60a0
+  lui   $t7, %hi(player1_statistics) # $t7, 0x8008
+  addiu $t7, %lo(player1_statistics) # addiu $t7, $t7, -0x60a0
   sll   $t5, $t5, 4
   addu  $t8, $t5, $t7
   jal   get_video2_settings_ulx
@@ -5821,8 +5821,8 @@ def_7F0C40C0:
   beq   $v0, $at, .Ljp7F0C5D0C
    sll   $t3, $v0, 3
   subu  $t3, $t3, $v0
-  lui   $t5, %hi(player1_player_data) # $t5, 0x8008
-  addiu $t5, %lo(player1_player_data) # addiu $t5, $t5, -0x60a0
+  lui   $t5, %hi(player1_statistics) # $t5, 0x8008
+  addiu $t5, %lo(player1_statistics) # addiu $t5, $t5, -0x60a0
   sll   $t3, $t3, 4
   addu  $t7, $t3, $t5
   jal   get_video2_settings_ulx
@@ -5850,8 +5850,8 @@ def_7F0C40C0:
   beq   $v0, $at, .Ljp7F0C5D78
    sll   $t3, $v0, 3
   subu  $t3, $t3, $v0
-  lui   $t5, %hi(player1_player_data) # $t5, 0x8008
-  addiu $t5, %lo(player1_player_data) # addiu $t5, $t5, -0x60a0
+  lui   $t5, %hi(player1_statistics) # $t5, 0x8008
+  addiu $t5, %lo(player1_statistics) # addiu $t5, $t5, -0x60a0
   sll   $t3, $t3, 4
   addu  $t7, $t3, $t5
   jal   get_video2_settings_ulx
@@ -6010,7 +6010,7 @@ def_7F0C40C0:
   bne   $t9, $at, .Ljp7F0C6118
    lw    $t7, 0xd4($sp)
   lw    $v0, 0xd4($sp)
-  lui   $t8, %hi(player1_player_data + 0x24) # $t8, 0x8008
+  lui   $t8, %hi(player1_statistics + 0x24) # $t8, 0x8008
   beqz  $v0, .Ljp7F0C5FF8
    nop   
   jal   get_video2_settings_ulx
@@ -6021,12 +6021,12 @@ def_7F0C40C0:
    move  $s0, $t3
   lw    $t6, 0xd4($sp)
   lw    $t5, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t7, $t6, 2
   addu  $a3, $a3, $t7
   addu  $a1, $s0, $t5
   addiu $a1, $a1, 0x50
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   addiu $a2, $v0, 0x46
   jal   display_text_for_playerdata_on_MP_menu
@@ -6035,7 +6035,7 @@ def_7F0C40C0:
   b     .Ljp7F0C6058
    lw    $v0, 0xd4($sp)
 .Ljp7F0C5FF8:
-  lw    $t8, %lo(player1_player_data + 0x24)($t8)
+  lw    $t8, %lo(player1_statistics + 0x24)($t8)
   blezl $t8, .Ljp7F0C605C
    li    $at, 1
   jal   get_video2_settings_ulx
@@ -6046,14 +6046,14 @@ def_7F0C40C0:
    move  $s0, $t4
   lw    $t3, 0xd4($sp)
   lw    $t9, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t5, $t3, 2
   addu  $a3, $a3, $t5
   li    $t6, 3
   addu  $a1, $s0, $t9
   addiu $a1, $a1, 0x50
   sw    $t6, 0x10($sp)
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   jal   display_text_for_playerdata_on_MP_menu
    addiu $a2, $v0, 0x46
@@ -6063,9 +6063,9 @@ def_7F0C40C0:
   li    $at, 1
 .Ljp7F0C605C:
   beq   $v0, $at, .Ljp7F0C60B8
-   lui   $t6, %hi(player2_player_data + 0x28) # $t6, 0x8008
-  lui   $t8, %hi(player1_player_data) # $t8, 0x8008
-  addiu $t8, %lo(player1_player_data) # addiu $t8, $t8, -0x60a0
+   lui   $t6, %hi(player2_statistics + 0x28) # $t6, 0x8008
+  lui   $t8, %hi(player1_statistics) # $t8, 0x8008
+  addiu $t8, %lo(player1_statistics) # addiu $t8, $t8, -0x60a0
   sll   $t7, $v0, 2
   addu  $t4, $t7, $t8
   jal   get_video2_settings_ulx
@@ -6086,9 +6086,9 @@ def_7F0C40C0:
   b     .Ljp7F0C6424
    move  $s1, $v0
 .Ljp7F0C60B8:
-  lw    $t6, %lo(player2_player_data + 0x28)($t6)
-  lui   $t8, %hi(player1_player_data) # $t8, 0x8008
-  addiu $t8, %lo(player1_player_data) # addiu $t8, $t8, -0x60a0
+  lw    $t6, %lo(player2_statistics + 0x28)($t6)
+  lui   $t8, %hi(player1_statistics) # $t8, 0x8008
+  addiu $t8, %lo(player1_statistics) # addiu $t8, $t8, -0x60a0
   blez  $t6, .Ljp7F0C6424
    sll   $t7, $v0, 2
   addu  $t4, $t7, $t8
@@ -6112,7 +6112,7 @@ def_7F0C40C0:
    move  $s1, $v0
 .Ljp7F0C6118:
   beqz  $t7, .Ljp7F0C6170
-   lui   $t5, %hi(player1_player_data + 0x24) # $t5, 0x8008
+   lui   $t5, %hi(player1_statistics + 0x24) # $t5, 0x8008
   jal   get_video2_settings_ulx
    nop   
   sll   $s0, $v0, 0x10
@@ -6121,12 +6121,12 @@ def_7F0C40C0:
    move  $s0, $t8
   lw    $t9, 0xd4($sp)
   lw    $t4, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t3, $t9, 2
   addu  $a3, $a3, $t3
   addu  $a1, $s0, $t4
   addiu $a1, $a1, 0x40
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   addiu $a2, $v0, 0x46
   jal   display_text_for_playerdata_on_MP_menu
@@ -6134,7 +6134,7 @@ def_7F0C40C0:
   b     .Ljp7F0C61CC
    move  $s1, $v0
 .Ljp7F0C6170:
-  lw    $t5, %lo(player1_player_data + 0x24)($t5)
+  lw    $t5, %lo(player1_statistics + 0x24)($t5)
   blezl $t5, .Ljp7F0C61D0
    lw    $t3, 0xd4($sp)
   jal   get_video2_settings_ulx
@@ -6145,14 +6145,14 @@ def_7F0C40C0:
    move  $s0, $t6
   lw    $t8, 0xd4($sp)
   lw    $t7, 0xa8($sp)
-  lui   $a3, %hi(player1_player_data+36)
+  lui   $a3, %hi(player1_statistics+36)
   sll   $t4, $t8, 2
   addu  $a3, $a3, $t4
   li    $t9, 3
   addu  $a1, $s0, $t7
   addiu $a1, $a1, 0x40
   sw    $t9, 0x10($sp)
-  lw    $a3, %lo(player1_player_data+36)($a3)
+  lw    $a3, %lo(player1_statistics+36)($a3)
   move  $a0, $s1
   jal   display_text_for_playerdata_on_MP_menu
    addiu $a2, $v0, 0x46
@@ -6161,10 +6161,10 @@ def_7F0C40C0:
   lw    $t3, 0xd4($sp)
 .Ljp7F0C61D0:
   li    $at, 1
-  lui   $t6, %hi(player1_player_data) # $t6, 0x8008
+  lui   $t6, %hi(player1_statistics) # $t6, 0x8008
   beq   $t3, $at, .Ljp7F0C622C
    sll   $t5, $t3, 2
-  addiu $t6, %lo(player1_player_data) # addiu $t6, $t6, -0x60a0
+  addiu $t6, %lo(player1_statistics) # addiu $t6, $t6, -0x60a0
   addu  $t7, $t5, $t6
   jal   get_video2_settings_ulx
    sw    $t7, 0x44($sp)
@@ -6184,13 +6184,13 @@ def_7F0C40C0:
   b     .Ljp7F0C6290
    move  $s1, $v0
 .Ljp7F0C622C:
-  lui   $t3, %hi(player2_player_data + 0x28) # $t3, 0x8008
-  lw    $t3, %lo(player2_player_data + 0x28)($t3)
+  lui   $t3, %hi(player2_statistics + 0x28) # $t3, 0x8008
+  lw    $t3, %lo(player2_statistics + 0x28)($t3)
   lw    $t5, 0xd4($sp)
-  lui   $t7, %hi(player1_player_data) # $t7, 0x8008
+  lui   $t7, %hi(player1_statistics) # $t7, 0x8008
   blez  $t3, .Ljp7F0C6290
    sll   $t6, $t5, 2
-  addiu $t7, %lo(player1_player_data) # addiu $t7, $t7, -0x60a0
+  addiu $t7, %lo(player1_statistics) # addiu $t7, $t7, -0x60a0
   addu  $t8, $t6, $t7
   jal   get_video2_settings_ulx
    sw    $t8, 0x44($sp)
@@ -6212,10 +6212,10 @@ def_7F0C40C0:
 .Ljp7F0C6290:
   lw    $t6, 0xd4($sp)
   li    $at, 2
-  lui   $t8, %hi(player1_player_data) # $t8, 0x8008
+  lui   $t8, %hi(player1_statistics) # $t8, 0x8008
   beq   $t6, $at, .Ljp7F0C62F0
    sll   $t7, $t6, 2
-  addiu $t8, %lo(player1_player_data) # addiu $t8, $t8, -0x60a0
+  addiu $t8, %lo(player1_statistics) # addiu $t8, $t8, -0x60a0
   addu  $t4, $t7, $t8
   jal   get_video2_settings_ulx
    sw    $t4, 0x44($sp)
@@ -6235,13 +6235,13 @@ def_7F0C40C0:
   b     .Ljp7F0C6354
    move  $s1, $v0
 .Ljp7F0C62F0:
-  lui   $t6, %hi(player3_player_data + 0x2C) # $t6, 0x8008
-  lw    $t6, %lo(player3_player_data + 0x2C)($t6)
+  lui   $t6, %hi(player3_statistics + 0x2C) # $t6, 0x8008
+  lw    $t6, %lo(player3_statistics + 0x2C)($t6)
   lw    $t7, 0xd4($sp)
-  lui   $t4, %hi(player1_player_data) # $t4, 0x8008
+  lui   $t4, %hi(player1_statistics) # $t4, 0x8008
   blez  $t6, .Ljp7F0C6354
    sll   $t8, $t7, 2
-  addiu $t4, %lo(player1_player_data) # addiu $t4, $t4, -0x60a0
+  addiu $t4, %lo(player1_statistics) # addiu $t4, $t4, -0x60a0
   addu  $t9, $t8, $t4
   jal   get_video2_settings_ulx
    sw    $t9, 0x44($sp)
@@ -6268,8 +6268,8 @@ def_7F0C40C0:
    li    $at, 3
   beq   $t4, $at, .Ljp7F0C63C0
    sll   $t9, $t4, 2
-  lui   $t3, %hi(player1_player_data) # $t3, 0x8008
-  addiu $t3, %lo(player1_player_data) # addiu $t3, $t3, -0x60a0
+  lui   $t3, %hi(player1_statistics) # $t3, 0x8008
+  addiu $t3, %lo(player1_statistics) # addiu $t3, $t3, -0x60a0
   addu  $t5, $t9, $t3
   jal   get_video2_settings_ulx
    sw    $t5, 0x44($sp)
@@ -6289,13 +6289,13 @@ def_7F0C40C0:
   b     .Ljp7F0C6424
    move  $s1, $v0
 .Ljp7F0C63C0:
-  lui   $t4, %hi(player4_player_data+0x30) # $t4, 0x8008
-  lw    $t4, %lo(player4_player_data+0x30)($t4)
+  lui   $t4, %hi(player4_statistics+0x30) # $t4, 0x8008
+  lw    $t4, %lo(player4_statistics+0x30)($t4)
   lw    $t9, 0xd4($sp)
-  lui   $t5, %hi(player1_player_data) # $t5, 0x8008
+  lui   $t5, %hi(player1_statistics) # $t5, 0x8008
   blez  $t4, .Ljp7F0C6424
    sll   $t3, $t9, 2
-  addiu $t5, %lo(player1_player_data) # addiu $t5, $t5, -0x60a0
+  addiu $t5, %lo(player1_statistics) # addiu $t5, $t5, -0x60a0
   addu  $t6, $t3, $t5
   jal   get_video2_settings_ulx
    sw    $t6, 0x44($sp)
@@ -6782,10 +6782,10 @@ def_7F0C40C0:
   sll   $t8, $zero, 3
   subu  $t8, $t8, $zero
   sll   $t8, $t8, 4
-  lui   $t9, %hi(player1_player_data) # $t9, 0x8008
+  lui   $t9, %hi(player1_statistics) # $t9, 0x8008
   sll   $t4, $t7, 2
   addu  $t5, $t8, $t4
-  addiu $t9, %lo(player1_player_data) # addiu $t9, $t9, -0x60a0
+  addiu $t9, %lo(player1_statistics) # addiu $t9, $t9, -0x60a0
   addu  $v1, $t5, $t9
 .Ljp7F0C6B50:
   lw    $t6, 0x24($v1)
@@ -6800,10 +6800,10 @@ def_7F0C40C0:
   sll   $t3, $a1, 3
   subu  $t3, $t3, $a1
   sll   $t3, $t3, 4
-  lui   $t5, %hi(player1_player_data) # $t5, 0x8008
+  lui   $t5, %hi(player1_statistics) # $t5, 0x8008
   sll   $t8, $t7, 2
   addu  $t4, $t3, $t8
-  addiu $t5, %lo(player1_player_data) # addiu $t5, $t5, -0x60a0
+  addiu $t5, %lo(player1_statistics) # addiu $t5, $t5, -0x60a0
   addu  $v1, $t4, $t5
 .Ljp7F0C6B90:
   lw    $t9, 0x24($v1)
