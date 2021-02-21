@@ -1,7 +1,7 @@
 load("//tools/gecc:gecc.bzl", "gecc_library")
 
 exports_files([
-    "chrobjdata.h"
+    "chrobjdata.h",
 ])
 
 gecc_library(

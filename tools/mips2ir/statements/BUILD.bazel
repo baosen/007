@@ -6,6 +6,6 @@ go_library(
     importpath = "mips2ir/statements",
     visibility = ["//visibility:public"],
     deps = [
-        "//tools/mips2ir/reassembler"
-    ]
+        "//tools/mips2ir/reassembler",
+    ],
 )

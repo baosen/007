@@ -37,9 +37,9 @@ go_library(
     importpath = "mips2ir/frontend",
     visibility = ["//visibility:public"],
     deps = [
-        "//tools/mips2ir/statements",
         "//tools/mips2ir/reassembler",
-    ]
+        "//tools/mips2ir/statements",
+    ],
 )
 
 go_test(

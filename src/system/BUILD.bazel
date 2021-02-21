@@ -242,4 +242,3 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
-

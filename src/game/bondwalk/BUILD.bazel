@@ -5,9 +5,9 @@ gecc_library(
     srcs = [
         "bondwalk.c",
         "//src/game:bondtypes.h",
-        "//src/game/chrobjdata:chrobjdata.h",
         "//src/game:player.h",
         "//src/game:xyzpoint.h",
+        "//src/game/chrobjdata:chrobjdata.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],

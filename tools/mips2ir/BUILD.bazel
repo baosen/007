@@ -14,5 +14,5 @@ go_library(
     deps = [
         "//tools/mips2ir/frontend",
         "//tools/mips2ir/reassembler",
-    ]
+    ],
 )

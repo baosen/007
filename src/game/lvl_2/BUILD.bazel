@@ -3,8 +3,8 @@ load("//tools/gecc:gecc.bzl", "gecc_library")
 gecc_library(
     name = "lvl_2",
     srcs = [
-        "//src/game:lvl.h",
         "lvl_2.c",
+        "//src/game:lvl.h",
     ],
     visibility = ["//visibility:public"],
 )

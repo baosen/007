@@ -4,14 +4,14 @@ load("//tools/gecc:gecc.bzl", "gecc_libraries")
 gecc_libraries(
     name = "libultra_c",
     srcs = [
-        "string.c",
-        "osDpSetStatus.c",
-        "osAiGetLength.c",
-        "osPiGetStatus.c",
         "__osGetCurrFaultedThread.c",
         "alCSPGetState.c",
-        "osViBlack.c",
+        "osAiGetLength.c",
+        "osDpSetStatus.c",
+        "osPiGetStatus.c",
         "osSpTaskYield.c",
+        "osViBlack.c",
+        "string.c",
     ],
     visibility = ["//visibility:public"],
 )

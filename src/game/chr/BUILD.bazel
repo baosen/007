@@ -1,7 +1,7 @@
 load("//tools/gecc:gecc.bzl", "gecc_library")
 
 exports_files([
-    "chr.h"
+    "chr.h",
 ])
 
 gecc_library(
