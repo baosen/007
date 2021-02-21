@@ -1,5 +1,183 @@
 #include "bondtypes.h"
 
+typedef struct CHRdata CHRdata;
+
+/* unfinished struct, WIP */
+struct CHRdata {
+  unsigned short chrnum;
+  char accuracyrating;
+  char speedrating;
+  unsigned char firecountleft;
+  unsigned char firecountright;
+  char headnum;
+  char actiontype;
+  char sleep;
+  char invalidmove;
+  char numclosearghs;
+  char numarghs;
+  unsigned char fadealpha;
+  char arghrating;
+  char aimendcount;
+  char bodynum;
+  /* 0x0010 */
+  unsigned char grenadeprob;
+  char flinchcnt;
+  short hidden;
+  int chrflags;
+  void *pad;
+  void *model;
+  /* 0x0020 */
+  void *field_20;
+  float chrwidth;
+  float chrheight;
+  void *bondpos; /* HACK - reused as fadeout counter on death, checks if pointer
+                    at 7F02B774 */
+  /* 0x0030 */
+  int field_30;
+  short field_34;
+  char field_36;
+  char field_37;
+  char field_38;
+  char field_39;
+  char field_3A;
+  char field_3B;
+  int path_target_position;
+  /* 0x0040 */
+  int field_40;
+  int field_44;
+  int field_48;
+  int field_4C;
+  /* 0x0050 */
+  int field_50;
+  int field_54;
+  char type_of_motion;
+  char distance_counter_or_something;
+  short distance_to_target;
+  int field_5C;
+  /* 0x0060 */
+  int target_position;
+  int field_64;
+  int field_68;
+  int field_6C;
+  /* 0x0070 */
+  int path_segment_coverage;
+  int path_segment_length;
+  int field_78;
+  int field_7C;
+  /* 0x0080 */
+  int field_80;
+  int field_84;
+  int field_88;
+  int field_8C;
+  /* 0x0090 */
+  int field_90;
+  int segment_coverage;
+  int segment_length;
+  int field_9C;
+  /* 0x00A0 */
+  int field_A0;
+  float sumground;
+  float manground;
+  float ground;
+  /* 0x00B0 */
+  float fallspeed[3];
+  float prevpos[3];
+  /* 0x00B8 */
+  int lastwalk60;
+  int lastmoveok60;
+  /* 0x00D0 */
+  float visionrange;
+  int lastseetarget60;
+  float lastvisibletarg[3];
+  /* 0x00E4 */
+  void *field_E4;
+  int timeshooter;
+  float hearingscale;
+  /* 0x00F0 */
+  int lastheartarget60;
+  unsigned char shadecol[4];
+  unsigned char nextcol[4];
+  float damage;
+  /* 0x0100 */
+  float maxdamage;
+  void *ailist;
+  unsigned short aioffset;
+  unsigned short aireturnlist;
+  unsigned char flags;  /* used by ai commands 81-85 */
+  unsigned char flags2; /* used by ai commands 86-8A */
+  unsigned char BITFIELD;
+  unsigned char random;
+  /* 0x0110 */
+  int timer60;
+  unsigned short padpreset1; /* ID PAD_PRESET */
+  unsigned short chrpreset1; /* ID CHR_PRESET */
+  unsigned short
+      chrseeshot; /* ID CHR_SEE_SHOT - ignores invincible/armoured guards */
+  unsigned short chrseedie; /* ID CHR_SEE_DIE */
+  /* 0x011C */
+  float field_11C[2];
+  float field_124[2];
+  float field_12C[2];
+  /* 0x0134 */
+  int field_134;
+  int field_138;
+  float shotbondsum;
+  /* 0x0140 */
+  float aimuplshoulder;
+  float aimuprshoulder;
+  float aimupback;
+  float aimsideback;
+  /* 0x0150 */
+  float aimendlshoulder;
+  float aimendrshoulder;
+  float aimendback;
+  float aimendsideback;
+  /* 0x0160 */
+  int *handle_positiondata[2];
+  int *ptr_SEbuffer1;
+  int *ptr_SEbuffer2;
+  /* 0x0170 */
+  int *ptr_SEbuffer3;
+  int *ptr_SEbuffer4;
+  int field_178;
+  int field_17C;
+  /* 0x0180 */
+  char field_180;
+  char field_181;
+  char field_182;
+  char field_183;
+  int field_184;
+  int field_188;
+  int field_18C;
+  /* 0x0190 */
+  int field_190;
+  int field_194;
+  int field_198;
+  int field_19C;
+  /* 0x01A0 */
+  int field_1A0;
+  int field_1A4;
+  int field_1A8;
+  char field_1AC;
+  char field_1AD;
+  char field_1AE;
+  char field_1AF;
+  /* 0x01B0 */
+  int field_1B0;
+  int field_1B4;
+  int field_1B8;
+  int field_1BC;
+  /* 0x01C0 */
+  int field_1C0;
+  int field_1C4;
+  int field_1C8;
+  int field_1CC;
+  /* 0x01D0 */
+  int field_1D0;
+  int field_1D4;
+  int *handle_positiondata_hat;
+};
+
 asm(R"
 glabel load_body_head_if_not_loaded
   sll   $t6, $a0, 2
@@ -8285,7 +8463,7 @@ glabel sub_GAME_7F02A1E8
    nop   
 ");
 
-int true_if_actor_dying_fading_limping_shot(struct CHRdata* chr) {
+int true_if_actor_dying_fading_limping_shot(struct CHRdata *chr) {
   char currentaction = chr->actiontype;
   if ((currentaction == ACT_DIE) || (currentaction == ACT_DEAD) ||
       (currentaction == ACT_PREARGH) ||
@@ -8294,7 +8472,7 @@ int true_if_actor_dying_fading_limping_shot(struct CHRdata* chr) {
   return 1;
 }
 
-int true_if_actor_dying_fading(struct CHRdata* chr) {
+int true_if_actor_dying_fading(struct CHRdata *chr) {
   char currentaction = chr->actiontype;
   return ((currentaction == ACT_DIE) || (currentaction == ACT_DEAD));
 }
@@ -9645,7 +9823,7 @@ glabel sub_GAME_7F02AD98
    nop   
 ");
 
-void actor_reset_sleep(struct CHRdata* actor) { actor->sleep = 0; }
+void actor_reset_sleep(struct CHRdata *actor) { actor->sleep = 0; }
 
 asm(R"
 glabel sub_GAME_7F02B4E8
