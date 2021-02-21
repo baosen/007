@@ -21,11 +21,6 @@ struct explosion_death_animation {
   float anonymous_6;
 };
 
-struct explosion_animation {
-  void *explosion_death_animation;
-  int count;
-};
-
 struct weapon_firing_animation_table {
   int anonymous_0;
   float anonymous_1;

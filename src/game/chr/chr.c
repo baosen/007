@@ -477,6 +477,11 @@ unsigned char expl_back[] = {0x14, 0x15, 0x16, 0x17};
 unsigned char expl_b_right[] = {0x12, 0x18, 0x00, 0x00};
 unsigned char expl_b_left[] = {0x13, 0x19, 0x00, 0x00};
 
+struct explosion_animation {
+  void *explosion_death_animation;
+  int count;
+};
+
 struct explosion_animation explosion_animation_table[] = {
     {expl_forward, 6}, {expl_f_left, 3}, {expl_left, 3},  {expl_b_right, 2},
     {expl_back, 4},    {expl_b_left, 2}, {expl_right, 3}, {expl_f_right, 3}};
