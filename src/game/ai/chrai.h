@@ -104,6 +104,52 @@ extern unsigned int dword_D_80031F00[];
 extern unsigned int dword_D_80031F44[];
 extern float gas_damage_flag;
 extern unsigned int gas_cutoff_flag;
+
+struct object_standard {
+  unsigned short extrascale : 2;
+  unsigned char hidden2 : 1;
+  unsigned char type : 1;
+  unsigned short obj;
+  unsigned short pad;
+  unsigned int flags;
+  unsigned int flags2;
+  void *runtime_ptr_obj_posdata;
+  void *runtime_ptr_obj_instance_controller;
+  void *runtime_MATRIX0;
+  void *runtime_MATRIX1;
+  void *runtime_MATRIX2;
+  void *runtime_MATRIX3;
+  void *runtime_MATRIX4;
+  void *runtime_MATRIX5;
+  void *runtime_MATRIX6;
+  void *runtime_MATRIX7;
+  void *runtime_MATRIX8;
+  void *runtime_MATRIX9;
+  void *runtime_MATRIXA;
+  void *runtime_MATRIXB;
+  void *runtime_MATRIXC;
+  void *runtime_MATRIXD;
+  void *runtime_MATRIXE;
+  void *runtime_MATRIXF;
+  float runtime_x_pos;
+  float runtime_y_pos;
+  float runtime_z_pos;
+  int runtime_bitflags;
+  int ptr_allocated_collisiondata_block;
+  int field_6C;
+  float field_70;
+  short damage;
+  short maxdamage;
+  char field_78;
+  char field_79;
+  char field_7A;
+  char field_7B;
+  char field_7C;
+  char field_7D;
+  char field_7E;
+  char field_7F;
+};
+
 extern struct object_standard *ptr_setup_objects;
 
 #endif
