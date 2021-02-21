@@ -11,16 +11,6 @@ struct struck_animation_table {
   float sfx2_timer_60;
 };
 
-struct explosion_death_animation {
-  int anonymous_0;
-  int anonymous_1;
-  float anonymous_2;
-  float anonymous_3;
-  float anonymous_4;
-  float anonymous_5;
-  float anonymous_6;
-};
-
 struct weapon_firing_animation_table {
   int anonymous_0;
   float anonymous_1;
