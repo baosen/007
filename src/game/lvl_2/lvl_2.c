@@ -15,6 +15,11 @@ extern unsigned int *ramrom_Frigate_1;
 extern unsigned int *ramrom_Frigate_2;
 extern unsigned int *ramrom_Train;
 
+struct ramrom_struct {
+  unsigned int *address;
+  unsigned int unk;
+};
+
 struct ramrom_struct ramrom_table[] = {
     {&ramrom_Dam_1, 0},      {&ramrom_Dam_2, 0},      {&ramrom_Facility_1, 0},
     {&ramrom_Facility_2, 0}, {&ramrom_Facility_3, 0}, {&ramrom_Runway_1, 0},
