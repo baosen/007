@@ -117,7 +117,7 @@ link_elf(
         "//src/game/random",
         "//src/game/unk_09B7A0",
         "//src/game/unk_09C250",
-        "//src/game:unk_0A1DA0",
+        "//src/game/unk_0A1DA0",
         "//src/game:unk_0B3200",
         "//src/game/unk_0BC530",
         "//src/game/cpu_cycle_count",
