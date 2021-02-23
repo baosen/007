@@ -1,5 +1,5 @@
-#ifndef _UNK_093880_H_
-#define _UNK_093880_H_
+#ifndef _PLAYERS_H_
+#define _PLAYERS_H_
 #include "player.h"
 
 typedef struct {
