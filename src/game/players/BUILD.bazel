@@ -6,7 +6,7 @@ gecc_library(
         "players.c",
         "//src/game:player.h",
         "//src/game:players.h",
-        "//src/game:coordinate.h",
+        "//src/game/coordinate:coordinate.h",
         "//src/game/bond:bond.h",
         "//src/game/chr:chr.h",
         "//src/game/lvl:lvl.h",

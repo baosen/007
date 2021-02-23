@@ -6,7 +6,7 @@ gecc_library(
         "watch.c",
         "//src/game:player.h",
         "//src/game:players.h",
-        "//src/game:coordinate.h",
+        "//src/game/coordinate:coordinate.h",
         "//src/game/bond:bond.h",
         "//src/game/chr:chr.h",
         "//src/game/unk_0A1DA0:unk_0A1DA0.h",
