@@ -1,4 +1,5 @@
 #include "bondtypes.h"
+#include "color.h"
 #include <types.h>
 
 int dword_CODE_bss_80069550;

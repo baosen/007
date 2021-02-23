@@ -8,6 +8,7 @@ gecc_library(
         "//src/game:player.h",
         "//src/game:xyzpoint.h",
         "//src/game/chrobjdata:chrobjdata.h",
+        "//src/game/color:color.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],

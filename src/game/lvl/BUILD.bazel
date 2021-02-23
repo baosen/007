@@ -5,6 +5,7 @@ gecc_library(
     srcs = [
         "lvl.c",
         "//src/game:bondtypes.h",
+        "//src/game/color:color.h",
         "//src/game/mainmenu:mainmenu.h",
         "//src/system:includes",
     ],

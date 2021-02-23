@@ -1,5 +1,6 @@
 #ifndef _MAINMENU_H_
 #define _MAINMENU_H_
+#include "color.h"
 
 extern int array_favweapon[4][2];
 

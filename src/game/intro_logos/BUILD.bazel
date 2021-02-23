@@ -5,6 +5,7 @@ gecc_library(
     srcs = [
         "intro_logos.c",
         "//src/game:bondtypes.h",
+        "//src/game/color:color.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
