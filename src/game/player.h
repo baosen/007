@@ -1,6 +1,6 @@
 #ifndef _PLAYER_H_
 #define _PLAYER_H_
-#include "xyzpoint.h"
+#include "coordinate.h"
 
 typedef struct ObjectRecord {
   unsigned short obj;
@@ -1132,8 +1132,8 @@ typedef struct {
   float c_scalelod;
   float c_lodscalez;
   unsigned int c_lodscalezu32;
-  struct xyzpoint c_cameratopnorm;
-  struct xyzpoint c_cameraleftnorm;
+  struct coordinate c_cameratopnorm;
+  struct coordinate c_cameraleftnorm;
 
   float screenxminf;
   float screenyminf;

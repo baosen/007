@@ -11,7 +11,7 @@ gecc_library(
         "bond.h",
         "//src/game:player.h",
         "//src/game:players.h",
-        "//src/game:xyzpoint.h",
+        "//src/game:coordinate.h",
     ],
     visibility = ["//visibility:public"],
 )

@@ -5,7 +5,7 @@ gecc_library(
     srcs = [
         "initunk_0072B0.c",
         "//src/game:player.h",
-        "//src/game:xyzpoint.h",
+        "//src/game:coordinate.h",
     ],
     visibility = ["//visibility:public"],
 )

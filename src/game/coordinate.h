@@ -1,7 +1,7 @@
 #ifndef _XYZPOINT_H_
 #define _XYZPOINT_H_
 
-struct xyzpoint {
+struct coordinate {
   float x, y, z;
 };
 

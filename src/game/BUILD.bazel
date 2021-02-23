@@ -8,5 +8,5 @@ exports_files([
     "player.h",
     "players.h",
     "unk_0A1DA0.h",
-    "xyzpoint.h",
+    "coordinate.h",
 ])

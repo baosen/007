@@ -6,7 +6,7 @@ gecc_library(
         "bondwalk.c",
         "//src/game:bondtypes.h",
         "//src/game:player.h",
-        "//src/game:xyzpoint.h",
+        "//src/game:coordinate.h",
         "//src/game/chrobjdata:chrobjdata.h",
         "//src/game/color:color.h",
         "//src/system:includes",
