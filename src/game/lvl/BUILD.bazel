@@ -1,5 +1,9 @@
 load("//tools/gecc:gecc.bzl", "gecc_library")
 
+exports_files([
+    "lvl.h",
+])
+
 gecc_library(
     name = "lvl",
     srcs = [

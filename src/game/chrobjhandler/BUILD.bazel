@@ -5,8 +5,8 @@ gecc_library(
     srcs = [
         "chrobjhandler.c",
         "//src/game:bondtypes.h",
-        "//src/game:lvl.h",
         "//src/game/ai:chrai.h",
+        "//src/game/lvl:lvl.h",
         "//src/system:includes",
         "//src/system:music.h",
     ],

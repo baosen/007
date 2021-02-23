@@ -4,12 +4,12 @@ gecc_library(
     name = "players",
     srcs = [
         "players.c",
-        "//src/game:lvl.h",
         "//src/game:player.h",
         "//src/game:players.h",
         "//src/game:xyzpoint.h",
         "//src/game/bond:bond.h",
         "//src/game/chr:chr.h",
+        "//src/game/lvl:lvl.h",
     ],
     visibility = ["//visibility:public"],
 )
