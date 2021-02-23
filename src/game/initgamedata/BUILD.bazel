@@ -4,7 +4,6 @@ gecc_library(
     name = "initgamedata",
     srcs = [
         "initgamedata.c",
-        "//src/game/color:color.h",
         "//src/game/mainmenu:mainmenu.h",
     ],
     visibility = ["//visibility:public"],

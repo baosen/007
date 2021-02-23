@@ -1,6 +1,5 @@
 #ifndef _MAINMENU_H_
 #define _MAINMENU_H_
-#include "color.h"
 
 extern int array_favweapon[4][2];
 
@@ -53,14 +52,6 @@ extern int set0_never_used;
 extern int set0_never_used_0;
 extern int D_8002A968;
 extern int dword_D_8002A96C;
-extern struct color stru_D_8002A970;
-extern struct color stru_D_8002A974;
-extern struct color stru_D_8002A978;
-extern struct color stru_D_8002A97C;
-extern struct color stru_D_8002A980;
-extern struct color stru_D_8002A984;
-extern struct color stru_D_8002A988;
-extern struct color stru_D_8002A98C;
 extern unsigned int dword_D_8002A990;
 extern unsigned int dword_D_8002A994;
 extern unsigned int dword_D_8002A998;

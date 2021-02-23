@@ -1,4 +1,5 @@
 #include "mainmenu.h"
+#include "color.h"
 #include "bondtypes.h"
 #include "music.h"
 #include <gbi.h>
