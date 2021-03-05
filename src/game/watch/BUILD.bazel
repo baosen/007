@@ -5,7 +5,7 @@ gecc_library(
     srcs = [
         "watch.c",
         "//src/game:player.h",
-        "//src/game:players.h",
+        "//src/game/players:players.h",
         "//src/game/coordinate:coordinate.h",
         "//src/game/bond:bond.h",
         "//src/game/chr:chr.h",

@@ -6,7 +6,6 @@ exports_files([
     "chr.h",
     "chrobjdata.h",
     "player.h",
-    "players.h",
     "unk_0A1DA0.h",
     "coordinate.h",
 ])
