@@ -4,7 +4,7 @@ gecc_library(
     name = "GlobalImageTable",
     srcs = [
         "GlobalImageTable.c",
-        "//src/game:bondtypes.h",
+        "//src/game/bondtypes:bondtypes.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],
