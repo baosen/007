@@ -1,3 +1,3 @@
 exports_files([
-    "player.h"
+    "player.h",
 ])
