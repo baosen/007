@@ -8,8 +8,8 @@ int getPlayerCount(void);
 
 void zbufAllocate(void) {
   unsigned int mempAllocBytesInBank(unsigned int bytes, unsigned char bank);
-
   extern int resolution;
+
   if (resolution != 0) {
     z_buffer_width = 440;
     z_buffer_height = 330;
@@ -34,18 +34,17 @@ void zbufSetBuffer(int vp_image, int vp_width, int vp_height) {
 }
 
 Gfx *zbufInit(Gfx *gdl) {
-  int phi_a3;
-  int test;
+  int resolution, test;
   if (z_buffer == 0) {
     zbufAllocate();
   }
   if (!(get_cur_playernum() < 2) ||
       ((getPlayerCount() == 2) && (get_cur_playernum() == 1))) {
-    phi_a3 = 320 * 240;
+    resolution = 320 * 240;
   } else {
-    phi_a3 = 0;
+    resolution = 0;
   }
-  test = (z_buffer - phi_a3);
+  test = z_buffer - resolution;
   test = test & ~0x3F;
   gDPPipeSync(gdl++);
   gDPSetDepthImage(gdl++, test);
@@ -56,8 +55,8 @@ Gfx *zbufClearCurrentPlayer(Gfx *gdl) {
   short get_video2_settings_txtClipW(void);
   short get_video2_settings_txtClipH(void);
 
-  int start_x;
-  int end_x;
+  int start_x, end_x;
+
   gDPPipeSync(gdl++);
   gDPSetRenderMode(gdl++, G_RM_NOOP, G_RM_NOOP2);
   gDPSetColorImage(gdl++, G_IM_FMT_RGBA, G_IM_SIZ_16b, z_buffer_width,
