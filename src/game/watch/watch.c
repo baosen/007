@@ -557,11 +557,9 @@ unsigned int get_screen_ratio(void) { return screen_ratio; }
 void set_screen_ratio(unsigned int uParm1) { screen_ratio = uParm1; }
 
 void sub_GAME_7F0A4EF8(void) {
-
-  if (watch_soundrelated_maybe == 1) {
+  if (watch_soundrelated_maybe == 1)
     watch_soundrelated_maybe = 0;
-
-  } else {
+  else {
     watch_soundrelated_maybe = 1;
     play_sfx_a1(ptr_sfx_buf, 0x9F, 0);
   }
