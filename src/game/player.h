@@ -34,8 +34,7 @@ typedef struct InvItem {
     struct invitem_dual type_dual;
   } type_inv_item;
 
-  struct InvItem *next;
-  struct InvItem *prev;
+  struct InvItem *next, *prev;
 } InvItem;
 
 typedef struct {
