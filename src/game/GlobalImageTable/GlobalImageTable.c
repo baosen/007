@@ -1,4 +1,5 @@
 #include "bondtypes.h"
+#include "bondconstants.h"
 
 typedef struct sGlobalImageTable {
   unsigned int globalDL_0x000[30];

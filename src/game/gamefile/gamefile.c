@@ -1,4 +1,4 @@
-#include "bondtypes.h"
+#include "bondconstants.h"
 #include "mainmenu.h"
 
 // EEPROM masks for in-game settings.

@@ -10,7 +10,6 @@ gecc_library(
         "bondaicommands.h",
         "chrobjdata.c",
         "chrobjdata.h",
-        "//src/game:bondtypes.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],

@@ -8,7 +8,6 @@ gecc_library(
     name = "chr",
     srcs = [
         "chr.c",
-        "//src/game:bondtypes.h",
         "//src/game/chr:chr.h",
         "//src/system:includes",
     ],

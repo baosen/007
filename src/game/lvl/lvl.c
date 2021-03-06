@@ -1,4 +1,4 @@
-#include "bondtypes.h"
+#include "bondconstants.h"
 #include "mainmenu.h"
 
 unsigned int *ptr_jfont_DL;

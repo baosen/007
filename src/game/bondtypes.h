@@ -1,6 +1,5 @@
 #ifndef _BONDTYPES_H_
 #define _BONDTYPES_H_
-#include "bondconstants.h"
 
 typedef struct sImageTableEntry {
   unsigned int index;

@@ -4,7 +4,6 @@ gecc_library(
     name = "bondwalk",
     srcs = [
         "bondwalk.c",
-        "//src/game:bondtypes.h",
         "//src/game:player.h",
         "//src/game/coordinate:coordinate.h",
         "//src/game/chrobjdata:chrobjdata.h",

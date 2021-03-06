@@ -4,7 +4,6 @@ gecc_library(
     name = "gamefile",
     srcs = [
         "gamefile.c",
-        "//src/game:bondtypes.h",
         "//src/game/mainmenu:mainmenu.h",
         "//src/system:includes",
     ],

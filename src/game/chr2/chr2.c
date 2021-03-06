@@ -1,4 +1,4 @@
-#include "bondtypes.h"
+#include "bondconstants.h"
 
 typedef struct CHRdata CHRdata;
 

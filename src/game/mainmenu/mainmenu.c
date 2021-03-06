@@ -1,7 +1,7 @@
 #include "mainmenu.h"
 #include "color.h"
-#include "bondtypes.h"
 #include "music.h"
+#include "bondconstants.h"
 #include <gbi.h>
 #include <stddef.h>
 #include <types.h>

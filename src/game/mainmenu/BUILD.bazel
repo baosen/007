@@ -8,7 +8,6 @@ gecc_library(
     name = "mainmenu",
     srcs = [
         "mainmenu.c",
-        "//src/game:bondtypes.h",
         "//src/game/color:color.h",
         "//src/game/mainmenu:mainmenu.h",
         "//src/system:includes",

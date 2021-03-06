@@ -1,4 +1,4 @@
-#include "bondtypes.h"
+#include "bondconstants.h"
 #include <gbi.h>
 
 typedef struct {

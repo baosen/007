@@ -4,7 +4,6 @@ gecc_library(
     name = "bg",
     srcs = [
         "bg.c",
-        "//src/game:bondtypes.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],

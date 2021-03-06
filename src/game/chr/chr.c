@@ -1,5 +1,5 @@
 #include "chr.h"
-#include "bondtypes.h"
+#include "bondconstants.h"
 #include <stddef.h>
 #include <types.h>
 

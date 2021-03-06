@@ -8,7 +8,6 @@ gecc_library(
     name = "lvl",
     srcs = [
         "lvl.c",
-        "//src/game:bondtypes.h",
         "//src/game/mainmenu:mainmenu.h",
         "//src/system:includes",
     ],

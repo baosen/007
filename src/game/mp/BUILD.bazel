@@ -12,7 +12,6 @@ gecc_library(
     name = "mp_watch",
     srcs = [
         "mp_watch.c",
-        "//src/game:bondtypes.h",
         "//src/system:includes",
         "//src/system:music.h",
     ],

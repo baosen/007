@@ -4,7 +4,6 @@ gecc_library(
     name = "chr2",
     srcs = [
         "chr2.c",
-        "//src/game:bondtypes.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],

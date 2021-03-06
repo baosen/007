@@ -4,7 +4,6 @@ gecc_library(
     name = "objective_status",
     srcs = [
         "objective_status.c",
-        "//src/game:bondtypes.h",
         "//src/system:includes",
     ],
     visibility = ["//visibility:public"],

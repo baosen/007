@@ -4,7 +4,6 @@ gecc_library(
     name = "intro_logos",
     srcs = [
         "intro_logos.c",
-        "//src/game:bondtypes.h",
         "//src/game/color:color.h",
         "//src/system:includes",
     ],

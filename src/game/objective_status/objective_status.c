@@ -1,4 +1,4 @@
-#include "bondtypes.h"
+#include "bondconstants.h"
 
 //! FIXME all but text field cannot be trusted
 struct objective_entry {
