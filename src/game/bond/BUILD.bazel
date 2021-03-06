@@ -9,7 +9,7 @@ gecc_library(
     srcs = [
         "bond.c",
         "bond.h",
-        "//src/game:player.h",
+        "//src/game/player:player.h",
         "//src/game/players:players.h",
         "//src/game/coordinate:coordinate.h",
     ],

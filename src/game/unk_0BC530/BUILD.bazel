@@ -4,7 +4,7 @@ gecc_library(
     name = "unk_0BC530",
     srcs = [
         "unk_0BC530.c",
-        "//src/game:player.h",
+        "//src/game/player:player.h",
         "//src/game/coordinate:coordinate.h",
     ],
     visibility = ["//visibility:public"],
