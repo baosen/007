@@ -1,7 +1,5 @@
-
-
-
 .section .text 
+
 glabel osUnmapTLB
   mfc0  $t0, $10
   mtc0  $a0, $0

@@ -1,7 +1,5 @@
-
-
-
 .section .text 
+
 glabel osStartThread
   addiu $sp, $sp, -0x28
   sw    $ra, 0x1c($sp)

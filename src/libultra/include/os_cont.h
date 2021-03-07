@@ -9,8 +9,8 @@ typedef struct {
 
 typedef struct {
   unsigned short button; // Which button?
-  char stick_x;          // -80 <= stick_x <= 80.
-  char stick_y;          // -80 <= stick_y <= 80.
+  char stick_x,          // -80 <= stick_x <= 80.
+       stick_y;          // -80 <= stick_y <= 80.
   unsigned char errno;   // Error number.
 } OSContPad;
 

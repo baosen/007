@@ -1,5 +1,3 @@
-
-
 .section .text
 .section .bss
 
