@@ -8,3 +8,12 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "sqrt_tan_angle_plus_one_pc",
+    srcs = [
+        "sqrt_tan_angle_plus_one.c",
+        "//src/libultra/include",
+    ],
+    visibility = ["//visibility:public"],
+)

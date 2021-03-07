@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "setguscale_pc",
+    srcs = [
+        "setguscale.c",
+    ],
+    visibility = ["//visibility:public"],
+)

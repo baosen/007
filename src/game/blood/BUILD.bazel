@@ -8,6 +8,14 @@ gecc_library(
     visibility = ["//visibility:public"],
 )
 
+cc_library(
+    name = "blood_image_pc",
+    srcs = [
+        "blood_image.c",
+    ],
+    visibility = ["//visibility:public"],
+)
+
 gecc_library(
     name = "blood_animation",
     srcs = [

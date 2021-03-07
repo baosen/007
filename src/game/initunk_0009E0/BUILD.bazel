@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "initunk_0009E0_pc",
+    srcs = [
+        "initunk_0009E0.c",
+    ],
+    visibility = ["//visibility:public"],
+)

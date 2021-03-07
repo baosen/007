@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "initweaponanigroups_pc",
+    srcs = [
+        "initweaponanigroups.c",
+    ],
+    visibility = ["//visibility:public"],
+)

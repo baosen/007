@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "initintromatrices_pc",
+    srcs = [
+        "initintromatrices.c",
+    ],
+    visibility = ["//visibility:public"],
+)

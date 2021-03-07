@@ -3,10 +3,7 @@
 
 struct indy_resource_entry {
   unsigned int resourceID;
-  int type;
-  int size;
-  int readsize;
-  int writesize;
+  int type, size, readsize, writesize;
 };
 
 struct indy_resource_entry_type3 {
@@ -22,8 +19,7 @@ struct indy_resource_entry_type4 {
 
 struct indy_resource_entry_type6 {
   struct indy_resource_entry entry;
-  unsigned int data1;
-  unsigned int data2;
+  unsigned int data1, data2;
 };
 
 extern int indy_ready;

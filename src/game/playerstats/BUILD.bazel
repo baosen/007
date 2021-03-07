@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "playerstats_pc",
+    srcs = [
+        "playerstats.c",
+    ],
+    visibility = ["//visibility:public"],
+)

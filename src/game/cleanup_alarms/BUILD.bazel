@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "cleanup_alarms_pc",
+    srcs = [
+        "cleanup_alarms.c",
+    ],
+    visibility = ["//visibility:public"],
+)

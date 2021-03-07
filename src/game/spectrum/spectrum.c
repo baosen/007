@@ -26,10 +26,7 @@ char spec_IFF2_lower;
 char spec_IFF2_upper;
 char spec_IM;
 char byte_CODE_bss_8008E34D;
-short spec_IX;
-short spec_IY;
-short spec_SP;
-short spec_PC;
+short spec_IX, spec_IY, spec_SP, spec_PC;
 
 char D_8004EC30 = 0;
 

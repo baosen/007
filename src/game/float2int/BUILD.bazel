@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "float2int_pc",
+    srcs = [
+        "float2int.c",
+    ],
+    visibility = ["//visibility:public"],
+)

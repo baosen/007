@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "initmttex_pc",
+    srcs = [
+        "initmttex.c",
+    ],
+    visibility = ["//visibility:public"],
+)

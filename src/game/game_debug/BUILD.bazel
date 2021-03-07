@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "game_debug_pc",
+    srcs = [
+        "game_debug.c",
+    ],
+    visibility = ["//visibility:public"],
+)
