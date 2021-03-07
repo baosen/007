@@ -4,7 +4,6 @@
 #include <message.h>
 #include <pi.h>
 #include <sptask.h>
-#include <thread.h>
 #include <vi.h>
 
 #define OS_SC_STACKSIZE 0x2000
