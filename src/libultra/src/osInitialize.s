@@ -15,7 +15,7 @@ glabel osDiskExist
 glabel __osFinalRom
 .word 0
 
-.section .text, "ax"
+.section .text
 glabel osInitialize
   addiu $sp, $sp, -0x40
   sw    $ra, 0x1c($sp)

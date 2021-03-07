@@ -1,7 +1,4 @@
-
-
-
-.section .text, "ax"  
+.section .text  
 glabel __CSPPostNextSeqEvent
   addiu $sp, $sp, -0x30
   sw    $ra, 0x14($sp)

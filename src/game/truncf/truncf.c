@@ -1,6 +1,5 @@
-float truncf(float arg0) {
+float truncf(const float arg0) {
   float temp_f2;
-
   if (arg0 >= 0.0f) {
     return (float)(int)arg0;
   }
@@ -11,9 +10,8 @@ float truncf(float arg0) {
   return temp_f2 - 1.0f;
 }
 
-int sub_GAME_7F05C3D8(float arg0) {
+int sub_GAME_7F05C3D8(const float arg0) {
   int temp_f8;
-
   if (arg0 >= 0.0f) {
     return (int)arg0;
   }

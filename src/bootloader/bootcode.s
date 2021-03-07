@@ -1,6 +1,6 @@
 # A loader that loads the main application code from the entry point address found in the rom header.
 # This code is placed after the rom header. Many other Nintendo 64 games also uses this loader.
-.section .text, "ax"
+.section .text
   mtc0  $zero, $13
   mtc0  $zero, $9
   mtc0  $zero, $11

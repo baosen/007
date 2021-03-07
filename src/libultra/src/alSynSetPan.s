@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel alSynSetPan
   addiu $sp, $sp, -0x18
   sw    $ra, 0x14($sp)

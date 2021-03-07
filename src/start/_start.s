@@ -1,5 +1,5 @@
 
-.section .text, "ax"
+.section .text
 
 # The entry-point. Blanks 8005D2E0-8008E360, sets SP->803AB410, JR to 80000450.
 glabel _start

@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel alHeapInit
   li    $v1, 16
   andi  $t6, $a1, 0xf

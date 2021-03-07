@@ -1,7 +1,5 @@
+.section .text
 
-
-
-.section .text, "ax"   
 glabel _bcopy
   beqz  $a2, .L7000F9DC
    move  $a3, $a1

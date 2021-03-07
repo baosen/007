@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel guMtxF2L
   li    $at, 0x47800000 # 65536.000000
   mtc1  $at, $f0

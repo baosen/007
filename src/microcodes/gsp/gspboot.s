@@ -1,5 +1,5 @@
 
-.section .text, "ax"
+.section .text
 glabel gsp3DTextStart
 .incbin "gspboot.text.bin"
 

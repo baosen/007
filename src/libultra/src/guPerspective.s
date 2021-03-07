@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax"   
+.section .text   
 glabel guPerspectiveF
   addiu $sp, $sp, -0x30
   mtc1  $a2, $f14

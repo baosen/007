@@ -1,7 +1,5 @@
+.section .text
 
-
-
-.section .text, "ax"  
 glabel alCents2Ratio
   li    $at, 0x3F800000 # 1.000000
   mtc1  $at, $f2

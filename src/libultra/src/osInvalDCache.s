@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel osInvalDCache
   blez  $a1, .L70010BA0
    nop   

@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel osSetTimer
   addiu $sp, $sp, -0x20
   sw    $a0, 0x20($sp)

@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax"   
+.section .text   
 
 glabel osDpGetCounters
   lui   $t6, %hi(DPC_CLOCK_REG) # $t6, 0xa410

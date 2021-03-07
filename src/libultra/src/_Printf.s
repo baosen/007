@@ -1,7 +1,5 @@
+.section .text
 
-
-
-.section .text, "ax"   
 glabel _Putfld
   addiu $sp, $sp, -0x18
   sw    $a1, 0x20($sp)

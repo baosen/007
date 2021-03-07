@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel osWritebackDCache
   blez  $a1, .L70010C18
    nop   

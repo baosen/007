@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax"
+.section .text
 
 glabel alCSPSetVol
   addiu $sp, $sp, -0x28

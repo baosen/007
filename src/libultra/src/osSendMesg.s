@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel osSendMesg
   addiu $sp, $sp, -0x38
   sw    $ra, 0x24($sp)

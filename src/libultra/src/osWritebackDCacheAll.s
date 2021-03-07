@@ -1,6 +1,6 @@
 
 
-.section .text, "ax"
+.section .text
 glabel osWritebackDCacheAll
   lui   $t0, 0x8000
   li    $t2, 8192

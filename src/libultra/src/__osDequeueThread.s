@@ -1,7 +1,4 @@
-
-
-
-.section .text, "ax" 
+.section .text 
 glabel __osDequeueThread
   move  $a2, $a0
   lw    $a3, ($a2)

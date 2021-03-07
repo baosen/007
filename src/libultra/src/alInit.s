@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 
 glabel alUnlink
   lw    $v0, ($a0)

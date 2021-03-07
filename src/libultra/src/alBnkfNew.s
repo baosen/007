@@ -1,4 +1,4 @@
-.section .text, "ax" 
+.section .text
   jr    $ra
   nop   
   jr    $ra

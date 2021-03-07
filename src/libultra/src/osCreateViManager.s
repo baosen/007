@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 
 .ifndef VERSION_EU
 glabel osCreateViManager

@@ -1,6 +1,6 @@
 
 
-.section .text, "ax"
+.section .text
 .section .bss
 
 glabel tp # type.

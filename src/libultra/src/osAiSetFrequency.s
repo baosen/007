@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel osAiSetFrequency
   lui   $t6, %hi(osViClock)#%hi(osViClock) 
   lw    $t6, %lo(osViClock)($t6)#%lo(osViClock)($t6)

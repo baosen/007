@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel __osExceptionPreamble
   lui   $k0, %hi(__osException) # $k0, 0x7001
   addiu $k0, %lo(__osException) # addiu $k0, $k0, 0x1a0

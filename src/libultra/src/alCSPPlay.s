@@ -1,7 +1,5 @@
+.section .text
 
-
-
-.section .text, "ax"
 glabel alCSPPlay
   addiu $sp, $sp, -0x28
   sw    $ra, 0x14($sp)

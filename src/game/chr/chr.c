@@ -439,13 +439,8 @@ struct struck_animation_table D_8002E5BC[] = {
     {0, 0, -1.0, 0.5, 0, -1.0, -1.0}};
 
 struct explosion_death_animation {
-  int anonymous_0;
-  int anonymous_1;
-  float anonymous_2;
-  float anonymous_3;
-  float anonymous_4;
-  float anonymous_5;
-  float anonymous_6;
+  int anonymous_0, anonymous_1;
+  float anonymous_2, anonymous_3, anonymous_4, anonymous_5, anonymous_6;
 };
 
 struct explosion_death_animation D_8002E648[] = {

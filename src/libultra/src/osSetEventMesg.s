@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel osSetEventMesg
   addiu $sp, $sp, -0x28
   sw    $ra, 0x1c($sp)

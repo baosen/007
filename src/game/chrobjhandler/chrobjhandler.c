@@ -1,7 +1,7 @@
+#include "bondconstants.h"
 #include "chrai.h"
 #include "lvl.h"
 #include "music.h"
-#include "bondconstants.h"
 #include <types.h>
 
 int alarm_timer = 0;

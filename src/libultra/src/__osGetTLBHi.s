@@ -1,7 +1,4 @@
-
-
-
-.section .text, "ax"   
+.section .text
 
 glabel __osGetTLBHi
   mtc0  $a0, $0

@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel __ull_rshift
   sw    $a0, ($sp)
   sw    $a1, 4($sp)

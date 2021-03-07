@@ -1,5 +1,5 @@
 
-.section .text, "ax" 
+.section .text 
 
   jr    $ra
    nop   

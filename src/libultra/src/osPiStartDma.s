@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel osPiStartDma
   addiu $sp, $sp, -0x28
   lui   $t6, %hi(__osPiDevMgr) 

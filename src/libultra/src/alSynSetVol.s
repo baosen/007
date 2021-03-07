@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel alSynSetVol
   addiu $sp, $sp, -0x20
   sw    $ra, 0x14($sp)

@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 glabel alEvtqFlushType
   addiu $sp, $sp, -0x40
   sw    $s3, 0x20($sp)

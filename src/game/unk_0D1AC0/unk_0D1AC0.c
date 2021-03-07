@@ -1,5 +1,4 @@
-float D_8004EAF0 = 0.0;
-float D_8004EAF4 = 0.0;
+float D_8004EAF0 = 0.0, D_8004EAF4 = 0.0;
 
 asm(R"
 glabel sub_GAME_7F0D1AC0

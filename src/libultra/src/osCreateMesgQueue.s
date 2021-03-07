@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 
 glabel osCreateMesgQueue
   lui   $t6, %hi(__osThreadTail) 

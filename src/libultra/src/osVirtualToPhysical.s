@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax"  
+.section .text  
 glabel osVirtualToPhysical
   addiu $sp, $sp, -0x18
   sw    $a0, 0x18($sp)

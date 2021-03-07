@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax"  
+.section .text  
 glabel alCSeqGetLoc
   lw    $t6, 4($a0)
   move  $a2, $a0

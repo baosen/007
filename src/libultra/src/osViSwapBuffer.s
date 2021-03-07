@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax" 
+.section .text 
 
 glabel osViSwapBuffer
   addiu $sp, $sp, -0x20

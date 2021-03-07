@@ -1,5 +1,5 @@
 
-.section .text, "ax"
+.section .text
 glabel rspbootTextStart
 .incbin "rspboot.text.bin"
 

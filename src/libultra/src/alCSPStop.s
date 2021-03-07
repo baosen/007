@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax"
+.section .text
 
 glabel alCSPStop
   addiu $sp, $sp, -0x28

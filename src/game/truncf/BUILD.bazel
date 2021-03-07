@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "truncf_pc",
+    srcs = [
+        "truncf.c",
+    ],
+    visibility = ["//visibility:public"],
+)

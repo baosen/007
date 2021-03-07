@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax"
+.section .text
 .ifndef VERSION_EU
 glabel osCreatePiManager
   addiu $sp, $sp, -0x30

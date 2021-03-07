@@ -1,7 +1,7 @@
 
 
 
-.section .text, "ax"
+.section .text
 
 
 glabel osPiRawStartDma
