@@ -18,24 +18,10 @@ void something_with_rsp_c_debug(void) {
   set_debug_notice_list_entry(&D_8004E9E0, "rsp_c_debug");
 }
 
-asm(R"
-glabel initialize_rsp_buffers
-  addiu $sp, $sp, -0x18
-  sw    $ra, 0x14($sp)
-  li    $a0, 40960
-  jal   mempAllocBytesInBank
-   li    $a1, 6
-  lw    $ra, 0x14($sp)
-  lui   $v1, %hi(D_8004E9E8)
-  li    $at, 40960
-  addiu $v1, %lo(D_8004E9E8) # addiu $v1, $v1, -0x1618
-  addu  $t7, $v0, $at
-  sw    $v0, ($v1)
-  lui   $at, %hi(D_8004E9E4)
-  sw    $t7, %lo(D_8004E9E4)($at)
-  jr    $ra
-   addiu $sp, $sp, 0x18
-");
+void initialize_rsp_buffers(void) {
+  D_8004E9E8 = mempAllocBytesInBank(0xa000, 6);
+  D_8004E9E4 = D_8004E9E8 + 0xa000;
+}
 
 asm(R"
 glabel load_rsp_microcode
