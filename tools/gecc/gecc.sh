@@ -27,7 +27,7 @@ ASSEMBLER_FLAGS="-march=vr4300 -mabi=32 $ASMDEFS $INCLUDE_DIRECTORIES"
 
 ASSEMBLY_PREPROCESSOR="python3 $thisdir/asmpreproc/asm-processor.py"
 IRIX_C_COMPILER="$thisdir/irix/cc"
-COMPILER_FLAGS="-Wo,-loopunroll,0 -Wab,-r4300_mul -non_shared -G 0 -Xcpluscomm -woff 568,709,712,797,807,819,820,852,821,838,893 -signed -mips2 $LCDEFS $INCLUDE_DIRECTORIES"
+COMPILER_FLAGS="-Wab,-r4300_mul -non_shared -G 0 -Xcpluscomm -woff 568,709,712,797,807,819,820,852,821,838,893 -signed -mips2 $LCDEFS $INCLUDE_DIRECTORIES"
 OPTIMIZATION_FLAGS="-O2" # used by GoldenEye 007.
 
 $ASSEMBLY_PREPROCESSOR $OPTIMIZATION_FLAGS $INPUT_FILES | $IRIX_C_COMPILER $COMPILER_FLAGS $OPTIMIZATION_FLAGS -c $thisdir/asmpreproc/include-stdin.c -o $OUTPUT_FILE
