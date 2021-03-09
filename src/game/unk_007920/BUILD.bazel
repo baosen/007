@@ -7,3 +7,11 @@ gecc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "unk_007920_pc",
+    srcs = [
+        "unk_007920.c",
+    ],
+    visibility = ["//visibility:public"],
+)
