@@ -1,5 +1,5 @@
-char dword_CODE_bss_8008D370[0x400];
-char dword_CODE_bss_8008D770[0xBA0];
+char dword_CODE_bss_8008D370[1024];
+char dword_CODE_bss_8008D770[2976];
 
 int D_8004E9E0 = 0, D_8004E9E4 = 0, D_8004E9E8 = 0, D_8004E9EC = 0;
 
