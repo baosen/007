@@ -9340,19 +9340,19 @@ int sub_GAME_7F09B528(int param_1) {
     if (param_1 == 0) {
       return dword_CODE_bss_8007A0C0;
     }
-    param_1 = param_1 + -1;
+    param_1 -= 1;
   }
   if ((&players_p1)[dword_CODE_bss_8007A0C4] != 0) {
     if (param_1 == 0) {
       return dword_CODE_bss_8007A0C4;
     }
-    param_1 = param_1 + -1;
+    param_1 -= 1;
   }
   if ((&players_p1)[dword_CODE_bss_8007A0C8] != 0) {
     if (param_1 == 0) {
       return dword_CODE_bss_8007A0C8;
     }
-    param_1 = param_1 + -1;
+    param_1 -= 1;
   }
   if (((&players_p1)[dword_CODE_bss_8007A0CC] != 0) && (param_1 == 0)) {
     return dword_CODE_bss_8007A0CC;
